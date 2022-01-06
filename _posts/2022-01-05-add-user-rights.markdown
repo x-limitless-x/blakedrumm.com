@@ -18,7 +18,7 @@ permalink: /blog/add-and-check-user-rights/
 # Check User Rights
 [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1)
 
- I stumbled across this ([https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to add Logon as a Service Right to a User. I modified the script and allowed for any type of Service to be modified, you can also run the Powershell script against multiple machines, users, and user rights.
+ I stumbled across this ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to add Logon as a Service Right to a User. I modified the script and allowed for any type of Service to be modified, you can also run the Powershell script against multiple machines, users, and user rights.
  
 Here are a few examples:
 ## Single Users
