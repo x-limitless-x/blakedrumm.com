@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Add and Check User Rights via Powershell"
+title:  "Add and Check User Rights Assignment via Powershell"
 date:   2022-01-05 23:41:26 -0500
 categories: powershell
-title: Add and Check User Rights via Powershell
+title: Add and Check User Rights Assignment via Powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/add-user-rights.png
 description: >- # this means to ignore newlines
   You can check or add User Rights with the following scripts.
 
-permalink: /blog/add-and-check-user-rights/
+permalink: /blog/add-and-check-user-rights-assignment/
 ---
 
  I stumbled across this ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
