@@ -49,6 +49,8 @@ In order to check the Local User Rights, you will need to run the above (Get-Loc
 
 ![LocalUserAccountsRights](/assets/img/posts/server-userlogonrights.png)
 
+You may edit line [207](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/55f03da164976c2138b27b16df9dba2c94e54667/Powershell/Get-LocalUserAccountsRights.ps1#L207) in the script in order to set a folder where a CSV will output (you can open CSV in Excel).
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/add-and-check-user-rights/)
 
 <!--
