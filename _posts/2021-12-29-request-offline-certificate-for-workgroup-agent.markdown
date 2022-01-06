@@ -6,9 +6,10 @@ categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/local-machine-certificate.png
 title: Create your own offline Certificate Request for SCOM Workgroup Server
-description: >- # this means to ignore newlines
+summary: >- # this means to ignore newlines
   Generate a certificate request with an .inf file. This will allow you to specify all the settings that are required and make things easier.
 
+keywords: certificate request, from scratch certificate request, how to make certificate request, how to make cert request
 permalink: /blog/request-offline-certificate-for-workgroup-agent/
 ---
 In the below example we are assuming your machine is named **IIS-2019**.

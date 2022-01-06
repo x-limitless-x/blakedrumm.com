@@ -6,9 +6,10 @@ categories: troubleshooting guides powershell
 title: Resolve Operations Manager Event ID 33333
 author: blakedrumm
 thumbnail: /assets/img/posts/event-33333.png
-description: >- # this means to ignore newlines
+summary: >- # this means to ignore newlines
   Resolve issues detected with SCOM Event ID 33333 which can occur on any Management Server.
 
+keywords: resolve 33333 event id, scom management server 33333, event 33333, scom
 permalink: /blog/resolve-33333-events/
 ---
  I had a case recently where my customer was having issues with the following Event ID 33333 on all the Management Servers in the Management Group.
