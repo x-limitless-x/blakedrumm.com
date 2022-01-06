@@ -12,11 +12,11 @@ description: >- # this means to ignore newlines
 permalink: /blog/add-and-check-user-rights/
 ---
 
+ I stumbled across this ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
+ 
 # Add User Rights
 [Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1)
 
- I stumbled across this ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
- 
 Here are a few examples:
 ## Single Users
 Add User Right "Log on as a service" to CONTOSO\User:
@@ -40,7 +40,7 @@ Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User
 .\Add-UserRights.ps1 -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 ```
 	
-You can also modify line 203 in the script to change what happens when the script is run without any arguments or parameters.
+You can also modify line [203](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/a7858c6c3919cc8eb9b4bd12a6ec17a7b5c79697/Powershell/Add-UserRights.ps1#L203) in the script to change what happens when the script is run without any arguments or parameters.
 
 # Check User Rights
 [Get-LocalUserAccountsRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1)
