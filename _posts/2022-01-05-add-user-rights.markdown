@@ -6,8 +6,7 @@ categories: powershell
 title: Add and Check User Rights Assignment via Powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/add-user-rights.png
-description: >- # this means to ignore newlines
-  You can check or add User Rights with the following scripts.
+summary: You can check or add User Rights Assignment with the following scripts.
 
 permalink: /blog/add-and-check-user-rights-assignment/
 ---
