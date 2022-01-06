@@ -52,7 +52,7 @@ Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User
 .\Add-UserRights.ps1 -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 ```
 	
-You can also modify line [205](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/0d6699ffca6abf414023fa26d8b39228e8fe83be/Powershell/Add-UserRights.ps1#L205) in the script to change what happens when the script is run without any arguments or parameters.
+You can also modify line [205](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1#L205) in the script to change what happens when the script is run without any arguments or parameters.
 
 # Check User Rights
 [Get-LocalUserAccountsRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1)
