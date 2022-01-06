@@ -13,12 +13,9 @@ permalink: /blog/add-and-check-user-rights/
 ---
 
 # Add User Rights
-[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1)
+[Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1)
 
-# Check User Rights
-[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1)
-
- I stumbled across this ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to add Logon as a Service Right to a User. I modified the script and allowed for any type of Service to be modified, you can also run the Powershell script against multiple machines, users, and user rights.
+ I stumbled across this ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/ab4b02f9cc05505eee97d2f744f4c9c798143af1/Source/Users/Grant-LogOnAsService.ps1)) gem that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
 Here are a few examples:
 ## Single Users
@@ -44,6 +41,13 @@ Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User
 ```
 	
 You can also modify line 203 in the script to change what happens when the script is run without any arguments or parameters.
+
+# Check User Rights
+[Get-LocalUserAccountsRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-LocalUserAccountsRights.ps1)
+
+In order to check the Local User Rights, you will need to run the above (Get-LocalUserAccountsRights), you may copy and paste the above script in your Powershell ISE and press play.
+
+![LocalUserAccountsRights](/assets/img/posts/server-userlogonrights.png)
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/add-and-check-user-rights/)
 
