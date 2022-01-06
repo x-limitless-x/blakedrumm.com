@@ -7,7 +7,7 @@ title: Add and Check User Rights Assignment via Powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/add-user-rights.png
 summary: You can check or add User Rights Assignment with the following scripts.
-
+keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell
 permalink: /blog/add-and-check-user-rights-assignment/
 ---
 
