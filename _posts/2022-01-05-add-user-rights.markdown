@@ -17,6 +17,19 @@ permalink: /blog/add-and-check-user-rights/
 # Add User Rights
 [Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1)
 
+```
+"Log on as a batch job (SeBatchLogonRight)"
+"Allow log on locally (SeInteractiveLogonRight)"
+"Access this computer from the network (SeNetworkLogonRight)"
+"Allow log on through Remote Desktop Services (SeRemoteInteractiveLogonRight)"
+"Log on as a service (SeServiceLogonRight)"
+"Deny log on as a batch job (SeDenyBatchLogonRight)"
+"Deny log on locally (SeDenyInteractiveLogonRight)"
+"Deny access to this computer from the network (SeDenyNetworkLogonRight)"
+"Deny log on through Remote Desktop Services (SeDenyRemoteInteractiveLogonRight)"
+"Deny log on as a service (SeDenyServiceLogonRight)"
+```
+
 Here are a few examples:
 ## Single Users
 Add User Right "Log on as a service" to CONTOSO\User:
