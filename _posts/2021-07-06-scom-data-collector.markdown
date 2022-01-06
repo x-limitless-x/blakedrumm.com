@@ -156,7 +156,7 @@ This will allow you to run every switch available currently, this supports the -
     .\DataCollector.ps1 -All -Servers Agent1
     .\DataCollector.ps1 -All -Yes
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/scom/data/collector/2021/07/06/scom-data-collector.html)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-data-collector)
 
 <!--
 ## Welcome to GitHub Pages

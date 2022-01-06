@@ -63,7 +63,7 @@ In order to check the Local User Rights, you will need to run the above (Get-Loc
 
 You may edit line [207](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/55f03da164976c2138b27b16df9dba2c94e54667/Powershell/Get-LocalUserAccountsRights.ps1#L207) in the script in order to set a folder where a CSV will output (you can open CSV in Excel).
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/add-and-check-user-rights/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/add-and-check-user-rights-assignment)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

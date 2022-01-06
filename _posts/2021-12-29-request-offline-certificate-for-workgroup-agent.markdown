@@ -60,7 +60,7 @@ Run it like this:
   .\Start-SCOMCertificateChecker.ps1 -All
   ```
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/articles/2021/12/29/request-offline-certificate-for-workgroup-agent)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-workgroup-agent)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
