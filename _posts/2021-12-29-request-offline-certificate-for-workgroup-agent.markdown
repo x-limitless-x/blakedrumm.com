@@ -67,7 +67,7 @@ On a side note. If you run the SCOM Certificate Checker script above and it show
 You may also notice that the Private Key for the Certificate is missing: \
 ![Certificate Private Key Missing](/assets/img/posts/certificate-private-key-notpresent.png)
 
-It is possible you may need to run the following command in an Administrator Command Prompt to restore the Keyspec and Private Key:
+It is possible you may need to run the following command in an Administrator Command Prompt to restore the Keyspec and Private Key (replace the numbers & letters after __my__ with the serial number of your Certificate):
 ```
 certutil -repairstore my 1f00000008c694dac94bcfdc4a000000000008
 ```
