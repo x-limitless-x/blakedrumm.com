@@ -52,13 +52,32 @@ Once you receive back your signed certificate, import the Certificate into the C
 certlm.msc
 ```
 
-* Run this script to check the certificate you imported: \
+* Run this Powershell script to check the certificate you imported: \
 [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1) \
  \
 Run it like this:
   ```
   .\Start-SCOMCertificateChecker.ps1 -All
   ```
+You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [1103](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1#L1103) to include the arguments you want to run.
+
+On a side note. If you run the SCOM Certificate Checker script above and it shows an output that looks like this:
+![/assets/img/posts/scom-cert-checker-missingkey.png]
+
+You may also notice that the Private Key for the Certificate is missing:
+![/assets/img/posts/certificate-private-key-notpresent.png]
+
+You will need to run the following command in an Administrator Command Prompt to restore the Keyspec and Private Key:
+```
+certutil -repairstore my 1f00000008c694dac94bcfdc4a000000000008
+```
+![/assets/img/posts/certutil-output.png]
+
+After you run the `certutil` command above, you will notice the Certificate is now showing a Private Key (notice the key icon)
+![/assets/img/posts/certificate-private-key-present.png]
+
+You should now see this when you run the SCOM Certificate Checker Powershell Script:
+![/assets/img/posts/scom-cert-checker-successful.png]
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-workgroup-agent)
 
