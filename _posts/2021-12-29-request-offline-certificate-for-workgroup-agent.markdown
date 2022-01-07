@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Create your own offline Certificate Request for Workgroup Server"
+title:  "Create your own offline Certificate Request for SCOM Off-Domain Server"
 date:   2021-12-29 12:03:42 -0500
 categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/local-machine-certificate.png
-title: Create your own offline Certificate Request for SCOM Workgroup Server
+title: Create your own offline Certificate Request for SCOM Off-Domain Server
 summary: >- # this means to ignore newlines
-  Generate a certificate request with an .inf file. This will allow you to specify all the settings that are required and make things easier.
+  Generate a certificate request with an .inf file. This will allow you to specify all the settings that are required and give you more control over your certificate request.
 
-keywords: certificate request, from scratch certificate request, how to make certificate request, how to make cert request
-permalink: /blog/request-offline-certificate-for-workgroup-agent/
+keywords: certificate request, from scratch certificate request, how to create certificate request, how to make cert request, scom certificate request, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate
+permalink: /blog/request-offline-certificate-for-off-domain-server/
 ---
 In the below example we are assuming your machine is named **IIS-2019**.
 
