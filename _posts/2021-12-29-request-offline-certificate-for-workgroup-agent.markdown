@@ -47,7 +47,7 @@ Certreq -New -f IIS-2019-CertReq.inf IIS-2019-CertRequest.req
 
 Upload the above (IIS-2019-CertRequest.req) file to your Certificate Authority. \
 ... \
-Once you receive back your signed certificate, import the Certificate into the Computer Certificate Store:
+Once you receive back your signed certificate, import the Certificate into the Local Computer Personal Certificate Store:
 ```
 certlm.msc
 ```
@@ -79,6 +79,12 @@ After you run the `certutil` command above, you will notice the Certificate is n
 
 You should now see this when you run the SCOM Certificate Checker Powershell Script: \
 ![Certificate Checker Script Successful](/assets/img/posts/scom-cert-checker-successful.png)
+
+Now you just need to import the Certificate with MOMCertImport (located on the SCOM Installation Media): \
+![MOMCertImport Location](/assets/img/posts/momcertimport-file.png)
+
+Right Click and Run the Program as Administrator, select the certificate you imported: \
+[Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png)
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-workgroup-agent)
 
