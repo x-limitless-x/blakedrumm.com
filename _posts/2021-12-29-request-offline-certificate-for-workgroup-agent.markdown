@@ -84,7 +84,7 @@ Now you just need to import the Certificate with MOMCertImport (located on the S
 ![MOMCertImport Location](/assets/img/posts/momcertimport-file.png)
 
 Right Click and Run the Program as Administrator, select the certificate you imported: \
-[Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png)
+![Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png)
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-workgroup-agent)
 
