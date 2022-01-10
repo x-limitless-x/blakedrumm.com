@@ -95,6 +95,13 @@ Output to Text in 'C:\Temp':
 .\Get-UserRights.ps1 -FileOutputPath C:\Temp
 ```
 
+PassThru object to allow manipulation / filtering:
+```powershell
+.\Get-UserRights.ps1 -ComputerName SQL.contoso.com -PassThru | Where {$_.Principal -match "Administrator"}
+# or
+.\Get-UserRights.ps1 -PassThru | ? {$_.Privilege -match 'SeServiceLogonRight'}
+```
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/add-and-check-user-rights-assignment)
 
 <!--
