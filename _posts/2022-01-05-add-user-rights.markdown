@@ -52,16 +52,16 @@ Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User
 .\Add-UserRights.ps1 -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 ```
 	
-You can also modify line [209](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1#L209) in the script to change what happens when the script is run without any arguments or parameters.
+You can also modify line [209](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Add-UserRights.ps1#L209) in the script to change what happens when the script is run without any arguments or parameters.
 
 # Check User Rights
-[Get-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-UserRights.ps1)
+[Get-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1)
 
-In order to check the Local User Rights, you will need to run the above (Get-LocalUserAccountsRights), you may copy and paste the above script in your Powershell ISE and press play.
+In order to check the Local User Rights, you will need to run the above (Get-UserRights), you may copy and paste the above script in your Powershell ISE and press play.
 
 ![UserAccountsRights](/assets/img/posts/get-user-right.png)
 
-You may edit line [443](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-UserAccountsRights.ps1#L443) in the script in order to set a folder where a CSV will output (you can open the CSV in Excel).
+You may edit line [443](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L443) in the script in order to set a folder where a CSV will output (you can open the CSV in Excel).
 
 ex: `Get-LocalUserAccountsRights -OutputPath C:\Temp\Output`
 
