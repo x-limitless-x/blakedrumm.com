@@ -64,7 +64,7 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 
 You may edit line [443](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L444) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
-Here are a few examples: \
+Here are a few examples:
 ## Local Computer
 Get Local User Account Rights and output to text in console:
 ```powershell
