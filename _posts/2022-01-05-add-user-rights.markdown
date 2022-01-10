@@ -55,7 +55,7 @@ Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User
 You can also modify line [209](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1#L209) in the script to change what happens when the script is run without any arguments or parameters.
 
 # Check User Rights
-[Get-UserAccountsRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-UserAccountsRights.ps1)
+[Get-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-UserRights.ps1)
 
 In order to check the Local User Rights, you will need to run the above (Get-LocalUserAccountsRights), you may copy and paste the above script in your Powershell ISE and press play.
 
