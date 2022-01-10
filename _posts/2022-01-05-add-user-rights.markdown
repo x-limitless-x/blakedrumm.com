@@ -10,11 +10,12 @@ summary: You can check or add User Rights Assignment (Remotely or Locally) with 
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell
 permalink: /blog/add-and-check-user-rights-assignment/
 ---
+<sub>Article last updated on January 10th, 2022</sub>
 
  I stumbled across this gem ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/master/Source/Users/Grant-LogOnAsService.ps1)) that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
 # Add User Rights
-[Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Add-UserRights.ps1)
+[Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Add-UserRights.ps1)
 
 ```
 "Log on as a batch job (SeBatchLogonRight)"
@@ -63,11 +64,14 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 
 You may edit line [443](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L444) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
+Here are a few examples: \
+## Local Computer
 Get Local User Account Rights and output to text in console:
 ```powershell
 .\Get-UserRights.ps1
 ```
 
+## Remote Computer
 Get Remote SQL Server User Account Rights:
 ```powershell
 .\Get-UserRights.ps1 -ComputerName SQL.contoso.com
@@ -78,6 +82,7 @@ Get Local Machine and SQL Server User Account Rights:
 .\Get-UserRights.ps1 -ComputerName $env:COMPUTERNAME, SQL.contoso.com
 ```
 
+## Output Types
 Output Local User Rights on Local Machine as CSV in 'C:\Temp':
 ```powershell
 .\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType CSV
