@@ -91,7 +91,7 @@ Output Local User Rights on Local Machine as CSV in 'C:\Temp':
 Output to Text in 'C:\Temp':
 ```powershell
 .\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType Text
-or
+# or
 .\Get-UserRights.ps1 -FileOutputPath C:\Temp
 ```
 
