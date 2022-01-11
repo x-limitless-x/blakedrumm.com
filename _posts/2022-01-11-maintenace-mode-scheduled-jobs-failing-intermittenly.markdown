@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Maintenance Mode Scheduled Jobs Failing Intermittenly"
+title:  "Maintenance Schedule Failing Intermittenly"
 date:   2022-01-11 16:46:00 -0500
 categories: troubleshooting guides
 author: blakedrumm
