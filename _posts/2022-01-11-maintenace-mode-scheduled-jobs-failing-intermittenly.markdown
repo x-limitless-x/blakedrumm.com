@@ -9,7 +9,7 @@ summary: I recently had a case where my customer was experiencing an issue with 
 keywords: maintenance mode failing, scheduled maintenance mode failing, maintenance mode issue, maintenance mode not running automatically, maintenance schedules issue, maintenance schedules not running
 permalink: /blog/maintenace-mode-scheduled-jobs-failing-intermittenly/
 ---
-The customer had setup Maintenance Scheduled Jobs that were to run Daily against a group of servers. This Maintenance Schedule was working as intended but would stop working intermittently. The “Next Run” date/time for the Maintenance Mode Scheduled Job would be empty and to fix this we would need to change the "Schedule is effective beginning” date to today or recreate the maintenance schedule job.
+The customer had setup Maintenance Scheduled Jobs that were to run Daily against a group of servers. This Maintenance Schedule was working as intended but would stop working intermittently. The “Next Run” date/time for the Maintenance Mode Scheduled Job would be empty and to fix this we would need to change "The schedule is effective beginning” date to today or recreate the maintenance schedule job.
 
 ![Maintenance Mode Scheduled Job Properties](/assets/img/posts/maintenance-mode-schedule-properties.png)
 
