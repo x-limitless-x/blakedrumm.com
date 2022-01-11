@@ -13,7 +13,7 @@ The customer had setup Maintenance Scheduled Jobs that were to run Daily against
 
 ![Maintenance Mode Scheduled Job Properties](/assets/img/posts/maintenance-mode-schedule-properties.png)
 
-In order to resolve this issue we had to run the SCOM Console as the SDK (System Center Data Access Service) Account and recreate the Maintenance Scheduled Jobs. This allowed the Maintenance Mode Scheduled jobs to run without any issues.
+__DIn order to resolve this issue we had to run the SCOM Console as the SDK (System Center Data Access Service) Account and recreate the Maintenance Scheduled Jobs. This allowed the Maintenance Mode Scheduled jobs to run without any issues.__
 
 So the issue is with the Users account that was setting up the Maintenance Schedule.
 
