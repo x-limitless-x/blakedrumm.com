@@ -3,7 +3,6 @@ layout: post
 title:  "SCOM Clear Cache Script"
 date:   2021-07-22 01:09:42 -0500
 categories: powershell
-title: Clear SCOM Cache Powershell Script
 author: blakedrumm
 thumbnail: /assets/img/posts/clear-scomcache.png
 summary: >- # this means to ignore newlines
