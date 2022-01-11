@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Maintenance Schedule Failing Intermittenly"
+title:  "Maintenance Schedule Failing intermittently"
 date:   2022-01-11 16:46:00 -0500
 categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/maintenance-mode-schedule.png
 summary: I recently had a case where my customer was experiencing an issue with Scheduled Maintenance Mode failing to put objects into maintenance mode intermittently. SCOM 2019 Management Group.
 keywords: maintenance mode failing, scheduled maintenance mode failing, maintenance mode issue, maintenance mode not running automatically, maintenance schedules issue, maintenance schedules not running
-permalink: /blog/maintenance-mode-scheduled-jobs-failing-intermittenly/
+permalink: /blog/maintenance-mode-scheduled-jobs-failing-intermittently/
 ---
 The customer had setup Maintenance Scheduled Jobs that were to run Daily against a group of servers. This Maintenance Schedule would work as intended for a while (up to a week), but would stop working intermittently. The “Next Run” date/time for the Maintenance Mode Scheduled Job would be empty and to fix this we would need to change "The schedule is effective beginning” date to today or recreate the maintenance schedule job.
 
@@ -17,7 +17,7 @@ __In order to resolve this issue we had to run the SCOM Console as the SDK (Syst
 
 So the issue is with the users personal Active Directory account that was used to set up the Maintenance Schedule.
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/maintenace-mode-scheduled-jobs-failing-intermittenly)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/maintenace-mode-scheduled-jobs-failing-intermittently)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
