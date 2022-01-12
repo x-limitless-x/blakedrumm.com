@@ -49,12 +49,12 @@ author_education_details:
                 visibility: true
 
 # Projects
-#author_project_details:
-#              - project_thumbnail: gamershub.png
-#                project_title: Gamers Hub
-#                project_description: A Platform built for Gamers and Game Devs
-#                project_url: https://gamershub.in
-#                visibility: true
+author_project_details:
+              - project_thumbnail: scom-data-collector.png
+                project_title: SCOM Data Collector
+                project_description: With the SCOM Data Collector you can collect a lot of useful data to analyze and troubleshoot your System Center Operations Manager Environment! This is a go to Tool for any SCOM Admin that wants a wholistic view of their configuration and setup. Written in Powershell!
+                project_url: https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest
+                visibility: true
 
 
 # social links
