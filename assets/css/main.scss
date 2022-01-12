@@ -6,3 +6,17 @@
 @import "devlopr";
 
 /* custom css goes below */
+img.githubStats {
+    max-width: 351px;
+}
+/* Table Colors */
+.card-body table th {
+    text-align: center;
+    background-color: #ffffff17;
+    border: 1px solid #ffffff30;
+}
+
+.card-body table td {
+    border: 1px solid #ffffff30;
+    padding: 3px;
+} 
