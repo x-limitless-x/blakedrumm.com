@@ -2,6 +2,7 @@
 title: Styleguide
 layout: page
 permalink: /styleguide/
+sitemap: false
 ---
 
 
