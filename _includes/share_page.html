@@ -19,15 +19,15 @@
     data-show-count="false" style="margin-top:5px;">Tweet</a>
   <a class="fb-share-button" data-href="{{site.url}}{{page.url}}" data-size="large" data-layout="button">Share</a>
   <script>
-    function Copy() {
-      var Url = document.getElementById("url");
-      Url.innerHTML = window.location.href;
-      console.log(Url.innerHTML)
-      Url.select();
+    function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
       document.execCommand("copy");
+      $temp.remove();
     }
   </script>
 
-  <input type="button" value="Copy Url" onclick="Copy();" />
+  <input type="button" value="Copy Url" onclick="copyToClipboard({site.url}}{{page.url});" />
 </div>
 </div>
