@@ -83,8 +83,25 @@ button.navbar-toggler{
 
 /* Search */
 @media (max-width: 400px){
-        margin: 0;
-    font-size: 14px;
+    .navbar-brand{
+		margin: 0;
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 992px){
+	.navbar-brand{
+		margin: 0;
+		font-size: 14px;
+	}
+    .nav.searchbtn:nth-of-type(1){
+		display:none
+	}
+}
+@media (max-width: 992px){
+	.nav.searchbtn:nth-of-type(2){
+		display:none
+	}
 }
 
 /* Control the color of the selected background in Contact form 
