@@ -83,6 +83,9 @@ img.company-logo[src*="gaston-college.png"] {
     a.navbar-brand{
         margin-right: unset;
     }
+    .main-container{
+        max-width: 95%;
+    }
 }
 
 /* Make Blog post images full size */
