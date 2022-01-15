@@ -74,6 +74,12 @@ img.company-logo[src*="gaston-college.png"] {
     div.offset-md-2 {
         margin-left: unset;
     }
+    .nav.searchbtn:nth-of-type(2){
+	display:none
+    }
+    .searchbtn.mobileView {
+	margin: 0 !important;
+    }
 }
 
 /* Search */
@@ -95,11 +101,6 @@ button.navbar-toggler{
 		font-size: 14px;
 	}
     .nav.searchbtn:nth-of-type(1){
-		display:none
-	}
-}
-@media (max-width: 992px){
-	.nav.searchbtn:nth-of-type(2){
 		display:none
 	}
 }
