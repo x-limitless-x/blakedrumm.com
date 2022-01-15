@@ -80,7 +80,7 @@ img.company-logo[src*="gaston-college.png"] {
     .searchbtn.mobileView {
 	margin: 0 !important;
     }
-    .navbar-brand{
+    a.navbar-brand{
         margin-right: unset;
     }
 }
@@ -90,10 +90,9 @@ button.navbar-toggler{
     padding: 0px;
 }
 /* Search */
-@media (max-width: 400px){
-    .navbar-brand{
-		margin: 0;
-		font-size: 14px;
+@media (max-width: 420px){
+	a.navbar-brand{
+		font-size: 1.01rem;
 	}
 }
 
