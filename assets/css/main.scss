@@ -83,8 +83,13 @@ img.company-logo[src*="gaston-college.png"] {
     a.navbar-brand{
         margin-right: unset;
     }
+    /* fix mobile view for posts etc. start page without zoom */
     .main-container{
         max-width: 95%;
+        margin: 0 auto;
+    }
+    .row.justify-content-center > div > .row.center{
+	justify-content: center;
     }
 }
 
