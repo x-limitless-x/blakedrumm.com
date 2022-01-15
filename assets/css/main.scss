@@ -44,10 +44,17 @@ div#disqus_thread {
 #author_projects .row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+/* Author - Github Readme Stats */
+a img.githubModule {
+    min-width: 100%;
+    max-width: -webkit-fill-available;
+}
+
 /* Author - Work Logo Scaling */
 @media (min-width: 481px) and (max-width: 767px){
     #author_projects .col-md-2 {
@@ -63,7 +70,7 @@ img.company-logo[src*="gaston-college.png"] {
 }
 
 /* Search */
-@media (min-width: 768px){
+@media (max-width: 992px){
     div.offset-md-2 {
         margin-left: unset;
     }
