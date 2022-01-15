@@ -62,29 +62,29 @@ Run it like this:
 You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [1103](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1#L1103) to include the arguments you want to run.
 
 On a side note. If you run the SCOM Certificate Checker script above and it shows an output that looks like this: \
-![Certificate Checker Script Missing Private Key](/assets/img/posts/scom-cert-checker-missingkey.png)
+![Certificate Checker Script Missing Private Key](/assets/img/posts/scom-cert-checker-missingkey.png){:class="img-fluid"}
 
 You may also notice that the Private Key for the Certificate is missing: \
-![Certificate Private Key Missing](/assets/img/posts/certificate-private-key-notpresent.png)
+![Certificate Private Key Missing](/assets/img/posts/certificate-private-key-notpresent.png){:class="img-fluid"}
 
 It is possible you may need to run the following command in an Administrator Command Prompt to restore the Keyspec and Private Key (replace the numbers & letters after __my__ with the serial number of your Certificate):
 ```
 certutil -repairstore my 1f00000008c694dac94bcfdc4a000000000008
 ```
 
-![certutil Repair Store - Command Output](/assets/img/posts/certutil-output.png)
+![certutil Repair Store - Command Output](/assets/img/posts/certutil-output.png){:class="img-fluid"}
 
 After you run the `certutil` command above, you will notice the Certificate is now showing a Private Key (notice the key icon): \
-![Certificate Private Key Present](/assets/img/posts/certificate-private-key-present.png)
+![Certificate Private Key Present](/assets/img/posts/certificate-private-key-present.png){:class="img-fluid"}
 
 You should now see this when you run the SCOM Certificate Checker Powershell Script: \
-![Certificate Checker Script Successful](/assets/img/posts/scom-cert-checker-successful.png)
+![Certificate Checker Script Successful](/assets/img/posts/scom-cert-checker-successful.png){:class="img-fluid"}
 
 Now you just need to import the Certificate with MOMCertImport (located on the SCOM Installation Media): \
-![MOMCertImport Location](/assets/img/posts/momcertimport-file.png)
+![MOMCertImport Location](/assets/img/posts/momcertimport-file.png){:class="img-fluid"}
 
 Right Click and Run the Program as Administrator, select the certificate you imported: \
-![Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png)
+![Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png){:class="img-fluid"}
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-workgroup-agent)
 
