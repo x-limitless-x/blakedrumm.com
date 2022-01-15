@@ -12,20 +12,6 @@
             <span class="icono-hamburger" id="navbar-hamburger"> </span>
           </button>
           <a class="navbar-brand" href="/">{{site.title}}</a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              {% for i in site.urls %}
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="{{ site.url}}{{site.baseurl}}{{ i.url }}"
-                  >{{ i.text }}</a
-                >
-              </li>
-              {% endfor %}
-
-            </ul>
-          </div>
           <ul class="nav justify-content-end">
             <!--
             <li class="nav-item">
@@ -62,6 +48,20 @@
               />
             </li> -->
           </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              {% for i in site.urls %}
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="{{ site.url}}{{site.baseurl}}{{ i.url }}"
+                  >{{ i.text }}</a
+                >
+              </li>
+              {% endfor %}
+
+            </ul>
+          </div>
         </nav>
         <div id="progress-bar"></div>
         <!-- Search Form -->
