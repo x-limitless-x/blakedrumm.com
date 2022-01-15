@@ -25,14 +25,12 @@ layout: null
     {% for page in site.pages %}
       {% if page.layout == 'page' %}
         {% if page.name != '404.md' %}
-          {% if page.name != 'Readme.md' %}
           <item>
             <title>{{ page.title | xml_escape }}</title>
             <description>{{ page.content | xml_escape }}</description>
             <link>{{ page.url | prepend: site.baseurl | prepend: site.url }}</link>
           </item>
         {% endif %}
-      {% endif %}
       {% endif %}
     {% endfor %}
 
