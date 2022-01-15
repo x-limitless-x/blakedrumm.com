@@ -76,6 +76,17 @@ img.company-logo[src*="gaston-college.png"] {
     }
 }
 
+/* Search */
+button.navbar-toggler{
+    padding: 0px;
+}
+
+/* Search */
+@media (max-width: 400px){
+        margin: 0;
+    font-size: 14px;
+}
+
 /* Control the color of the selected background in Contact form 
 .form-control::placeholder{
     background: #c9ced3;
