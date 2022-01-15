@@ -59,7 +59,7 @@ You can also modify line [290](https://github.com/blakedrumm/SCOM-Scripts-and-SQ
 
 In order to check the Local User Rights, you will need to run the above (Get-UserRights), you may copy and paste the above script in your Powershell ISE and press play.
 
-![UserAccountsRights](/assets/img/posts/get-user-right.png)
+![UserAccountsRights](/assets/img/posts/get-user-right.png){:class="img-fluid"}
 
 You may edit line [485](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L485) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
