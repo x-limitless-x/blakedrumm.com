@@ -28,6 +28,47 @@ img.githubStats {
 .main-container div.blog-post{
     margin: unset;
 }
+
+/* Disqus thread */
+div#disqus_thread {
+    display: block;
+    width: 80%;
+}
+/* Author - Project Scaling */
+#author_projects .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Author - Project Scaling */
+#author_projects .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+/* Author - Work Logo Scaling */
+@media (min-width: 481px) and (max-width: 767px){
+    #author_projects .col-md-2 {
+        text-align:center;
+    }
+}
+/* Round Image for Gaston College */
+img.company-logo[src*="gaston-college.png"] {
+    background-color: white;
+    border: 3px solid #03204f;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+/* Search */
+@media (min-width: 768px){
+    div.offset-md-2 {
+        margin-left: unset;
+    }
+}
+
 /* Control the color of the selected background in Contact form 
 .form-control::placeholder{
     background: #c9ced3;
