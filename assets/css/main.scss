@@ -85,6 +85,11 @@ img.company-logo[src*="gaston-college.png"] {
     }
 }
 
+/* Make Blog post images full size */
+.card {
+    padding: 0 !important;
+}
+
 /* Search */
 button.navbar-toggler{
     padding: 0px;
