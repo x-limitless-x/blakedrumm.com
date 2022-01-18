@@ -129,11 +129,11 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
-      path: "gallery"
-    values:
-      permalink: /:path/:basename:output_ext
+#  -
+#    scope:
+#      path: "gallery"
+#    values:
+#      permalink: /:path/:basename:output_ext
   -
     scope:
       path: ""
@@ -141,6 +141,11 @@ defaults:
     values:
       layout: author
       permalink: /blog/authors/:slug
+  -
+    scope:
+      path: 'assets/**'
+    values:
+      sitemap: false
 
 # Build settings
 plugins:
