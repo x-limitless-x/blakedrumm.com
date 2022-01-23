@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SCOM Data Collector"
-date:   2021-07-06 02:16:42 -0500
+date:   '2021-07-06 02:16:42 -0500'
 categories: powershell projects
 title: System Center Operations Manager - Data Collector
 author: blakedrumm
