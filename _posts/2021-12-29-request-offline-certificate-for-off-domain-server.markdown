@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Create your own offline Certificate Request for SCOM Off-Domain Server"
-date:   2021-12-29 12:03:42 -0500
+date:   '2021-12-29 12:03:42 -0500'
 categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/local-machine-certificate.png
