@@ -155,7 +155,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-admin
-  - jekyll-last-modified-at
 
 # Jekyll Admin Config
 jekyll_admin:
