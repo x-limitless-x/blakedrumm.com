@@ -147,7 +147,12 @@ defaults:
       path: 'assets/**'
     values:
       sitemap: false
-
+  -
+    scope:
+      path: 'admin/**'
+    values:
+      sitemap: false
+      
 # Build settings
 plugins:
   - jekyll-paginate
