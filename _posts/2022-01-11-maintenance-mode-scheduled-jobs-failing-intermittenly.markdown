@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maintenance Schedule Failing Intermittently"
-date:   2022-01-11 16:46:00 -0500
+date:   '2022-01-11 16:46:00 -0500'
 categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/maintenance-mode-schedule.png
