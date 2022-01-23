@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Add and Check User Rights Assignment via Powershell"
-date:   2022-01-05 23:41:26 -0500
+date:   '2022-01-05 23:41:26 -0500'
 categories: powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/add-user-rights.png
