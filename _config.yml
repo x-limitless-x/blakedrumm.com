@@ -160,6 +160,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-admin
+  - jekyll-archives
 
 # Jekyll Admin Config
 jekyll_admin:
