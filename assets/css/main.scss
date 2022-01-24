@@ -69,7 +69,7 @@ img.company-logo[src*="gaston-college.png"] {
     padding: 8px;
 }
 
-.donate-button-container{
+#donate-button-container{
     float: left;
     display: block;
 }
@@ -96,7 +96,7 @@ img.company-logo[src*="gaston-college.png"] {
     .row.justify-content-center > div > .row.center{
 	justify-content: center;
     }
-    .donate-button-container{
+    #donate-button-container{
 	float: unset;
     }
 }
