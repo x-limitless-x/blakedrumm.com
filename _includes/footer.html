@@ -2,21 +2,20 @@
     <p> Hosted with <a href="https://pages.github.com">Github Pages</a>. Subscribe via
         <a href="{{ " /feed.xml " | prepend: site.baseurl }}">RSS</a>
     </p>
-    <div style="display: inline;float: left;"><div id="donate-button-container">
-<div id="donate-button"></div>
-<script charset="UTF-8" src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js?test"></script>
-<script>
-PayPal.Donation.Button({
-env:'production',
-hosted_button_id:'UNANPFKQM67UA',
-image: {
-src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-alt:'Donate with PayPal button',
-title:'PayPal - The safer, easier way to pay online!',
-}
-}).render('#donate-button');
-</script>
-</div></div>
-    <p style="display:inline;"> © 2022 Blake Drumm
-    </p>
+    <p style="display:block;">© 2022 Blake Drumm</p>
+    <div id="donate-button-container">
+        <div id="donate-button"></div>
+        <script charset="UTF-8" src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js?test"></script>
+        <script>
+        PayPal.Donation.Button({
+            env:'production',
+            hosted_button_id:'UNANPFKQM67UA',
+            image: {
+            src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+            alt:'Donate with PayPal button',
+            title:'PayPal - The safer, easier way to pay online!',
+        }
+        }).render('#donate-button');
+        </script>
+    </div>
 </footer>
