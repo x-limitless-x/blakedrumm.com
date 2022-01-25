@@ -201,7 +201,7 @@ Select (DatePart(HOUR, @d) * 3600) + (DatePart(MINUTE, @d) * 60) + DatePart(SECO
 Update configuration to midnight UTC, which is 7:00 PM (EST):
 ```sql
 UPDATE [dbo].[dtConfig]
-   SET [Value] = 0 -- Default: 25200
+   SET [Value] = 0 -- Default: 25200 (7:00 AM (EST))
    WHERE [Id] = 4
 GO
 ```
