@@ -24,26 +24,26 @@ A customer of mine was having problems with Audit Collection Services in SCOM 20
     ```
     
 2.  Once Opened go to Monitoring Tools Folder, then right click on **Performance Monitor** and go to **Properties**: \
-    ![Performance Monitor Properties](/assets/img/posts/ACS-perfmonitor-properties.png)
+    ![Performance Monitor Properties](/assets/img/posts/ACS-perfmonitor-properties.png){:class="img-fluid"}
 
 3.  Select the Data tab: \
-    ![Performance Monitor Properties - General](/assets/img/posts/ACS-PerformanceMonitorProperties-General.png)
+    ![Performance Monitor Properties - General](/assets/img/posts/ACS-PerformanceMonitorProperties-General.png){:class="img-fluid"}
 
 4.  Clear the currently selected counters by removing each counter listed with the **Remove** Button, then select **Add**: \
-    ![Performance Monitor Properties - Data Sets](/assets/img/posts/ACS-PerformanceMonitorProperties-DataSets.png)
+    ![Performance Monitor Properties - Data Sets](/assets/img/posts/ACS-PerformanceMonitorProperties-DataSets.png){:class="img-fluid"}
 
 5.  Locate the **ACS Collector** in available counters, select it, and click on the **Add** button: \
-    ![ACS Collector Performance Counter](/assets/img/posts/ACS-CollectorPerformanceCounter.png) \
+    ![ACS Collector Performance Counter](/assets/img/posts/ACS-CollectorPerformanceCounter.png){:class="img-fluid"} \
     This is how it should look when it is added: \
-    ![ACS Collector Performance Counter - Added](/assets/img/posts/ACS-CollectorPerformanceCounter-Added.png)
+    ![ACS Collector Performance Counter - Added](/assets/img/posts/ACS-CollectorPerformanceCounter-Added.png){:class="img-fluid"}
 
 6.  Click **OK** to confirm the property settings.
 
 8.  Click on the following button to change the view type, change to **Report**: \
-    ![Change to Report View](/assets/img/posts/ACS-ChangeToReportView.png)
+    ![Change to Report View](/assets/img/posts/ACS-ChangeToReportView.png){:class="img-fluid"}
 
 9.  View your performance data for ACS: \
-    ![ACS Performance Data](/assets/img/posts/ACS-PerformanceData.png)
+    ![ACS Performance Data](/assets/img/posts/ACS-PerformanceData.png){:class="img-fluid"}
 
 ___
 
@@ -164,7 +164,11 @@ Trace log files are located in the `%SystemRoot%\Temp` directory. For the Collec
 
 1. To enable logging, open RegEdit navigate to the following location: \
 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\AdtAgent\Parameters`
-2. Create the TraceFlags __DWORD (32-bit) Value__ and set it to __Hexadecimal__ `80003` unless otherwise advised. Trace logging begins immediately; no restart of the Collector is needed. Additionally, Change permission must be granted to `%SystemRoot%\Temp` for the __NetworkService__ account. For example, to log errors, warnings, and information messages to a file change the traceflags registry value to `0x00080003`. This is a combination of `0x00080000` _[file]_ and `0x00000003` _[errors +warnings+informational]_.
+2. Create the TraceFlags __DWORD (32-bit) Value__ and set it to __Hexadecimal__ `80003` unless otherwise advised. Trace logging begins immediately; no restart of the Collector is needed. Additionally, Change permission must be granted to `%SystemRoot%\Temp` for the __NetworkService__ account.
+
+    > ### Note
+    > For example, to log errors, warnings, and information messages to a file change the traceflags registry value to `0x00080003`. This is a combination of `0x00080000` _[file]_ and `0x00000003` _[errors +warnings+informational]_.
+
 3. To disable logging, delete the __TraceFlags__ value or set it to `0`. 
 
 
