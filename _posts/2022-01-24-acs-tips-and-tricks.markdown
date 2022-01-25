@@ -161,7 +161,7 @@ Trace log files are located in the `%SystemRoot%\Temp` directory. For the Collec
 1. To enable logging, via RegEdit navigate to the following location: \
 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\AdtAgent\Parameters`
 2. Create the TraceFlags __DWORD (32-bit) Value__ and set it to __Hexadecimal__ `80003` unless otherwise advised. Trace logging begins immediately; no restart of the Collector is needed. Additionally, Change permission must be granted to `%SystemRoot%\Temp` for the __NetworkService__ account. For example, to log errors, warnings, and information messages to a file change the traceflags registry value to `0x00080003`. This is a combination of `0x00080000` _[file]_ and `0x00000003` _[errors +warnings+informational]_.
-3. To disable logging, delete the __TraceFlags__ value or set it to 0. 
+3. To disable logging, delete the __TraceFlags__ value or set it to `0`. 
 
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/acs-collector-troubleshooting-tips/)
