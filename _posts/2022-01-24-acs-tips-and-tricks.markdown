@@ -158,7 +158,7 @@ TraceFlags consists of three groups that are OR'd (added) together. They are Ver
 
 Trace log files are located in the `%SystemRoot%\Temp` directory. For the Collector, the log files are written to `%SystemRoot%\Temp\AdtServer.log` and `%SystemRoot%\Temp\AdtSrvDll.log`. When a log file fills to capacity, the system overwrites the oldest entries with the most recent entries. Log files have a default size of 1 MB and begin to overwrite the oldest entries once they are full. 
 
-1. To enable logging, via RegEdit navigate to the following location: \
+1. To enable logging, open RegEdit navigate to the following location: \
 `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\AdtAgent\Parameters`
 2. Create the TraceFlags __DWORD (32-bit) Value__ and set it to __Hexadecimal__ `80003` unless otherwise advised. Trace logging begins immediately; no restart of the Collector is needed. Additionally, Change permission must be granted to `%SystemRoot%\Temp` for the __NetworkService__ account. For example, to log errors, warnings, and information messages to a file change the traceflags registry value to `0x00080003`. This is a combination of `0x00080000` _[file]_ and `0x00000003` _[errors +warnings+informational]_.
 3. To disable logging, delete the __TraceFlags__ value or set it to `0`. 
