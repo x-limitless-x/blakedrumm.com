@@ -175,16 +175,30 @@ ___
 
 ## Change the scheduled time the SQL Scripts run that are in the ACS Installation Folder
 In order for you to change the time the jobs will run the partitioning, grooming and reindexing. You need to edit the dtConfig table and change the __"table switch offset in seconds since midnight UTC"__ value to another time in UTC ([Google UTC Converter](https://www.google.com/search?q=UTC+Converter)):
+
+Get current configuration:
 ```sql
 select * from dtConfig
 ```
 
-Get current current SQL UTC time:
+Get current SQL UTC time:
 ```sql
 SELECT GETUTCDATE() AS 'Current UTC Time' 
 ```
 
-Update to midnight UTC, which is 7:00 PM (EST):
+Get 10 minutes ahead of current UTC time:
+```sql
+SELECT DATEADD(MINUTE, 10, GETUTCDATE())
+```
+
+Get seconds from midnight for dtConfig __"table switch offset in seconds since midnight UTC"__ ahead in seconds, in this example we add 10 minutes to the current UTC time:
+```sql
+Declare @d DateTime
+Select @d = DATEADD(MINUTE, 10, GETUTCDATE())
+Select (DatePart(HOUR, @d) * 3600) + (DatePart(MINUTE, @d) * 60) + DatePart(SECOND, @d)
+```
+
+Update configuration to midnight UTC, which is 7:00 PM (EST):
 ```sql
 UPDATE [dbo].[dtConfig]
    SET [Value] = 0 -- Default: 25200
