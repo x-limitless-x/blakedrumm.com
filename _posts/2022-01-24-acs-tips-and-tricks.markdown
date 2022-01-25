@@ -173,7 +173,7 @@ Trace log files are located in the `%SystemRoot%\Temp` directory. For the Collec
 
 ___
 
-## Change the scheduled time the SQL Scripts run that are located in the ACS Installation Folder
+## Change the scheduled time the SQL Scripts run that are in the ACS Installation Folder
 In order for you to change the time the jobs will run the partitioning, grooming and reindexing. You need to edit the dtConfig table and change the __"table switch offset in seconds since midnight UTC"__ value to another time in UTC ([Google UTC Converter](https://www.google.com/search?q=UTC+Converter)):
 ```sql
 select * from dtConfig
