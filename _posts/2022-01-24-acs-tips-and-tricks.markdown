@@ -48,6 +48,12 @@ permalink: /blog/acs-collector-troubleshooting-tips/
 You can run the following tsql query against the OperationsManagerAC
 
 ```sql
+-- Status:
+-- 0: active, set by collector
+-- 1: inactive, mark for closing during collector startup & indexing, set manually
+-- 2: archived, ready for deletion, set from outside the collector
+-- 100 - 108: closed, indexing in progress
+-- 109: indexing complete
 select * from dtpartition order by partitionstarttime
 ```
 
@@ -55,28 +61,98 @@ select * from dtpartition order by partitionstarttime
 ## Enable ACS Collector Logging
 ### TraceFlags
 TraceFlags consists of three groups that are OR'd (added) together. They are Verbosity Level, Component, and Log Output Method. Verbosity Level refers to the number and type of events that are logged to the trace log when trace logging is enabled, while Component can only be used if the Verbosity Level is set to Level Debug and is used to enable/disable logging for various internal components. Log Output Method is used to specify the location that tracing information is written to. 
+
 #### Verbosity Level settings
-|Value |Description |
-|------|------------|
-|0x00000000|No logging.|
-|0x00000001|Level Error. Logs only errors.|
-|0x00000002|Level Warning. Logs errors and warnings.|
-|0x00000003|Level Informational. Logs errors, warnings, and information.|
-|0x00000004|Level Debug. Logs everything and is very verbose.|
+<div class="responsive-table">
+<table>
+      <thead>
+        <tr>
+          <th scope="col">Value</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00000000</td>
+          <td>No logging.</td>
+        </tr>
+        <tr>
+          <td>0x00000001</td>
+          <td>Level Error. Logs only errors.</td>
+        </tr>
+        <tr>
+          <td>0x00000002</td>
+          <td>Level Warning. Logs errors and warnings.</td>
+        </tr>
+        <tr>
+          <td>0x00000003</td>
+          <td>Level Informational. Logs errors, warnings, and information.</td>
+        </tr>
+        <tr>
+          <td>0x00000004</td>
+          <td>Level Debug. Logs everything and is very verbose.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+<hr />
 
 #### Component settings
-|Value |Description |
-|------|------------|
-|0x00000010|General|
-|0x00000020|Networking|
-|0x00000080|Event tracking|
+<div class="responsive-table">
+<table>
+      <thead>
+        <tr>
+          <th scope="col">Value</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00000010</td>
+          <td>General</td>
+        </tr>
+        <tr>
+          <td>0x00000020</td>
+          <td>Networking</td>
+        </tr>
+        <tr>
+          <td>0x00000080</td>
+          <td>Event tracking</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+<hr />
 
 #### Log Output Method settings
-|Value |Description |
-|------|------------|
-|0x00020000|Log to debug out|
-|0x00040000|Log to the console, if available (only when running the collector from the command line)|
-|0x00080000|Log to file in `%SystemRoot%\Temp` directory|
+<div class="responsive-table">
+<table>
+      <thead>
+        <tr>
+          <th scope="col">Value</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00020000</td>
+          <td>Log to debug out</td>
+        </tr>
+        <tr>
+          <td>0x00040000</td>
+          <td>Log to the console, if available (only when running the collector from the command line)</td>
+        </tr>
+        <tr>
+          <td>0x00080000</td>
+          <td>Log to file in `%SystemRoot%\Temp` directory</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+<hr />
 
 > %SystemRoot% = C:\Windows\
 
