@@ -171,6 +171,23 @@ Trace log files are located in the `%SystemRoot%\Temp` directory. For the Collec
 
 3. To disable logging, delete the __TraceFlags__ value or set it to `0`. 
 
+___
+
+## Change the scheduled time the SQL Scripts run that are located in the ACS Installation Folder
+In order for you to change the time the jobs will run the partitioning, grooming and reindexing. You need to edit the dtConfig table and change the __"table switch offset in seconds since midnight UTC"__ value to another time in UTC ([Google UTC Converter](https://www.google.com/search?q=UTC+Converter)):
+```sql
+select * from dtConfig
+```
+
+Update to midnight UTC, which is 7:00 PM (EST):
+```sql
+UPDATE [dbo].[dtConfig]
+   SET [Value] = 0 -- Default: 25200
+   WHERE [Id] = 4
+GO
+```
+
+Be mindful that the is usually run overnight when there is not alot of activity in the ACS Database. So take precautions if changing this when alot of logons/logoffs are happening in your environment.
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/acs-collector-troubleshooting-tips/)
 
