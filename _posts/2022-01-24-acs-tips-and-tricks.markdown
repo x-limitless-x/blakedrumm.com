@@ -179,6 +179,11 @@ In order for you to change the time the jobs will run the partitioning, grooming
 select * from dtConfig
 ```
 
+Get current current SQL UTC time:
+```sql
+SELECT GETUTCDATE() AS 'Current UTC Time' 
+```
+
 Update to midnight UTC, which is 7:00 PM (EST):
 ```sql
 UPDATE [dbo].[dtConfig]
