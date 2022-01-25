@@ -13,6 +13,8 @@ permalink: /blog/acs-collector-troubleshooting-tips/
 ---
 A customer of mine was having problems with Audit Collection Services in SCOM 2019 UR3 and I noticed that there are not alot of troubleshooting guides out there. So it would be a good idea to document this information here.
  
+ ___
+ 
 ## Verify ACS collector performance
 
 1.  Open Performance Monitor, right click on Start Menu and select run. \
@@ -43,6 +45,7 @@ A customer of mine was having problems with Audit Collection Services in SCOM 20
 9.  View your performance data for ACS: \
     ![ACS Performance Data](/assets/img/posts/ACS-PerformanceData.png)
 
+___
 
 ## Gather Partition Table History
 You can run the following tsql query against the OperationsManagerAC
@@ -57,6 +60,7 @@ You can run the following tsql query against the OperationsManagerAC
 select * from dtpartition order by partitionstarttime
 ```
 
+___
 
 ## Enable ACS Collector Logging
 ### TraceFlags
