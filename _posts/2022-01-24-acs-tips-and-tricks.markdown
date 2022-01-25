@@ -11,9 +11,9 @@ summary: >- # this means to ignore newlines
 keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts
 permalink: /blog/acs-collector-troubleshooting-tips/
 ---
- A customer of mine was having problems with Audit Collection Services in SCOM 2019 UR3 and I noticed that there are not alot of troubleshooting guides out there. So it would be a good idea to document this information here.
+A customer of mine was having problems with Audit Collection Services in SCOM 2019 UR3 and I noticed that there are not alot of troubleshooting guides out there. So it would be a good idea to document this information here.
  
- ## Verify ACS collector performance
+## Verify ACS collector performance
 
 1.  Open Performance Monitor, right click on Start Menu and select run. \
     In run box type the following:
