@@ -30,7 +30,7 @@ Tail -f /var/log/messages
 ___
 
 ## Verify OpenSSL s_client
-The OpenSSL s_client command is a helpful test client for troubleshooting remote SSL or TLS connections.
+The OpenSSL s_client command is a helpful test client for troubleshooting remote SSL or TLS connections:
 ```shell
 openssl s_client -connect server.domain.com:1270
 openssl s_client -connect server.domain.com:1270 -tls1
