@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Troubleshooting Tips for Unix / Linux System Center Operations Manager Agents"
-date:   '2022-01-10 12:21:52 -0500'
+date:   '2022-01-26 12:21:52 -0500'
 categories: troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
