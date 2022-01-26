@@ -38,6 +38,9 @@ Working Example:
 
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png){:class="img-fluid"}
 
+__Not Working:__
+![Example 3 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example3-notworking.png){:class="img-fluid"}
+
 ___
 
 ## Tail the Logs
