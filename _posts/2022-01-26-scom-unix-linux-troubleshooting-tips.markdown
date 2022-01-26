@@ -14,7 +14,28 @@ You can run the following command on a monitored and not monitored server to com
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
 
-Working Example for __scx-1.5.1-242.e16.x86_64__ (__Agent Version__: 7.5.1068.0	- _SCOM 2012 R2 UR12	(01/27/2017)_): \
+Working Example:
+<div class="responsive-table">
+<table>
+      <thead>
+        <tr>
+          <th scope="col">Agent Version</th>
+          <th scope="col">Version</th>
+          <th scope="col">Management Group Version</th>
+          <th scope="col">Released</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>scx-1.5.1-242.e16.x86_64</td>
+          <td>7.5.1068.0</td>
+          <td>SCOM 2012 R2 UR12</td>
+          <td>01/27/2017</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png){:class="img-fluid"}
 
 ___
