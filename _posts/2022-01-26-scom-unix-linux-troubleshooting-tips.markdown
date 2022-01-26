@@ -57,18 +57,18 @@ tail -f /var/log/messages
 ```
 
 ### OMI
-#### OMI Server Log
+#### Server Log
 ```shell
 tail -f /var/opt/microsoft/scx/log/omiserver.log
 ```
 
-#### OMI Agent Log
+#### Agent Log
 ```shell
 tail -f /var/opt/microsoft/scx/log/omiagent.root.root.log
 ```
 
 ### SCX
-#### SCX Agent Log
+#### Agent Log
 ```shell
 tail -f /var/opt/microsoft/scx/log/scx.log
 ```
