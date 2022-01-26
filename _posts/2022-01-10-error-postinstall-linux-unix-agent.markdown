@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resolve error with Unix / Linux Install for SCOM Agent"
+title:  "Resolve Post Install error with Unix / Linux Install for SCOM Agent"
 date:   '2022-01-10 18:04:26 -0500'
 categories: troubleshooting
 author: blakedrumm
