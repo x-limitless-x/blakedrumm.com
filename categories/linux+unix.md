@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Linux+Unix
-permalink: /blog/categories/linux+unix/
+title: Linux
+permalink: /blog/categories/linux/
 ---
 
 <h5> Posts by Category : {{ page.title }} </h5>
 
 <div class="card">
-{% for post in site.categories.linux+unix %}
+{% for post in site.categories.linux %}
  <li class="category-posts"><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </div>
