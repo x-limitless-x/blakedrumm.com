@@ -14,7 +14,7 @@ You can run the following command on a monitored and not monitored server to com
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
 
-Working Example:
+__Working Example:__
 <div class="responsive-table">
 <table>
       <thead>
