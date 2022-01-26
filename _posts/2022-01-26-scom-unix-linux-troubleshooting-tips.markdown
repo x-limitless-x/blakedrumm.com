@@ -9,7 +9,7 @@ summary: Tips / Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
 ## Verify the versions for all prerequisite software
-You can run the following command on a working and non-working server to compare the software installed:
+You can run the following command on a monitored and not monitored server to compare the software installed:
 ```shell
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
