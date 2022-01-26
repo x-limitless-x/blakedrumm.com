@@ -14,7 +14,7 @@ You can run the following command on a working and non-working server to compare
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
 
-Working Example:
+Working Example: \
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png)
 
 ___
