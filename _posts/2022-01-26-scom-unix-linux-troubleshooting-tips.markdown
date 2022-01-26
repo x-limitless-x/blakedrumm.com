@@ -38,7 +38,7 @@ __Working Example:__
 
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png){:class="img-fluid"}
 
-__Not Working Example:__ \
+__Non-working Example:__ \
 ![Example 3 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example3-notworking.png){:class="img-fluid"}
 
 ___
