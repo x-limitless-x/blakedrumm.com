@@ -14,7 +14,7 @@ You can run the following command on a monitored and not monitored server to com
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
 
-Working Example: \
+Working Example for __scx-1.5.1-242.e16.x86_64__ (__Agent Version__: 7.5.1068.0	- _SCOM 2012 R2 UR12	(01/27/2017)_): \
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png){:class="img-fluid"}
 
 ___
