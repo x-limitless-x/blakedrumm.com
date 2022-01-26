@@ -14,6 +14,8 @@ You can run the following command on a working and non-working server to compare
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
 
+___
+
 ## Tail the Logs
 You can run the following command to show current log data pertaining to authentication and authorization privileges:
 ```shell
@@ -25,6 +27,8 @@ You can run the following command to show current log data in `/var/log/messages
 Tail -f /var/log/messages
 ```
 
+___
+
 ## Verify OpenSSL s_client
 The OpenSSL s_client command is a helpful test client for troubleshooting remote SSL or TLS connections.
 ```shell
@@ -32,6 +36,8 @@ openssl s_client -connect server.domain.com:1270
 openssl s_client -connect server.domain.com:1270 -tls1
 openssl s_client -connect server.domain.com:1270 -ssl3
 ```
+
+___
 
 ## Get MB / GB size of file
 Run the following command to gather the MB / GB size of a file:
