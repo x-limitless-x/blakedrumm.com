@@ -20,27 +20,31 @@ Working Example: \
 ___
 
 ## Tail the Logs
+### Secure Log
 You can run the following command to show current log data pertaining to authentication and authorization privileges:
 ```shell
 tail -f /var/log/secure
 ```
 
+### Messages Log
 You can run the following command to show all the global system messages, including the messages that are logged during system startup:
 ```shell
 tail -f /var/log/messages
 ```
 
-OMI Server Log:
+### OMI
+#### OMI Server Log
 ```shell
 tail -f /var/opt/microsoft/scx/log/omiserver.log
 ```
 
-OMI Agent Log:
+#### OMI Agent Log
 ```shell
 tail -f /var/opt/microsoft/scx/log/omiagent.root.root.log
 ```
 
-SCX Agent Log:
+### SCX
+#### SCX Agent Log
 ```shell
 tail -f /var/opt/microsoft/scx/log/scx.log
 ```
