@@ -5,7 +5,7 @@ date:   '2022-01-26 12:21:52 -0500'
 categories: troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
-summary: Tips / Tricks for troubleshooting SCOM Unix / Linux Agent issues.
+summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
 ## Verify the versions for all prerequisite software
