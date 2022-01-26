@@ -22,7 +22,7 @@ Working Example:
           <th scope="col">Agent Version</th>
           <th scope="col">Version</th>
           <th scope="col">Management Group Version</th>
-          <th scope="col">Released</th>
+          <th scope="col">Release Date</th>
         </tr>
       </thead>
       <tbody>
