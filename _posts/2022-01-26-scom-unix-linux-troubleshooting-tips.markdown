@@ -22,12 +22,27 @@ ___
 ## Tail the Logs
 You can run the following command to show current log data pertaining to authentication and authorization privileges:
 ```shell
-Tail -f /var/log/secure
+tail -f /var/log/secure
 ```
 
-You can run the following command to show current log data in `/var/log/messages`:
+You can run the following command to show all the global system messages, including the messages that are logged during system startup:
 ```shell
-Tail -f /var/log/messages
+tail -f /var/log/messages
+```
+
+OMI Server Log:
+```shell
+tail -f /var/opt/microsoft/scx/log/omiserver.log
+```
+
+OMI Agent Log:
+```shell
+tail -f /var/opt/microsoft/scx/log/omiagent.root.root.log
+```
+
+SCX Agent Log:
+```shell
+tail -f /var/opt/microsoft/scx/log/scx.log
 ```
 
 ___
