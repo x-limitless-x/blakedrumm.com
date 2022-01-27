@@ -2,7 +2,7 @@
 layout: post
 title:  "Resolve Post Install error with Unix / Linux Install for SCOM Agent"
 date:   '2022-01-10 18:04:26 -0500'
-categories: troubleshooting
+categories: troubleshooting linux
 author: blakedrumm
 thumbnail: /assets/img/posts/scx-agent-list.png
 summary: I recently had a case where my customer was experiencing an issue when attempting to install the SCOM Agent onto a Solaris 10 server. SCOM 2019 Management Group.
