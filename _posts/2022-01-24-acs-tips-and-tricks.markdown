@@ -198,7 +198,7 @@ Select @d = DATEADD(MINUTE, 10, GETUTCDATE())
 Select (DatePart(HOUR, @d) * 3600) + (DatePart(MINUTE, @d) * 60) + DatePart(SECOND, @d)
 ```
 
-Update configuration to midnight UTC, which is 7:00 PM (EST):
+Update configuration to midnight UTC, which is 2:00 AM (EST):
 ```sql
 UPDATE [dbo].[dtConfig]
    SET [Value] = 0 -- Default: 25200 (7:00 AM (EST))
