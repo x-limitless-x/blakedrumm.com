@@ -28,7 +28,9 @@ After doing this we cleared the cache on the SCOM Management Servers by running 
 We waited for a few minutes after clearing the SCOM Management Server cache. The Management Servers were coming back online, but they were still not receiving new Alerts, and there were not any Notification Emails.
 
 While reviewing the Operations Manager Event Logs, we found that there were 2115 Errors indicating an issue with the insertion of Discovery and other related data:
+
 ## Event 1
+
  >__Log Name:__      Operations Manager \
  >__Source:__        HealthService \
  >__Date:__          1/20/2022 3:42:02 PM \
@@ -45,6 +47,7 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
 
  ## Event 2
+
  >__Log Name:__      Operations Manager \
  >__Source:__        HealthService \
  >__Date:__          1/20/2022 3:42:02 PM \
@@ -61,6 +64,7 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
 
  ## Event 3
+
  >__Log Name:__      Operations Manager \
  >__Source:__        HealthService \
  >__Date:__          1/20/2022 3:42:02 PM \
@@ -77,6 +81,7 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
 
 ## Event 4
+
  >__Log Name:__      Operations Manager \
  >__Source:__        HealthService \
  >__Date:__          1/20/2022 3:42:03 PM \
@@ -93,6 +98,7 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
 
  ## Event 5
+ 
  >__Log Name:__      Operations Manager \
  >__Source:__        HealthService \
  >__Date:__          1/20/2022 3:42:30 PM \
