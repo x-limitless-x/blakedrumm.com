@@ -30,6 +30,8 @@ We waited for a few minutes after clearing the SCOM Management Server cache. The
 
 While reviewing the Operations Manager Event Logs, we found that there were 2115 Errors indicating an issue with the insertion of Discovery and other related data:
 
+___
+
 ## Event 1
 
  >__Log Name:__      Operations Manager \
@@ -46,6 +48,8 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectEventData</span> \
  >__Instance    :__ ManagementServer1.contoso.com \
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
+
+___
 
  ## Event 2
 
@@ -64,6 +68,8 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Instance    :__ ManagementServer1.contoso.com \
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
 
+___
+
  ## Event 3
 
  >__Log Name:__      Operations Manager \
@@ -80,6 +86,8 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectPublishedEntityState</span> \
  >__Instance    :__ ManagementServer1.contoso.com \
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
+
+___
 
 ## Event 4
 
@@ -98,6 +106,8 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Instance    :__ ManagementServer1.contoso.com \
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
 
+___
+
  ## Event 5
 
  >__Log Name:__      Operations Manager \
@@ -114,6 +124,8 @@ While reviewing the Operations Manager Event Logs, we found that there were 2115
  >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectDiscoveryData</span> \
  >__Instance    :__ ManagementServer1.contoso.com \
  >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
+
+___
 
 We reviewed the current SQL Logs and found that there were authentication failures that indicated the __Computer Account__ for the SCOM Management Server didnt have permission to the Database. This lead us to check the __Default Action Account__ in Run As Profiles. We modified the __Default Action Account__ for the Management Servers to be assigned an __Windows Action Account__ instead of __Local System__. This resolved the issue and now Notifications and Alerts are being being sent normally.
 
