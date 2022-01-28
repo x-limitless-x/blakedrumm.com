@@ -4,7 +4,7 @@ title:  "How to resolve SCOM Notifications Stopped / No new Alerts"
 date:   '2022-01-28 14:21:52 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm
-thumbnail: /assets/img/posts/management-server-registry.png
+thumbnail: /assets/img/posts/SCOM-Notification-Bell-Email.png
 summary: Here is how I resolved an issue my customer had with not receiving notification emails for alerts in SCOM. They also noticed there are no new alerts in several days.
 keywords: scom notifications failed, opsmgr notifications, operations manager notifications, alerts not updating, no new alerts, alerts stalled, all management server resource pool failure
 permalink: /blog/scom-notifications-and-alerts-stopped-working/
