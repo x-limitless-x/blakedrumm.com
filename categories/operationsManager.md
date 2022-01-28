@@ -1,7 +1,7 @@
 ---
 layout: page
 title: operationsManager
-permalink: /blog/categories/SystemCenter_OperationsManager/
+permalink: /blog/categories/operationsManager/
 ---
 
 <h5> Posts by Category : {{ page.title }} </h5>
