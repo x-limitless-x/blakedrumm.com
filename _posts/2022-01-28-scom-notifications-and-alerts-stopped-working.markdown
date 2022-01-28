@@ -48,10 +48,10 @@ ___
   >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectEventData</span> \
   >__Instance    :__ ManagementServer1.contoso.com \
   >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
-&nbsp;
+
 ___
 
- ## Event 2
+## Event 2
 
   >__Log Name:__      Operations Manager \
   >__Source:__        HealthService \
@@ -67,10 +67,10 @@ ___
   >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectPerformanceData</span> \
   >__Instance    :__ ManagementServer1.contoso.com \
   >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
-&nbsp;
+
 ___
 
- ## Event 3
+## Event 3
 
   >__Log Name:__      Operations Manager \
   >__Source:__        HealthService \
@@ -86,7 +86,7 @@ ___
   >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectPublishedEntityState</span> \
   >__Instance    :__ ManagementServer1.contoso.com \
   >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
-&nbsp;
+
 ___
 
 ## Event 4
@@ -105,10 +105,10 @@ ___
   >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectSignatureData</span> \
   >__Instance    :__ ManagementServer1.contoso.com \
   >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
-&nbsp;
+
 ___
 
- ## Event 5
+## Event 5
 
   >__Log Name:__      Operations Manager \
   >__Source:__        HealthService \
@@ -124,7 +124,7 @@ ___
   >__Workflow Id :__ <span style="color:yellow">Microsoft.SystemCenter.CollectDiscoveryData</span> \
   >__Instance    :__ ManagementServer1.contoso.com \
   >__Instance Id :__ {AEC38E5Z-67A9-0406-20DB-ACC33BB9C4A4}
-&nbsp;
+
 ___
 
 We reviewed the current SQL Logs and found that there were authentication failures that indicated the __Computer Account__ for the SCOM Management Server didnt have permission to the Database. This lead us to check the __Default Action Account__ in Run As Profiles. We modified the __Default Action Account__ for the Management Servers to be assigned an __Windows Action Account__ instead of __Local System__. This resolved the issue and now Notifications and Alerts are being being sent normally.
