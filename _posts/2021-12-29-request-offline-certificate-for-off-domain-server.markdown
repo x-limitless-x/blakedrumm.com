@@ -45,6 +45,9 @@ Run the following:
 Certreq -New -f IIS-2019-CertReq.inf IIS-2019-CertRequest.req
 ```
 
+  > ### Note
+  > The server where you run the above certreq command will be where the Certificate Private Key will be stored.
+
 Upload the above (IIS-2019-CertRequest.req) file to your Certificate Authority. \
 ... \
 Once you receive back your signed certificate, import the Certificate into the Local Computer Personal Certificate Store:
