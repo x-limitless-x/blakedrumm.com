@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to resolve SCOM Notifications Stopped / No new Alerts"
+title:  "How to resolve SCOM Notifications Stopped & No New Alerts"
 date:   '2022-01-28 14:21:52 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm
