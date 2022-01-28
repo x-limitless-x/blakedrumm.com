@@ -12,4 +12,6 @@ social:
       url: "https://www.linkedin.com/in/blakedrumm"
     - title: "facebook"
       url: "https://www.facebook.com/blake.drumm"
+    - title: "twitter"
+      url: "https://twitter.com/bdrumm1326"
 ---
