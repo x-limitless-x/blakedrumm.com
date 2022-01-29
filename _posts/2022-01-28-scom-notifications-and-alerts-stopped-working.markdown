@@ -19,7 +19,7 @@ Apparently the Operations Manager Management Server received a package from SCCM
  > ## Precaution
  > Take care when directly modifying the Registry via [regedit.exe](https://support.microsoft.com/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11). If you insist on making changes, always backup the registry first. There is always the possiblity you can cause more damage than you are fixing.
 
-I had the customer Delete the __AgentManagement__ key and we matched the Registry Values for __Server Management Groups__ to my lab environment.
+I had the customer Delete the __Agent Management Groups__ key and we matched / created the Registry Values for __Server Management Groups__ to my lab environment.
 ![Management Server - Good Registry Keys](/assets/img/posts/management-server-registry.png){:class="img-fluid"}
 
 After doing this we cleared the cache on the SCOM Management Servers by running the following PowerShell script: \
