@@ -1,6 +1,3 @@
-Total Visitors to Download Site (files.blakedrumm.com):
-<img src="https://counter.blakedrumm.com/count/tag.svg?url=https%3A%2F%2Ffiles.blakedrumm.com" alt="Hits">
-
 ### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
