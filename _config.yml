@@ -194,5 +194,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - assets/*
 
 destination: ./build
