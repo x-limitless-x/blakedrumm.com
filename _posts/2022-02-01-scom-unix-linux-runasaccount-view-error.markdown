@@ -30,7 +30,7 @@ We noticed an exception that will pop-up intermittently (while Console is idle o
   > at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. DeserializeToScxRunAsAccount(ScxCredentialRef credentialRef) \
   > at System.Linq.Enumerable.WhereSelectListIterator\`2.MoveNext() \
   > at System.Collections.Generic.List\`1..ctor(IEnumerable\`1 collection) \
-  > at System.Linq.Enumerable.ToList[TSource](IEnumerable\`1 source)  \
+  > at System.Linq.Enumerable.ToList\[TSource](IEnumerable\`1 source)  \
   > at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. EnumerateScxRunAsAccount(IManagementGroupConnection managementGroupConnection) \
   > at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountInfoFactory.EnumerateScxRunAsAccount() \
   > at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.<span style="color:yellow">\<GetScxRunAsAccountInstances\></span>b__6(Object sender, ConsoleJobEventArgs e) \
