@@ -93,7 +93,7 @@ First we ran the following Powershell command output to gather RunAs Accounts re
 Get-SCOMRunAsAccount | Where {$_.AccountType -like "SCX*"}
 ```
 
-We compared the above output to the accounts we can choose in the RunAs Profile for Unix/Linux RunAs. We noticed an entry that was not in the `Get-SCOMRunAsAccount` command run above:
+We compared the above output to the accounts we can choose in the RunAs Profile for Unix/Linux Action Account. We noticed an entry that was not in the `Get-SCOMRunAsAccount` command run above:
 ![Orphaned RunAs Accounts](/assets/img/posts/unix-linux-runas-accounts-orphaned.png){:class="img-fluid"}
 
 I asked the customer if he is comfortable with removing the RunAs Account and re-adding the Account. He said this was fine, so we proceeded to remove the RunAs Account like this:
@@ -101,7 +101,7 @@ I asked the customer if he is comfortable with removing the RunAs Account and re
 Get-SCOMRunAsAccount | Where {$_.Name -eq "Test"} | Remove-SCOMRunAsAccount
 ```
 
-Removing the Orphaned RunAs account allowed the Unix/Linux RunAs Account view to populate as intended.
+Removing the __Orphaned RunAs account__ allowed the Unix/Linux RunAs Account view to populate as intended.
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-runasaccount-view-error/)
 
