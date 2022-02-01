@@ -10,7 +10,7 @@ keywords: scom unix linux, scom unix runas accounts, scom runas account, unix li
 permalink: /blog/scom-unix-linux-runasaccount-view-error/
 ---
  
-I received a case today for a customer who is having issues when attempting to open the RunAs Account view for Unix/Linux RunAs Accounts (__Administration Tab-> Unix/Linux Accounts__). They are unable to return any Unix/Linux RunAs Accounts, even though we can create new ones, they are not populating in the list of RunAs Accounts for Unix/Linux.
+I received a case today for a customer who is having issues when attempting to open the RunAs Account view for Unix/Linux RunAs Accounts in the SCOM Console (__Administration Tab-> Run As Configuration -> Unix/Linux Accounts__). We were unable to return any Unix/Linux RunAs Accounts in the SCOM Console, even though we can create new ones, they are not populating in the list of RunAs Accounts for Unix/Linux.
 
 We noticed an exception that will pop-up intermittently (while Console is idle or active):
 
