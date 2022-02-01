@@ -101,7 +101,8 @@ I asked the customer if he is comfortable with removing the RunAs Account and re
 Get-SCOMRunAsAccount | Where {$_.Name -eq "Test"} | Remove-SCOMRunAsAccount
 ```
 
-Removing the __Orphaned RunAs account__ allowed the Unix/Linux RunAs Account view to populate as intended.
+# Conclusion
+Removing the __Orphaned RunAs account__ allowed the Unix/Linux RunAs Account view to populate as intended. You can only remove these Orphaned RunAs accounts with the Powershell Commands: `Get-SCOMRunAsAccount` and `Remove-SCOMRunAsAccount`
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-runasaccount-view-error/)
 
