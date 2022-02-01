@@ -1,6 +1,6 @@
 ---
 layout: page
-title: operationsManager
+title: System Center Operations Manager
 permalink: /blog/categories/operationsManager/
 ---
 
