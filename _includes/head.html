@@ -19,9 +19,11 @@
   />
   <meta content="{{ site.share.fb_appid }}" property="fb:app_id" />
   <meta content="{{ site.title }}" property="og:site_name" />
-  {% if page.noindex %}
+  <!-- {% if page.noindex %}
   <meta name="robots" content="noindex" />
-  {% endif %} {% if page.title %}
+  {% endif %} 
+  -->
+  {% if page.title %}
   <meta content="{{ page.title }}" property="og:title" />
   <meta content="article" property="og:type" />
   {% else %}
