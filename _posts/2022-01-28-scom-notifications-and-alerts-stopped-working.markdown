@@ -10,10 +10,10 @@ keywords: scom notifications failed, opsmgr notifications, operations manager no
 permalink: /blog/scom-notifications-and-alerts-stopped-working/
 ---
  
- First thing I noticed was that the SCOM Management Servers had an SCOM Agent Installed on it. We noticed by verifing the following location:
+ First thing I noticed was that the SCOM Management Servers had an SCOM Agent Installed on it. We verifing by navigating to the following location, you can see the __Agent Management Groups__:
  ![Management Server - Bad Registry Keys](/assets/img/posts/agent-registry-scom-ms.png){:class="img-fluid"}
 
-Apparently the Operations Manager Management Server received a package from SCCM, and this attempted to install the SCOM Agent (Microsoft Monitoring Agent) and overwrote some registry keys inside of the following location: \
+Apparently the Operations Manager Management Server received a package from SCCM, and this attempted to automatically install the SCOM Agent (Microsoft Monitoring Agent). And during this process the installer overwrote some registry keys inside of the following location: \
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\`
 
  > ## Precaution
