@@ -1,7 +1,7 @@
 ---
 layout: page
 title: System Center Virtual Machine Manager
-permalink: /blog/categories/SystemCenter_VirtualMachineManager/
+permalink: /blog/categories/virtualMachineManager/
 ---
 
 <h5> Posts by Category : {{ page.title }} </h5>
