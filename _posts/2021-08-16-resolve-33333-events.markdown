@@ -13,7 +13,7 @@ description: {{ post.summary }}
 
 keywords: resolve 33333 event id, scom management server 33333, event 33333, scom
 permalink: /blog/resolve-33333-events/
-url: {{site.url}}{{site.baseurl}}{{ pageurl }}
+url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
  I had a case recently where my customer was having issues with the following Event ID 33333 on all the Management Servers in the Management Group.
  

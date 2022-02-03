@@ -13,7 +13,7 @@ description: {{ post.summary }}
 
 keywords: certificate request, from scratch certificate request, how to create certificate request, how to make cert request, scom certificate request, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate, How to monitor untrusted servers in SCOM, How do I create a SCOM client certificate
 permalink: /blog/request-offline-certificate-for-off-domain-server/
-url: {{site.url}}{{site.baseurl}}{{ pageurl }}
+url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
 In the below example we are assuming your machine is named **IIS-2019**.
 

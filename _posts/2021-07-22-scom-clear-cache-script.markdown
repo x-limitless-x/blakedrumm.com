@@ -14,7 +14,7 @@ description: {{ post.summary }}
 
 keywords: clear scom cache, clear cache for scom, Management Server clear cache, clear gateway cache, clear agent cache, clean gateway, clean management server, clean agent, clean MS
 permalink: /blog/clear-scomcache/
-url: {{site.url}}{{site.baseurl}}{{ pageurl }}
+url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
 <sub>Article last updated on December 29th, 2021</sub>
 

@@ -16,7 +16,7 @@ description: {{ post.summary }}
 
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
-url: {{site.url}}{{site.baseurl}}{{ pageurl }}
+url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
 # Download Link
 [https://aka.ms/SCOM-DataCollector](https://aka.ms/SCOM-DataCollector)
