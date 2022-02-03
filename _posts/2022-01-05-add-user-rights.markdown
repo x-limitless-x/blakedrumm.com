@@ -105,7 +105,7 @@ PassThru object to allow manipulation / filtering:
 .\Get-UserRights.ps1 -PassThru | ? {$_.Privilege -match 'SeServiceLogonRight'}
 ```
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/add-and-check-user-rights-assignment)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

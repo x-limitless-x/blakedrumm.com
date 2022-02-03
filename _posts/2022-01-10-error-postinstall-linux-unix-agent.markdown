@@ -89,7 +89,7 @@ The piece of the message above that stood out to me was this line:
 
 I asked the customer to take a look at their Environmental Variables in `/etc/profile` and verify if there are any custom lines in there. We noticed there were custom lines, __we removed these lines and attempted the installation again, it succeeded!__
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/error-postinstall-linux-unix-agent)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
