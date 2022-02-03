@@ -133,7 +133,7 @@ ___
 
 We reviewed the current SQL Logs and found that there were authentication failures that indicated the __Computer Account__ for the SCOM Management Server didnt have permission to the Database. This lead us to check the __Default Action Account__ in Run As Profiles. We modified the __Default Action Account__ for the Management Servers to be assigned an __Windows Action Account__ instead of __Local System__. This resolved the issue and now Notifications and Alerts are being being sent normally.
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-notifications-and-alerts-stopped-working/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

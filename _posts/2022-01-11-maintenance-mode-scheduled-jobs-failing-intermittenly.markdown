@@ -21,7 +21,7 @@ __In order to resolve this issue we had to run the SCOM Console as the SDK (Syst
 
 So the issue is with the users personal Active Directory account that was used to set up the Maintenance Schedule.
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/maintenace-mode-scheduled-jobs-failing-intermittently)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
