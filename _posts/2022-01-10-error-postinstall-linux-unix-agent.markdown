@@ -12,7 +12,6 @@ description: {{ post.summary }}
 
 keywords: unix linux agent install issue, scom solaris agent install issue, scom solaris install, unable to discover solaris server, solaris scom, scom linux agent install
 permalink: /blog/error-postinstall-linux-unix-agent/
-url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
 My customer was running Solaris 10 (SunOS 5.10), they were having issues when attempting to install the SCOM Agent (scx-1.6.8-1.solaris.10.sparc.sh). So we dug further into things to verify why the installer was failing on the __PostInstall__ step.
 

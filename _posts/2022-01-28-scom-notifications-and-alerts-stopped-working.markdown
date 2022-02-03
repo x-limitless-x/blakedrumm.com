@@ -12,7 +12,6 @@ description: {{ post.summary }}
 
 keywords: scom notifications failed, opsmgr notifications, operations manager notifications, alerts not updating, no new alerts, alerts stalled, all management server resource pool failure
 permalink: /blog/scom-notifications-and-alerts-stopped-working/
-url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
  
  First thing I noticed was that the SCOM Management Servers had an SCOM Agent Installed on it. We verifing by navigating to the following location, you can see the __Agent Management Groups__:

@@ -13,7 +13,6 @@ description: {{ post.summary }}
 
 keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts
 permalink: /blog/acs-collector-troubleshooting-tips/
-url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
 A customer of mine was having problems with Audit Collection Services in SCOM 2019 UR3 and I noticed that there are not alot of troubleshooting guides out there. So it would be a good idea to document this information here.
  

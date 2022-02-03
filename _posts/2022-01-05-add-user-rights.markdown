@@ -12,7 +12,6 @@ description: {{ post.summary }}
 
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell, add logon locally, powershell local security policy, logon as batch powershell, local user account rights
 permalink: /blog/add-and-check-user-rights-assignment/
-url: {{site.url}}{{site.baseurl}}{{ post.permalink }}
 ---
 <sub>Article last updated on January 10th, 2022</sub>
 
