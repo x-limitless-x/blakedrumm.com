@@ -13,6 +13,7 @@ description: {{ post.summary }}
 
 keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts
 permalink: /blog/acs-collector-troubleshooting-tips/
+url: {{site.url}}{{site.baseurl}}{{ pageurl }}
 ---
 A customer of mine was having problems with Audit Collection Services in SCOM 2019 UR3 and I noticed that there are not alot of troubleshooting guides out there. So it would be a good idea to document this information here.
  
@@ -211,7 +212,7 @@ GO
 
 Be mindful that the is usually run overnight when there is not alot of activity in the ACS Database. So take precautions if changing this when alot of logons/logoffs are happening in your environment.
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/acs-collector-troubleshooting-tips/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

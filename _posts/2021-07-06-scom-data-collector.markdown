@@ -16,6 +16,7 @@ description: {{ post.summary }}
 
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
+url: {{site.url}}{{site.baseurl}}{{ pageurl }}
 ---
 # Download Link
 [https://aka.ms/SCOM-DataCollector](https://aka.ms/SCOM-DataCollector)
@@ -177,7 +178,7 @@ This will allow you to run every switch available currently, this supports the -
     .\DataCollector.ps1 -All -Servers Agent1
     .\DataCollector.ps1 -All -Yes
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-data-collector)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 ## Welcome to GitHub Pages

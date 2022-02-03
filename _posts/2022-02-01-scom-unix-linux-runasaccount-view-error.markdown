@@ -12,6 +12,7 @@ description: {{ post.summary }}
 
 keywords: scom unix linux, scom unix runas accounts, scom runas account, unix linux runas account view error, linux error runas accounts, scom runas account view error
 permalink: /blog/scom-unix-linux-runasaccount-view-error/
+url: {{site.url}}{{site.baseurl}}{{ pageurl }}
 ---
  
 I received a case today for a customer who is having issues when attempting to open the RunAs Account view for Unix/Linux RunAs Accounts in the SCOM Console (__Administration Tab-> Run As Configuration -> Unix/Linux Accounts__). We were unable to return any Unix/Linux RunAs Accounts in the SCOM Console, even though we can create new ones, they are not populating in the list of RunAs Accounts for Unix/Linux.
@@ -108,7 +109,7 @@ Get-SCOMRunAsAccount | Where {$_.Name -eq "Test"} | Remove-SCOMRunAsAccount
 # Conclusion
 Removing the __Orphaned RunAs account__ allowed the Unix/Linux RunAs Account view to populate as intended. You can only remove these Orphaned RunAs accounts with the Powershell Commands: `Get-SCOMRunAsAccount` and `Remove-SCOMRunAsAccount`
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-runasaccount-view-error/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

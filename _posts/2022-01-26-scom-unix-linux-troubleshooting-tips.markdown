@@ -11,6 +11,7 @@ summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 description: {{ post.summary }}
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
+url: {{site.url}}{{site.baseurl}}{{ pageurl }}
 ---
 ## Verify the versions for all prerequisite software
 You can run the following command on a monitored and not monitored server to compare the software installed:
@@ -95,7 +96,7 @@ Run the following command to gather the MB / GB size of a file:
 du -sh /var/opt/microsoft/scx/log/scx.log
 ```
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-troubleshooting-tips)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

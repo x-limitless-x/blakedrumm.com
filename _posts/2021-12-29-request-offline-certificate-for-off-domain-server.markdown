@@ -13,6 +13,7 @@ description: {{ post.summary }}
 
 keywords: certificate request, from scratch certificate request, how to create certificate request, how to make cert request, scom certificate request, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate, How to monitor untrusted servers in SCOM, How do I create a SCOM client certificate
 permalink: /blog/request-offline-certificate-for-off-domain-server/
+url: {{site.url}}{{site.baseurl}}{{ pageurl }}
 ---
 In the below example we are assuming your machine is named **IIS-2019**.
 
@@ -91,7 +92,7 @@ Now you just need to import the Certificate with MOMCertImport (located on the S
 Right Click and Run the Program as Administrator, select the certificate you imported: \
 ![Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png){:class="img-fluid"}
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-workgroup-agent)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
