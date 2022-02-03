@@ -5,6 +5,7 @@ date:   '2022-01-11 16:46:00 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/maintenance-mode-schedule.png
+image: {{ post.thumbnail }}
 summary: I recently had a case where my customer was experiencing an issue with Scheduled Maintenance Mode failing to put objects into maintenance mode intermittently. SCOM 2019 Management Group.
 
 description: {{ post.summary }}

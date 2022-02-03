@@ -5,6 +5,7 @@ date:   '2022-01-28 14:21:52 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/SCOM-Notification-Bell-Email.png
+image: {{ post.thumbnail }}
 summary: Here is how I resolved an issue my customer had with not receiving notification emails for alerts in SCOM. They also noticed there are no new alerts in several days.
 
 description: {{ post.summary }}

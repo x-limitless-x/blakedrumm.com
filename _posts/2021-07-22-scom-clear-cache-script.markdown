@@ -5,6 +5,7 @@ date:   '2021-07-22 01:09:42 -0500'
 categories: powershell operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/clear-scomcache.png
+image: {{ post.thumbnail }}
 summary: >- # this means to ignore newlines
   Clear your Agent, Management Server, or Gateway SCOM Cache with an easy to use Powershell Script!
   The script also utilizes Invoke-Command, be sure to enable PSRemoting to allow you to utilize this script across servers if needed.

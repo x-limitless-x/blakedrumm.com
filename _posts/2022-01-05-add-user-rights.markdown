@@ -5,6 +5,7 @@ date:   '2022-01-05 23:41:26 -0500'
 categories: powershell operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/add-user-rights.png
+image: {{ post.thumbnail }}
 summary: You can check or add User Rights Assignment (Remotely or Locally) with the following Powershell scripts.
 
 description: {{ post.summary }}
