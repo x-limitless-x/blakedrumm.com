@@ -91,7 +91,7 @@ Now you just need to import the Certificate with MOMCertImport (located on the S
 Right Click and Run the Program as Administrator, select the certificate you imported: \
 ![Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png){:class="img-fluid"}
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com{{ post.permalink }})
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-off-domain-server/)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
