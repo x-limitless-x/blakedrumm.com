@@ -8,6 +8,8 @@ thumbnail: /assets/img/posts/event-33333.png
 summary: >- # this means to ignore newlines
   Resolve issues detected with SCOM Event ID 33333 which can occur on any Management Server.
 
+description: {{ post.summary }}
+
 keywords: resolve 33333 event id, scom management server 33333, event 33333, scom
 permalink: /blog/resolve-33333-events/
 ---
