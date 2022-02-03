@@ -17,6 +17,9 @@ permalink: /blog/scom-data-collector/
 # Download Link
 [https://aka.ms/SCOM-DataCollector](https://aka.ms/SCOM-DataCollector)
 
+[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/latest/SCOM-DataCollector.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DataCollector) \
+[![Download Count Releases](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/total.svg?style=for-the-badge&color=brightgreen)](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases)
+
 # Personal Webpage
 [https://files.blakedrumm.com/SCOM-DataCollector.zip](https://files.blakedrumm.com/SCOM-DataCollector.zip)
 
