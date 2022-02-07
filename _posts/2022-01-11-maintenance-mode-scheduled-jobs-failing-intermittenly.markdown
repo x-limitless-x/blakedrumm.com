@@ -19,7 +19,8 @@ The customer had setup Maintenance Scheduled Jobs that were to run Daily against
 
 __In order to resolve this issue we had to run the SCOM Console as the SDK (System Center Data Access Service) Account and recreate the Maintenance Scheduled Jobs. This allowed the Maintenance Mode Scheduled jobs to run without any issues.__
 
-So the issue is with the users personal Active Directory account that was used to set up the Maintenance Schedule.
+## Conclusion
+So the issue was due to the users' personal Active Directory account being locked out when setting up the Maintenance Schedule.
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/maintenance-mode-scheduled-jobs-failing-intermittently/)
 
