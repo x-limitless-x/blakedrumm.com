@@ -21,7 +21,7 @@ Apparently the Operations Manager Management Server received a package from SCCM
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\`
 
  > ## Precaution
- > Take care when directly modifying the Registry via [regedit.exe](https://support.microsoft.com/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11). If you insist on making changes, always backup the registry first. There is always the possiblity you can cause more damage than you are fixing.
+ > Take care when directly modifying the Registry via [regedit.exe](https://support.microsoft.com/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11). If you insist on making changes, always backup the registry first. There is always the possibility you can cause more damage than you are fixing.
 
 I had the customer Delete the __Agent Management Groups__ key and we matched / created the Registry Values for __Server Management Groups__ compared to my lab environment. We needed to create the Management Group Name Key in my situation.
 ![Management Server - Good Registry Keys](/assets/img/posts/management-server-registry.png){:class="img-fluid"}
