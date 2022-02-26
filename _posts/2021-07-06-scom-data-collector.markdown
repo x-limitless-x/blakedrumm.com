@@ -6,14 +6,12 @@ categories: powershell projects operationsManager
 title: System Center Operations Manager - Data Collector
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-data-collector.png
-image: {{ post.thumbnail }}
+image:
+  path: {{ post.thumbnail }}
 summary: >- # this means to ignore newlines
   With the SCOM Data Collector you can collect a lot of useful data to analyze and troubleshoot
   your System Center Operations Manager Environment! This is a go to Tool for any SCOM Admin 
   that wants a wholistic view of their configuration and setup. Written in Powershell!
-image:
-  path: /assets/img/posts/scom-data-collector.png
-
 description: {{ post.summary }}
 
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
