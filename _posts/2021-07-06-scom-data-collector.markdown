@@ -12,7 +12,6 @@ summary: >- # this means to ignore newlines
   your System Center Operations Manager Environment! This is a go to Tool for any SCOM Admin 
   that wants a wholistic view of their configuration and setup. Written in Powershell!
 description: {{ post.summary }}
-url: https://blakedrumm.com/blog/scom-data-collector/
 
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
