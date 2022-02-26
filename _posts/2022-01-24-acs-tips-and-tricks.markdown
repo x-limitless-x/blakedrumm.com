@@ -5,11 +5,12 @@ date:   '2022-01-24 20:22:16 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/system-center-operations-manager-acs.png
-image: {{ post.thumbnail }}
+image: {{ page.thumbnail }}
 summary: >- # this means to ignore newlines
   Tips for troubleshooting System Center Operations Manager Audit Collection Services issues.
 
-description: {{ post.summary }}
+description: {{ page.summary }}
+url: {{site.url}}{{site.baseurl}}
 
 keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts
 permalink: /blog/acs-collector-troubleshooting-tips/

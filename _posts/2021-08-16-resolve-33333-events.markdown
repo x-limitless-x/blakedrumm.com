@@ -5,11 +5,12 @@ date:   '2021-08-16 02:08:42 -0500'
 categories: troubleshooting guides powershell operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/event-33333.png
-image: {{ post.thumbnail }}
+image: {{ page.thumbnail }}
 summary: >- # this means to ignore newlines
   Resolve issues detected with SCOM Event ID 33333 which can occur on any Management Server.
 
-description: {{ post.summary }}
+description: {{ page.summary }}
+url: {{site.url}}{{site.baseurl}}
 
 keywords: resolve 33333 event id, scom management server 33333, event 33333, scom
 permalink: /blog/resolve-33333-events/
