@@ -17,8 +17,6 @@ You can run the following command on a monitored and not monitored server to com
 ```shell
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
-
-__Working Example:__
 <div class="responsive-table">
 <table>
       <thead>
@@ -39,6 +37,8 @@ __Working Example:__
       </tbody>
     </table>
     </div>
+    
+__Working Example:__
 
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png){:class="img-fluid"}
 
