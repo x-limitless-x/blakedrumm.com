@@ -13,7 +13,6 @@ summary: >- # this means to ignore newlines
   that wants a wholistic view of their configuration and setup. Written in Powershell!
 
 description: {{ post.summary }}
-url: {{site.url}}{{site.baseurl}}
 
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
