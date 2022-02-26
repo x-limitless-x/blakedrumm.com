@@ -5,12 +5,11 @@ date:   '2021-12-29 12:03:42 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/local-machine-certificate.png
-image: {{ page.thumbnail }}
+image: {{ post.thumbnail }}
 summary: >- # this means to ignore newlines
   Generate a certificate request with an .inf file. This will allow you to specify all the settings that are required and give you more control over your certificate request.
 
-description: {{ page.summary }}
-url: {{site.url}}{{site.baseurl}}
+description: {{ post.summary }}
 
 keywords: certificate request, from scratch certificate request, how to create certificate request, how to make cert request, scom certificate request, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate, How to monitor untrusted servers in SCOM, How do I create a SCOM client certificate
 permalink: /blog/request-offline-certificate-for-off-domain-server/

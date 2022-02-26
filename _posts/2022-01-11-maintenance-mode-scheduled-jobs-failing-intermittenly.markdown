@@ -5,11 +5,10 @@ date:   '2022-01-11 16:46:00 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/maintenance-mode-schedule.png
-image: {{ page.thumbnail }}
+image: {{ post.thumbnail }}
 summary: I recently had a case where my customer was experiencing an issue with Scheduled Maintenance Mode failing to put objects into maintenance mode intermittently. SCOM 2019 Management Group.
 
-description: {{ page.summary }}
-url: {{site.url}}{{site.baseurl}}
+description: {{ post.summary }}
 
 keywords: maintenance mode failing, scheduled maintenance mode failing, maintenance mode issue, maintenance mode not running automatically, maintenance schedules issue, maintenance schedules not running
 permalink: /blog/maintenance-mode-scheduled-jobs-failing-intermittently/

@@ -5,12 +5,10 @@ date:   '2022-01-26 12:21:52 -0500'
 categories: troubleshooting linux operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
-image: {{ page.thumbnail }}
+image: {{ post.thumbnail }}
 summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 
-description: {{ page.summary }}
-url: {{site.url}}{{site.baseurl}}
-
+description: {{ post.summary }}
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
