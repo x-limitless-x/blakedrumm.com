@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to create a Certificate Template for Operations Manager in the Certificate Authority"
+title:  "How to create a Certificate Template for Operations Manager"
 date:   '2022-02-28 12:12:46 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
@@ -14,24 +14,24 @@ description: {{ post.summary }}
 keywords: certificate template scom, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate, How to monitor untrusted servers in SCOM, How do I create a SCOM client certificate
 permalink: /blog/create-operations-manager-certificate-template/
 ---
-# Steps to Create Certificate Template
-## Step 1
+## Steps to Create Certificate Template
+### Step 1
 Open the Certificate Authority Tool: \
 ![Open the Certificate Authority Tool](/assets/img/posts/certificate-authority-template-guide/step-1.png){:class="img-fluid"}
 
-## Step 2
+### Step 2
 Expand the tree on the left and Right Click on **Certificate Templates** and select **Manage**: \
 ![Open the Manage Certificate Templates Snap-In](/assets/img/posts/certificate-authority-template-guide/step-2.png){:class="img-fluid"}
 
-## Step 3
+### Step 3
 Right Click on the **IPSec (Offline request)** template display name, and select Duplicate Template: \
 ![Select Duplicate Template on the IPSec (Offline request) template](/assets/img/posts/certificate-authority-template-guide/step-3.png){:class="img-fluid"}
 
-## Step 4
+### Step 4
 Confirm the **Compatibility** tab: \
 ![Confirm Compatibility Tab](/assets/img/posts/certificate-authority-template-guide/step-4.png){:class="img-fluid"}
 
-## Step 5
+### Step 5
 Confirm you have modified the following in the **General** Tab:
  - **Template Display Name:** \
    `System Center Operations Manager`
@@ -41,24 +41,24 @@ Confirm you have modified the following in the **General** Tab:
 
 ![Confirm General Tab](/assets/img/posts/certificate-authority-template-guide/step-5.png){:class="img-fluid"}
 
-## Step 6
+### Step 6
 Confirm you have modified the following in the **Request Handling Tab**:
  - Check **Allow private key to be exportable**
 
 ![Confirm Request Handling Tab](/assets/img/posts/certificate-authority-template-guide/step-6.png){:class="img-fluid"}
 
-## Step 7
+### Step 7
 Confirm you have modified the following in the **Cryptography Tab**: 
   - Under **Providers** Check **Microsoft Enhanced Cryptographic Provider v1.0** and move it to below **Microsoft RSA SChannel Cryptographic Provider**
   - Verify **Minimum key size** is set to `2048`
 
 ![Confirm Cryptography Tab](/assets/img/posts/certificate-authority-template-guide/step-7.png){:class="img-fluid"}
 
-## Step 8
+### Step 8
 Confirm that **None** is selected for the **Key Attestation Tab**: \
 ![Confirm Key Attestation Tab](/assets/img/posts/certificate-authority-template-guide/step-8.png){:class="img-fluid"}
 
-## Step 9
+### Step 9
 Confirm you have modified the following in the **Extensions Tab**: \
 ![Confirm Extensions Tab](/assets/img/posts/certificate-authority-template-guide/step-9.png){:class="img-fluid"}
 
@@ -76,7 +76,7 @@ Confirm you have modified the following in the **Extensions Tab**: \
       - Click **OK** \
     ![Confirm Extensions Tab - Key Usage Extension Adding](/assets/img/posts/certificate-authority-template-guide/step-9-3.png){:class="img-fluid"}
 
-## Step 10
+### Step 10
 Confirm you have modified the following in the **Security Tab**:
   - You can add multiple types of objects here: Users, Computers, Service Accounts, Groups, or Built-in security principals. \
   For simplicity I will keep the defaults and **only** add the following permissions on **Authenticated Users**:
@@ -86,7 +86,7 @@ Confirm you have modified the following in the **Security Tab**:
       - Click **OK** to confirm / create the Certificate Template \
       ![Certificate Template Created](/assets/img/posts/certificate-authority-template-guide/step-10-1.png){:class="img-fluid"}
 
-## Step 11
+### Step 11
 Close the certificate templates Console.
  - In the Certificate Authority tool, right click on **Certificate Templates**
    - Hover over **New** -> Select **Certificate Template to Issue** \
@@ -117,13 +117,13 @@ Verify you are seeing the Certificate Template on your Management Server.
     - Click on **Enroll** \
     ![Configure Certificate](/assets/img/posts/certificate-authority-template-guide/step-12-3.png){:class="img-fluid"}
 
-## Step 13
+### Step 13
 In order to use certificates with System Center Operations Manager you will need to generate / perform run the MOMCertImport tool on atleast one of the Management Servers, and any servers that will communicate via Certificates (DMZ servers, Workgroup Machines, etc.).
   - `MOMCertImport.exe` is located in your System Center Operations Manager Installation Media inside of `SupportTools\AMD64`.
     - Right Click on `MOMCertImport.exe` and select **Run as administrator**
       - Select the certificate you generated via the System Center Operations Manager Certificate Template.
 
-## Step 14
+### Step 14
 Restart the Microsoft Monitoring Agent with the following Powershell Command:
 ```powershell
 Restart-Service HealthService
