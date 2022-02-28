@@ -4,7 +4,7 @@ title:  "How to create a Certificate Template for Operations Manager in the Cert
 date:   '2022-02-28 12:12:46 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
-thumbnail: /assets/img/posts/local-machine-certificate.png
+thumbnail: /assets/img/posts/certificate-authority-template-guide/certificate-authority.png
 image: {{ post.thumbnail }}
 summary: >- # this means to ignore newlines
   This is a guide on how to create your own certificate template for System Center Operations Manager on the Certificate Authority server.
