@@ -89,9 +89,9 @@ Confirm you have modified the following in the **Security Tab**:
 ## Step 11
 Close the certificate templates Console.
  - In the Certificate Authority tool, right click on **Certificate Templates**
-   - Hover over **New** -> Select **Certificate Template to Issue**
+   - Hover over **New** -> Select **Certificate Template to Issue** \
   ![Deploy with Certificate Template to Issue](/assets/img/posts/certificate-authority-template-guide/step-11.png){:class="img-fluid"}
-   - Select the Certificate Template Display Name you created in Step 5:
+   - Select the Certificate Template Display Name you created in Step 5: \
   ![Select Certificate Template you Created](/assets/img/posts/certificate-authority-template-guide/step-11-1.png){:class="img-fluid"}
      - Click **OK**
 
@@ -99,7 +99,7 @@ Close the certificate templates Console.
 Verify you are seeing the Certificate Template on your Management Server.
   - Open Local Machine Certificate Store: `certlm.msc`
   - Open Personal -> Certificates
-  - Right Click Certificates and hover over **All Tasks** -> Select **Request New Certificate...**
+  - Right Click Certificates and hover over **All Tasks** -> Select **Request New Certificate...** \
   ![Select Request New Certificate on Management Server](/assets/img/posts/certificate-authority-template-guide/step-12.png){:class="img-fluid"}
     - Skip through the first screen
       - Click **Next**
