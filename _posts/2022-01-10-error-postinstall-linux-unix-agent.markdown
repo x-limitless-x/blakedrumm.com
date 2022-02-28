@@ -8,8 +8,6 @@ thumbnail: /assets/img/posts/scx-agent-list.png
 image: {{ post.thumbnail }}
 summary: I recently had a case where my customer was experiencing an issue when attempting to install the SCOM Agent onto a Solaris 10 server. SCOM 2019 Management Group.
 
-description: {{ post.summary }}
-
 keywords: unix linux agent install issue, scom solaris agent install issue, scom solaris install, unable to discover solaris server, solaris scom, scom linux agent install
 permalink: /blog/error-postinstall-linux-unix-agent/
 ---

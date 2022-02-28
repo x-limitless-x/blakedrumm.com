@@ -9,8 +9,6 @@ image: {{ post.thumbnail }}
 summary: >- # this means to ignore newlines
   Tips for troubleshooting System Center Operations Manager Audit Collection Services issues.
 
-description: {{ post.summary }}
-
 keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts
 permalink: /blog/acs-collector-troubleshooting-tips/
 ---

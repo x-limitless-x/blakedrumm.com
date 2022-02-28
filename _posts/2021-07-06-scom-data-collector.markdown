@@ -12,31 +12,29 @@ summary: >- # this means to ignore newlines
   your System Center Operations Manager Environment! This is a go to Tool for any SCOM Admin 
   that wants a wholistic view of their configuration and setup. Written in Powershell!
 
-description: {{ post.summary }}
-
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
 ---
-# Download Link
+## Download Link
 [https://aka.ms/SCOM-DataCollector](https://aka.ms/SCOM-DataCollector)
 
 [![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/latest/SCOM-DataCollector.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DataCollector){:class="img-fluid"} \
 [![Download Count Releases](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/total.svg?style=for-the-badge&color=brightgreen)](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases){:class="img-fluid"}
 
-# Personal Webpage
+## Personal Webpage
 [https://files.blakedrumm.com/SCOM-DataCollector.zip](https://files.blakedrumm.com/SCOM-DataCollector.zip)
 
-# Github Link
+## Github Link
 [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest)
 
-# Requirements
+## Requirements
 System Center Operations Manager - Management Server
 
 Administrator Privileges
 
 Powershell 4+ (will still run on Powershell 3)
 
-# Instructions
+## Instructions
 
 [Download zip file](https://aka.ms/SCOM-DataCollector) and extract zip file to a directory (ex. C:\Data Collector). Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as: \
 `cd C:\Data Collector`
@@ -81,18 +79,18 @@ This script has the ability to gather the following information:
 
 ----
 
-# Examples
+## Examples
 
 ##### Note: If you know you have Query rights against the DB(s) run any Switch (-Command) with -AssumeYes
  
 
-## Available Switches
+### Available Switches
 Every Switch Available:
 
     .\DataCollector.ps1 -Servers -GetRunasAccounts -GetEventLogs -CheckCertificates -CheckTLS -ExportMPs -GPResult -MSInfo32 -SQLLogs -SQLOnly -CaseNumber -AssumeYes -GenerateHTML -All -PingAll
 
 
-## Built in menu
+### Built in menu
 
 To see the built in menu, run the script with no arguments or switches:
 
@@ -102,7 +100,7 @@ You can also right click the `.ps1` file and Run with Powershell.
 
 
 
-## Certificates
+### Certificates
 
 To Check the Certificate(s) Installed on the Management Server(s) in the Management Group, and an Server:
 
@@ -113,7 +111,7 @@ To Check the Certificate(s) Installed on the Management Server(s) in the Managem
     .\DataCollector.ps1 -CheckCertificates
 
 
-## Gather only SQL Queries
+### Gather only SQL Queries
 
 To gather only the SQL Queries run the following:
 
@@ -126,7 +124,7 @@ If you know the account running the Data Collector has permissions against the S
 
 
 
-## Event Logs
+### Event Logs
 
 To gather Event Logs from 3 Agents and the Management Server(s) in the Current Management Group:
 
@@ -140,7 +138,7 @@ To just gather the Event Logs from the Management Server(s) in the Management Gr
 
 
 
-## Management Packs
+### Management Packs
 
 To Export Installed Management Packs:
 
@@ -150,7 +148,7 @@ To Export Installed Management Packs:
 
 
 
-## RunAs Accounts
+### RunAs Accounts
 
 To Export RunAs Accounts from the Management Server:
 
@@ -160,7 +158,7 @@ To Export RunAs Accounts from the Management Server:
 
 
 
-## Check TLS 1.2 Readiness
+### Check TLS 1.2 Readiness
 
 To Run the TLS 1.2 Hardening Readiness Checks on every Management Server and SQL SCOM DB Server(s) in the Management Group:
 
@@ -170,7 +168,7 @@ To Run the TLS 1.2 Hardening Readiness Checks on every Management Server and SQL
 
 
 
-## All Switches
+### All Switches
 This will allow you to run every switch available currently, this supports the -Servers Switch:
 
     .\DataCollector.ps1 -All

@@ -8,7 +8,6 @@ thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
 image: {{ post.thumbnail }}
 summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 
-description: {{ post.summary }}
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---

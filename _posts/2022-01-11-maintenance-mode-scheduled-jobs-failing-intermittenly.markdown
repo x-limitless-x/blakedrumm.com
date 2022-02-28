@@ -8,8 +8,6 @@ thumbnail: /assets/img/posts/maintenance-mode-schedule.png
 image: {{ post.thumbnail }}
 summary: I recently had a case where my customer was experiencing an issue with Scheduled Maintenance Mode failing to put objects into maintenance mode intermittently. SCOM 2019 Management Group.
 
-description: {{ post.summary }}
-
 keywords: maintenance mode failing, scheduled maintenance mode failing, maintenance mode issue, maintenance mode not running automatically, maintenance schedules issue, maintenance schedules not running
 permalink: /blog/maintenance-mode-scheduled-jobs-failing-intermittently/
 ---
