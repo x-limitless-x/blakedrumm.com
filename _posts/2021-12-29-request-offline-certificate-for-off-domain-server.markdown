@@ -96,7 +96,7 @@ Lastly, you will need to restart the Microsoft Monitoring Agent (HealthService).
 Restart-Service HealthService -Force
 ```
 
-After restarting the Microsoft Monitoring Agent (HealthService). You will wait until you see the following Event ID in the Operations Manager Event Log:
+After restarting the Microsoft Monitoring Agent (HealthService). You will wait until you see the following Event ID in the Operations Manager Event Log (20053) confirming that the certificate has been loaded:
 ```
 Log Name: Operations Manager
 Source: OpsMgr Connector

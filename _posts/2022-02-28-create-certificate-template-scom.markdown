@@ -124,6 +124,27 @@ In order to use certificates with System Center Operations Manager you will need
     - Right Click on `MOMCertImport.exe` and select **Run as administrator**
       - Select the certificate you generated via the System Center Operations Manager Certificate Template.
 
+## Step 14
+Restart the Microsoft Monitoring Agent with the following Powershell Command:
+```powershell
+Restart-Service HealthService -Force
+```
+
+After restarting the Microsoft Monitoring Agent (HealthService). You will wait until you see the following Event (**Event ID:** 20053) in the Operations Manager Event Log confirming that the certificate has been loaded:
+```
+Log Name: Operations Manager
+Source: OpsMgr Connector
+Date: 2/28/2022 10:35:36 AM
+Event ID: 20053
+Task Category: None
+Level: Information
+Keywords: Classic
+User: N/A
+Computer: IIS-2019.contoso.com
+Description:
+The OpsMgr Connector has loaded the specified authentication certificate successfully.
+```
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/create-operations-manager-certificate-template/)
 
 <!--
