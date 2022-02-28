@@ -91,6 +91,29 @@ Now you just need to import the Certificate with MOMCertImport (located on the S
 Right Click and Run the Program as Administrator, select the certificate you imported: \
 ![Confirm Certificate in MOMCertImport](/assets/img/posts/momcertimport-certificate.png){:class="img-fluid"}
 
+Lastly, you will need to restart the Microsoft Monitoring Agent (HealthService). You can do this via Powershell with this command:
+```powershell
+Restart-Service HealthService -Force
+```
+
+After restarting the Microsoft Monitoring Agent (HealthService). You will wait until you see the following Event ID in the Operations Manager Event Log:
+```
+Log Name: Operations Manager
+Source: OpsMgr Connector
+Date: 2/28/2022 10:35:36 AM
+Event ID: 20053
+Task Category: None
+Level: Information
+Keywords: Classic
+User: N/A
+Computer: IIS-2019.contoso.com
+Description:
+The OpsMgr Connector has loaded the specified authentication certificate successfully.
+```
+
+> **Don't forget the Management Server:** \
+> The Management Server also needs to have a certificate requested for itself, and imported into the Personal Store in the Local Machine Certificates. Otherwise the communication between the Management Server and the Agent or Gateway Server will not work via certificates.
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-off-domain-server/)
 
 <!--
