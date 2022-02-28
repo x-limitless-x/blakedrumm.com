@@ -60,6 +60,8 @@ Confirm that **None** is selected for the **Key Attestation Tab**: \
 
 ## Step 9
 Confirm you have modified the following in the **Extensions Tab**:
+![Confirm Extensions Tab](/assets/img/posts/certificate-authority-template-guide/step-9.png){:class="img-fluid"}
+
   - Click on **Application Policies** and **Edit**
     - Remove **IP security IKE intermediate** \
     ![Confirm Extensions Tab - Application Policies Extension Removal](/assets/img/posts/certificate-authority-template-guide/step-9-1.png){:class="img-fluid"}
@@ -74,8 +76,6 @@ Confirm you have modified the following in the **Extensions Tab**:
       - Click **OK** \
     ![Confirm Extensions Tab - Key Usage Extension Adding](/assets/img/posts/certificate-authority-template-guide/step-9-3.png){:class="img-fluid"}
 
-![Confirm Extensions Tab](/assets/img/posts/certificate-authority-template-guide/step-9.png){:class="img-fluid"}
-
 ## Step 10
 Confirm you have modified the following in the **Security Tab**:
   - You can add multiple types of objects here: Users, Computers, Service Accounts, Groups, or Built-in security principals. \
@@ -83,7 +83,7 @@ Confirm you have modified the following in the **Security Tab**:
     -  **Read**
     -  **Enroll** \
     ![Confirm Security Tab](/assets/img/posts/certificate-authority-template-guide/step-10.png){:class="img-fluid"}
-      - Click **OK** to confirm / create the Certificate Template
+      - Click **OK** to confirm / create the Certificate Template \
       ![Certificate Template Created](/assets/img/posts/certificate-authority-template-guide/step-10-1.png){:class="img-fluid"}
 
 ## Step 11
@@ -115,7 +115,7 @@ Verify you are seeing the Certificate Template on your Management Server.
     ![Configure Certificate](/assets/img/posts/certificate-authority-template-guide/step-12-2.png){:class="img-fluid"}
       - Click **OK**
 
-    - Click on **Enroll**
+    - Click on **Enroll** \
     ![Configure Certificate](/assets/img/posts/certificate-authority-template-guide/step-12-3.png){:class="img-fluid"}
 
 ## Step 13
