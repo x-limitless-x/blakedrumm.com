@@ -49,8 +49,8 @@ Confirm you have modified the following in the **Request Handling Tab**:
 
 ## Step 7
 Confirm you have modified the following in the **Cryptography Tab**: 
-  - Check **Microsoft Enhanced Cryptographic Provider v1.0** and move it to below **Microsoft RSA SChannel Cryptographic Provider**
-  - Verify Minimum key size: `2048`
+  - Under **Providers** Check **Microsoft Enhanced Cryptographic Provider v1.0** and move it to below **Microsoft RSA SChannel Cryptographic Provider**
+  - Verify **Minimum key size** is set to `2048`
 
 ![Confirm Cryptography Tab](/assets/img/posts/certificate-authority-template-guide/step-7.png){:class="img-fluid"}
 
