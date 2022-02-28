@@ -127,7 +127,7 @@ In order to use certificates with System Center Operations Manager you will need
 ## Step 14
 Restart the Microsoft Monitoring Agent with the following Powershell Command:
 ```powershell
-Restart-Service HealthService -Force
+Restart-Service HealthService
 ```
 
 After restarting the Microsoft Monitoring Agent (HealthService). You will wait until you see the following Event (**Event ID:** 20053) in the Operations Manager Event Log confirming that the certificate has been loaded:

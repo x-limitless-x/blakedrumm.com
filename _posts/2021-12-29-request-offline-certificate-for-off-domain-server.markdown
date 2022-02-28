@@ -93,7 +93,7 @@ Right Click and Run the Program as Administrator, select the certificate you imp
 
 Lastly, you will need to restart the Microsoft Monitoring Agent (HealthService). You can do this via Powershell with this command:
 ```powershell
-Restart-Service HealthService -Force
+Restart-Service HealthService
 ```
 
 After restarting the Microsoft Monitoring Agent (HealthService). You will wait until you see the following Event ID in the Operations Manager Event Log (20053) confirming that the certificate has been loaded:
