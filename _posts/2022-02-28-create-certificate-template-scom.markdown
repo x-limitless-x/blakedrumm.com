@@ -37,19 +37,19 @@ Confirm you have modified the following in the **General** Tab:
    `System Center Operations Manager`
  - **Validity period:** \
    `5 years` (change this per your security policy)
- - Check &check; `Publish certificate in Active Directory`
+ - Check `Publish certificate in Active Directory`
 
 ![Confirm General Tab](/assets/img/posts/certificate-authority-template-guide/step-5.png){:class="img-fluid"}
 
 ## Step 6
 Confirm you have modified the following in the **Request Handling Tab**:
- - Check &check; **Allow private key to be exportable**
+ - Check **Allow private key to be exportable**
 
 ![Confirm Request Handling Tab](/assets/img/posts/certificate-authority-template-guide/step-6.png){:class="img-fluid"}
 
 ## Step 7
 Confirm you have modified the following in the **Cryptography Tab**: 
-  - Check &check; **Microsoft Enhanced Cryptographic Provider v1.0** and move it to below **Microsoft RSA SChannel Cryptographic Provider**
+  - Check **Microsoft Enhanced Cryptographic Provider v1.0** and move it to below **Microsoft RSA SChannel Cryptographic Provider**
   - Verify Minimum key size: `2048`
 
 ![Confirm Cryptography Tab](/assets/img/posts/certificate-authority-template-guide/step-7.png){:class="img-fluid"}
@@ -70,7 +70,7 @@ Confirm you have modified the following in the **Extensions Tab**:
         - Click **OK**
   - Click on **Key Usage** and **Edit**
     - Confirm you have checked:
-      - &check; **Make this extension critical**
+      -  **Make this extension critical**
       - Click **OK** \
     ![Confirm Extensions Tab - Key Usage Extension Adding](/assets/img/posts/certificate-authority-template-guide/step-9-3.png){:class="img-fluid"}
 
@@ -80,8 +80,8 @@ Confirm you have modified the following in the **Extensions Tab**:
 Confirm you have modified the following in the **Security Tab**:
   - You can add multiple types of objects here: Users, Computers, Service Accounts, Groups, or Built-in security principals. \
   For simplicity I will keep the defaults and **only** add the following permissions on **Authenticated Users**:
-    - &check; **Read**
-    - &check; **Enroll** \
+    -  **Read**
+    -  **Enroll** \
     ![Confirm Security Tab](/assets/img/posts/certificate-authority-template-guide/step-10.png){:class="img-fluid"}
       - Click **OK** to confirm / create the Certificate Template
       ![Certificate Template Created](/assets/img/posts/certificate-authority-template-guide/step-10-1.png){:class="img-fluid"}
@@ -105,7 +105,7 @@ Verify you are seeing the Certificate Template on your Management Server.
       - Click **Next**
     - Verify that you have selected **Active Directory Enrollment Policy**
       - Click **Next**
-    - Select the checkbox &check; next to the Certificate Template you created and click on the Warning sign below the Certificate Template, it says **click here to configure settings.**
+    - Select the checkbox  next to the Certificate Template you created and click on the Warning sign below the Certificate Template, it says **click here to configure settings.**
     ![Request Certificate from Management Server](/assets/img/posts/certificate-authority-template-guide/step-12.png){:class="img-fluid"}
 
     - You will notice that the Management Server can see the Certificate Template \
