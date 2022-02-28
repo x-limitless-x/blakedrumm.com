@@ -59,7 +59,7 @@ Confirm that **None** is selected for the **Key Attestation Tab**: \
 ![Confirm Key Attestation Tab](/assets/img/posts/certificate-authority-template-guide/step-8.png){:class="img-fluid"}
 
 ## Step 9
-Confirm you have modified the following in the **Extensions Tab**:
+Confirm you have modified the following in the **Extensions Tab**: \
 ![Confirm Extensions Tab](/assets/img/posts/certificate-authority-template-guide/step-9.png){:class="img-fluid"}
 
   - Click on **Application Policies** and **Edit**
