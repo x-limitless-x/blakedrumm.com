@@ -9,8 +9,6 @@ image: {{ post.thumbnail }}
 summary: >- # this means to ignore newlines
   This is a guide on how to create your own certificate template for System Center Operations Manager on the Certificate Authority server.
 
-description: {{ post.summary }}
-
 keywords: certificate template scom, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate, How to monitor untrusted servers in SCOM, How do I create a SCOM client certificate
 permalink: /blog/create-operations-manager-certificate-template/
 ---
