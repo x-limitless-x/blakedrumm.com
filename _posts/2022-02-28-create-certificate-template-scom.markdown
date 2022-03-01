@@ -93,7 +93,7 @@ Close the certificate templates Console.
   ![Select Certificate Template you Created](/assets/img/posts/certificate-authority-template-guide/step-11-1.png){:class="img-fluid"}
      - Click **OK**
 
-# Step 12
+### Step 12
 Verify you are seeing the Certificate Template on your Management Server.
   - Open Local Machine Certificate Store: `certlm.msc`
   - Open Personal -> Certificates
