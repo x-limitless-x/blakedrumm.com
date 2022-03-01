@@ -5,7 +5,7 @@ date:   '2021-12-29 12:03:42 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/local-machine-certificate.png
-image: {{ post.thumbnail }}
+
 summary: >- # this means to ignore newlines
   Generate a certificate request with an .inf file. This will allow you to specify all the settings that are required and give you more control over your certificate request.
   

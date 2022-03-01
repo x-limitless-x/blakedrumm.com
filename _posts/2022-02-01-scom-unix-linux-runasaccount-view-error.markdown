@@ -5,7 +5,7 @@ date:   '2022-02-01 16:45:21 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/unix-linux-runas-accounts-missing.png
-image: {{ post.thumbnail }}
+
 summary: 'Are you able to open the Unix / Linux RunAs Account List view, but it is empty? You also may be experiencing an issue with an intermittent XML Exception. This article may help you resolve this!'
 
 keywords: scom unix linux, scom unix runas accounts, scom runas account, unix linux runas account view error, linux error runas accounts, scom runas account view error
