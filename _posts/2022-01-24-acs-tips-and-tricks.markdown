@@ -16,6 +16,10 @@ A customer of mine was having problems with Audit Collection Services in SCOM 20
  
  ___
  
+## SQL Queries
+Here are some ACS SQL Queries you can utilize: \
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/SQL%20Queries/OperationsManagerAC](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/SQL%20Queries/OperationsManagerAC)
+ 
 ## Verify ACS collector performance
 
 1.  Open Performance Monitor, right click on Start Menu and select run. \
