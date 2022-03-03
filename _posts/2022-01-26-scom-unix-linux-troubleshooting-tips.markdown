@@ -94,6 +94,13 @@ Run the following command to gather the MB / GB size of a file:
 du -sh /var/opt/microsoft/scx/log/scx.log
 ```
 
+___
+
+## Linux Agent Certificate Hostname Detection during initial Installation
+1. Try `hostname -f` (this will fail on some Linux systems)
+2. Attempt to obtain the domain name from `/etc/resolve.conf`
+3. Attempt to obtain long hostname with `nslookup` command
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-troubleshooting-tips/)
 
 <!--
