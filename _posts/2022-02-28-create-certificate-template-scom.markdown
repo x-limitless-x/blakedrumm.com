@@ -143,7 +143,7 @@ Description:
 The OpsMgr Connector has loaded the specified authentication certificate successfully.
 ```
 
-> **Note**
+> ## Note
 > You may experience issues with connectivity between the remote machine and the Management Server(s), verify you have checked these things:
 > 1. Ensure all SPN’s are correctly registered for Management Servers, Operations Manager & Data Warehouse Databases, and services that are utilizing them.
 > 2. Event ID `20071` and `21016` on Gateway point to Firewall, SPN, or Certificate issue in most cases.
