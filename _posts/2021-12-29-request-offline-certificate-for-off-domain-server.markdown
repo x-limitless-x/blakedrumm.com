@@ -29,7 +29,7 @@ MachineKeySet=TRUE
 
 ; Optionally include the Certificate Template
 ; [RequestAttributes]
-; CertificateTemplate="OperationsManager"
+; CertificateTemplate="SystemCenterOperationsManager"
 
 [EnhancedKeyUsageExtension]
 OID=1.3.6.1.5.5.7.3.1 ; Server Authentication
