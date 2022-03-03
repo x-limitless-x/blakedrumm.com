@@ -143,6 +143,16 @@ Description:
 The OpsMgr Connector has loaded the specified authentication certificate successfully.
 ```
 
+> **Note**
+> You may experience issues with connectivity between the remote machine and the Management Server(s), verify you have checked these things:
+> 1. Ensure all SPN’s are correctly registered for Management Servers, Operations Manager & Data Warehouse Databases, and services that are utilizing them.
+> 2. Event ID `20071` and `21016` on Gateway point to Firewall, SPN, or Certificate issue in most cases.
+> 3. Run the Gateway Approval Tool using the SDK (Data Access Service) account OR an account with high permission level (SysAdmin privileges) to Operations Manager SQL DB.
+> 4. Verify you selected the appropriate certificate when you run MOMCertImport, check the certificate properties.
+>     - You may also check the following registry path: `HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft OperationsManager\3.0\Machine Settings`
+>       - Check the key: `ChannelCertificateSerialNumber` this is the serial number of the certificate you imported, reversed.
+> 5. Verify that there are not any other certificates in the Local Machine Personal Store that have matching Subject Names.
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/create-operations-manager-certificate-template/)
 
 <!--
