@@ -104,7 +104,7 @@ Task Category: None
 Level: Information
 Keywords: Classic
 User: N/A
-Computer: IIS-2019.contoso.com
+Computer: MS02-2019.contoso.com
 Description:
 The OpsMgr Connector has loaded the specified authentication certificate successfully.
 ```
