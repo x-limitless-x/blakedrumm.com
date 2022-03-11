@@ -64,6 +64,8 @@ Run it like this:
   ```
 You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [730](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1#L730) to include the arguments you want to run.
 
+---
+
 On a side note. If you run the SCOM Certificate Checker script above and it shows an output that looks like this: \
 ![Certificate Checker Script Missing Private Key](/assets/img/posts/scom-cert-checker-missingkey.png){:class="img-fluid"}
 
