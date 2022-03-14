@@ -18,7 +18,7 @@ permalink: /blog/clear-scomcache/
   The Clear SCOM Cache Script, which is located here: \
   [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Clear-SCOMCache.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Clear-SCOMCache.ps1)
 
-The script without any modifications clears the SCOM cache only on the local server, nothing else.
+The script without any modifications or parameters clears the Operations Manager cache only on the local server, nothing else.
 
 Argument List | Description |
 ------------- | ----------- |
