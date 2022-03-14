@@ -40,22 +40,22 @@ $objects = Get-SCOMMonitoringObject -class:$agent | where {$_.IsAvailable -eq $f
 .\Clear-SCOMCache.ps1 -Servers $objects
 ```
 
-### Clear SCOM cache on every Management Server in Management Group.
+### Clear SCOM cache on every Management Server in Management Group
 ```powershell
 Get-SCOMManagementServer | .\Clear-SCOMCache.ps1
 ```
 
-### Clear SCOM cache on every Agent in the Management Group.
+### Clear SCOM cache on every Agent in the Management Group
 ```powershell
 Get-SCOMAgent | .\Clear-SCOMCache.ps1
 ```
 
-### Clear SCOM cache and reboot the Servers specified.
+### Clear SCOM cache and reboot the Servers specified
 ```powershell
 .\Clear-SCOMCache.ps1 -Servers AgentServer.contoso.com, ManagementServer.contoso.com -Reboot
 ```
 
-### Clear SCOM cache and shutdown the Servers specified.
+### Clear SCOM cache and shutdown the Servers specified
 ```powershell
 .\Clear-SCOMCache.ps1 -Servers AgentServer.contoso.com, ManagementServer.contoso.com -Shutdown
 ```
