@@ -15,7 +15,7 @@ permalink: /blog/add-and-check-user-rights-assignment/
 
  I stumbled across this gem ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/master/Source/Users/Grant-LogOnAsService.ps1)) that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
-# Add User Rights
+## Add User Rights
 [Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Add-UserRights.ps1)
 
 ```
@@ -32,7 +32,12 @@ permalink: /blog/add-and-check-user-rights-assignment/
 ```
 
 Here are a few examples:
-## Single Users
+### Single Users
+Add User Right "Allow log on locally" to current user:
+```powershell
+.\Add-UserRights.ps1 -UserRight SeInteractiveLogonRight
+```
+
 Add User Right "Log on as a service" to CONTOSO\User:
 ```powershell
 .\Add-UserRights.ps1 -Username CONTOSO\User -UserRight SeServiceLogonRight
@@ -43,12 +48,12 @@ Add User Right "Log on as a batch job" to CONTOSO\User:
 .\Add-UserRights.ps1 -Username CONTOSO\User -UserRight SeBatchLogonRight
 ```
 
-Add User Right "Allow log on locally" to current user:
+Add User Right "Allow log on locally" to user SID:
 ```powershell
-.\Add-UserRights.ps1 -UserRight SeInteractiveLogonRight
+Add-UserRights -UserRight SeBatchLogonRight -Username S-1-5-11
 ```
 
-## Multiple Users / Services / Computers
+### Multiple Users / Services / Computers
 Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User and run on, local machine and SQL.contoso.com:
 ```powershell
 .\Add-UserRights.ps1 -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
@@ -56,7 +61,9 @@ Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User
 	
 You can also modify line [306](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Add-UserRights.ps1#L306) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
-# Check User Rights
+---
+
+## Check User Rights
 [Get-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1)
 
 In order to check the Local User Rights, you will need to run the above (Get-UserRights), you may copy and paste the above script in your Powershell ISE and press play.
@@ -66,13 +73,13 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 You may edit line [485](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L485) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
-## Local Computer
+### Local Computer
 Get Local User Account Rights and output to text in console:
 ```powershell
 .\Get-UserRights.ps1
 ```
 
-## Remote Computer
+### Remote Computer
 Get Remote SQL Server User Account Rights:
 ```powershell
 .\Get-UserRights.ps1 -ComputerName SQL.contoso.com
@@ -83,7 +90,7 @@ Get Local Machine and SQL Server User Account Rights:
 .\Get-UserRights.ps1 -ComputerName $env:COMPUTERNAME, SQL.contoso.com
 ```
 
-## Output Types
+### Output Types
 Output Local User Rights on Local Machine as CSV in 'C:\Temp':
 ```powershell
 .\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType CSV
