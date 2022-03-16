@@ -11,7 +11,7 @@ summary: You can check or add User Rights Assignment (Remotely or Locally) with 
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell, add logon locally, powershell local security policy, logon as batch powershell, local user account rights
 permalink: /blog/add-and-check-user-rights-assignment/
 ---
-<sub>Article last updated on January 10th, 2022</sub>
+<sub>This post was last updated on March 16th, 2022</sub>
 
  I stumbled across this gem ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/master/Source/Users/Grant-LogOnAsService.ps1)) that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
