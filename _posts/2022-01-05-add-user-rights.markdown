@@ -48,9 +48,9 @@ Add User Right "Log on as a batch job" to CONTOSO\User:
 .\Add-UserRights.ps1 -Username CONTOSO\User -UserRight SeBatchLogonRight
 ```
 
-Add User Right "Allow log on locally" to user SID:
+Add User Right “Log on as a batch job” to user SID S-1-5-11:
 ```powershell
-Add-UserRights -UserRight SeBatchLogonRight -Username S-1-5-11
+Add-UserRights -Username S-1-5-11 -UserRight SeBatchLogonRight
 ```
 
 ### Multiple Users / Services / Computers
