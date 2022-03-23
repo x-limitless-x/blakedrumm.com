@@ -2,7 +2,7 @@
 layout: post
 title:  "How to create a Certificate Template for Operations Manager"
 date:   '2022-02-28 12:12:46 -0500'
-categories: troubleshooting guides operationsManager
+categories: troubleshooting guides operationsManager certificates
 author: blakedrumm
 thumbnail: /assets/img/posts/certificate-authority-template-guide/certificate-authority.png
 
