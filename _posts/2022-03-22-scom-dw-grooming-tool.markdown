@@ -14,7 +14,7 @@ permalink: /blog/scom-dw-grooming-tool/
 ---
 ## Introduction
 
-This tool can be used to modify the System Center Operations Manager Data Warehouse Grooming retention days, allows you to see grooming history, you can manually run grooming, and you may also export the current configuration so you can keep a backup of your settings. You have the option of reseting the values to Defaults, which is the built in values for the known data sets in the Data Warehouse.
+This tool can be used to modify the System Center Operations Manager Data Warehouse Grooming retention days, allows you to see grooming history, you can manually run grooming, and you may also export the current configuration so you can keep a backup of your settings. You have the option of reseting the values to Defaults, which is the built in values for the typical data sets in the Data Warehouse.
 
 ## How to Use
 
@@ -23,6 +23,8 @@ You have multiple ways to run the SCOM DW Grooming GUI Tool:
 1. Download and install the MSI: [MSI Download](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/raw/master/Powershell/SCOM-DW-Grooming/Installer%20(MSI)/SCOM-DW-GroomingGUI.msi)
 2. Download and run the EXE: [EXE Download](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/raw/master/Powershell/SCOM-DW-Grooming/Executable%20(EXE)/SCOM-DW-GroomingGUI.exe)
 3. Download or Copy the Powershell Script: [Powershell Script](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/SCOM-DW-Grooming/Source%20(PS1)/SCOM-DW-GroomingGUI.ps1)
+
+You will need to provide the Data Warehouse DB Server Name or Address, and the Data Warehouse Database Name. The script may auto detect these variables from the local registry on the machine you are running the script on. You can now press the Get Current Settings button. This will allow the script to gather information from the database server.
 
 ## More Information
 
