@@ -1,8 +1,8 @@
 ---
 layout: post
 date:   '2022-03-22 20:25:31 -0500'
+title: "System Center Operations Manager - Data Warehouse Grooming Tool"
 categories: powershell projects operationsManager
-title: System Center Operations Manager - Data Warehouse Grooming Tool
 author: blakedrumm
 thumbnail: /assets/img/scom-dw-grooming-tool.png
 
