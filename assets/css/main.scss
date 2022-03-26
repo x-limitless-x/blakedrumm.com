@@ -7,6 +7,18 @@
 
 /* custom css goes below */
 
+/* Main Logo */
+img.top-logo {
+    width: 188px;
+}
+
+/* Main Page Middle Image Height */
+@media screen and (min-width: 576px) {
+    .jumbotron {
+        padding: 16rem 2rem;
+    }
+}
+
 img.githubStats {
     max-width: 351px;
 }
