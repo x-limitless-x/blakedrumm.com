@@ -14,9 +14,13 @@ img.top-logo {
 
 /* Main Page Middle Image Height */
 @media screen and (min-width: 576px) {
-    .jumbotron {
+    .container-fluid .jumbotron {
         padding: 16rem 2rem;
     }
+}
+
+body {
+    padding-top: 66px;
 }
 
 img.githubStats {
