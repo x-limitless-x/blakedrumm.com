@@ -23,12 +23,9 @@ img.top-logo {
         display: table-column;
     }
 }
-div #author_projects .project-img{
-    width: inherit;
-}
 /* Project Image */
 #author_projects .project-img {
-    width: auto;
+    width: inherit;
     height: auto;
     max-height: 301px;
 }
