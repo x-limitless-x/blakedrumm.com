@@ -19,7 +19,7 @@ img.top-logo {
     }
 }
 @media (max-width: 767px) {
-    #author_projects .row{
+    #author_projects #project-card{
         display: table-column;
     }
 }
