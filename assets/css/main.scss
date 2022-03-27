@@ -18,7 +18,7 @@ img.top-logo {
         padding: 16rem 2rem;
     }
 }
-@media (min-width: 767px) {
+@media (max-width: 767px) {
     #author_projects .row{
         display: table-column;
     }
