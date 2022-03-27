@@ -18,9 +18,9 @@ img.top-logo {
         padding: 16rem 2rem;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
     #author_projects #project-card{
-        display: table-column;
+        display: table-column !important;
     }
 }
 /* Project Image */
