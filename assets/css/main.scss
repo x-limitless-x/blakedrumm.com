@@ -20,7 +20,7 @@ img.top-logo {
 }
 @media (max-width: 992px) {
     #author_projects #project-card{
-        display: table-column !important;
+        flex-direction: column;
     }
 }
 .card .row{
