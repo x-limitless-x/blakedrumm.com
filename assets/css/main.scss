@@ -23,6 +23,9 @@ img.top-logo {
         display: table-column !important;
     }
 }
+.card .row{
+    justify-content: center;
+}
 /* Project Image */
 #author_projects .project-img {
     width: inherit;
