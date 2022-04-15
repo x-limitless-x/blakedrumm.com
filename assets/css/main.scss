@@ -158,6 +158,14 @@ button.navbar-toggler{
 	}
 }
 
+@media (max-width: 767px){
+	.search-form-container {
+	    top: unset;
+	    margin-top: 25px;
+	    padding-top: 13px;
+	}
+}
+
 @media (min-width: 992px){
     .nav.searchbtn:nth-of-type(1){
 		display:none
