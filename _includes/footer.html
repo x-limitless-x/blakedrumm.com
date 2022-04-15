@@ -3,23 +3,25 @@
         <a href="{{ "/feed.xml " | prepend: site.baseurl }}">RSS</a>
     </p>
     <p style="display:block;">© 2022 Blake Drumm</p>
-    <div id="donate-button-container">
-        <div id="donate-button"></div>
-        <script charset="UTF-8" src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js?test"></script>
-        <script>
-        PayPal.Donation.Button({
-            env:'production',
-            hosted_button_id:'UNANPFKQM67UA',
-            image: {
-            src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
-            alt:'Donate with PayPal button',
-            title:'PayPal - The safer, easier way to pay online!',
-        }
-        }).render('#donate-button');
-        </script>
-    </div>
+    <div id="footer-buttons-container">
+        <div id="donate-button-container">
+            <div id="donate-button"></div>
+            <script charset="UTF-8" src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js?test"></script>
+            <script>
+            PayPal.Donation.Button({
+                env:'production',
+                hosted_button_id:'UNANPFKQM67UA',
+                image: {
+                src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+                alt:'Donate with PayPal button',
+                title:'PayPal - The safer, easier way to pay online!',
+            }
+            }).render('#donate-button');
+            </script>
+        </div>
+        <!-- Cloudflare App (Google Translate)  -->
         <div id="translate-container">
-        <div id="translate"></div>
-        <!-- This is where the Cloudflare App (Google Translate) is going to render -->
+            <div id="translate"><!-- This is where the Cloudflare App (Google Translate) is going to render --></div>
+        </div>
     </div>
 </footer>
