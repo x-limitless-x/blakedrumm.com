@@ -13,7 +13,6 @@ summary: >- # this means to ignore newlines
 keywords: scom, gacutil, operationsmanager, SCOM 2019, dot net, Global Assembly Cache
 permalink: /blog/verify-assemblies-loaded-with-gacutil/
 ---
-
 ## What is GAC?
 
 Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache. The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer. More information can be found here: [https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac)
