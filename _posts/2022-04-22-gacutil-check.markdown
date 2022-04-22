@@ -15,10 +15,10 @@ permalink: /blog/verify-assemblies-loaded-with-gacutil/
 ---
 ## What is GAC?
 
-Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache. The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer. More information can be found here: [https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac)
+Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache. The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer. More information can be found here: [https://docs.microsoft.com/dotnet/framework/app-domains/gac](https://docs.microsoft.com/dotnet/framework/app-domains/gac)
 
 ## Prerequisites
-Download and install the **.NET 4.8 Framework Developer Pack** on the affected machine: [https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+Download and install the **.NET 4.8 Framework Developer Pack** on the affected machine: [https://dotnet.microsoft.com/download/dotnet-framework/net48](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 ## Check the currently installed Assemblies
 1. Open a ***Powershell*** or ***Command Prompt*** as **Administrator**
