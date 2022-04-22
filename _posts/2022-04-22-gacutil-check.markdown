@@ -2,7 +2,7 @@
 layout: post
 date:   '2022-04-22 14:28:58 -0500'
 categories: powershell operationsManager virtualMachineManager troubleshooting guides
-title: Verify Assemblies that are loaded with GACUtil
+title: "Verify Assemblies that are loaded with GACUtil"
 author: blakedrumm
 thumbnail: /assets/img/posts/gacutil-check.png
 
