@@ -1,13 +1,13 @@
 ---
 layout: post
 date:   '2022-04-22 14:28:58 -0500'
-categories: powershell operationsManager troubleshooting guides
-title: "Verify Assemblies that are loaded with GACUtil"
+title: "Verify Assemblies are loaded with GACUtil"
+categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/gacutil-check.png
 
 summary: >- # this means to ignore newlines
-I recently needed a customer to check the output of the .NET tool gacutil, so we could verify that all required assemblies were present. This guide details how to check GACUtil with the .NET Framework Developer pack. 
+  I recently needed a customer to check the output of the .NET tool gacutil, so we could verify that all required assemblies were present. This guide details how to check GACUtil with the .NET Framework Developer pack. 
 
 keywords: scom, gacutil, operationsmanager, SCOM 2019, dot net, Global Assembly Cache
 permalink: /blog/verify-assemblies-loaded-with-gacutil/
