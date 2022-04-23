@@ -11,13 +11,14 @@ summary: You can check or add User Rights Assignment (Remotely or Locally) with 
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell, add logon locally, powershell local security policy, logon as batch powershell, local user account rights
 permalink: /blog/add-and-check-user-rights-assignment/
 ---
-<sub>This post was last updated on March 16th, 2022</sub>
+<sub>This post was last updated on April 23rd, 2022</sub>
 
  I stumbled across this gem ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/master/Source/Users/Grant-LogOnAsService.ps1)) that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
-## Add User Rights
-[Add-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Add-UserRights.ps1)
+## Set User Rights
+[Set-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1)
 
+Some (but not all) of the User Rights that can be can set:
 ```
 "Log on as a batch job (SeBatchLogonRight)"
 "Allow log on locally (SeInteractiveLogonRight)"
@@ -29,37 +30,72 @@ permalink: /blog/add-and-check-user-rights-assignment/
 "Deny access to this computer from the network (SeDenyNetworkLogonRight)"
 "Deny log on through Remote Desktop Services (SeDenyRemoteInteractiveLogonRight)"
 "Deny log on as a service (SeDenyServiceLogonRight)"
+...
 ```
 
 Here are a few examples:
+## Add Users
 ### Single Users
+#### Example 1
 Add User Right "Allow log on locally" to current user:
 ```powershell
-.\Add-UserRights.ps1 -UserRight SeInteractiveLogonRight
+.\Set-UserRights.ps1 -AddRight -UserRight SeInteractiveLogonRight
 ```
-
+#### Example 2
 Add User Right "Log on as a service" to CONTOSO\User:
 ```powershell
-.\Add-UserRights.ps1 -Username CONTOSO\User -UserRight SeServiceLogonRight
+.\Set-UserRights.ps1 -AddRight -Username CONTOSO\User -UserRight SeServiceLogonRight
 ```
-
+#### Example 3
 Add User Right "Log on as a batch job" to CONTOSO\User:
 ```powershell
-.\Add-UserRights.ps1 -Username CONTOSO\User -UserRight SeBatchLogonRight
+.\Set-UserRights.ps1 -AddRight -Username CONTOSO\User -UserRight SeBatchLogonRight
 ```
-
+#### Example 4
 Add User Right “Log on as a batch job” to user SID S-1-5-11:
 ```powershell
-Add-UserRights -Username S-1-5-11 -UserRight SeBatchLogonRight
+.\Set-UserRights.ps1 -AddRight -Username S-1-5-11 -UserRight SeBatchLogonRight
 ```
 
 ### Multiple Users / Services / Computers
+#### Example 5
 Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User and run on, local machine and SQL.contoso.com:
 ```powershell
-.\Add-UserRights.ps1 -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
+.\Set-UserRights.ps1 -AddRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 ```
-	
-You can also modify line [306](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Add-UserRights.ps1#L306) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+
+## Remove Users
+### Single Users
+#### Example 1
+Remove User Right "Allow log on locally" to current user:
+```powershell
+.\Set-UserRights.ps1 -RemoveRight -UserRight SeInteractiveLogonRight
+```
+#### Example 2
+Add User Right "Log on as a service" to CONTOSO\User:
+```powershell
+.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeServiceLogonRight
+```
+#### Example 3
+Add User Right "Log on as a batch job" to CONTOSO\User:
+```powershell
+.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeBatchLogonRight
+```
+#### Example 4
+Add User Right “Log on as a batch job” to user SID S-1-5-11:
+```powershell
+.\Set-UserRights.ps1 -RemoveRight -Username S-1-5-11 -UserRight SeBatchLogonRight
+```
+
+### Multiple Users / Services / Computers
+#### Example 5
+Add User Right "Log on as a service" and "Log on as a batch job" to CONTOSO\User and run on, local machine and SQL.contoso.com:
+```powershell
+.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
+```
+
+> ## Note
+> You can also modify line [392](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L392) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 ---
 
