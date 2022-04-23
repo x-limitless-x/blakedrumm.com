@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Add and Check User Rights Assignment via Powershell"
+title:  "Set and Check User Rights Assignment via Powershell"
 date:   '2022-01-05 23:41:26 -0500'
 categories: powershell operationsManager troubleshooting projects 
 author: blakedrumm
-thumbnail: /assets/img/posts/add-user-rights.png
+thumbnail: /assets/img/posts/set-user-rights.png
 
-summary: You can check or add User Rights Assignment (Remotely or Locally) with the following Powershell scripts.
+summary: You can add, remove, and check User Rights Assignment (remotely / locally) with the following Powershell scripts.
 
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell, add logon locally, powershell local security policy, logon as batch powershell, local user account rights
 permalink: /blog/add-and-check-user-rights-assignment/
