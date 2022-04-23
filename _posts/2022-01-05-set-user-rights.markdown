@@ -18,7 +18,7 @@ permalink: /blog/set-and-check-user-rights-assignment/
 ## Set User Rights
 [Set-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1)
 
-Some (but not all) of the User Rights that can be can set:
+Some (but not all) of the User Rights that can be set:
 ```
 "Log on as a batch job (SeBatchLogonRight)"
 "Allow log on locally (SeInteractiveLogonRight)"
