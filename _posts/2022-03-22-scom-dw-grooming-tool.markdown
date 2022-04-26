@@ -34,6 +34,9 @@ You will get prompted each time you run the script to accept the license agreeme
 
 If you have any questions or concerns, please leave a comment and I will do my best to assist!
 
+## Latest Version
+Version `1.0.3.0`
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-dw-grooming-tool/)
 
 <!--
