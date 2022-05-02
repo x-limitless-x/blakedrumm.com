@@ -6,7 +6,8 @@ document.addEventListener('scroll', _ => {
 
   progress = scrollTop / height * 100;
 
-  if ( progress > 0) {
+  // only run if the element exists to be updated
+  if ( progress > 0 && document.querySelector('#progress-bar') !== null ) {
     progressBar = document.querySelector('#progress-bar');
     progressBar.style.setProperty('--progress', progress + '%');
   } else {
