@@ -172,6 +172,20 @@ button.navbar-toggler{
 	}
 }
 
+/* Nav Divider: | */
+span.nav-divider {
+    font-size: 26px;
+    padding-right: 10px;
+    color: #38383c;
+    cursor: default;
+}
+
+@media (max-width: 992px){
+    span.nav-divider {
+        display: none;
+    }
+}
+
 /* Control the color of the selected background in Contact form 
 .form-control::placeholder{
     background: #c9ced3;
