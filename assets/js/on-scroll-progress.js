@@ -8,3 +8,8 @@ document.addEventListener('scroll', _ => {
 
   if ( progress > 0) {
     progressBar = document.querySelector('#progress-bar');
+    progressBar.style.setProperty('--progress', progress + '%');
+  } else {
+    progressBar.style.setProperty('--progress', '0%');
+  }
+});
