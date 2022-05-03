@@ -2,9 +2,9 @@
 layout: post
 date:   '2022-05-02 14:28:58 -0500'
 title: "Custom SQL Management Pack Invoke-SqlCmd Exception"
-categories: troubleshooting guides
+categories: troubleshooting guides OperationsManager
 author: blakedrumm
-thumbnail: /assets/img/posts/gacutil-check.png
+thumbnail: /assets/img/posts/invoke-sqlcmd.png
 
 summary: >- # this means to ignore newlines
   I was working on a case regarding Invoke-SqlCmd powershell command that is unable to return data for all SQL Servers.
