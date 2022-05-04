@@ -231,8 +231,8 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
     ```
     adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (EventID=528 or EventID=540 or EventID=680)”
     ```
-> Note: Change the event IDs to the events you don't want collected
-> See below example for a basic filter. Since every environment has its own concerns, please double check which events can be ignored to reduce data collection amount. 
+> ### Note
+> Change the event IDs to the events you don't want collected. See the below example for a basic filter. Since every environment has its own concerns, please double check which events can be ignored to reduce data collection amount. 
 > ```
 > adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (((EventId=528 AND String01='5') OR (EventId=576 AND (String01='SeChangeNotifyPrivilege' OR HeaderDomain='NT Authority')) OR (EventId=538 OR EventId=566 OR EventId=672 OR EventId=680)))"
 > ```
