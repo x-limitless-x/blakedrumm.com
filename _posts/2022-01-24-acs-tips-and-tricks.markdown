@@ -216,7 +216,7 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
 ----
 
 ## Set filter for ACS Data
-1. On the ACS server, Go to the registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\AdtServer\Parameters
+1. On the ACS server, Go to the registry: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\AdtServer\Parameters`
 2. Right click the key Parameters, select Permissions
 3. Select the row “Network service”
 4. Click edit
@@ -224,9 +224,9 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
 6. Select Full control in the column Allow, click OK
 7. Run CMD as an administrator
 8. Run the below command
-	cd C:\Windows\System32\Security\AdtServer
+	`cd C:\Windows\System32\Security\AdtServer`
 9. Run the below command to check current query we use. There should no filter clause to exclude the collected event.
-	adtadmin –getquery
+	`adtadmin –getquery`
 10. Run the following command to add filter for the collected events.
     ```
     adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (EventID=528 or EventID=540 or EventID=680)”
