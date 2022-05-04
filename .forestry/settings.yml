@@ -20,6 +20,8 @@ sections:
   label: Posts
   create: documents
   new_doc_ext: md
+  templates:
+  - base-template-for-posts
 - type: directory
   path: _authors
   label: Authors
