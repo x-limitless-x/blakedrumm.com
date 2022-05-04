@@ -5,9 +5,9 @@ admin_path: "/admin-forestry"
 webhook_url: 
 sections:
 - type: directory
-  path: assets/css
+  path: assets
   label: Main CSS Folder
-  create: documents
+  create: all
   match: "**/*"
 - type: heading
   label: Site Configuration
