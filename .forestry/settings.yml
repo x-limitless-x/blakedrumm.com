@@ -4,13 +4,13 @@ auto_deploy: false
 admin_path: "/admin-forestry"
 webhook_url: 
 sections:
+- type: heading
+  label: Site Configuration
 - type: directory
   path: assets
   label: Main CSS Folder
   create: all
   match: "**/*"
-- type: heading
-  label: Site Configuration
 - type: document
   path: assets/css/main.scss
   label: Main CSS
