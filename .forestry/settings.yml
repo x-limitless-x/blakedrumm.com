@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Site Configuration
 - type: document
-  path: https://github.com/x-limitless-x/blakedrumm.com/blob/master/assets/css
+  path: assets/css
   label: Main CSS
 - type: heading
   label: Post Information
