@@ -5,6 +5,12 @@ admin_path: "/admin-forestry"
 webhook_url: 
 sections:
 - type: heading
+  label: Site Configuration
+- type: document
+  path: https://github.com/x-limitless-x/blakedrumm.com/blob/master/assets/css/main.scss
+  label: Main CSS
+  match: "**/*"
+- type: heading
   label: Post Information
 - type: jekyll-posts
   label: Posts
