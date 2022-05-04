@@ -222,11 +222,15 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
 4. Click edit
 5. Set “Apply to” as “This key and subkeys”
 6. Select Full control in the column Allow, click OK
-7. Run CMD as an administrator
-8. Run the below command
-	`cd C:\Windows\System32\Security\AdtServer`
+7. Run **CMD** as an **Administrator**
+8. Run the below command:
+   ```
+   cd C:\Windows\System32\Security\AdtServer
+   ```
 9. Run the below command to check current query we use. There should no filter clause to exclude the collected event.
-	`adtadmin –getquery`
+   ```
+   adtadmin –getquery
+   ```
 10. Run the following command to add filter for the collected events.
     ```
     adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (EventID=528 or EventID=540 or EventID=680)”
