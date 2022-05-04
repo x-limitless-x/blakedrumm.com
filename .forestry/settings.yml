@@ -4,6 +4,9 @@ auto_deploy: false
 admin_path: "/admin-forestry"
 webhook_url: 
 sections:
+- type: document
+  path: assets/css/main.scss
+  label: Main CSS
 - type: heading
   label: Site Configuration
 - type: directory
@@ -11,9 +14,6 @@ sections:
   label: Main CSS Folder
   create: all
   match: "**/*"
-- type: document
-  path: assets/css/main.scss
-  label: Main CSS
 - type: heading
   label: Post Information
 - type: jekyll-posts
