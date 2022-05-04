@@ -30,3 +30,5 @@ fields:
 - type: text
   name: permalink
   label: permalink
+pages:
+- _posts/test1234.md
