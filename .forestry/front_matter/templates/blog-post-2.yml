@@ -1,0 +1,31 @@
+---
+label: Blog Post 2
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: categories
+  label: categories
+- type: text
+  name: title
+  label: title
+- type: text
+  name: author
+  label: author
+- type: file
+  name: thumbnail
+  label: thumbnail
+- type: textarea
+  name: summary
+  label: summary
+- type: textarea
+  name: keywords
+  label: keywords
+- type: text
+  name: permalink
+  label: permalink
