@@ -12,31 +12,22 @@ keywords: scom, gacutil, operationsmanager, SCOM 2019, dot net, Global Assembly 
 permalink: "/blog/verify-assemblies-loaded-with-gacutil/"
 
 ---
-## What is GAC?
+## Header #1
 
-Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache. The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer. More information can be found here: [https://docs.microsoft.com/dotnet/framework/app-domains/gac](https://docs.microsoft.com/dotnet/framework/app-domains/gac)
+Body #2
 
-## Prerequisites
-Download and install the **.NET 4.8 Framework Developer Pack** on the affected machine: [https://dotnet.microsoft.com/download/dotnet-framework/net48](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+## Header #2
 
-## Check the currently installed Assemblies
-1. Open a ***Powershell*** or ***Command Prompt*** as **Administrator**
-2. Navigate to the installation directory: \
-    `cd "C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools"`
-3. Run this GACUtil Command to List the Assemblies installed: \
-    **Powershell:**
-    ```powershell
-    .\gacutil /L
-    ```
-    **Command Prompt:**
-    ```
-    gacutil /L
-    ```
+Body #2
 
+## Header #3
+
+Body #3
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/verify-assemblies-loaded-with-gacutil/)
 
 <!--
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
@@ -74,4 +65,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
--->
+\-->
