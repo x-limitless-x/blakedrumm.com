@@ -1,10 +1,10 @@
 ---
 layout: post
-date: 2022-05-04T00:00:46-04:00
+date: 2022-05-03T00:00:46-04:00
 title: Title of Article
 categories: troubleshooting guides
 author: blakedrumm
-thumbnail: "/assets/img/posts/gacutil-check.png"
+thumbnail: "/assets/img/posts/filename.png"
 summary: Summary of Article
 keywords: ''
 permalink: "/blog/path-to-site-article"
@@ -22,7 +22,7 @@ Body #2
 
 Body #3
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/verify-assemblies-loaded-with-gacutil/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/path-to-site-article/)
 
 <!--
 
