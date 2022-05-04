@@ -9,8 +9,8 @@ sections:
   create: documents
   new_doc_ext: md
 - type: directory
-  path: _products
-  label: Products
+  path: _authors
+  label: Authors
   create: all
   match: "**/*"
 upload_dir: assets/img/posts
