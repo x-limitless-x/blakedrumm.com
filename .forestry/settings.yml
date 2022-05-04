@@ -7,9 +7,8 @@ sections:
 - type: heading
   label: Site Configuration
 - type: document
-  path: https://github.com/x-limitless-x/blakedrumm.com/blob/master/assets/css/main.scss
+  path: https://github.com/x-limitless-x/blakedrumm.com/blob/master/assets/css
   label: Main CSS
-  match: "**/*"
 - type: heading
   label: Post Information
 - type: jekyll-posts
