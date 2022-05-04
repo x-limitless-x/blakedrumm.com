@@ -213,6 +213,31 @@ GO
 
 Be mindful that the scripts are usually run overnight when there is not alot of activity in the ACS Database. So take precautions if changing this when alot of logons/logoffs are happening in your environment.
 
+----
+
+## Set filter for ACS Data
+1. On the ACS server, Go to the registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\AdtServer\Parameters
+2. Right click the key Parameters, select Permissions
+3. Select the row “Network service”
+4. Click edit
+5. Set “Apply to” as “This key and subkeys”
+6. Select Full control in the column Allow, click OK
+7. Run CMD as an administrator
+8. Run the below command
+	cd C:\Windows\System32\Security\AdtServer
+9. Run the below command to check current query we use. There should no filter clause to exclude the collected event.
+	adtadmin –getquery
+10. Run the following command to add filter for the collected events.
+    ```
+    adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (EventID=528 or EventID=540 or EventID=680)”
+    ```
+> Note: Change the event IDs to the events you don't want collected
+> See below example for a basic filter. Since every environment has its own concerns, please double check which events can be ignored to reduce data collection amount. 
+> ```
+> adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (((EventId=528 AND String01='5') OR (EventId=576 AND (String01='SeChangeNotifyPrivilege' OR HeaderDomain='NT Authority')) OR (EventId=538 OR EventId=566 OR EventId=672 OR EventId=680)))"
+> ```
+
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/acs-collector-troubleshooting-tips/)
 
 <!--
