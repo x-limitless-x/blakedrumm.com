@@ -2,7 +2,7 @@ backend:
   name: github
   repo: x-limitless-x/blakedrumm.com
   branch: master
-  site_domain: blakedrumm.netlify.app
+  site_domain: blakedrumm.com
 
 media_folder: "assets/img/posts" # Media files will be stored in the repo under images/uploads
 public_folder: "/assets/img/posts" # The src attribute for uploaded media will begin with /images/uploads
