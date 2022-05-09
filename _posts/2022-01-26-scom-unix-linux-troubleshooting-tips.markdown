@@ -8,7 +8,7 @@ thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
 
 summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 
-keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting
+keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
 <sub>This post was last updated on May 9th, 2022</sub>
@@ -98,14 +98,14 @@ du -sh /var/opt/microsoft/scx/log/scx.log
 
 ___
 ## WinRM Enumerate SCX Agent
-From the Management Server in the Linux/Unix Resource Pool, verify that the following command resolves correctly:
+From the Management Server(s) in the Unix/Linux Resource Pool, verify that the following command resolves correctly:
 
-### Basic
+### Basic Authentication
 ```
 winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -password:<password> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:basic -skipCACheck -skipCNCheck -skiprevocationcheck -encoding:utf-8
 ```
 
-### Kerberos
+### Kerberos Authentication
 ```
 winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:Kerberos -encoding:utf-8
 ```
