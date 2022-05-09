@@ -95,6 +95,33 @@ du -sh /var/opt/microsoft/scx/log/scx.log
 ```
 
 ___
+## WinRM Enumerate SCX Agent
+From the Management Server in the Linux/Unix Resource Pool, verify that the following command resolves correctly:
+
+### Basic
+```
+winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -password:<password> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:basic -skipCACheck -skipCNCheck -skiprevocationcheck -encoding:utf-8
+```
+
+### Kerberos
+```
+winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:Kerberos -encoding:utf-8
+```
+
+
+
+> ### Note
+> You may experience an error that contains the following:
+> ```
+> WSManFault
+>     Message = The server certificate on the destination computer (CLSANVLPZIAAC01.ey.net:1270) has the following errors:
+>Encountered an internal error in the SSL library.
+>
+>Error number:  -2147012721 0x80072F8F
+>A security error occurred
+>```
+
+___
 
 ## Linux Agent Certificate Hostname Detection during initial Installation
 The following steps are what happens (from a high level) during initial installation of the Linux / Unix Agent to generate a Certificate for the Agent.
