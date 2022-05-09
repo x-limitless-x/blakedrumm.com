@@ -115,7 +115,7 @@ winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent
 You may experience an error that contains the following when running the above Commands:
 ```
 WSManFault
-    Message = The server certificate on the destination computer (CLSANVLPZIAAC01.ey.net:1270) has the following errors:
+    Message = The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:
 Encountered an internal error in the SSL library.
 Error number:  -2147012721 0x80072F8F
 A security error occurred
