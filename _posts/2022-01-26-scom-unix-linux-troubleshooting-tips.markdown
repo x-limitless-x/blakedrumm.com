@@ -8,7 +8,7 @@ thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
 
 summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 
-keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers
+keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
 <sub>This post was last updated on May 9th, 2022</sub>
