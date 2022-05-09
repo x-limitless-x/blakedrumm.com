@@ -122,7 +122,7 @@ A security error occurred
 ```
 
 ##### Resolution
-You could potentially import (**Merge**) the below known working ciphers by copying the below to a new file on your server called `example.reg`:
+You could potentially import (**Merge**) the below known working ciphers by copying the text to a new file on your server called `example.reg`, right click and Merge the file into your registry:
 ```
 Windows Registry Editor Version 5.00
 
