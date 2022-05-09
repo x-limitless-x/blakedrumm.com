@@ -11,6 +11,8 @@ summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
+<sub>This post was last updated on May 9th, 2022</sub>
+
 ## Verify the versions for all prerequisite software
 You can run the following command on a monitored and not monitored server to compare the software installed:
 ```shell
