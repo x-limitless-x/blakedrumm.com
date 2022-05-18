@@ -241,6 +241,8 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
 > adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (((EventId=528 AND String01='5') OR (EventId=576 AND (String01='SeChangeNotifyPrivilege' OR HeaderDomain='NT Authority')) OR (EventId=538 OR EventId=566 OR EventId=672 OR EventId=680)))"
 > ```
 
+----
+
 ## Install ACS from Command Line
 In order to install the ACS Collector from the command line you are required to provide an XML, this an example of the XML that is required:
 ```xml
