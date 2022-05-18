@@ -241,6 +241,187 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
 > adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (((EventId=528 AND String01='5') OR (EventId=576 AND (String01='SeChangeNotifyPrivilege' OR HeaderDomain='NT Authority')) OR (EventId=538 OR EventId=566 OR EventId=672 OR EventId=680)))"
 > ```
 
+## Install ACS from Command Line
+In order to install the ACS Collector from the command line you are required to provide an XML, this an example of the XML that is required:
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+
+<InstallationOptions>
+
+  <AcsCollector>
+
+    <!-- Interval (in seconds) between heartbeats. -->
+   <HeartBeatInterval>60</HeartBeatInterval>
+
+    <!-- Number of failed heart beats before collector
+             disconnects the forwarder. -->
+    <HeartBeatFailedCount>3</HeartBeatFailedCount>
+
+    <!-- Time (in seconds) to wait before disconnecting forwarders
+             which have not yet sent the initial data packet on a
+             new connection. -->
+    <ConnectNoDataThreshold>10</ConnectNoDataThreshold>
+
+    <!-- The TCP port on which the collector should listen
+             for forwarder connections. -->
+    <AdtAgentPort>51909</AdtAgentPort>
+
+    <!-- Maximum length of database queue. This value will be
+             rounded up to a power of two if necessary. -->
+    <MaximumQueueLength>0x40000</MaximumQueueLength>
+
+    <!-- Lower bound (in seconds) of randomly chosen backoff
+             time sent to agent if the collector is overloaded. -->
+    <BackOffMinTime>120</BackOffMinTime>
+
+    <!-- Upper bound (in seconds) of randomly chosen backoff
+             time sent to agent if the collector is overloaded. -->
+    <BackOffMaxTime>480</BackOffMaxTime>
+
+    <!-- (percentage of max queue length) -->
+   <BackOffThreshold>50</BackOffThreshold>
+
+    <!-- (percentage of max queue length) -->
+   <DisconnectThreshold>75</DisconnectThreshold>
+
+    <!-- Asset value new agents get assigned.
+             -1 means they get the value of their group instead. -->
+    <DefaultAssetValue>-1</DefaultAssetValue>
+
+    <!-- Group ID of the group new agents get assigned to. -->
+   <DefaultGroup>0</DefaultGroup>
+
+    <!-- Number of simultaneous database connections to use
+             for event insertion. -->
+    <DbEventConnections>8</DbEventConnections>
+
+    <!-- Number of simultaneous database connections to use
+             for string insertion. -->
+    <DbStringConnections>8</DbStringConnections>
+
+    <!-- Minimum asset value required in order to report 
+             application log events regarding an agent. -->
+    <ReportThreshold>1</ReportThreshold>
+
+    <!-- Minimum asset value required in order to store events
+             from an agent. -->
+    <StoreThreshold>1</StoreThreshold>
+
+    <!-- (seconds) -->
+   <CheckPointInterval>198</CheckPointInterval>
+
+    <!-- (seconds) -->
+   <PurgingInterval>198</PurgingInterval>
+
+    <!-- If running in grooming mode, the collector only kicks
+             off a grooming cycle if the database queue has at most
+             MaxPurgingQueue entries. -->
+    <MaxPurgingQueue>500</MaxPurgingQueue>
+
+    <!-- 0 = Event timestamps will be reported in UTC.
+         1 = Event timestamps will be reported in local time. -->
+    <ConvertToLocalTime>1</ConvertToLocalTime>
+
+    <!-- Size (in bytes) of memory to use for caching principal data. -->
+   <PrincipalCacheSize>0x8000</PrincipalCacheSize>
+
+    <!-- Size (in bytes) of memory to use for caching string data. -->
+   <StringCacheSize>0x20000</StringCacheSize>
+
+    <!-- Time, in seconds, to backoff unwanted agents -->
+   <BackOffUnwanted>21600</BackOffUnwanted>
+
+    <!-- Maximum time (in minutes) a connection can exist before it
+             gets disconnected for rekeying purposes. -->
+    <TlsRekeyInterval>600</TlsRekeyInterval>
+
+    <!-- -->
+   <AcceptSockets>4</AcceptSockets>
+
+    <!-- Time, in seconds, before a new connection gets
+             disconnected if the client doesn't send any data -->
+    <MaxAcceptIdle>15</MaxAcceptIdle>
+
+    <!-- Time, in seconds, before a connection attempt times out -->
+   <MaxConnectIdle>15</MaxConnectIdle>
+
+    <!-- Interval (in seconds) between recalculation of queue
+             statistics. -->
+    <MinUpdateInterval>21</MinUpdateInterval>
+
+    <!-- Name of ODBC data source -->
+   <DataSource>acs</DataSource>
+
+    <!-- 0 = SQL Server runs on a different machine
+         1 = SQL Server runs on collector machine -->
+    <DbServerLocal>1</DbServerLocal>
+
+    <!-- Name of machine running SQL Server -->
+   <DbServerName>acs-sql</DbServerName>
+
+    <!-- Name of SQL Server instance to use. Usually blank. -->
+   <DbServerInstance></DbServerInstance>
+
+    <!-- Name of collector database -->
+   <DbName>OperationsManagerAC</DbName>
+
+    <!-- 0 = Specified data and log directories will be used.
+         1 = SQL Server's data and log directories will be used. -->
+    <UseDefaultPaths>1</UseDefaultPaths>
+
+    <!-- Path (on DB server) where data file should be created
+             Necessary only if UseDefaultPaths is set to 0 -->
+    <DataFilePath>d:\acsdata</DataFilePath>
+
+    <!-- Initial data file size in MB -->
+   <DbDataFileInitialSize>1024</DbDataFileInitialSize>
+
+    <!-- Maximum data file size in MB, 0 means unlimited -->
+   <DbDataFileMaximumSize>65536</DbDataFileMaximumSize>
+
+    <!-- File growth amount in MB -->
+   <DbDataFileIncrementSize>1024</DbDataFileIncrementSize>
+
+    <!-- Path (on DB server) where log file should be created.
+             Necessary only if UseDefaultPaths is set to 0 -->
+    <LogFilePath>e:\acslog</LogFilePath>
+
+    <!-- Initial log file size in MB -->
+   <DbLogFileInitialSize>128</DbLogFileInitialSize>
+
+    <!-- Maximum log file size in MB, 0 means unlimited -->
+   <DbLogFileMaximumSize>4096</DbLogFileMaximumSize>
+
+    <!-- File growth amount in MB -->
+   <DbLogFileIncrementSize>128</DbLogFileIncrementSize>
+
+    <!-- (hours) time to keep events -->
+   <EventRetentionPeriod>24</EventRetentionPeriod>
+
+    <!-- Number of partitions to use -->
+   <PartitionCount>1</PartitionCount>
+
+    <!-- Time when partition switching should occur.
+             Expressed in seconds since midnight in UTC -->
+    <PartitionSwitchOffset>0</PartitionSwitchOffset>
+
+    <!-- Type of authentication collector should use
+             when connecting to the database:
+             0 = Use SQL authentication (not recommended)
+             1 = Use Windows authentication (recommended) -->
+    <UseWindowsAuth>1</UseWindowsAuth>
+
+   <!-- only necessary when using SQL authentication -->
+   <DbUser>SampleAdtServerDbUser</DbUser>
+
+    <!-- only necessary when using SQL authentication -->
+   <DbPassword>SampleAdtServerDbPwd</DbPassword>
+
+  </AcsCollector>
+
+</InstallationOptions>
+```
+
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/acs-collector-troubleshooting-tips/)
 
