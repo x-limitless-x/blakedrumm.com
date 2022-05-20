@@ -112,7 +112,7 @@ The OpsMgr Connector has loaded the specified authentication certificate success
 ```
 
 > **Don't forget the Management Server** \
-> The Management Server also needs to have a certificate requested for itself, and imported into the Personal Store in the Local Machine Certificates. Otherwise the communication between the Management Server and the Agent or Gateway Server will not work via certificates.
+> The Management Server also needs to have a certificate requested for itself, and imported into the Personal Store in the Local Machine Certificates. You also need to run MOMCertImport.exe on the Management Server for the Management Server certificate. Otherwise the communication between the Management Server and the Agent or Gateway Server will not work via certificates.
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/request-offline-certificate-for-off-domain-server/)
 
