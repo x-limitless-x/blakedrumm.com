@@ -20,6 +20,8 @@ This tool can be used to modify the System Center Operations Manager Data Wareho
 
 You have multiple ways to run the SCOM DW Grooming GUI Tool:
 
+<a href="https://files.blakedrumm.com" target="_"><button class="btn btn-primary navbar-btn">Get Started</button></a>
+
 1. Download and install the MSI: [MSI Download](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest/download/SCOM-DW-GroomingGUI-MSI.zip)
 2. Download and run the EXE: [EXE Downloads](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest/download/SCOM-DW-GroomingGUI-EXE-64bit.zip)
 3. Download or Copy the Powershell Script: [Powershell Script](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest/download/SCOM-DW-GroomingGUI.ps1)
