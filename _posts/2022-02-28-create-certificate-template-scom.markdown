@@ -7,7 +7,7 @@ author: blakedrumm
 thumbnail: /assets/img/posts/certificate-authority-template-guide/certificate-authority.png
 
 summary: >- # this means to ignore newlines
-  This is a guide on how to create your own certificate template for System Center Operations Manager on the Certificate Authority server.
+  This is a guide on how to create your own certificate template for System Center Operations Manager on an Enterprise Certificate Authority server.
 
 keywords: certificate template scom, certificate for scom, scom gateway certificate, scom agent certificate, scom workgroup certificate, how to create scom certificate, How to monitor untrusted servers in SCOM, How do I create a SCOM client certificate
 permalink: /blog/create-operations-manager-certificate-template/
@@ -30,7 +30,7 @@ Confirm the **Compatibility** tab: \
 ![Confirm Compatibility Tab](/assets/img/posts/certificate-authority-template-guide/step-4.png){:class="img-fluid"}
 
 ### Step 5
-Confirm you have modified the following in the **General** Tab:
+Confirm you have modified the following in the **General** tab:
  - **Template Display Name:** \
    `System Center Operations Manager`
  - **Validity period:** \
@@ -40,13 +40,13 @@ Confirm you have modified the following in the **General** Tab:
 ![Confirm General Tab](/assets/img/posts/certificate-authority-template-guide/step-5.png){:class="img-fluid"}
 
 ### Step 6
-Confirm you have modified the following in the **Request Handling Tab**:
+Confirm you have modified the following in the **Request Handling** tab:
  - Check **Allow private key to be exportable**
 
 ![Confirm Request Handling Tab](/assets/img/posts/certificate-authority-template-guide/step-6.png){:class="img-fluid"}
 
 ### Step 7
-Confirm you have modified the following in the **Cryptography Tab**: 
+Confirm you have modified the following in the **Cryptography** tab: 
   - Verify **Microsoft RSA SChannel Cryptographic Provider** is Checked
   - Under **Providers** Check **Microsoft Enhanced Cryptographic Provider v1.0** and move it to below **Microsoft RSA SChannel Cryptographic Provider**
   - Verify **Minimum key size** is set to `2048` or `1024` (2048 adds CPU overhead)
@@ -54,11 +54,11 @@ Confirm you have modified the following in the **Cryptography Tab**:
 ![Confirm Cryptography Tab](/assets/img/posts/certificate-authority-template-guide/step-7.png){:class="img-fluid"}
 
 ### Step 8
-Confirm that **None** is selected for the **Key Attestation Tab**: \
+Confirm that **None** is selected for the **Key Attestation** tab: \
 ![Confirm Key Attestation Tab](/assets/img/posts/certificate-authority-template-guide/step-8.png){:class="img-fluid"}
 
 ### Step 9
-Confirm you have modified the following in the **Extensions Tab**: \
+Confirm you have modified the following in the **Extensions** tab: \
 ![Confirm Extensions Tab](/assets/img/posts/certificate-authority-template-guide/step-9.png){:class="img-fluid"}
 
   - Click on **Application Policies** and **Edit**
@@ -76,7 +76,7 @@ Confirm you have modified the following in the **Extensions Tab**: \
     ![Confirm Extensions Tab - Key Usage Extension Adding](/assets/img/posts/certificate-authority-template-guide/step-9-3.png){:class="img-fluid"}
 
 ### Step 10
-Confirm you have modified the following in the **Security Tab**:
+Confirm you have modified the following in the **Security** tab:
   - You can add multiple types of objects here: Users, Computers, Service Accounts, Groups, or Built-in security principals. \
   For simplicity I will keep the defaults and **only** add the following permissions on **Authenticated Users**:
     -  **Read**
