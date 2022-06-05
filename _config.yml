@@ -158,6 +158,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-admin
+  - jemoji
 
 # Jekyll Admin Config
 jekyll_admin:
