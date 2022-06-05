@@ -2,7 +2,7 @@
 layout: post
 date:   '2022-05-02 14:28:58 -0500'
 title: "Custom SQL Management Pack Invoke-SqlCmd Exception"
-categories: troubleshooting guides OperationsManager
+categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/invoke-sqlcmd.png
 
