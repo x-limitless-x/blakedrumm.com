@@ -12,8 +12,9 @@ summary: >- # this means to ignore newlines
 keywords: rebuild scom perf counters, scom perf counters, opsmgr perf counters, operations manager
 permalink: /blog/rebuild-perf-counters/
 ---
+<!--
 ## Introduction
-The following event id prompted me to write this article.
+The following event id inspired me to write this article:
 
 ```
 Log Name:      Operations Manager
@@ -36,9 +37,9 @@ Instance ID: {3Z4DF6FB-B78C-33D9-BE0F-C84F7278AB92}
 Management group: <ManagementGroupName>
 ```
 
-The above tells me, for some reason SCOM is no longer able to resolve some Performance Counter names on the Management Server, which causes some of the workflows for the SCOM Data Warehouse to fail.
-
-## How to Resolve
+The above tells me: `could not resolve counter instance OpsMgr DW Writer Module` for some reason SCOM is no longer able to resolve some Performance Counter names on the Management Server, which causes some of the workflows for the SCOM Data Warehouse to fail.
+-->
+## How to Rebuild
 Rebuild the Performance counters with the following Powershell Script, you can copy and paste the below script to a Powershell ISE Window running as **Administrator**:
 ```powershell
 Push-Location $PWD
