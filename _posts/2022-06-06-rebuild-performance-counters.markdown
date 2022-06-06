@@ -36,7 +36,7 @@ Instance ID: {3Z4DF6FB-B78C-33D9-BE0F-C84F7278AB92}
 Management group: <ManagementGroupName>
 ```
 
-The above tells me, for some reason SCOM is no longer able to resolve the Performance Counter names on the Management Server, which causes some of the workflows for the SCOM Data Warehouse to fail.
+The above tells me, for some reason SCOM is no longer able to resolve some Performance Counter names on the Management Server, which causes some of the workflows for the SCOM Data Warehouse to fail.
 
 ## How to Resolve
 Rebuild the Performance counters with the following Powershell Script, you can copy and paste the below script to a Powershell ISE Window running as **Administrator**:
