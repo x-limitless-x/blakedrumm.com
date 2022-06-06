@@ -2,7 +2,7 @@
 layout: post
 date:   '2022-06-06 9:21:21 -0500'
 title: "Rebuild Performance Counters"
-categories: operationsManager
+categories: guides operationsManager powershell
 author: blakedrumm
 thumbnail: /assets/img/scom-dw-grooming-tool.png
 
