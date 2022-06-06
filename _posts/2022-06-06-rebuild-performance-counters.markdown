@@ -4,7 +4,7 @@ date:   '2022-06-06 9:21:21 -0500'
 title: "Rebuild Performance Counters"
 categories: guides operationsManager powershell
 author: blakedrumm
-thumbnail: /assets/img/scom-dw-grooming-tool.png
+thumbnail: /assets/img/posts/recreate-perf-counters.png
 
 summary: >- # this means to ignore newlines
   This article shows you how to rebuild your Performance Counters.
