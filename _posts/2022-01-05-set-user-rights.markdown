@@ -147,6 +147,8 @@ PassThru object to allow manipulation / filtering:
 .\Get-UserRights.ps1 -PassThru | ? {$_.Privilege -match 'SeServiceLogonRight'}
 ```
 
+Leave some feedback if this helped you! :v:
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/set-and-check-user-rights-assignment/)
 
 <!--
