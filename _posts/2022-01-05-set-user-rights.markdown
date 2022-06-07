@@ -33,6 +33,9 @@ Some (but not all) of the User Rights that can be set:
 ...
 ```
 
+> ## Note
+> You may edit line [392](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L392) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+
 Here are a few examples:
 ## Add Users
 ### Single Users
@@ -93,9 +96,6 @@ Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\Use
 ```powershell
 .\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 ```
-
-> ## Note
-> You can also modify line [392](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L392) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 ---
 
