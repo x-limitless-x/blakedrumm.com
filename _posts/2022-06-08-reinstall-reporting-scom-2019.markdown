@@ -29,8 +29,8 @@ The following may resolve the above error for you:
 1. Start by connecting to the Operations Manager database via SQL Server Management Studio. **(Create a backup of your Databases prior to any direct edits)**
 2. Get the current version of the Management Server you are connecting SSRS with note the version *(we will use this later to revert the changes to the DB)*
 
-   ### Example:
-	```sql
+   ### Get Version
+   ```sql
 	-- SCOM 2019 RTM
 	-- 10.19.10050.0
 
@@ -62,10 +62,10 @@ The following may resolve the above error for you:
 	where
 		IsManagementServer = 1 and 
 		PrincipalName = 'MS01-2019.contoso.com'
-	```	
+   ```	
 	![Example output for Management Server version SQL Query](/assets/img/posts/ssrs-example-1.png){:class="img-fluid"}
 3. We will run the following query to update the Management Server to the RTM version of SCOM 2019 (*10.19.10050.0*):
-   ### Example:
+   ### Update Version to RTM
    ```sql
    update MTV_HealthService
    set Version = '10.19.10050.0'
@@ -74,7 +74,7 @@ The following may resolve the above error for you:
    ```
 4. Install the SCOM Reporting Services! :smiley:
 5. After SCOM Reporting Services installs, you will need to revert the changes, run the following to return the version back to the version returned in step 1.
-   ### Example:
+   ### Revert Change
    ```sql
    update MTV_HealthService
    set Version = '10.19.10552.0'
