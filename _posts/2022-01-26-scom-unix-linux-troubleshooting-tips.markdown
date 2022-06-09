@@ -46,6 +46,8 @@ __Working Example:__
 __Non-working Example:__ \
 ![Example 3 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example3-notworking.png){:class="img-fluid"}
 
+>#### Important
+>Official list of Unix/Linux Operating Systems supported by System Center Operations Manager: [https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os](https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os)
 ___
 
 ## Tail the Logs
