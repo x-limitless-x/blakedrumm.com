@@ -74,7 +74,7 @@ The following may resolve the above error for you:
    ```
 4. Install SCOM Reporting Services! :sunglasses: :thumbsup:
    ![Install SCOM Reporting Services](/assets/img/posts/install-scom-reporting.png){:class="img-fluid"}
-5. After SCOM Reporting Services installs, you will need to revert the changes, run the following to return the version back to the version returned in step 1.
+5. After SCOM Reporting Services installs, you will need to revert the changes, run the following to return the version back to the version returned in Step 1:
    ### Revert Change
    ```sql
    update MTV_HealthService
