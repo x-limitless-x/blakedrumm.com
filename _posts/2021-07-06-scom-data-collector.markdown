@@ -34,8 +34,11 @@ permalink: /blog/scom-data-collector/
 ## Instructions
 [Download the zip file](https://aka.ms/SCOM-DataCollector) and extract zip file to a directory (ex. C:\Data Collector). You have 2 options for running this script.
 1. Right Click the SCOM Data Collector script and select Run with Powershell.
-2. Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as: \
-`cd C:\Data Collector`
+2. Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as:
+   ```powershell
+   cd C:\Data Collector
+   .\DataCollector-v3.8.3.ps1
+   ```
 
  >### Optional
  >You have the ability to run this script as any user you would like when you start the script without any switches. The default is the System Center Data Access Service account.
