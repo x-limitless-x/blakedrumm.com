@@ -27,18 +27,17 @@ permalink: /blog/scom-data-collector/
 [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest)
 
 ## Requirements
-System Center Operations Manager - Management Server
-
-Administrator Privileges
-
-Powershell 4+ (will still run on Powershell 3)
+- System Center Operations Manager - Management Server
+- Administrator Privileges
+- Powershell 4
 
 ## Instructions
-
-[Download zip file](https://aka.ms/SCOM-DataCollector) and extract zip file to a directory (ex. C:\Data Collector). Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as: \
+[Download the zip file](https://aka.ms/SCOM-DataCollector) and extract zip file to a directory (ex. C:\Data Collector). You have 2 options for running this script.
+1. Right Click the SCOM Data Collector script and select Run with Powershell.
+2. Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as: \
 `cd C:\Data Collector`
 
- >## Note
+ >### Optional
  >You have the ability to run this script as any user you would like when you start the script without any switches. The default is the System Center Data Access Service account.
 
 Run this script on a Operations Manager Management Server to gather their SQL server names and DB names from the local registry. Otherwise user will need to manually input names. It will attempt to query the SQL Server Instance remotely, and will create CSV output files in the Output folder located in the SCOM Data Collector script directory.The SCOM Data Collector has the ability to query multiple databases in the SCOM SQL Instance (_master, OperationsManager, OperationsManagerDW_), having a high level of rights to SQL is preferred for a full gather.
@@ -54,8 +53,8 @@ This script has the ability to gather the following information:
  - SQL Queries that collect information about many aspects of your environment (too many queries to go into detail here, here are some of the queries it uses: https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/SQL%20Queries)
  - Windows Updates installed on Management Servers / SQL Server
  - Service Principal Name (SPN) Information for SCOM Management Servers
- - Local Administrators Group on each Management Server
- - Local User Account Rights on each Management Server
+ - Local Administrators Group on each Management Server and any other servers you specify
+ - Local User Account Rights on each Management Server and any other servers you specify
  - Database Information / DB Version
  - SCOM RunAs Account Information
  - Check TLS 1.2 Readiness
@@ -67,112 +66,116 @@ This script has the ability to gather the following information:
  - Rules / Monitors in your SCOM Environment
  - Get Run As Accounts from SCOM Management Group
  - Test SCOM Ports
- - Best Practice Analyzer to verify you are following SCOM Best Practices
+ - Best Practice Analyzer to verify you are following SCOM Best Practices *(only a few items being checked currently)*
  - Gathers Group Policy settings on each Management Server and SQL Server
  - Gathers installed Software on each Management Server
  - Management Group Overall Health and verify Configuration matches across Management Servers in Management Group
  - Check SCOM Certificates for Validity / Usability
  - SCOM Install / Update Logs
  - IP Address of each Management Server
- - this list is not complete..
+ - Gather SCOM Configuration from registry and configuration file
+ - ***this list is not complete...***
 
 ----
 
 ## Examples
 
-##### Note: If you know you have Query rights against the DB(s) run any Switch (-Command) with -AssumeYes
- 
+>### Optional
+>If you know you have (read) Query rights against the DB(s) and Administrator permissions on the Management Servers, run any Switch (-Command) with -AssumeYes (-Yes). Otherwise you will need to provide an account that has permissions at runtime.
+
 
 ### Available Switches
 Every Switch Available:
 
-    .\DataCollector.ps1 -Servers -GetRunasAccounts -GetEventLogs -CheckCertificates -CheckTLS -ExportMPs -GPResult -MSInfo32 -SQLLogs -SQLOnly -CaseNumber -AssumeYes -GenerateHTML -All -PingAll
+```powershell
+.\DataCollector.ps1 -All -ManagementServers <array> -Servers <array> -AdditionalEventLogs <array> -GetRulesAndMonitors -GetRunAsAccounts -CheckTLS -CheckCertificates -GetEventLogs -ExportMPs -GPResult -SQLLogs -CheckPorts -GetLocalSecurity -GetInstalledSoftware -GetSPN -AssumeYes -GetConfiguration -CheckGroupPolicy -GetInstallLogs -SkipSQLQueries -SQLOnly -SQLOnlyOpsDB -SQLOnlyDW
+```
+
+
+### All Switches
+This will allow you to run every switch available currently:
+
+```powershell
+.\DataCollector.ps1 -All
+.\DataCollector.ps1 -All -Servers Agent1
+.\DataCollector.ps1 -All -Servers Agent1 -ManagementServer MS01-2019.contoso.com
+.\DataCollector.ps1 -All -Yes
+```
 
 
 ### Built in menu
-
 To see the built in menu, run the script with no arguments or switches:
 
-    .\DataCollector.ps1
-
+```powershell
+.\DataCollector.ps1
+```
 You can also right click the `.ps1` file and Run with Powershell.
 
 
-
 ### Certificates
-
 To Check the Certificate(s) Installed on the Management Server(s) in the Management Group, and an Server:
 
-    .\DataCollector.ps1 -CheckCertificates -Servers AppServer1.contoso.com
+```powershell
+.\DataCollector.ps1 -CheckCertificates -Servers AppServer1.contoso.com
+```
 
 To Check the Certificate(s) Installed on the Management Server(s) in the Management Group:
 
-    .\DataCollector.ps1 -CheckCertificates
-
+```powershell
+.\DataCollector.ps1 -CheckCertificates
+```
 
 ### Gather only SQL Queries
-
 To gather only the SQL Queries run the following:
 
-    .\DataCollector.ps1 -SQLOnly
+```powershell
+.\DataCollector.ps1 -SQLOnly
+```
 
 If you know the account running the Data Collector has permissions against the SCOM Databases, run this:
 
-    .\DataCollector.ps1 -SQLOnly -Yes
-
+```powershell
+.\DataCollector.ps1 -SQLOnly -Yes
+```
 
 
 
 ### Event Logs
-
 To gather Event Logs from 3 Agents and the Management Server(s) in the Current Management Group:
 
-    .\DataCollector.ps1 -GetEventLogs -Servers Agent1.contoso.com, Agent2.contoso.com, Agent3.contoso.com
+```powershell
+.\DataCollector.ps1 -GetEventLogs -Servers Agent1.contoso.com, Agent2.contoso.com, Agent3.contoso.com
+```
 
 To just gather the Event Logs from the Management Server(s) in the Management Group:
 
-    .\DataCollector.ps1 -GetEventLogs
-
-
-
+```powershell
+.\DataCollector.ps1 -GetEventLogs
+```
 
 
 ### Management Packs
-
 To Export Installed Management Packs:
 
-    .\DataCollector.ps1 -ExportMPs
-
-
-
+```powershell
+.\DataCollector.ps1 -ExportMPs
+```
 
 
 ### RunAs Accounts
-
 To Export RunAs Accounts from the Management Server:
 
-    .\DataCollector.ps1 -GetRunAsAccounts
-
-
-
+```powershell
+.\DataCollector.ps1 -GetRunAsAccounts
+```
 
 
 ### Check TLS 1.2 Readiness
-
 To Run the TLS 1.2 Hardening Readiness Checks on every Management Server and SQL SCOM DB Server(s) in the Management Group:
 
-    .\DataCollector.ps1 -CheckTLS
-
-
-
-
-
-### All Switches
-This will allow you to run every switch available currently, this supports the -Servers Switch:
-
-    .\DataCollector.ps1 -All
-    .\DataCollector.ps1 -All -Servers Agent1
-    .\DataCollector.ps1 -All -Yes
+```powershell
+.\DataCollector.ps1 -CheckTLS
+```
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-data-collector/)
 
