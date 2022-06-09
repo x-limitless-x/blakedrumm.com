@@ -15,9 +15,9 @@ permalink: /blog/fix-install-bug-scom-2019-reporting/
 ---
 ## Issue Description
 The issue I have seen is the following error message in the SCOM Reporting Services installer:
-```
-“Unable to connect to the Data Access service for this management server. Ensure the Data Access service is running and that the service, the management group, and setup are all the same version.”
-```
+
+***“Unable to connect to the Data Access service for this management server. Ensure the Data Access service is running and that the service, the management group, and setup are all the same version.”***
+
 The problem stems from an SCOM 2019 Update Rollup that was previously applied to the Management Server and this causes the SCOM Reporting Services to fail due to the Reporting Services installer expecting the RTM version to be present.
 
 The regression was introduced in [Update Rollup 1 for System Center Operations Manager 2019 (KB4533415)](https://support.microsoft.com/en-us/topic/update-rollup-1-for-system-center-operations-manager-2019-kb4533415-e5ce3191-2403-684f-1980-43aa61b50cb6)
