@@ -14,7 +14,7 @@ permalink: /blog/scom-unix-linux-troubleshooting-tips/
 <sub>This post was last updated on June 9th, 2022</sub>
 
 ## Verify the versions for all prerequisite software
-You can run the following command on a monitored and not monitored server to compare the software installed:
+You can run the following command on a monitored and not monitored server to compare the software installed, or verify with the official list [https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os](https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os):
 ```shell
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
@@ -46,8 +46,6 @@ __Working Example:__
 __Non-working Example:__ \
 ![Example 3 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example3-notworking.png){:class="img-fluid"}
 
->#### Important
->Official list of Unix/Linux Operating Systems supported by System Center Operations Manager: [https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os](https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os)
 ___
 
 ## Tail the Logs
