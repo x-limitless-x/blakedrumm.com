@@ -91,7 +91,7 @@ This script has the ability to gather the following information:
 Every Switch Available:
 
 ```powershell
-.\DataCollector.ps1 -All -ManagementServers <array> -Servers <array> -AdditionalEventLogs <array> -GetRulesAndMonitors -GetRunAsAccounts -CheckTLS -CheckCertificates -GetEventLogs -ExportMPs -GPResult -SQLLogs -CheckPorts -GetLocalSecurity -GetInstalledSoftware -GetSPN -AssumeYes -GetConfiguration -CheckGroupPolicy -GetInstallLogs -SkipSQLQueries -SQLOnly -SQLOnlyOpsDB -SQLOnlyDW
+.\DataCollector.ps1 -All -ManagementServers "<array>" -Servers "<array>" -AdditionalEventLogs "<array>" -GetRulesAndMonitors -GetRunAsAccounts -CheckTLS -CheckCertificates -GetEventLogs -ExportMPs -GPResult -SQLLogs -CheckPorts -GetLocalSecurity -GetInstalledSoftware -GetSPN -AssumeYes -GetConfiguration -CheckGroupPolicy -GetInstallLogs -SkipSQLQueries -SQLOnly -SQLOnlyOpsDB -SQLOnlyDW
 ```
 
 
