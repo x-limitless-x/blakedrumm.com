@@ -26,7 +26,7 @@ The regression was introduced in [Update Rollup 1 for System Center Operations M
 
 ## Solution
 The following may resolve the above error for you:
-1. Start by connecting to the Operations Manager database. **(Create a backup of your Databases prior to any direct edits)**
+1. Start by connecting to the Operations Manager database via SQL Server Management Studio. **(Create a backup of your Databases prior to any direct edits)**
 2. Get the current version of the Management Server you are connecting SSRS with note the version *(we will use this later to revert the changes to the DB)*
 
    ### Example:
