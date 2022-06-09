@@ -11,7 +11,7 @@ summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
-<sub>This post was last updated on May 9th, 2022</sub>
+<sub>This post was last updated on June 9th, 2022</sub>
 
 ## Verify the versions for all prerequisite software
 You can run the following command on a monitored and not monitored server to compare the software installed:
@@ -139,6 +139,14 @@ The following steps are what happens (from a high level) during initial installa
 1. Try `hostname -f` (this will fail on some Linux systems)
 2. Attempt to obtain the domain name from `/etc/resolve.conf`
 3. Attempt to obtain long hostname with `nslookup` command
+
+___
+
+## Purge SCX Agent Installation
+On the Unix/Linux Machine run the following command to uninstall and purge the SCOM Linux Agent installation:
+```shell
+sh ./scx-<version>.<type>.<version>.<arch>.sh --purge --force
+```
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-troubleshooting-tips/)
 
