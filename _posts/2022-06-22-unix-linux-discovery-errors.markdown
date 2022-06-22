@@ -15,6 +15,8 @@ permalink: /blog/unix-linux-discovery-errors/
 ---
 ## Errors you may see
 
+___
+
 ### Error Example 1
 **DiscoveryResult.ErrorData type. Please file bug report - Parameter Name: s** \
 When discovering a Unix/Linux machine, the wizard shows the machine as unmanageable in the discovery results with below error:
