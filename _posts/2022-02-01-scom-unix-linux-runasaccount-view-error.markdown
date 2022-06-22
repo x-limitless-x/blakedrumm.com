@@ -2,7 +2,7 @@
 layout: post
 title:  "SCOM Unix/Linux RunAs Account View - System.Xml.XmlException"
 date:   '2022-02-01 16:45:21 -0500'
-categories: troubleshooting operationsManager
+categories: troubleshooting operationsManager linux
 author: blakedrumm
 thumbnail: /assets/img/posts/unix-linux-runas-accounts-missing.png
 
