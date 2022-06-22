@@ -37,7 +37,7 @@ permalink: /blog/scom-data-collector/
 2. Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as:
    ```powershell
    cd C:\Data Collector
-   .\DataCollector-v3.8.3.ps1
+   .\DataCollector-v3.8.5.ps1
    ```
 
  >### Optional
