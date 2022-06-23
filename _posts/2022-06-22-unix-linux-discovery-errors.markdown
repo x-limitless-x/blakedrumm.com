@@ -43,7 +43,13 @@ If there is a WinHTTP proxy server configured, add the FQDN for the server which
 netsh winhttp set proxy proxy-server="<proxyserver:port>" bypass-list="*.ourdomain.com;*.yourdomain.com*;<serverFQDN>" 
 ```
  
-Once the Bypass List has been configured, check if discovery of the agent is now successful 
+Once the Bypass List has been configured, check if discovery of the agent is now successful
+
+> ## Note
+> You can disable WinHTTP Proxy by running the following command, this will remove a proxy server and configure **“Direct Access”**:
+> ```
+> netsh winhttp reset proxy
+> ```
 
 ___
 
