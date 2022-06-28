@@ -60,7 +60,7 @@ Add User Right “Log on as a batch job” for user SID S-1-5-11:
 .\Set-UserRights.ps1 -AddRight -Username S-1-5-11 -UserRight SeBatchLogonRight
 ```
 
-### Multiple Users / Services / Computers
+### Multiple Users / Rights / Computers
 #### Example 5
 Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
 ```powershell
