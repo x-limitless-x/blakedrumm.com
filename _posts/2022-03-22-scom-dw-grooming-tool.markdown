@@ -12,6 +12,11 @@ summary: >- # this means to ignore newlines
 keywords: scom dw grooming, opsmgr dw tool, scom dw tool, operations manager tool, powershell script for SCOM, powershell script
 permalink: /blog/scom-dw-grooming-tool/
 ---
+
+## Latest Version
+[![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-DW-Grooming-Tool)](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest) \
+[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-DW-Grooming-Tool/latest/SCOM-DW-GroomingGUI-EXE-64bit.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DW-Tool)
+
 ## Introduction
 
 This tool can be used to modify the System Center Operations Manager Data Warehouse Grooming retention days, allows you to see grooming history, you can manually run grooming, and you may also export the current configuration so you can keep a backup of your settings. You have the option of resetting the values to Defaults for the typical data sets in the Data Warehouse.
@@ -36,9 +41,6 @@ This script will log some actions to the Application Event Log. Look for the Eve
 You will get prompted each time you run the script to accept the license agreement, unless you select do not ask me again, when you select this it will save a file to your ProgramData Directory: `C:\ProgramData\SCOM-DataWarehouseGUI-AgreedToLicense.log`
 
 If you have any questions or concerns, please leave a comment and I will do my best to assist!
-
-## Latest Version
-**Version:** `1.0.5.4`
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-dw-grooming-tool/)
 
