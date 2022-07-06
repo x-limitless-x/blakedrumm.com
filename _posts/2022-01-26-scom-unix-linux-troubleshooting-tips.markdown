@@ -102,12 +102,12 @@ From the Management Server(s) in the Unix/Linux Resource Pool, verify that the f
 
 ### Basic Authentication
 ```cmd
-winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -password:<password> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:basic -skipCACheck -skipCNCheck -skiprevocationcheck -encoding:utf-8
+winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -password:<password> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:basic -skipCAcheck -skipCNcheck -skipRevocationcheck -encoding:utf-8
 ```
 
 ### Kerberos Authentication
 ```cmd
-winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:Kerberos -skipCACheck -skipCNCheck -skiprevocationcheck -encoding:utf-8
+winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -username:<username> -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:Kerberos -skipCAcheck -skipCNcheck -skipRevocationcheck -encoding:utf-8
 ```
 
 
