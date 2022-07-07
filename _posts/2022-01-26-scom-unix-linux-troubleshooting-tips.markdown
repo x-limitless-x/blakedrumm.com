@@ -122,7 +122,7 @@ Encountered an internal error in the SSL library.
 Error number:  -2147012721 0x80072F8F
 A security error occurred
 ```
-or
+or this error via the Discovery Wizard:
 ```
 Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:
 Encountered an internal error in the SSL library.
