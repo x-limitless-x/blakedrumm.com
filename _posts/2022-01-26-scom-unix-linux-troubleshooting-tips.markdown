@@ -11,7 +11,7 @@ summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
-<sub>This post was last updated on June 9th, 2022</sub>
+<sub>This post was last updated on July 20th, 2022</sub>
 
 ## Verify the versions for all prerequisite software
 You can run the following command on a monitored and not monitored server to compare the software installed, or verify with the official list [https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os](https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os):
