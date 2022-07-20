@@ -49,6 +49,34 @@ __Non-working Example:__ \
 ___
 
 ## Tail the Logs
+### Enable Verbose SCX Logs
+Use the below command to enable verbose logging for the SCX Provider:
+```shell
+scxadmin -log-set all verbose
+```
+
+### Enable Verbose logging for OMI Server
+Use the below command to modify the omiserver.conf file. Change loglevel to one of the following valid options, verbose being highest:
+**ERROR, WARNING, INFO, DEBUG, VERBOSE**
+```shell
+sudo vim /etc/opt/omi/conf/omiserver.conf
+```
+
+If loglevel does not exist in the file you can add the following lines to the file and change the loglevel value
+```shell
+##
+## loglevel -- set the loggiing options for OMI server
+##   Valid options are: ERROR, WARNING, INFO, DEBUG, VERBOSE (debug build)
+##   If commented out, then default value is: WARNING
+##
+loglevel = INFO
+```
+
+After saving and quitting vim, restart the service with below command for logging to be enabled
+```shell
+sudo /opt/omi/bin/service_control restart
+```
+
 ### Secure Log
 You can run the following command to show current log data pertaining to authentication and authorization privileges:
 ```shell
