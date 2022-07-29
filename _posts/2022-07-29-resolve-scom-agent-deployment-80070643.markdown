@@ -15,16 +15,16 @@ permalink: /blog/resolve-scom-agent-deployment-80070643/
  I had a case where my customer is experiencing an error on their SCOM Console when attempting to resolve an agent Pending Upgrade in Pending Management. The Agent needed to be upgraded from the SCOM 2019 Agent to the SCOM 2022 Agent. We reviewed the Log file: `Agent1AgentInstall.Log` located in the following directory: `C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\AgentLogs`.
  
  The MSI error highlighted below was the main cause for the installation failure:
-  > Action start 16:18:53: _SuppressComputerReboot.
-  > MSI (s) (AC:F0) [16:18:53:021]: Skipping action: SetIS_NETFRAMEWORK_472_OR_LATER_INSTALLED (condition is false)
-  > MSI (s) (AC:F0) [16:18:53:021]: Doing action: LaunchConditions
-  > Action ended 16:18:53: _SuppressComputerReboot. Return value 1.
-  > Action start 16:18:53: LaunchConditions.
-  > MSI (s) (AC:F0) [16:18:53:021]: Product: Microsoft Monitoring Agent -- <span style="color:yellow">The .NET Framework 4.7.2 is required to install this application.
-  > 
-  > The .NET Framework 4.7.2 is required to install this application.</span>
-  > Action ended 16:18:53: LaunchConditions. Return value 3.
-  > Action ended 16:18:53: INSTALL. Return value 3.
+  > Action start 16:18:53: _SuppressComputerReboot. \
+  > MSI (s) (AC:F0) [16:18:53:021]: Skipping action: SetIS_NETFRAMEWORK_472_OR_LATER_INSTALLED (condition is false) \
+  > MSI (s) (AC:F0) [16:18:53:021]: Doing action: LaunchConditions \
+  > Action ended 16:18:53: _SuppressComputerReboot. Return value 1. \
+  > Action start 16:18:53: LaunchConditions. \
+  > MSI (s) (AC:F0) [16:18:53:021]: Product: Microsoft Monitoring Agent -- <span style="color:yellow">The .NET Framework 4.7.2 is required to install this application. \
+  >  
+  > The .NET Framework 4.7.2 is required to install this application.</span> \
+  > Action ended 16:18:53: LaunchConditions. Return value 3. \
+  > Action ended 16:18:53: INSTALL. Return value 3. \
 
 We also attempted a manual install and this will also show you the error: \
 ![DotNET Missing MSI Error](/assets/img/posts/dotNET-4_7_2-missing.png){:class="img-fluid"}
