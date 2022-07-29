@@ -7,7 +7,7 @@ author: blakedrumm
 thumbnail: /assets/img/posts/unix-linux-discovery-wizard.png
 
 summary: >- # this means to ignore newlines
-  I had a case today that required an unusual fixes so I figured I would post some items that may resolve 
+  I had a case today that required an unusual fix so I figured I would post some items that may resolve 
   these Discovery Wizard errors while discovering a Linux Machine.
 
 keywords: scom, unix linux discovery errors, operationsmanager, SCOM 2019, 
