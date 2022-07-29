@@ -7,7 +7,7 @@ author: blakedrumm
 thumbnail: /assets/img/posts/SCOM-Agent-Deployment-Error-80070643.png
 
 summary: >- # this means to ignore newlines
-  This article describes how to resolve an SCOM Agent Deployment Error you may experience which can affect the ability to upgrade or install an Agent. 
+  This article describes how to resolve an SCOM Agent Deployment Error you may experience which can affect the ability to upgrade or install an Agent.
 
 keywords: resolve 80070643, scom management server 80070643, event 80070643, scom agent upgrade error, agent update error
 permalink: /blog/resolve-scom-agent-deployment-80070643/
@@ -26,7 +26,7 @@ permalink: /blog/resolve-scom-agent-deployment-80070643/
   > Action ended 16:18:53: LaunchConditions. Return value 3.
   > Action ended 16:18:53: INSTALL. Return value 3.
 
-We also attempted a manual install and this will also show you the error:
+We also attempted a manual install and this will also show you the error: \
 ![DotNET Missing MSI Error](/assets/img/posts/dotNET-4_7_2-missing.png)
 
 After installing **.NET Framework 4.7.2** as required for the SCOM 2022 Agent, the installation succeeded. \
