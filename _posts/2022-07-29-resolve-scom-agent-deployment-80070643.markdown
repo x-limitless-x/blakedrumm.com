@@ -27,7 +27,7 @@ permalink: /blog/resolve-scom-agent-deployment-80070643/
   > Action ended 16:18:53: INSTALL. Return value 3.
 
 We also attempted a manual install and this will also show you the error:
-![.NET Missing MSI Error](/assets/img/posts/.NET-4.7.2-missing.png)
+![DotNET Missing MSI Error](/assets/img/posts/.NET-4.7.2-missing.png)
 
 After installing .NET Framework 4.7.2 as required for the SCOM 2022 Agent, the installation succeeded.
 [SCOM 2022 Agent Requirements](https://docs.microsoft.com/system-center/scom/system-requirements?view=sc-om-2022#microsoft-monitoring-agent-operating-system)
