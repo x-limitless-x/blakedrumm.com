@@ -20,11 +20,11 @@ permalink: /blog/resolve-scom-agent-deployment-80070643/
   > MSI (s) (AC:F0) [16:18:53:021]: Doing action: LaunchConditions \
   > Action ended 16:18:53: _SuppressComputerReboot. Return value 1. \
   > Action start 16:18:53: LaunchConditions. \
-  > MSI (s) (AC:F0) [16:18:53:021]: Product: Microsoft Monitoring Agent -- <span style="color:yellow">The .NET Framework 4.7.2 is required to install this application. \
+  > MSI (s) (AC:F0) [16:18:53:021]: Product: Microsoft Monitoring Agent -- <span style="color:yellow">The .NET Framework 4.7.2 is required to install this application.</span> \
   >  
-  > The .NET Framework 4.7.2 is required to install this application.</span> \
+  > The .NET Framework 4.7.2 is required to install this application. \
   > Action ended 16:18:53: LaunchConditions. Return value 3. \
-  > Action ended 16:18:53: INSTALL. Return value 3. \
+  > Action ended 16:18:53: INSTALL. Return value 3.
 
 We also attempted a manual install and this will also show you the error: \
 ![DotNET Missing MSI Error](/assets/img/posts/dotNET-4_7_2-missing.png){:class="img-fluid"}
