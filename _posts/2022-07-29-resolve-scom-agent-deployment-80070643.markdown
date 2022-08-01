@@ -14,6 +14,30 @@ permalink: /blog/resolve-scom-agent-deployment-80070643/
 ---
  I had a case where my customer is experiencing an error on their SCOM Console when attempting to resolve an agent Pending Upgrade in Pending Management. The Agent needed to be upgraded from the SCOM 2019 Agent to the SCOM 2022 Agent. We reviewed the Log file: `Agent1AgentInstall.Log` located in the following directory: `C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\AgentLogs`.
  
+**Discovery Wizard Error:**
+ ```
+ __________________________________________________________
+The Agent Management Operation Agent Install failed for remote computer Agent1.contoso.com. 
+
+
+
+Install account: CONTOSO\SCOMAdmin 
+
+
+Error Code: 80004021 
+
+
+Error Description: The operation attempted is not supported. 
+
+
+Microsoft Installer Error Description: 
+
+
+
+
+For more information, see Windows Installer log file "C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\AgentLogs\Agent1AgentInstall.log" on the Management Server. 
+ ```
+ 
  The MSI error highlighted below was the main cause for the installation failure:
   > Action start 16:18:53: _SuppressComputerReboot. \
   > MSI (s) (AC:F0) [16:18:53:021]: Skipping action: SetIS_NETFRAMEWORK_472_OR_LATER_INSTALLED (condition is false) \
