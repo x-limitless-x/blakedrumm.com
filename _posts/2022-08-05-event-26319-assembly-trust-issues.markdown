@@ -41,7 +41,7 @@ There are two assemblies used by SCOM that are marked as _UNSAFE_ and not allowe
 ## How to Resolve
 ### Prerequisites 
  
-*If using availability groups, this is to be completed after the databases are added 
+__*If using availability groups, this is to be completed after the databases are added__
  
  - Ensure that CLR is enabled on all SQL Server instances with this script:
 ```sql
@@ -81,8 +81,8 @@ What these mean:
 If the value is 0 - check this doc for more info on how to set it to 1 - [https://docs.microsoft.com/sql/database-engine/configure-windows/clr-strict-security?view=sql-server-2017](https://docs.microsoft.com/sql/database-engine/configure-windows/clr-strict-security?view=sql-server-2017)
  
 
- ### Step 2: Create the Trusted Assemblies
- To create the Trusted Assemblies, run the below TSQL Query on each SQL 2017+ instance(s) hosting the Operations Manager Database: 
+### Step 2: Create the Trusted Assemblies
+To create the Trusted Assemblies, run the below TSQL Query on each SQL 2017+ instance(s) hosting the Operations Manager Database: 
 ```sql
 USE master;
 GO
