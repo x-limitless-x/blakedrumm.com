@@ -12,6 +12,8 @@ summary: >- # this means to ignore newlines
 keywords: resolve 26319, scom management server assembly trust issue, event 26319, assembly id 65537, unable to open scom console
 permalink: /blog/event-26319-assembly-trust-issues/
 ---
+<sub>Thank you to Lorne Sepaugh for the original creation of the KB!</sub>
+
 ## Symptom
 I had a customer today that had an issue with being unable to open any SCOM Console without receiving the following error:
 ```
