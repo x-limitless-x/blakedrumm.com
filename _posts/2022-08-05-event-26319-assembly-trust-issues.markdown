@@ -71,7 +71,7 @@ SELECT * FROM sys.configurations WHERE name LIKE 'clr strict security';
 You should get a return like this, "value_in_use" and "value" should be 1: \
 ![Example showing sys.configurations value_in_use](/assets/img/posts/clr-value-in-use.png){:class="img-fluid"}
  
-This is what the values mean: \
+This is what the values mean:
 | Value | Description |
 |---|---|
 | 0 | Disabled - Provided for backwards compatibility. Disabled value is not recommended |
