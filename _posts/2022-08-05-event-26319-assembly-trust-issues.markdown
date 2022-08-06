@@ -34,7 +34,7 @@ System.IO.FileLoadException:
 ```
 
 This error is due to a change in the SQL 2017 security approach for CLR, as stated in the SQL Server 2017 docs: \
-![CLR SQL 2017 documentation highlight](/assets/img/posts/clr-sql-2017-security-approach.png)
+![CLR SQL 2017 documentation highlight](/assets/img/posts/clr-sql-2017-security-approach.png){:class="img-fluid"}
  
 There are two assemblies used by SCOM that are marked as _UNSAFE_ and not allowed to run by default in one of these scenarios - as such we need to mark them as safe and trusted on each server instance. The assemblies are: 
  - Microsoft.EnterpriseManagement.SQL.DataAccessLayer 
@@ -69,7 +69,7 @@ SELECT * FROM sys.configurations WHERE name LIKE 'clr strict security';
 ```
 
 You should get a return like this, "value_in_use" and "value" should be 1: \
-![Example showing sys.configurations value_in_use](/assets/img/posts/clr-value-in-use.png)
+![Example showing sys.configurations value_in_use](/assets/img/posts/clr-value-in-use.png){:class="img-fluid"}
  
 This is what the values mean: \
 | Value | Description |
@@ -137,7 +137,7 @@ SELECT * FROM sys.trusted_assemblies
 
 Once done on all SQL Server instance(s) that host the Operations Manager Database, restart the SCOM Console on the management servers and everything should load correctly.
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/event-26319-assembly-trust-issues/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/event-26319-assembly-trust-issues/){:class="img-fluid"}
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
