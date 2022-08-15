@@ -107,7 +107,7 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 ![UserAccountsRights](/assets/img/posts/get-user-right.png){:class="img-fluid"}
 
 > ## Note
-> You may edit line [487](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L487) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [467](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L467) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
 ### Local Computer
