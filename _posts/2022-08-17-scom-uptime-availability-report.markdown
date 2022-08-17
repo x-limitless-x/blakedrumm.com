@@ -37,6 +37,16 @@ In order to properly report on the uptime of a machine, you will need to target 
 > Quick tip, you can modify the parameters for the report at any time with the Show or Hide Parameter Area button: \
 > ![Show and Hide Parameter in Reports](/assets/img/posts/show-hide-parameter-area-reporting.png){:class="img-fluid"}
 
+---
+
+## Dynamic Agent Health Service Watcher Group
+
+If you would like to make it easier to run the report again, you can create a group for the Health Service Watchers. Just create a group in **Authoring** -> **Groups**, with the following Dynamic Member Rule: \
+![Dynamic Member Rule](/assets/img/posts/scom-agent-hsw-group.png){:class="img-fluid"}
+
+**Membership Result:** \
+![Membership Result](/assets/img/posts/all-agent-hsw-objects-group.png){:class="img-fluid"}
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-uptime-availability-report/)
 
 <!--
