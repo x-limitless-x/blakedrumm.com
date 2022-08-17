@@ -2,7 +2,7 @@
 layout: post
 date:   '2022-06-22 15:08:58 -0500'
 title: "SCOM Unix/Linux Discovery Errors + How To Fix Them"
-categories: troubleshooting guides linux
+categories: troubleshooting guides linux operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/unix-linux-discovery-wizard.png
 
