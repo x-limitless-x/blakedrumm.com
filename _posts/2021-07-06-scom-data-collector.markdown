@@ -14,25 +14,25 @@ summary: >- # this means to ignore newlines
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
 ---
-## Download Link
+## :arrow_down_small: Download Link
 [https://aka.ms/SCOM-DataCollector](https://aka.ms/SCOM-DataCollector)
 
 [![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-Scripts-and-SQL)](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest){:class="img-fluid"} \
 [![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/latest/SCOM-DataCollector.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DataCollector){:class="img-fluid"} \
 [![Download Count Releases](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/total.svg?style=for-the-badge&color=brightgreen)](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases){:class="img-fluid"}
 
-## Personal Webpage
+## :page_facing_up: Personal Webpage
 [https://files.blakedrumm.com/SCOM-DataCollector.zip](https://files.blakedrumm.com/SCOM-DataCollector.zip)
 
-## Github Link
+## :link: Github Link
 [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest)
 
-## Requirements
+## :red_circle: Requirements
 - System Center Operations Manager - Management Server
 - Administrator Privileges
 - Powershell 4
 
-## Instructions
+## :page_with_curl: Instructions
 [Download the zip file](https://aka.ms/SCOM-DataCollector) and extract zip file to a directory (ex. C:\Data Collector). You have 2 options for running this script.
 1. Right Click the SCOM Data Collector script and select Run with Powershell.
 2. Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as:
@@ -82,7 +82,7 @@ This script has the ability to gather the following information:
 
 ----
 
-## Examples
+## :question: Examples
 
 >### Optional
 >If you know you have (read) Query rights against the DB(s) and Administrator permissions on the Management Servers, run any Switch (-Command) with -AssumeYes (-Yes). Otherwise you will need to provide an account that has permissions at runtime.

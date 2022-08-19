@@ -30,7 +30,7 @@ Argument List | Description |
 
 
 
-## Examples
+## :question: Examples
 ### Clear all Gray SCOM Agents
 ```powershell
 #Get the SystemCenter Agent Class

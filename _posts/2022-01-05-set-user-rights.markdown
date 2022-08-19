@@ -33,69 +33,75 @@ Some (but not all) of the User Rights that can be set:
 ...
 ```
 
-> ## Note
+> ## :notebook: Note
 > You may edit line [392](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L392) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
 ## Add Users
 ### Single Users
-#### Example 1
-Add User Right "Allow log on locally" for current user:
-```powershell
-.\Set-UserRights.ps1 -AddRight -UserRight SeInteractiveLogonRight
-```
-#### Example 2
-Add User Right "Log on as a service" for CONTOSO\User:
-```powershell
-.\Set-UserRights.ps1 -AddRight -Username CONTOSO\User -UserRight SeServiceLogonRight
-```
-#### Example 3
-Add User Right "Log on as a batch job" for CONTOSO\User:
-```powershell
-.\Set-UserRights.ps1 -AddRight -Username CONTOSO\User -UserRight SeBatchLogonRight
-```
-#### Example 4
-Add User Right “Log on as a batch job” for user SID S-1-5-11:
-```powershell
-.\Set-UserRights.ps1 -AddRight -Username S-1-5-11 -UserRight SeBatchLogonRight
-```
+>#### :question: Example 1
+>Add User Right "Allow log on locally" for current user:
+>```powershell
+>.\Set-UserRights.ps1 -AddRight -UserRight SeInteractiveLogonRight
+>```
+
+>#### :question: Example 2
+>Add User Right "Log on as a service" for CONTOSO\User:
+>```powershell
+>.\Set-UserRights.ps1 -AddRight -Username CONTOSO\User -UserRight SeServiceLogonRight
+>```
+
+>#### :question: Example 3
+>Add User Right "Log on as a batch job" for CONTOSO\User:
+>```powershell
+>.\Set-UserRights.ps1 -AddRight -Username CONTOSO\User -UserRight SeBatchLogonRight
+>```
+
+>#### :question: Example 4
+>Add User Right “Log on as a batch job” for user SID S-1-5-11:
+>```powershell
+>.\Set-UserRights.ps1 -AddRight -Username S-1-5-11 -UserRight SeBatchLogonRight
+>```
 
 ### Multiple Users / Rights / Computers
-#### Example 5
-Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
-```powershell
-.\Set-UserRights.ps1 -AddRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
-```
+>#### :question: Example 5
+>Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
+>```powershell
+>.\Set-UserRights.ps1 -AddRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
+>```
 
 ## Remove Users
 ### Single Users
-#### Example 1
-Remove User Right "Allow log on locally" for current user:
-```powershell
-.\Set-UserRights.ps1 -RemoveRight -UserRight SeInteractiveLogonRight
-```
-#### Example 2
-Add User Right "Log on as a service" for CONTOSO\User:
-```powershell
-.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeServiceLogonRight
-```
-#### Example 3
-Add User Right "Log on as a batch job" for CONTOSO\User:
-```powershell
-.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeBatchLogonRight
-```
-#### Example 4
-Add User Right “Log on as a batch job” for user SID S-1-5-11:
-```powershell
-.\Set-UserRights.ps1 -RemoveRight -Username S-1-5-11 -UserRight SeBatchLogonRight
-```
+>#### :question: Example 1
+>Remove User Right "Allow log on locally" for current user:
+>```powershell
+>.\Set-UserRights.ps1 -RemoveRight -UserRight SeInteractiveLogonRight
+>```
+
+>#### :question: Example 2
+>Add User Right "Log on as a service" for CONTOSO\User:
+>```powershell
+>.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeServiceLogonRight
+>```
+
+>#### :question: Example 3
+>Add User Right "Log on as a batch job" for CONTOSO\User:
+>```powershell
+>.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeBatchLogonRight
+>```
+
+>#### :question: Example 4
+>Add User Right “Log on as a batch job” for user SID S-1-5-11:
+>```powershell
+>.\Set-UserRights.ps1 -RemoveRight -Username S-1-5-11 -UserRight SeBatchLogonRight
+>```
 
 ### Multiple Users / Services / Computers
-#### Example 5
-Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
-```powershell
-.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
-```
+>#### :question: Example 5
+>Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
+>```powershell
+>.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
+>```
 
 ---
 
@@ -106,46 +112,46 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 
 ![UserAccountsRights](/assets/img/posts/get-user-right.png){:class="img-fluid"}
 
-> ## Note
+> ## :notebook: Note
 > You may edit line [467](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L467) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
-### Local Computer
-Get Local User Account Rights and output to text in console:
-```powershell
-.\Get-UserRights.ps1
-```
+>### Local Computer
+>Get Local User Account Rights and output to text in console:
+>```powershell
+>.\Get-UserRights.ps1
+>```
 
-### Remote Computer
-Get Remote SQL Server User Account Rights:
-```powershell
-.\Get-UserRights.ps1 -ComputerName SQL.contoso.com
-```
+>### Remote Computer
+>Get Remote SQL Server User Account Rights:
+>```powershell
+>.\Get-UserRights.ps1 -ComputerName SQL.contoso.com
+>```
 
-Get Local Machine and SQL Server User Account Rights:
-```powershell
-.\Get-UserRights.ps1 -ComputerName $env:COMPUTERNAME, SQL.contoso.com
-```
+>Get Local Machine and SQL Server User Account Rights:
+>```powershell
+>.\Get-UserRights.ps1 -ComputerName $env:COMPUTERNAME, SQL.contoso.com
+>```
 
-### Output Types
-Output Local User Rights on Local Machine as CSV in 'C:\Temp':
-```powershell
-.\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType CSV
-```
+>### Output Types
+>Output Local User Rights on Local Machine as CSV in 'C:\Temp':
+>```powershell
+>.\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType CSV
+>```
 
-Output to Text in 'C:\Temp':
-```powershell
-.\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType Text
-# or
-.\Get-UserRights.ps1 -FileOutputPath C:\Temp
-```
+>Output to Text in 'C:\Temp':
+>```powershell
+>.\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType Text
+># or
+>.\Get-UserRights.ps1 -FileOutputPath C:\Temp
+>```
 
-PassThru object to allow manipulation / filtering:
-```powershell
-.\Get-UserRights.ps1 -ComputerName SQL.contoso.com -PassThru | Where {$_.Principal -match "Administrator"}
-# or
-.\Get-UserRights.ps1 -PassThru | ? {$_.Privilege -match 'SeServiceLogonRight'}
-```
+>PassThru object to allow manipulation / filtering:
+>```powershell
+>.\Get-UserRights.ps1 -ComputerName SQL.contoso.com -PassThru | Where {$_.Principal -match "Administrator"}
+># or
+>.\Get-UserRights.ps1 -PassThru | ? {$_.Privilege -match 'SeServiceLogonRight'}
+>```
 
 Leave some feedback if this helped you! :v:
 
