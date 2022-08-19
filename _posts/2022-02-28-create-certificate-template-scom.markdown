@@ -143,7 +143,10 @@ Description:
 The OpsMgr Connector has loaded the specified authentication certificate successfully.
 ```
 
-> ## Note
+> ## :bangbang: Important
+> You may experience issues when a certificate Re-enrolls automatically. Operations Manager needs the certificate to be imported with MOMCertImport.exe prior to being able to be used by SCOM. So unfortunately there is not an automated method for keeping this information up-to-date.
+
+> ## :notebook: Note
 > You may experience issues with connectivity between the remote machine and the Management Server(s), verify you have checked these things:
 > 1. Ensure all SPN’s are correctly registered for Management Servers, Operations Manager & Data Warehouse Databases, and services that are utilizing them.
 > 2. Event ID `20071` and `21016` on Gateway point to Firewall, SPN, or Certificate issue in most cases.
