@@ -116,13 +116,13 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 > You may edit line [467](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L467) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
->### Local Computer
+>### :question: Local Computer
 >Get Local User Account Rights and output to text in console:
 >```powershell
 >.\Get-UserRights.ps1
 >```
 
->### Remote Computer
+>### :question: Remote Computer
 >Get Remote SQL Server User Account Rights:
 >```powershell
 >.\Get-UserRights.ps1 -ComputerName SQL.contoso.com
@@ -133,7 +133,7 @@ Here are a few examples:
 >.\Get-UserRights.ps1 -ComputerName $env:COMPUTERNAME, SQL.contoso.com
 >```
 
->### Output Types
+>### :question: Output Types
 >Output Local User Rights on Local Machine as CSV in 'C:\Temp':
 >```powershell
 >.\Get-UserRights.ps1 -FileOutputPath C:\Temp -FileOutputType CSV
