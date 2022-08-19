@@ -144,7 +144,7 @@ The OpsMgr Connector has loaded the specified authentication certificate success
 ```
 
 > ## :bangbang: Important
-> You may experience issues when a certificate Re-enrolls automatically. Operations Manager needs the certificate to be imported with MOMCertImport.exe prior to being able to be used by SCOM. So unfortunately there is not an automated method for keeping this information up-to-date.
+> You may experience issues when a certificate Re-enrolls automatically. Operations Manager needs the certificate to be imported with MOMCertImport.exe prior to being able to be used by SCOM. Unfortunately, there is not an automated method for SCOM Certificate Management.
 
 > ## :notebook: Note
 > You may experience issues with connectivity between the remote machine and the Management Server(s), verify you have checked these things:
