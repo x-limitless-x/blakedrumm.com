@@ -103,8 +103,8 @@ Verify you are seeing the Certificate Template on your Management Server.
     - Skip through the first screen
       - Click **Next**
     - Verify that you have selected **Active Directory Enrollment Policy**
-      - Click **Next** \
-      ![Request Certificate from Management Server](/assets/img/posts/certificate-authority-template-guide/step-12.png){:class="img-fluid"}
+      - Click **Next**
+      <!-- ![Request Certificate from Management Server](/assets/img/posts/certificate-authority-template-guide/step-12.png){:class="img-fluid"} -->
 
     - Select the checkbox  next to the Certificate Template you created and click on the Warning sign below the Certificate Template, it says **click here to configure settings.** \
     ![Certificate Template showing up on Management Server](/assets/img/posts/certificate-authority-template-guide/step-12-1.png){:class="img-fluid"}
