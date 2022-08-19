@@ -41,7 +41,7 @@ permalink: /blog/scom-data-collector/
    .\DataCollector-v3.8.5.ps1
    ```
 
- >### Optional
+ >### :o: Optional
  >You have the ability to run this script as any user you would like when you start the script without any switches. The default is the System Center Data Access Service account.
 
 Run this script on a Operations Manager Management Server to gather their SQL server names and DB names from the local registry. Otherwise user will need to manually input names. It will attempt to query the SQL Server Instance remotely, and will create CSV output files in the Output folder located in the SCOM Data Collector script directory.The SCOM Data Collector has the ability to query multiple databases in the SCOM SQL Instance (_master, OperationsManager, OperationsManagerDW_), having a high level of rights to SQL is preferred for a full gather.
