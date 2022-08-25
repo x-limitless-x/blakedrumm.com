@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Troubleshooting Tips for Unix / Linux System Center Operations Manager Agents"
+title:  "Unix / Linux System Center Operations Manager Agents Troubleshooting Tips"
 date:   '2022-01-26 12:21:52 -0500'
 categories: troubleshooting linux operationsManager
 author: blakedrumm
@@ -11,7 +11,10 @@ summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
-<sub>This post was last updated on July 20th, 2022</sub>
+<sub>This post was last updated on August 25th, 2022</sub>
+## Build list containing the SCOM Linux Agent versions
+The following url contains the versions of the SCX Agent: [https://docs.microsoft.com/system-center/scom/release-build-versions](https://docs.microsoft.com/system-center/scom/release-build-versions)
+
 
 ## Verify the versions for all prerequisite software
 You can run the following command on a monitored and not monitored server to compare the software installed, or verify with the official list [https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os](https://docs.microsoft.com/system-center/scom/plan-supported-crossplat-os):
@@ -174,6 +177,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002]
 "Functions"="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P521,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P521,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P521,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P521,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P521,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P384,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P521,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P521,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P384,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P521,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P521,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256"
 ```
+
+> 🗒️ ### Note
+> Be sure to verify if the Linux agent supports the same ciphers as the Management Server / Gateway.
+> List of Ciphers Supported for Linux / Unix SCOM Agents: [https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix](https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix)
 
 ___
 
