@@ -33,7 +33,7 @@ In order to properly report on the uptime of a machine, you will need to target 
 9. Resulting output: \
 ![Availability Report Results](/assets/img/posts/availability-report-output.png){:class="img-fluid"}
 
-> ### Note
+> ### :notebook: Note
 > Quick tip, you can modify the parameters for the report at any time with the Show or Hide Parameter Area button: \
 > ![Show and Hide Parameter in Reports](/assets/img/posts/show-hide-parameter-area-reporting.png){:class="img-fluid"}
 
