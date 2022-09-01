@@ -141,7 +141,8 @@ winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent
 winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:Kerberos -skipCAcheck -skipCNcheck -skipRevocationcheck -encoding:utf-8
 ```
 
-
+> ### :notebook: Note
+> Verify that you have enabled Kerberos via the Management Server Registry on each Management Server in the resource pool you are using to monitor the Unix/Linux agents: [https://docs.microsoft.com/system-center/scom/manage-linux-kerberos-auth](https://docs.microsoft.com/system-center/scom/manage-linux-kerberos-auth)
 
 #### Example 1
 ##### Issue
