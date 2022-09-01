@@ -84,7 +84,7 @@ This script has the ability to gather the following information:
 
 ## :question: Examples
 
->### Optional
+>### :o: Optional
 >If you know you have (read) Query rights against the DB(s) and Administrator permissions on the Management Servers, run any Switch (-Command) with -AssumeYes (-Yes). Otherwise you will need to provide an account that has permissions at runtime.
 
 
