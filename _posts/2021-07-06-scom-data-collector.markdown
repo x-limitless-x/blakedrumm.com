@@ -14,7 +14,7 @@ summary: >- # this means to ignore newlines
 keywords: scom data collector, data collector for SCOM, data collector script, SDC_Results, scom, Operations Manager Data Collector, Performance Analysis, powershell script for SCOM, powershell script
 permalink: /blog/scom-data-collector/
 ---
-## :arrow_down_small: Download Link
+## :arrow_down_small: Quick Download Link
 [https://aka.ms/SCOM-DataCollector](https://aka.ms/SCOM-DataCollector)
 
 [![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-Scripts-and-SQL)](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest){:class="img-fluid"} \
@@ -22,10 +22,16 @@ permalink: /blog/scom-data-collector/
 [![Download Count Releases](https://img.shields.io/github/downloads/blakedrumm/SCOM-Scripts-and-SQL/total.svg?style=for-the-badge&color=brightgreen)](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases){:class="img-fluid"}
 
 ## :page_facing_up: Personal Webpage
+#### Data Collector
 [https://files.blakedrumm.com/SCOM-DataCollector.zip](https://files.blakedrumm.com/SCOM-DataCollector.zip)
+#### Report Builder
+[https://files.blakedrumm.com/ReportBuilder.zip](https://files.blakedrumm.com/ReportBuilder.zip)
 
 ## :link: Github Link
-[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest)
+#### Data Collector
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest/download/SCOM-DataCollector.zip](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest/download/SCOM-DataCollector.zip)
+#### Report Builder
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest/download/ReportBuilder.zip](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest/download/ReportBuilder.zip)
 
 ## :red_circle: Requirements
 - System Center Operations Manager - Management Server
