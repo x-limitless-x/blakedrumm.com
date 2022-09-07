@@ -23,10 +23,6 @@ _or_ \
 _or_ \
 [Personal File Server - Set-UserRights.txt](https://files.blakedrumm.com/Set-UserRights.txt) :arrow_left: **Text Format Alternative Download Link**
 
-<object data="https://files.blakedrumm.com/Set-UserRights.ps1" width="300" height="200">
-Not supported
-</object>
-
 Some (but not all) of the User Rights that can be set:
 ```
 "Log on as a batch job (SeBatchLogonRight)"
