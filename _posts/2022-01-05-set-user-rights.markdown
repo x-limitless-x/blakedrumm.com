@@ -66,7 +66,7 @@ Here are a few examples:
 >```
 >### Add Multiple Users / Rights / Computers
 >#### Example 5
->Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
+>Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User1 and CONTOSO\User2 and run on, local machine and SQL.contoso.com:
 >```powershell
 >.\Set-UserRights.ps1 -AddRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 >```
@@ -97,7 +97,7 @@ Here are a few examples:
 >```
 >### Remove Multiple Users / Rights / Computers
 >#### Example 5
->Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User and run on, local machine and SQL.contoso.com:
+>Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User1 and CONTOSO\User2 and run on, local machine and SQL.contoso.com:
 >```powershell
 >.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 >```
