@@ -52,7 +52,7 @@ permalink: /blog/scom-data-collector/
 
 Run this script on a Operations Manager Management Server to gather their SQL server names and DB names from the local registry. Otherwise user will need to manually input names. It will attempt to query the SQL Server Instance remotely, and will create CSV output files in the Output folder located in the SCOM Data Collector script directory.The SCOM Data Collector has the ability to query multiple databases in the SCOM SQL Instance (_master, OperationsManager, OperationsManagerDW_), having a high level of rights to SQL is preferred for a full gather.
 
-After the script has completed you will see that the Output folder that is temporary created during script execution is removed. A zip file will be created in the same directory as the SCOM Data Collector Powershell Script named something similar to this: \
+After the script has completed you will see that the Output folder that is temporary created during script execution is removed. The Data Collector will automatically create a zip file in the same directory as the SCOM Data Collector Powershell Script named something similar to this: \
 `SDC_Results_04_04_1975.zip`
 
 This script has the ability to gather the following information:
@@ -60,7 +60,7 @@ This script has the ability to gather the following information:
  - Event Logs – Application, System, OperationsManager
  - SCOM Version Installed
  - Update Rollup Information for SCOM Upgrades
- - SQL Queries that collect information about many aspects of your environment (too many queries to go into detail here, here are some of the queries it uses: https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/SQL%20Queries)
+ - SQL Queries that collect information about many aspects of your environment (too many queries to go into detail here, here are some of the queries it uses: [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/SQL%20Queries](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/SQL%20Queries))
  - Windows Updates installed on Management Servers / SQL Server
  - Service Principal Name (SPN) Information for SCOM Management Servers
  - Local Administrators Group on each Management Server and any other servers you specify
