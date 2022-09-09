@@ -57,7 +57,7 @@ After the script has completed you will see that the Output folder that is tempo
 
 This script has the ability to gather the following information:
 
- - Data from Management Server(s), Operations Manager SQL Server(s), and Agent(s) is specified with `-Servers`.
+ - Data from Management Server(s), Operations Manager SQL Server(s). You can also gather from Servers(s) specified with `-Servers`.
  - Event Logs – Application, System, OperationsManager
  - SCOM Version Installed
  - Update Rollup Information for SCOM Upgrades
