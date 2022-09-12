@@ -137,7 +137,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.2.29)
+  bundler (~> 2.3.22)
   jekyll (~> 4.2)
   jekyll-admin (~> 0.11.0)
   jekyll-feed (~> 0.16.0)
@@ -156,4 +156,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.29
+   2.3.22
