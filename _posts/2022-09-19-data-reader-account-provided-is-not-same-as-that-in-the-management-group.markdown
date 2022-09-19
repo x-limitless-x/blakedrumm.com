@@ -15,21 +15,55 @@ permalink: /blog/data-reader-account-provided-is-not-same-as-that-in-the-managem
 During installation of SCOM Reporting services, you may see the following error:
 Data Reader account provided is not same as that in the management group.
 
-
-### Reconfigured the "Data Warehouse Report Deployment Account" Profile
+## How to fix
+### Reconfigure the "Data Warehouse Report Deployment Account" Profile
 Set the Data Warehouse Report Deployment Account to the Class "Collection Server" and "Data Warehouse Synchronization Server"
 
 ![/assets/img/posts/dw-report-deployment-account-profile.png](/assets/img/posts/dw-report-deployment-account-profile.png)
 
  
  
-### Reconfigured the "Data Warehouse Account" Profile
+### Reconfigure the "Data Warehouse Account" Profile
 Data Warehouse Action Account to the Class "Collection Server", "Data Warehouse Synchronization Server", "Data Set" and "Operations Manager APM Data Transfer Service"
 
 ![/assets/img/posts/data-warehouse-account-profile.jpg](/assets/img/posts/data-warehouse-account-profile.jpg)
 
 
  After configuring the above, the SCOM Reporting component installed successfully with the **Data Warehouse Report Deployment Account** as expected.
+
+## Automate with Powershell
+
+**Blog post from Udish Mudiar:** [https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/](https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/)
+
+```powershell
+#Associate  Run As Account association in Data Warehouse and Report Deployment Run As Profile.
+Write-Host "Script started.." -ForegroundColor Green
+
+Import-Module OperationsManager
+
+#Get the run as profiles
+$DWActionAccountProfile = Get-SCOMRunAsProfile -DisplayName "Data Warehouse Account"
+$ReportDeploymentProfile = Get-SCOMRunAsProfile -DisplayName "Data Warehouse Report Deployment Account"
+
+#Get the run as accounts
+$DWActionAccount = Get-SCOMrunAsAccount -Name "Data Warehouse Action Account"
+$DWReportDeploymentAccount = Get-SCOMrunAsAccount -Name "Data Warehouse Report Deployment Account"
+
+#Get all the required classes
+$CollectionServerClass = Get-SCOMClass -DisplayName "Collection Server"
+$DataSetClass = Get-SCOMClass -DisplayName "Data Set"
+$APMClass = Get-SCOMClass -DisplayName "Operations Manager APM Data Transfer Service"
+$DWSyncClass = Get-SCOMClass -DisplayName "Data Warehouse Synchronization Server"
+
+#Setting the association
+Write-Host "Setting the Run As Account Association for Data Warehouse Account Profile" -ForegroundColor Cyan
+Set-SCOMRunAsProfile -Action "Add" -Profile $DWActionAccountProfile -Account $DWActionAccount -Class $CollectionServerClass,$DataSetClass,$APMClass,$DWSyncClass
+Write-Host "Setting the Run As Account Association for Data Warehouse Report Deployment Account Profile" -ForegroundColor Cyan
+Set-SCOMRunAsProfile -Action "Add" -Profile $ReportDeploymentProfile -Account $DWReportDeploymentAccount -Class $CollectionServerClass,$DWSyncClass
+
+
+Write-Host "Script end.." -ForegroundColor Green
+```
 
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/)
