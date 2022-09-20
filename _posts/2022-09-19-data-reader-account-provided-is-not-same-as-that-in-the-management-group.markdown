@@ -12,6 +12,8 @@ summary: >- # this means to ignore newlines
 keywords: data reader account error, scom setup error, scom setup reporting error, opsmgr reporting error
 permalink: /blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
 ---
+<sub>Thank you to Luis Décio for the original creation of the KB!</sub>
+
 During installation of SCOM Reporting services, you may see the following error:
 Data Reader account provided is not same as that in the management group.
 
