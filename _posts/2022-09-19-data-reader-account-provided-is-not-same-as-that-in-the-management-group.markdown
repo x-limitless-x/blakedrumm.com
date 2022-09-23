@@ -7,7 +7,7 @@ author: blakedrumm
 thumbnail: /assets/img/posts/opsmgr-setup-data-reader-account-issue.jpg
 
 summary: >- # this means to ignore newlines
-  From my colleauges, this post details how to resolve an issue you may experience while installing the Reporting Services.
+  From my colleagues, this post details how to resolve an issue you may experience while installing the Reporting Services.
 
 keywords: data reader account error, scom setup error, scom setup reporting error, opsmgr reporting error
 permalink: /blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
