@@ -21,14 +21,14 @@ Data Reader account provided is not same as that in the management group.
 ### Reconfigure the "Data Warehouse Report Deployment Account" Profile
 Set the Data Warehouse Report Deployment Account to the Class "Collection Server" and "Data Warehouse Synchronization Server"
 
-![/assets/img/posts/dw-report-deployment-account-profile.png](/assets/img/posts/dw-report-deployment-account-profile.png)
+![/assets/img/posts/dw-report-deployment-account-profile.png](/assets/img/posts/dw-report-deployment-account-profile.png){:class="img-fluid"}
 
  
  
 ### Reconfigure the "Data Warehouse Account" Profile
 Data Warehouse Action Account to the Class "Collection Server", "Data Warehouse Synchronization Server", "Data Set" and "Operations Manager APM Data Transfer Service"
 
-![/assets/img/posts/data-warehouse-account-profile.jpg](/assets/img/posts/data-warehouse-account-profile.jpg)
+![/assets/img/posts/data-warehouse-account-profile.jpg](/assets/img/posts/data-warehouse-account-profile.jpg){:class="img-fluid"}
 
 
  After configuring the above, the SCOM Reporting component installed successfully with the **Data Warehouse Report Deployment Account** as expected.
