@@ -52,7 +52,7 @@ function Invoke-TimeStamp
 	$TimeStamp = (Get-Date).DateTime
 	return "$TimeStamp - "
 }
-
+Write-Host "`n`n------------------------------------------------------------" -ForegroundColor Green
 #Associate Run As Account association in Data Warehouse and Report Deployment Run As Profile.
 Write-Output "$(Invoke-TimeStamp)Script started"
 
@@ -95,6 +95,7 @@ catch
 }
 
 Write-Output "$(Invoke-TimeStamp)Script ended"
+Write-Host '------------------------------------------------------------' -ForegroundColor Green
 ```
 
 
