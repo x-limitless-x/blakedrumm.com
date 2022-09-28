@@ -45,7 +45,8 @@ Here is my own take on Udish's Powershell script:
 # Original Blog Post: https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/
 # =========================================================================================================================
 # Modified by: Blake Drumm (blakedrumm@microsoft.com)
-# Modified Blog Post: https://blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
+# Last Modified: September 28th, 2022
+# Blog Post: https://blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
 
 function Invoke-TimeStamp
 {
