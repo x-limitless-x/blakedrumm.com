@@ -33,6 +33,8 @@ Data Warehouse Action Account to the Class "Collection Server", "Data Warehouse 
 
  After configuring the above, the SCOM Reporting component installed successfully with the **Data Warehouse Report Deployment Account** as expected.
 
+---
+
 ## Automate with Powershell
 
 You can use Powershell to automate fixing the DW RunAs Profiles. I would suggest that you remove all RunAs accounts from both RunAs profiles ("Data Warehouse Account" and "Data Warehouse Report Deployment Account") prior to running the below Powershell script.
