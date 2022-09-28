@@ -43,7 +43,8 @@ Here is my own take on Udish's Powershell script:
 ```powershell
 # Original Author: Udish Mudiar
 # Modified by: Blake Drumm (blakedrumm@microsoft.com)
-# Blog Post: https://blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
+# Original Blog Post: https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/
+# Modified Blog Post: https://blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
 
 function Invoke-TimeStamp
 {
@@ -52,7 +53,7 @@ function Invoke-TimeStamp
 }
 
 #Associate Run As Account association in Data Warehouse and Report Deployment Run As Profile.
-Write-Output "$(Invoke-TimeStamp)Set DW RunAs Profile Script Started"
+Write-Output "$(Invoke-TimeStamp)Set Data Warehouse Account and Data Warehouse Report Deployment Account RunAs Profile Script : Started"
 
 Import-Module OperationsManager
 
