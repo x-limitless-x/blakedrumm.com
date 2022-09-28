@@ -42,8 +42,9 @@ You can use Powershell to automate fixing the DW RunAs Profiles. I would suggest
 Here is my own take on Udish's Powershell script:
 ```powershell
 # Original Author: Udish Mudiar
-# Modified by: Blake Drumm (blakedrumm@microsoft.com)
 # Original Blog Post: https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/
+# =========================================================================================================================
+# Modified by: Blake Drumm (blakedrumm@microsoft.com)
 # Modified Blog Post: https://blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
 
 function Invoke-TimeStamp
