@@ -54,7 +54,7 @@ function Invoke-TimeStamp
 }
 
 #Associate Run As Account association in Data Warehouse and Report Deployment Run As Profile.
-Write-Output "$(Invoke-TimeStamp)Set Data Warehouse Account and Data Warehouse Report Deployment Account RunAs Profile Script : Started"
+Write-Output "$(Invoke-TimeStamp)Script started"
 
 Import-Module OperationsManager
 
