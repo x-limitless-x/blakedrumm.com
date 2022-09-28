@@ -35,11 +35,20 @@ Data Warehouse Action Account to the Class "Collection Server", "Data Warehouse 
 
 ## Automate with Powershell
 
+You can use Powershell to automate fixing the DW RunAs Profiles. I would suggest that you remove all RunAs accounts from both RunAs profiles ("Data Warehouse Account" and "Data Warehouse Report Deployment Account") prior to running the below Powershell script.
+
 **Blog post from Udish Mudiar:** [https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/](https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/)
 
+Here is my own take on Udish's Powershell script:
 ```powershell
+function Invoke-TimeStamp
+{
+	$TimeStamp = (Get-Date).DateTime
+	return "$TimeStamp - "
+}
+
 #Associate  Run As Account association in Data Warehouse and Report Deployment Run As Profile.
-Write-Host "Script started.." -ForegroundColor Green
+Write-Output "$(Invoke-TimeStamp)Set DW RunAs Profile Script Started"
 
 Import-Module OperationsManager
 
@@ -58,13 +67,28 @@ $APMClass = Get-SCOMClass -DisplayName "Operations Manager APM Data Transfer Ser
 $DWSyncClass = Get-SCOMClass -DisplayName "Data Warehouse Synchronization Server"
 
 #Setting the association
-Write-Host "Setting the Run As Account Association for Data Warehouse Account Profile" -ForegroundColor Cyan
-Set-SCOMRunAsProfile -Action "Add" -Profile $DWActionAccountProfile -Account $DWActionAccount -Class $CollectionServerClass,$DataSetClass,$APMClass,$DWSyncClass
-Write-Host "Setting the Run As Account Association for Data Warehouse Report Deployment Account Profile" -ForegroundColor Cyan
-Set-SCOMRunAsProfile -Action "Add" -Profile $ReportDeploymentProfile -Account $DWReportDeploymentAccount -Class $CollectionServerClass,$DWSyncClass
+Write-Output "$(Invoke-TimeStamp)Setting the Run As Account Association for Data Warehouse Account Profile"
+try
+{
+	Set-SCOMRunAsProfile -ErrorAction Stop -Action "Add" -Profile $DWActionAccountProfile -Account $DWActionAccount -Class $CollectionServerClass, $DataSetClass, $APMClass, $DWSyncClass
+	Write-Output "$(Invoke-TimeStamp)   Completed Successfully!"
+}
+catch
+{
+	Write-Output "$(Invoke-TimeStamp)   Unable to set the RunAs accounts, try removing all accounts from inside the RunAs Profile (`"Data Warehouse Account`"), and run the script again.`n"
+}
+Write-Output "$(Invoke-TimeStamp)Setting the Run As Account Association for Data Warehouse Report Deployment Account Profile"
+try
+{
+	Set-SCOMRunAsProfile -ErrorAction Stop -Action "Add" -Profile $ReportDeploymentProfile -Account $DWReportDeploymentAccount -Class $CollectionServerClass, $DWSyncClass
+	Write-Output "$(Invoke-TimeStamp)   Completed Successfully!"
+}
+catch
+{
+	Write-Output "$(Invoke-TimeStamp)   Unable to set the RunAs accounts, try removing all accounts from inside the RunAs Profile (`"Data Warehouse Report Deployment Account`"), and run the script again."
+}
 
-
-Write-Host "Script end.." -ForegroundColor Green
+Write-Output "$(Invoke-TimeStamp)Script ended"
 ```
 
 
