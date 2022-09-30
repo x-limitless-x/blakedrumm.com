@@ -41,7 +41,7 @@ Confirm you have modified the following in the **General** tab:
 
 ### Step 6
 Confirm you have modified the following in the **Request Handling** tab:
- - Check **Allow private key to be exportable**
+ - Check **Allow private key to be exportable** (this is required for Server Authentication)
 
 ![Confirm Request Handling Tab](/assets/img/posts/certificate-authority-template-guide/step-6.png){:class="img-fluid"}
 
