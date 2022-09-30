@@ -21,7 +21,7 @@ Edit the file to include something similar to the following (**NOTE: Be aware Op
 ```
 [NewRequest]
 Subject="CN=IIS-2019.contoso.com,OU=Servers,O=Support Team,L=Charlotte,S=North Carolina,C=US"
-Exportable=TRUE ; Private key is exportable
+Exportable=TRUE ; Private key is exportable - Required for Server Authentication
 KeyLength=2048
 KeySpec=1 ; Key Exchange – Required for encryption
 KeyUsage=0xf0 ; Digital Signature, Key Encipherment
