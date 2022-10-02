@@ -32,7 +32,7 @@ _or_ \
 > ## :notebook: Note
 > You may edit line [751](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/ad05d2310e63ecd9aece585d88cd454ac2786029/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1#L751) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
-## Parameters
+## Argument List
  Parameter       | Alias | ValueFromPipeline | Type   | Description                                                                                                                                                                |
 ------------------|-------|-------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
  AssumeYes        | yes   |                   | Switch | Optionally assume yes to any question asked by this script.                                                                                                                |
