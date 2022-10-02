@@ -14,7 +14,7 @@ permalink: /blog/remove-data-from-scom-database/
 ---
 
 ## Introduction
-I have had too many cases where I have to run the following SQL Queries by Kevin Holman: [Deleting and Purging data from the SCOM Database (kevinholman.com)](https://kevinholman.com/2018/05/03/deleting-and-purging-data-from-the-scom-database/)
+I have had many cases where I've had to run the following SQL Queries by Kevin Holman: [Deleting and Purging data from the SCOM Database (kevinholman.com)](https://kevinholman.com/2018/05/03/deleting-and-purging-data-from-the-scom-database/) ***(A big thank you to Kevin Holman for his guide!)***
 
 After the 6th or 7th time running the script I decided that I could automate this process in Powershell and make it very easy to do this automatically for as many servers as you need. This script will query the Operations Manager database and run all the steps in Kevin Holman's queries. The script will ask questions at each step to verify the action is correct. You have to answer **Y** or **N** before the script will proceed.
 
