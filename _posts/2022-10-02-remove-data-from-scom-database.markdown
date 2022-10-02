@@ -33,16 +33,16 @@ _or_ \
 > You may edit line [751](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/ad05d2310e63ecd9aece585d88cd454ac2786029/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1#L751) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 ## Parameters
-| Parameter       | Alias | ValueFromPipeline | Type   | Description                                                                                                                                                                |
-|------------------|-------|-------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AssumeYes        | yes   |                   | Switch | Optionally assume yes to any question asked by this script.                                                                                                                |
-| Database         |       |                   | String | The name of the OperationsManager Database for SCOM.                                                                                                                       |
-| DontStop         | ds    |                   | Switch | Optionally force the script to not stop when an error occurs connecting to the Management Server.                                                                          |
-| Id               |       |                   | Array  | You may provide any Base Managed Entity Id's to be deleted specifically from the Operations Manager Database.                                                              |
-| ManagementServer | ms    |                   | String | SCOM Management Server that we will remotely connect to. If running on a Management Server, there is no need to provide this parameter.                                    |
-| Name             |       |                   | Array  | The Base Managed Entity Display Name of the object you are wanting to delete from the Operations Manager Database.                                                         |
-| Servers          |       | True              | Array  | Each Server (comma separated) you want to Remove related BME ID's related to the Display Name in the OperationsManager Database. This will also remove from Agent Managed. |
-| SqlServer        |       |                   | String | SQL Server/Instance, Port that hosts OperationsManager Database for SCOM.                                                                                                  |
+ Parameter       | Alias | ValueFromPipeline | Type   | Description                                                                                                                                                                |
+------------------|-------|-------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ AssumeYes        | yes   |                   | Switch | Optionally assume yes to any question asked by this script.                                                                                                                |
+ Database         |       |                   | String | The name of the OperationsManager Database for SCOM.                                                                                                                       |
+ DontStop         | ds    |                   | Switch | Optionally force the script to not stop when an error occurs connecting to the Management Server.                                                                          |
+ Id               |       |                   | Array  | You may provide any Base Managed Entity Id's to be deleted specifically from the Operations Manager Database.                                                              |
+ ManagementServer | ms    |                   | String | SCOM Management Server that we will remotely connect to. If running on a Management Server, there is no need to provide this parameter.                                    |
+ Name             |       |                   | Array  | The Base Managed Entity Display Name of the object you are wanting to delete from the Operations Manager Database.                                                         |
+ Servers          |       | True              | Array  | Each Server (comma separated) you want to Remove related BME ID's related to the Display Name in the OperationsManager Database. This will also remove from Agent Managed. |
+ SqlServer        |       |                   | String | SQL Server/Instance, Port that hosts OperationsManager Database for SCOM.                                                                                                  |
 
 ## How to use it
 >#### Example 1
