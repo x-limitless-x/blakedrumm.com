@@ -431,4 +431,8 @@ In order to install the ACS Collector from the command line you are required to 
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+Tip:
+To add auto-size pictures:
+![/assets/img/posts/example.jpg](/assets/img/posts/example.jpg){:class="img-fluid"}
 -->
