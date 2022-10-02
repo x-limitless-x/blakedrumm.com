@@ -22,9 +22,9 @@ After the 6th or 7th time running the script I decided that I could automate thi
 You can get a copy of the script here: \
 [Remove-SCOMBaseManagedEntity.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
-[Personal File Server - Remove-SCOMBaseManagedEntity.ps1]() :arrow_left: **Alternative Download Link** \
+[Personal File Server - Remove-SCOMBaseManagedEntity.ps1](https://files.blakedrumm.com/Remove-SCOMBaseManagedEntity.ps1) :arrow_left: **Alternative Download Link** \
 _or_ \
-[Personal File Server - Remove-SCOMBaseManagedEntity.txt]() :arrow_left: **Text Format Alternative Download Link**
+[Personal File Server - Remove-SCOMBaseManagedEntity.txt](https://files.blakedrumm.com/Remove-SCOMBaseManagedEntity.txt) :arrow_left: **Text Format Alternative Download Link**
 
 > ### :exclamation: Important!
 > Make sure you have backups of your SCOM Databases prior to executing this script!
