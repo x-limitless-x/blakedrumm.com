@@ -21,7 +21,7 @@ After the 6th or 7th time running the script I decided that I could automate thi
 > ### :exclamation: Important!
 > It is recommended to only run the script when asked by a Microsoft Support Engineer. \
 > &nbsp; \
-> If you absolutely need to run the script, make sure you have Full backups of your SCOM SQL Instances / Databases!
+> If you absolutely need to run the script, make sure you have full backups of your SCOM SQL Instances / Databases!
 
 ## How to get it
 You can get a copy of the script here: \
