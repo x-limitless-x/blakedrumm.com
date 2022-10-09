@@ -18,6 +18,11 @@ I have had many cases where I've had to run the following SQL Queries by Kevin H
 
 After the 6th or 7th time running the script I decided that I could automate this process in Powershell and make it very easy to do this automatically for as many servers as you need. This script will query the Operations Manager database and run all the steps in Kevin Holman's queries. The script will ask questions at each step to verify the action is correct. You have to answer **Y** or **N** before the script will proceed.
 
+> ### :exclamation: Important!
+> It is recommended to only run the script when asked by a Microsoft Support Engineer. \
+> &nbsp; \
+> If you absolutely need to run the script, make sure you have Full backups of your SCOM SQL Instances / Databases!
+
 ## How to get it
 You can get a copy of the script here: \
 [Remove-SCOMBaseManagedEntity.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1) :arrow_left: **Direct Download Link** \
@@ -25,9 +30,6 @@ _or_ \
 [Personal File Server - Remove-SCOMBaseManagedEntity.ps1](https://files.blakedrumm.com/Remove-SCOMBaseManagedEntity.ps1) :arrow_left: **Alternative Download Link** \
 _or_ \
 [Personal File Server - Remove-SCOMBaseManagedEntity.txt](https://files.blakedrumm.com/Remove-SCOMBaseManagedEntity.txt) :arrow_left: **Text Format Alternative Download Link**
-
-> ### :exclamation: Important!
-> Make sure you have backups of your SCOM Databases prior to executing this script!
 
 > ## :notebook: Note
 > You may edit line [752](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1#L752) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
