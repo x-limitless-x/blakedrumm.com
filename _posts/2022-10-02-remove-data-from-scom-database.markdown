@@ -16,10 +16,10 @@ permalink: /blog/remove-data-from-scom-database/
 ## Introduction
 I have had many cases where I've had to run the following SQL Queries by Kevin Holman: [Deleting and Purging data from the SCOM Database (kevinholman.com)](https://kevinholman.com/2018/05/03/deleting-and-purging-data-from-the-scom-database/) ***(A big thank you to Kevin Holman for his guide!)***
 
-After the 6th or 7th time running the script I decided that I could automate this process in Powershell and make it very easy to do this automatically for as many servers as you need. This script will query the Operations Manager database and run all the steps in Kevin Holman's queries. The script will ask questions at each step to verify the action is correct. You have to answer **Y** or **N** before the script will proceed.
+After the 6th or 7th time running the tsql queries I decided that I should automate this process in Powershell, and make it very easy to do this automatically for as many servers as needed. This script will query the Operations Manager database and run all the steps in Kevin Holman's queries. The script will ask questions at each step to verify the action is correct. You have to answer **Y** or **N** before the script will proceed.
 
 > ### :exclamation: Important!
-> It is recommended to only run the script when asked by a Microsoft Support Engineer. \
+> It is recommended to only run the script when requested by a Microsoft Support Engineer. **This script can be dangerous if used incorrectly.** \
 > &nbsp; \
 > If you absolutely need to run the script, make sure you have full backups of your SCOM SQL Instances / Databases!
 
