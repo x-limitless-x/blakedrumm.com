@@ -49,7 +49,34 @@ __Working Example:__
 __Non-working Example:__ \
 ![Example 3 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example3-notworking.png){:class="img-fluid"}
 
+&nbsp;
+
 ___
+
+&nbsp;
+
+## Restart System Security Services Daemon (SSSD)
+These steps show you how to restart SSSD which is used for LDAP, and other enterprise authentication methods on UNIX/Linux.
+### Stop SSSD Service
+```
+Service sssd stop; 
+```
+
+### Clear SSSD Cache
+```
+rm -rf /var/lib/sss/db/*; 
+```
+
+### Start SSSD Service
+```
+service sssd start
+```
+
+&nbsp;
+
+___
+
+&nbsp;
 
 ## Tail the Logs
 ### Enable Verbose SCX Logs
@@ -109,7 +136,11 @@ tail -f /var/opt/microsoft/scx/log/omiagent.root.root.log
 tail -f /var/opt/microsoft/scx/log/scx.log
 ```
 
+&nbsp;
+
 ___
+
+&nbsp;
 
 ## Verify OpenSSL s_client
 The OpenSSL s_client command is a helpful test client for troubleshooting remote SSL or TLS connections:
@@ -119,7 +150,11 @@ openssl s_client -connect server.domain.com:1270 -tls1
 openssl s_client -connect server.domain.com:1270 -ssl3
 ```
 
+&nbsp;
+
 ___
+
+&nbsp;
 
 ## Get MB / GB size of file
 Run the following command to gather the MB / GB size of a file:
@@ -127,7 +162,12 @@ Run the following command to gather the MB / GB size of a file:
 du -sh /var/opt/microsoft/scx/log/scx.log
 ```
 
+&nbsp;
+
 ___
+
+&nbsp;
+
 ## WinRM Enumerate SCX Agent
 From the Management Server(s) in the Unix/Linux Resource Pool, verify that the following command resolves correctly:
 
@@ -184,7 +224,11 @@ Windows Registry Editor Version 5.00
 > Be sure to verify if the Linux agent supports the same ciphers as the Management Server / Gateway.
 > List of Ciphers Supported for Linux / Unix SCOM Agents: [https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix](https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix)
 
+&nbsp;
+
 ___
+
+&nbsp;
 
 ## Certificate Troubleshooting
 
@@ -244,8 +288,11 @@ ___
 > /etc/opt/omi/ssl/omi-host-<HostName>.pem
 > ```
 
+&nbsp;
 
 ___
+
+&nbsp;
 
 ## Linux Agent Certificate Hostname Detection steps during initial Installation
 The following steps are what happens (from a high level) during initial installation of the Linux / Unix Agent to generate a Certificate for the Agent.
@@ -253,7 +300,11 @@ The following steps are what happens (from a high level) during initial installa
 2. Attempt to obtain the domain name from `/etc/resolve.conf`
 3. Attempt to obtain long hostname with `nslookup` command
 
+&nbsp;
+
 ___
+
+&nbsp;
 
 ## Purge SCX Agent Installation
 On the Unix/Linux Machine run the following command to uninstall and purge the SCOM Linux Agent installation:
