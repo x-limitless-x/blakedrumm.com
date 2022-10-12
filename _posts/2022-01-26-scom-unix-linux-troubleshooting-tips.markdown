@@ -57,7 +57,12 @@ ___
 &nbsp;
 
 ## Restart System Security Services Daemon (SSSD)
-These steps show you how to restart SSSD which is used for LDAP, and other enterprise authentication methods on UNIX/Linux.
+The System Security Services Daemon (SSSD) provides access to identity and authentication providers. Basically rather than relying on locally configured authentication, SSSD is used to lookup its local cache. The entries within this cache may come from different remote identity providers, such as an LDAP directory, Kerberos, or Active Directory for example.
+
+SSSD caches the results of users and credentials from these remote locations so that if the identity provider goes offline, the user credentials are still available and users can still login. This helps to improve performance and facilitates scalability with a single user that can login over many systems, rather than using local accounts everywhere.
+
+The cached results can potentially be problematic if the stored records become stale and are no longer in sync with the identity provider, so it is important to know how to flush the SSSD cache to fix various problems and update the cache.
+
 ### Stop SSSD Service
 ```
 Service sssd stop; 
@@ -72,6 +77,11 @@ rm -rf /var/lib/sss/db/*;
 ```
 service sssd start
 ```
+
+SSSD should now start up correctly with an empty cache, any user login will now first go directly to the defined identity provider for authentication, and then be cached locally afterwards.
+
+> ### :notebook: Note
+> It’s recommend to only clear the sssd cache if the identity provider servers performing the authentication within the domain are available, otherwise users will not be able to log in once the sssd cache has been flushed.
 
 &nbsp;
 
