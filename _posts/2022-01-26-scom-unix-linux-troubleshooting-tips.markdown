@@ -11,7 +11,7 @@ summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
-<sub>This post was last updated on August 25th, 2022</sub>
+<sub>This post was last updated on October 12th, 2022</sub>
 ## Build list containing the SCOM Linux Agent versions
 The following url contains the versions of the SCX Agent: [https://docs.microsoft.com/system-center/scom/release-build-versions](https://docs.microsoft.com/system-center/scom/release-build-versions)
 
@@ -183,6 +183,38 @@ Windows Registry Editor Version 5.00
 > ### :notebook: Note
 > Be sure to verify if the Linux agent supports the same ciphers as the Management Server / Gateway.
 > List of Ciphers Supported for Linux / Unix SCOM Agents: [https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix](https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix)
+
+___
+
+## Certificate Troubleshooting
+### Configure the Xplat certificates (export/import) for each management server in the resource pool
+The below steps show how to configure Xplat certificates easily for Management Servers with Powershell. You can automate this process for as many management servers as you need!
+#### Windows Management Server Commands
+##### Export Certificate On MS1 (Admin Powershell Prompt)
+```
+& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS2\c$\MS1.cer
+```
+##### Export Certificate On MS2 (Admin Powershell Prompt)
+```
+& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS1\c$\MS2.cer
+```
+
+##### Import Certificate On MS1 (Admin Powershell Prompt)
+```
+& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS1\c$\MS2.cer
+```
+##### Import Certificate On MS2 (Admin Powershell Prompt)
+```
+& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS2\c$\MS1.cer
+```
+
+### Location for Certificates
+#### SCOM 2012 Agent:
+    /etc/opt/microsoft/scx/ssl/scx.pem
+    /etc/opt/microsoft/scx/ssl/scx-host-$HostName.pem
+#### SCOM 2016 or newer Agent:
+    /etc/opt/omi/ssl/omi-host-$HostName.pem
+
 
 ___
 
