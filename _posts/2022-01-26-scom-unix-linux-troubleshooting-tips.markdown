@@ -240,6 +240,7 @@ ___
 > &nbsp;
 > #### SCOM 2016 Linux Agent and newer:
 > ```
+> /etc/opt/omi/ssl/omi.pem
 > /etc/opt/omi/ssl/omi-host-<HostName>.pem
 > ```
 
