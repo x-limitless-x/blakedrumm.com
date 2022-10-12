@@ -41,9 +41,10 @@ rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
       </tbody>
     </table>
     </div>
+
+&nbsp;
     
 __Working Example:__
-
 ![Example 2 - Prerequisite Software](/assets/img/posts/prerequisite-software-unix-linux-example2.png){:class="img-fluid"}
 
 __Non-working Example:__ \
