@@ -187,38 +187,66 @@ Windows Registry Editor Version 5.00
 ___
 
 ## Certificate Troubleshooting
-### Configure the Xplat certificates (export/import) for each management server in the resource pool
-The below steps show how to configure Xplat certificates easily for Management Servers with Powershell. You can automate this process for as many management servers as you need!
-#### Windows Management Server Commands
-##### Export Certificate On MS1 (Admin Powershell Prompt)
-```
-& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS2\c$\MS1.cer
-```
-##### Export Certificate On MS2 (Admin Powershell Prompt)
-```
-& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS1\c$\MS2.cer
-```
 
-##### Import Certificate On MS1 (Admin Powershell Prompt)
-```
-& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS1\c$\MS2.cer
-```
-##### Import Certificate On MS2 (Admin Powershell Prompt)
-```
-& 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS2\c$\MS1.cer
-```
+> ### UNIX/Linux Certificate
+> #### Check Certificate
+> ```
+> openssl x509 -in /etc/opt/omi/ssl/omi.pem -text -noout
+> ```
+> #### Generate Certificate with custom name
+> ```
+> /opt/microsoft/scx/bin/tools/scxsslconfig -f -d contoso.com -h redhat
+> ```
+> #### Generate Certificate
+> ```
+> /opt/microsoft/scx/bin/tools/scxsslconfig -f
+> ```
+> #### Remove Old Certificate
+> ```
+> rm /etc/opt/omi/ssl/omikey.pem --force
+> ```
 
-### Location for Certificates
-#### SCOM 2012 Agent:
-    /etc/opt/microsoft/scx/ssl/scx.pem
-    /etc/opt/microsoft/scx/ssl/scx-host-$HostName.pem
-#### SCOM 2016 or newer Agent:
-    /etc/opt/omi/ssl/omi-host-$HostName.pem
+&nbsp;
+
+> ### Configure the Xplat certificates (export/import) for each management server in the resource pool
+> The below steps show how to configure Xplat certificates easily for Management Servers with Powershell. You can automate this process for as many management servers as you need!
+> #### Windows Management Server Commands
+> ##### Export Certificate On MS1 (Admin Powershell Prompt)
+> ```
+> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS2\c$\MS1.cer
+> ```
+> ##### Export Certificate On MS2 (Admin Powershell Prompt)
+> ```
+> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS1\c$\MS2.cer
+> ```
+> &nbsp;
+> ##### Import Certificate On MS1 (Admin Powershell Prompt)
+> ```
+> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS1\c$\MS2.cer
+> ```
+> ##### Import Certificate On MS2 (Admin Powershell Prompt)
+> ```
+> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS2\c$\MS1.cer
+> ```
+
+&nbsp;
+
+> ### Location for Certificates
+> #### SCOM 2012 Linux Agent:
+> ```
+> /etc/opt/microsoft/scx/ssl/scx.pem
+> /etc/opt/microsoft/scx/ssl/scx-host-<HostName>.pem
+> ```
+> &nbsp;
+> #### SCOM 2016 Linux Agent and newer:
+> ```
+> /etc/opt/omi/ssl/omi-host-<HostName>.pem
+> ```
 
 
 ___
 
-## Linux Agent Certificate Hostname Detection during initial Installation
+## Linux Agent Certificate Hostname Detection steps during initial Installation
 The following steps are what happens (from a high level) during initial installation of the Linux / Unix Agent to generate a Certificate for the Agent.
 1. Try `hostname -f` (this will fail on some Linux systems)
 2. Attempt to obtain the domain name from `/etc/resolve.conf`
