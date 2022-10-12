@@ -63,6 +63,9 @@ SSSD caches the results of users and credentials from these remote locations so 
 
 The cached results can potentially be problematic if the stored records become stale and are no longer in sync with the identity provider, so it is important to know how to flush the SSSD cache to fix various problems and update the cache.
 
+> ### :notebook: Note
+> It’s recommend to only clear the sssd cache if the identity provider servers performing the authentication within the domain are available, otherwise users will not be able to log in once the sssd cache has been flushed.
+
 ### Stop SSSD Service
 ```
 Service sssd stop; 
@@ -79,9 +82,6 @@ service sssd start
 ```
 
 SSSD should now start up correctly with an empty cache, any user login will now first go directly to the defined identity provider for authentication, and then be cached locally afterwards.
-
-> ### :notebook: Note
-> It’s recommend to only clear the sssd cache if the identity provider servers performing the authentication within the domain are available, otherwise users will not be able to log in once the sssd cache has been flushed.
 
 &nbsp;
 
