@@ -56,7 +56,7 @@ ___
 
 &nbsp;
 
-## Restart System Security Services Daemon (SSSD)
+## Clearing the System Security Services Daemon (SSSD) Cache
 The System Security Services Daemon (SSSD) provides access to identity and authentication providers. Basically rather than relying on locally configured authentication, SSSD is used to lookup its local cache. The entries within this cache may come from different remote identity providers, such as an LDAP directory, Kerberos, or Active Directory for example.
 
 SSSD caches the results of users and credentials from these remote locations so that if the identity provider goes offline, the user credentials are still available and users can still login. This helps to improve performance and facilitates scalability with a single user that can login over many systems, rather than using local accounts everywhere.
