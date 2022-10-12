@@ -138,7 +138,8 @@ winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent
 
 ### Kerberos Authentication
 ```cmd
-winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -r:https://<LINUXSERVERFQDN>:1270/wsman -auth:Kerberos -skipCAcheck -skipCNcheck -skipRevocationcheck -encoding:utf-8
+winrm e http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -r:https://<LINUXSERVERFQDN>:1270 -u:<username@contoso.com> -p:<password> -auth:Kerberos -skipcacheck -skipcncheck -encoding:utf-8
+
 ```
 
 > ### :notebook: Note
