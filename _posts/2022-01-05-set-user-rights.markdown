@@ -23,20 +23,55 @@ _or_ \
 _or_ \
 [Personal File Server - Set-UserRights.txt](https://files.blakedrumm.com/Set-UserRights.txt) :arrow_left: **Text Format Alternative Download Link**
 
-Some (but not all) of the User Rights that can be set:
-```
-"Log on as a batch job (SeBatchLogonRight)"
-"Allow log on locally (SeInteractiveLogonRight)"
-"Access this computer from the network (SeNetworkLogonRight)"
-"Allow log on through Remote Desktop Services (SeRemoteInteractiveLogonRight)"
-"Log on as a service (SeServiceLogonRight)"
-"Deny log on as a batch job (SeDenyBatchLogonRight)"
-"Deny log on locally (SeDenyInteractiveLogonRight)"
-"Deny access to this computer from the network (SeDenyNetworkLogonRight)"
-"Deny log on through Remote Desktop Services (SeDenyRemoteInteractiveLogonRight)"
-"Deny log on as a service (SeDenyServiceLogonRight)"
-...
-```
+All of the User Rights that can be set:
+
+Privilege                                 | PrivilegeName                                                      |
+-------------------------------------------|--------------------------------------------------------------------|
+SeAssignPrimaryTokenPrivilege             | Replace a process level token                                      |
+SeAuditPrivilege                          | Generate security audits                                           |
+SeBackupPrivilege                         | Back up files and directories                                      |
+SeBatchLogonRight                         | Log on as a batch job                                              |
+SeChangeNotifyPrivilege                   | Bypass traverse checking                                           |
+SeCreateGlobalPrivilege                   | Create global objects                                              |
+SeCreatePagefilePrivilege                 | Create a pagefile                                                  |
+SeCreatePermanentPrivilege                | Create permanent shared objects                                    |
+SeCreateSymbolicLinkPrivilege             | Create symbolic links                                              |
+SeCreateTokenPrivilege                    | Create a token object                                              |
+SeDebugPrivilege                          | Debug programs                                                     |
+SeDelegateSessionUserImpersonatePrivilege | Obtain an impersonation token for another user in the same session |
+SeDenyBatchLogonRight                     | Deny log on as a batch job                                         |
+SeDenyInteractiveLogonRight               | Deny log on locally                                                |
+SeDenyNetworkLogonRight                   | Deny access to this computer from the network                      |
+SeDenyRemoteInteractiveLogonRight         | Deny log on through Remote Desktop Services                        |
+SeDenyServiceLogonRight                   | Deny log on as a service                                           |
+SeEnableDelegationPrivilege               | Enable computer and user accounts to be trusted for delegation     |
+SeImpersonatePrivilege                    | Impersonate a client after authentication                          |
+SeIncreaseBasePriorityPrivilege           | Increase scheduling priority                                       |
+SeIncreaseQuotaPrivilege                  | Adjust memory quotas for a process                                 |
+SeIncreaseWorkingSetPrivilege             | Increase a process working set                                     |
+SeInteractiveLogonRight                   | Allow log on locally                                               |
+SeLoadDriverPrivilege                     | Load and unload device drivers                                     |
+SeLockMemoryPrivilege                     | Lock pages in memory                                               |
+SeMachineAccountPrivilege                 | Add workstations to domain                                         |
+SeManageVolumePrivilege                   | Perform volume maintenance tasks                                   |
+SeNetworkLogonRight                       | Access this computer from the network                              |
+SeProfileSingleProcessPrivilege           | Profile single process                                             |
+SeRelabelPrivilege                        | Modify an object label                                             |
+SeRemoteInteractiveLogonRight             | Allow log on through Remote Desktop Services                       |
+SeRemoteShutdownPrivilege                 | Force shutdown from a remote system                                |
+SeRestorePrivilege                        | Restore files and directories                                      |
+SeSecurityPrivilege                       | Manage auditing and security log                                   |
+SeServiceLogonRight                       | Log on as a service                                                |
+SeShutdownPrivilege                       | Shut down the system                                               |
+SeSyncAgentPrivilege                      | Synchronize directory service data                                 |
+SeSystemEnvironmentPrivilege              | Modify firmware environment values                                 |
+SeSystemProfilePrivilege                  | Profile system performance                                         |
+SeSystemtimePrivilege                     | Change the system time                                             |
+SeTakeOwnershipPrivilege                  | Take ownership of files or other objects                           |
+SeTcbPrivilege                            | Act as part of the operating system                                |
+SeTimeZonePrivilege                       | Change the time zone                                               |
+SeTrustedCredManAccessPrivilege           | Access Credential Manager as a trusted caller                      |
+SeUndockPrivilege                         | Remove computer from docking station                               |
 
 > ## :notebook: Note
 > You may edit line [399](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L399) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
