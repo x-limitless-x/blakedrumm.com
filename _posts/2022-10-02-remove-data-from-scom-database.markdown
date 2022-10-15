@@ -54,16 +54,19 @@ _or_ \
 ## How to use it
 >#### Example 1
 >Remove SCOM BME Related Data from the OperationsManager DB, on every Agent in the Management Group:
+>{% include code_header.html %}
 >```powershell
 >Get-SCOMAgent -Name Agent1.contoso.com | %{.\Remove-SCOMBaseManagedEntity.ps1 -Servers $_}
 >```
 >#### Example 2
 >Remove SCOM BME Related Data for 2 Agent machines:
+>{% include code_header.html %}
 >```powershell
 >.\Remove-SCOMBaseManagedEntity.ps1 -Servers IIS-Server.contoso.com, WindowsServer.contoso.com
 >```
 >#### Example 3
 >Remove SCOM BME IDs from the Operations Manager Database:
+>{% include code_header.html %}
 >```powershell
 >.\Remove-SCOMBaseManagedEntity -Id C1E9B41B-0A35-C069-16EB-00AC43BB9C47, CB29ECDE-BCE8-2213-D5DD-0353116EDA6B
 >```
