@@ -57,16 +57,19 @@ _or_ \
 >```powershell
 >Get-SCOMAgent -Name Agent1.contoso.com | %{.\Remove-SCOMBaseManagedEntity.ps1 -Servers $_}
 >```
+>{: #code-example-1}
 >#### Example 2
 >Remove SCOM BME Related Data for 2 Agent machines:
 >```powershell
 >.\Remove-SCOMBaseManagedEntity.ps1 -Servers IIS-Server.contoso.com, WindowsServer.contoso.com
 >```
+>{: #code-example-2}
 >#### Example 3
 >Remove SCOM BME IDs from the Operations Manager Database:
 >```powershell
 >.\Remove-SCOMBaseManagedEntity -Id C1E9B41B-0A35-C069-16EB-00AC43BB9C47, CB29ECDE-BCE8-2213-D5DD-0353116EDA6B
 >```
+>{: #code-example-3}
 
 Leave some feedback if this helped you! :v:
 
