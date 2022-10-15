@@ -94,7 +94,7 @@ olvy_widget_type: sidebar
 
 # syntax highlighter
 markdown: kramdown
-highlighter: rouge
+highlighter: Pygments
 permalink: pretty
 
 # Choose what to show ( can be true or false)
