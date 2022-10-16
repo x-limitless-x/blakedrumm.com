@@ -5,6 +5,7 @@ date:   '2022-02-28 12:12:46 -0500'
 categories: troubleshooting guides operationsManager certificates
 author: blakedrumm
 thumbnail: /assets/img/posts/certificate-authority-template-guide/certificate-authority.png
+toc: true
 
 summary: >- # this means to ignore newlines
   This is a guide on how to create your own certificate template for System Center Operations Manager on an Enterprise Certificate Authority server.

@@ -5,6 +5,7 @@ date:   '2022-01-05 23:41:26 -0500'
 categories: powershell operationsManager troubleshooting projects 
 author: blakedrumm
 thumbnail: /assets/img/posts/set-user-rights.png
+toc: true
 
 summary: You can add, remove, and check User Rights Assignment (remotely / locally) with the following Powershell scripts.
 

@@ -5,6 +5,7 @@ date:   '2022-09-19 15:16:32 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/opsmgr-setup-data-reader-account-issue.jpg
+toc: true
 
 summary: >- # this means to ignore newlines
   From my colleagues, this post details how to resolve an issue you may experience while installing the Reporting Services.

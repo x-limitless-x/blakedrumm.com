@@ -5,6 +5,7 @@ title: "Rebuild Performance Counters"
 categories: guides operationsManager powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/recreate-perf-counters.png
+toc: true
 
 summary: >- # this means to ignore newlines
   This article shows you how to rebuild your Performance Counters.

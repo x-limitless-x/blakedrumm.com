@@ -5,6 +5,7 @@ title: "Error while installing SCOM 2019 Reporting"
 categories: guides operationsManager troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/posts/reporting-error-scom-ssrs.png
+toc: true
 
 summary: >- # this means to ignore newlines
   I have experienced many cases where SCOM Reporting would not install on a SCOM 2019 Management Group

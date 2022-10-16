@@ -5,6 +5,7 @@ title: "SCOM Uptime Availability Report"
 categories: guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/uptime-availability-report.png
+toc: true
 
 summary: >- # this means to ignore newlines
   One of my customers needed the uptime report for SCOM Agents in their environment. I couldn't find any good guides so I wrote this one.

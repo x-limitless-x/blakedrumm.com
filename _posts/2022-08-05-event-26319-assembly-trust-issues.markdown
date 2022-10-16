@@ -5,6 +5,7 @@ date:   '2022-08-05 16:00:21 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/event-26319-error-assembly-trust-issues.png
+toc: true
 
 summary: >- # this means to ignore newlines
   This article describes how to resolve an error regarding Assembly Trust Issues you may notice when opening the SCOM Console.

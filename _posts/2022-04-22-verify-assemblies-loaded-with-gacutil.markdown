@@ -5,6 +5,7 @@ title: "Verify Assemblies are loaded with GACUtil"
 categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/gacutil-check.png
+toc: true
 
 summary: >- # this means to ignore newlines
   I recently needed a customer to check the output of the .NET tool gacutil, so we could verify that all required assemblies were present.

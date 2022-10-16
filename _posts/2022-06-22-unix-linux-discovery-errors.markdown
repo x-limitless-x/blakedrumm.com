@@ -5,6 +5,7 @@ title: "SCOM Unix/Linux Discovery Errors + How To Fix Them"
 categories: troubleshooting guides linux operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/unix-linux-discovery-wizard.png
+toc: true
 
 summary: >- # this means to ignore newlines
   I had a case today that required an unusual fix so I figured I would post some items that may resolve 

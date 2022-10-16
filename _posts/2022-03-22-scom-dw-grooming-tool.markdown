@@ -5,6 +5,7 @@ title: "System Center Operations Manager - Data Warehouse Grooming Tool"
 categories: powershell projects operationsManager
 author: blakedrumm
 thumbnail: /assets/img/scom-dw-grooming-tool.png
+toc: true
 
 summary: >- # this means to ignore newlines
   This tool can analyze your Data Warehouse Grooming and see what is being stored and how much of your Data Warehouse is being filled with the related data. Free and open source GUI tool written in Powershell, with multiple ways of running the script: MSI, EXE, or source PS1.

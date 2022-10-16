@@ -5,6 +5,7 @@ date:   '2022-10-02 13:52:41 -0500'
 categories: powershell operationsManager troubleshooting projects
 author: blakedrumm
 thumbnail: /assets/img/posts/remove-scombasemanagedentity.png
+toc: true
 
 summary: >- # this means to ignore newlines
   Sometimes you need to remove data from the SCOM Database that relates to a specific server or client. If you need it done quickly, without having to open SQL Server Management Studio, or run queries manually; you can instead use this Powershell script.

@@ -7,23 +7,28 @@
 
 /* custom css goes below */
 
-html[data-theme="dark"] {
-    --bold-color: rgb(233, 233, 233);
-    --box-background-color: hsl(0, 0%, 20%);
-    --highlight-color: hsl(0, 0%, 60%);
-    --light-border-color: hsl(0, 0%, 30%);
-    --light-text-color: rgb(199, 199, 204);
-    --link-color: #f69801;
-    --link-color-visited: hsl(250, 100%, 60%);
-    --main-background-color: rgb(28, 28, 30);
-    --main-text-color: rgb(233, 233, 233);
-    --medium-text-color: hsl(0, 0%, 70%);
-    --underline-color: hsl(0, 0%, 50%);
-    --social-link-color: #ffffff;
-    --card-background-color: rgb(32, 32, 34);
-    --newsletter-background-color: #222324;
-    --button-background-color: #111;
+.docs-toc {
+    order: 2;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-size: .875rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
 }
+
+.markdown-body .octicon-link {
+    color: #c9d1d9;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor .octicon-link, .markdown-body h2:hover .anchor .octicon-link, .markdown-body h3:hover .anchor .octicon-link, .markdown-body h4:hover .anchor .octicon-link, .markdown-body h5:hover .anchor .octicon-link, .markdown-body h6:hover .anchor .octicon-link {
+    visibility: visible;
+}
+
 
 /* Main Logo */
 img.top-logo {

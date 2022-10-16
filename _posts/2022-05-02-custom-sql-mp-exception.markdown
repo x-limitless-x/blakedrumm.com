@@ -5,6 +5,7 @@ title: "Custom SQL Management Pack Invoke-SqlCmd Exception"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/invoke-sqlcmd.png
+toc: true
 
 summary: >- # this means to ignore newlines
   I was working on a case regarding Invoke-SqlCmd powershell command that is unable to return data for all SQL Servers.

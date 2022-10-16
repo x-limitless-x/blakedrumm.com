@@ -5,6 +5,7 @@ categories: powershell projects operationsManager
 title: System Center Operations Manager - Data Collector
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-data-collector.png
+toc: true
 
 summary: >- # this means to ignore newlines
   With the SCOM Data Collector you can collect a lot of useful data to analyze and troubleshoot
