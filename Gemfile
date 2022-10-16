@@ -1,16 +1,17 @@
 source "https://rubygems.org"
 
-#gem 'jekyll', '~> 4.2'
+gem 'jekyll', '~> 4.2'
 gem 'bundler', '~> 2.3.13'
 gem 'kramdown'
 gem 'rack-jekyll'
 gem 'rack'
 gem 'puma'
 gem 'jemoji'
+gem 'jekyll-toc'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
 # Plugins
 group :jekyll_plugins do
@@ -22,7 +23,6 @@ group :jekyll_plugins do
     gem 'jekyll-seo-tag', '~> 2.8.0'
     gem 'jekyll-sitemap', '~> 1.4.0'
     gem 'jekyll-admin', '~> 0.11.0'
-    gem 'jekyll-toc'
 end
 
 
