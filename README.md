@@ -34,6 +34,7 @@ or if you want to try fast :
 6. Wait for CI/CD to build your website. Visit Github Actions to see the build process.
 7. Once Ready, Your website will be ready at https://your_username.github.io :sparkles: 
 8. Happy Hacking your new site ! For Local changes you can clone locally.
+9. Enjoy!
 
 
 ### Local Development Steps :
