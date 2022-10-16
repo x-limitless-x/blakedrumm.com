@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'jekyll', '~> 4.2'
+#gem 'jekyll', '~> 4.2'
 gem 'bundler', '~> 2.3.13'
 gem 'kramdown'
 gem 'rack-jekyll'
@@ -14,7 +14,7 @@ gem 'jemoji'
 
 # Plugins
 group :jekyll_plugins do
-    # gem 'devlopr', '~> 0.4.5'
+    #gem 'devlopr', '~> 0.4.5'
     gem 'jgd', '~> 1.12'
     gem 'jekyll-feed', '~> 0.16.0'
     gem 'jekyll-paginate', '~> 1.1.0'
