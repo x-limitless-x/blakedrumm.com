@@ -7,6 +7,7 @@ gem 'rack-jekyll'
 gem 'rack'
 gem 'puma'
 gem 'jemoji'
+gem 'jekyll-toc'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -22,7 +23,6 @@ group :jekyll_plugins do
     gem 'jekyll-seo-tag', '~> 2.8.0'
     gem 'jekyll-sitemap', '~> 1.4.0'
     gem 'jekyll-admin', '~> 0.11.0'
-    gem 'jekyll-toc'
 end
 
 
