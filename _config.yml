@@ -159,7 +159,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-admin
   - jemoji
-  - jekyll-toc
+#  - jekyll-toc
 
 # Jekyll Admin Config
 jekyll_admin:
