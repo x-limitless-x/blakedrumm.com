@@ -10,7 +10,7 @@ toc: true
 summary: >- # this means to ignore newlines
   Tips for troubleshooting System Center Operations Manager Audit Collection Services issues.
 
-keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts
+keywords: audit collection services, scom 2019 acs, scom acs troubleshooting, opsmgr acs, scom acs, scom acs slow inserts, scom audit collection services
 permalink: /blog/acs-collector-troubleshooting-tips/
 ---
 A customer of mine was having problems with Audit Collection Services in SCOM 2019 UR3. I figured this information may prove helpful someday to someone. Enjoy!
