@@ -15,4 +15,4 @@ function modeSwitcher() {
 // 		document.documentElement.setAttribute('data-theme', 'dark');
 // 		sessionStorage.setItem('theme', 'dark');
 // 	}
- }
+// }
