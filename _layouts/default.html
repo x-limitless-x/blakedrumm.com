@@ -15,6 +15,43 @@ layout: compress
          </div>
         {%- include footer.html -%}
      <script>
+              /* 
+              * dark-light mode-switcher
+              * Change the icons inside the button based on previous settings
+              */
+              if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                $('#theme-toggle-light-mode').removeClass('hidden');
+              } else {
+                $('#theme-toggle-dark-mode').removeClass('hidden');
+              }
+
+              $('#theme-toggle').on('click', function() {
+
+                  // toggle icons inside button
+                  $('#theme-toggle-dark-mode').toggleClass('hidden');
+                  $('#theme-toggle-light-mode').toggleClass('hidden');
+
+                  // if set via local storage previously
+                  if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                      $(document.documentElement).addClass('dark');
+                      localStorage.setItem('color-theme', 'dark');
+                    } else {
+                      $(document.documentElement).removeClass('dark');
+                      localStorage.setItem('color-theme', 'light');
+                    }
+
+                  // if NOT set via local storage previously
+                  } else {
+                    if ($(document.documentElement).hasClass('dark')) {
+                      $(document.documentElement).removeClass('dark');
+                      localStorage.setItem('color-theme', 'light');
+                    } else {
+                      $(document.documentElement).addClass('dark');
+                      localStorage.setItem('color-theme', 'dark');
+                    }
+                  }
+              });
             var options = {
                 classname: 'progressline',
                 id: 'my-id'
