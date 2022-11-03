@@ -1,5 +1,12 @@
 $(document).ready(()=> modeSwitcher() )
 
+if ( !localStorage.getItem('color-theme') ){
+	document.documentElement.setAttribute('data-theme', 'dark');
+}
+else{
+	document.documentElement.setAttribute('data-theme', localStorage.getItem('color-theme'));
+}
+
 /**
  * Page theme switching between *light* and *dark*
  * 
@@ -7,18 +14,13 @@ $(document).ready(()=> modeSwitcher() )
  */
 function modeSwitcher() {
 
-	if ( !localStorage.getItem('color-theme') ){
-		document.documentElement.setAttribute('data-theme', 'dark');
-    	sessionStorage.setItem('theme', 'dark');
-	}
-	else{
-		document.documentElement.setAttribute('data-theme', localStorage.getItem('color-theme'));
-	}
-
-	if  ( localStorage.getItem('color-theme') === 'dark' ) {
-		$('.theme-toggle').removeAttr('checked');
-	} else {
-		$('.theme-toggle').attr('checked','');
+	switch ( localStorage.getItem('color-theme') ){
+		case 'dark':
+			$('.theme-toggle').removeAttr('checked');
+		break;
+		case 'light':
+			$('.theme-toggle').attr('checked','');
+		break;
 	}
 
     /* 
