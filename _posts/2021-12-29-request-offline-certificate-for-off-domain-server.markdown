@@ -27,6 +27,9 @@ KeyLength=2048
 KeySpec=1 ; Key Exchange – Required for encryption
 KeyUsage=0xf0 ; Digital Signature, Key Encipherment
 MachineKeySet=TRUE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+ProviderType = 12
+KeyAlgorithm = RSA
 
 ; Optionally include the Certificate Template
 ; [RequestAttributes]
