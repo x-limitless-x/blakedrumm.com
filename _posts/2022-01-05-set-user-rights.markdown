@@ -73,6 +73,7 @@ SeTcbPrivilege                            | Act as part of the operating system 
 SeTimeZonePrivilege                       | Change the time zone                                               |
 SeTrustedCredManAccessPrivilege           | Access Credential Manager as a trusted caller                      |
 SeUndockPrivilege                         | Remove computer from docking station                               |
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
 &nbsp;
 
