@@ -1,14 +1,18 @@
+var ghosthunter_key = null,
+    ghost_root_url = false;
 $(document).ready(function() {
     'use strict';
     var search_field = $('.search-form__field'),
         search_results = $('.search-results'),
         toggle_search = $('.toggle-search-button'),
         close_search = $('.close-search-button'),
-        search_result_template = "\
-          <div class='search-results__item'>\
-            <a class='search-results__item__title' href='{{link}}'>{{title}}</a>\
-            <span class='post__date'>{{pubDate}}</span>\
-          </div>";
+        search_result_template = `
+        <div id="searchResults" style="--background: url('{{postImage}}')" class='search-results__item item_bgimg gh-search-item'>
+          <div class="_itemcontainer">
+            <a class='search-results__item__title' href='{{link}}'>{{title}}</a>
+            <span class='post__date'>{{pubDate}}</span>
+          </div>
+        </div>`;
 
     toggle_search.click(function(event) {
       event.preventDefault();
@@ -38,7 +42,12 @@ $(document).ready(function() {
       result_template : search_result_template,
       before: function() {
         search_results.fadeIn();
-      }
+      },
+      item_preprocessor: function(item) {
+        return {
+          postImage: item.postImage
+        };
+    }
     });
 
   });

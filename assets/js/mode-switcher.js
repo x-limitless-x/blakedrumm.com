@@ -2,8 +2,10 @@ $(document).ready(()=> modeSwitcher() )
 
 if ( !localStorage.getItem('color-theme') ){
 	document.documentElement.setAttribute('data-theme', 'dark');
+	document.documentElement.classList.add("dark-theme");
 }
 else{
+	document.documentElement.classList.add(localStorage.getItem('color-theme') + "-theme");
 	document.documentElement.setAttribute('data-theme', localStorage.getItem('color-theme'));
 }
 
@@ -33,9 +35,13 @@ function modeSwitcher() {
 		if ($(document.documentElement).attr('data-theme') === "dark" ) {
 			document.documentElement.setAttribute('data-theme', 'light');
 			localStorage.setItem('color-theme', 'light');
+			document.documentElement.classList.remove("dark-theme");
+			document.documentElement.classList.add("light-theme");
 		} else {
 			document.documentElement.setAttribute('data-theme', 'dark');
 			localStorage.setItem('color-theme', 'dark');
+			document.documentElement.classList.remove("light-theme");
+			document.documentElement.classList.add("dark-theme");
 		}
         
     });

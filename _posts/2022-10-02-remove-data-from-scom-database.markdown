@@ -49,8 +49,8 @@ _or_ \
  Name             |       |                   | Array  | The Base Managed Entity Display Name of the object you are wanting to delete from the Operations Manager Database.                                                         |
  Servers          |       | True              | Array  | Each Server (comma separated) you want to Remove related BME ID's related to the Display Name in the OperationsManager Database. This will also remove from Agent Managed. |
  SqlServer        |       |                   | String | SQL Server/Instance, Port that hosts OperationsManager Database for SCOM.                                                                                                  |
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
-&nbsp;
 
 ## How to use it
 >#### Example 1

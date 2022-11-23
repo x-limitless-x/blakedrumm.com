@@ -58,6 +58,7 @@ img.top-logo {
 
 body {
     padding-top: 66px;
+    transition: .25s background-color ease-in-out;
 }
 
 img.githubStats {
@@ -163,6 +164,15 @@ img.company-logo[src*="gaston-college.png"] {
     #donate-button-container{
 	text-align: center;
     }
+    #recent-articles-header{
+        /* display: grid; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        /* grid-template-columns: 17fr 2fr; */
+    }
 }
 
 /* Make Blog post images full size */
@@ -210,8 +220,30 @@ button.navbar-toggler{
 	}
 }
 
+html.light-theme .recommendations-unit-title{
+    color: #6a6a6a !important;
+}
+html.light-theme .recommendations-forum{
+    color: #4b4b4b !important;
+}
+html.dark-theme .recommendations-unit-title{
+    color: #f3f3f3 !important;
+}
+html.dark-theme .recommendations-forum{
+    color: #acacac !important;
+}
+
 nav#topNav {
     box-shadow: #00000040 0 9px 8px;
+    transition: .25s background-color ease-in-out;
+}
+
+.blog-post-category-title{
+    display:none;
+}
+
+.table-hover>tbody>tr:hover>*{
+    color: #aeaeae !important;
 }
 
 /* Nav Divider: | */

@@ -17,7 +17,7 @@ layout: null
         <title>{{ post.title | xml_escape }}</title>
         <postImage>{{ post.thumbnail | xml_escape }}</postImage>
         <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_string }}</pubDate>
+        <pubDate>{{ post.date | date: "%B %-d, %Y" }}</pubDate>
         <link>{{site.url}}{{site.baseurl}}{{post.url}}</link>
         <guid isPermaLink="true">{{site.url}}{{site.baseurl}}{{post.url}}</guid>
       </item>
