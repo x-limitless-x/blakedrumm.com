@@ -78,6 +78,7 @@ This table describes what the values mean:
 |---|---|
 | 0 | Disabled - Provided for backwards compatibility. Disabled value is not recommended |
 | 1 | Enabled - Causes the Database Engine to ignore the PERMISSION_SET information on the assemblies, and always interpret them as UNSAFE. Enabled is the default value for SQL Server 2017 (14.x) |
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
 &nbsp;
 
