@@ -7,16 +7,32 @@
 
 /* custom css goes below */
 
-.docs-toc {
-    order: 2;
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
-    font-size: .875rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 70px;
-    height: calc(100vh - 70px);
-    overflow-y: auto;
+#toc_container {
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 14px;
+    margin-bottom: 1em;
+    padding: 8px;
+    max-width: 75%;
+    margin-top: 18px;
+    border-radius: 8px;
+    box-shadow: 0px 7px 10px #0000004d;
+    min-width: 45%;
+}
+@media (max-width: 992px) {
+    #toc_container{
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    margin-left: unset !important;
 }
 
 .markdown-body .octicon-link {

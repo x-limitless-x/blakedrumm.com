@@ -31,8 +31,11 @@
         src="{{ page.thumbnail }}"
         alt="{{ post.title }}"
       />
-      <br />
-      <br />
+      <div id="toc_container" class="card-header">
+        <p class="toc_title">Contents</p>
+          {% include toc.html html=content class='toc_list' submenu_class='toc-submenu' item_class='toc-item' %}
+      </div>  
+      <hr />
       {{ content }}
       <br />
       {%- include share_page.html -%}
