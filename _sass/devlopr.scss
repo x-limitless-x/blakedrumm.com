@@ -246,7 +246,9 @@ header {
     background-color: var(--main-background-color) !important;
     box-shadow: #000 0px 0px 8px;
 }
-
+.nav-link:focus, .nav-link:hover{
+    color: rgba(255, 255, 255, 0.75)!important;
+}
 #navbar-hamburger, #navbar-search{
     color: var(--bold-color) !important;
 }
@@ -255,7 +257,7 @@ header {
     color: #ff7601 !important;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: var(--nav-link-color) !important;
+    color: var(--nav-link-color);
 }
 .navbar-dark .navbar-toggler {
     border-color:transparent !important;
