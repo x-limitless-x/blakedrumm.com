@@ -56,7 +56,7 @@ author_project_details:
                 project_description: With the SCOM Data Collector you can collect a lot of useful data to analyze and troubleshoot your System Center Operations Manager Environment! This is a go to Tool for any SCOM Admin that wants a wholistic view of their configuration and setup. Written in Powershell!
                 project_url: https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest
                 visibility: true
-              - project_thumbnail: /posts/scom-db-move-tool.png
+              - project_thumbnail: scom-db-move-tool.png
                 project_title: Reconfigure System Center Operations Manager for Database Move Tool
                 project_description: This application is designed to allow users to migrate their SCOM SQL Instances to a new location. With that said, the application will only edit database values if selected or potentially edit the configuration file (ConfigService.config) and Registry to allow the Management Server(s) to use the updated SQL Instance / Database.
                 project_url: https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest
