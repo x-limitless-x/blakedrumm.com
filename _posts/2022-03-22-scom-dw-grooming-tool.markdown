@@ -2,7 +2,7 @@
 layout: post
 date:   '2022-03-22 20:25:31 -0500'
 title: "System Center Operations Manager - Data Warehouse Grooming Tool"
-categories: powershell projects operationsManager
+categories: powershell projects operationsManager troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/scom-dw-grooming-tool.png
 toc: true
@@ -14,13 +14,13 @@ keywords: scom dw grooming, opsmgr dw tool, scom dw tool, operations manager too
 permalink: /blog/scom-dw-grooming-tool/
 ---
 
-## Latest Version
-[![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-DW-Grooming-Tool)](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest) \
-[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-DW-Grooming-Tool/latest/SCOM-DW-GroomingGUI-EXE-64bit.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DW-Tool)
-
 ## Introduction
 
 This tool can be used to modify the System Center Operations Manager Data Warehouse Grooming retention days, allows you to see grooming history, you can manually run grooming, and you may also export the current configuration so you can keep a backup of your settings. You have the option of resetting the values to Defaults for the typical data sets in the Data Warehouse.
+
+## Latest Version
+[![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-DW-Grooming-Tool)](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest) \
+[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-DW-Grooming-Tool/latest/SCOM-DW-GroomingGUI-EXE-64bit.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DW-Tool)
 
 ## How to Use
 
