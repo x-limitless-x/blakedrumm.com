@@ -16,7 +16,7 @@ keywords: scom data collector, data collector for SCOM, data collector script, S
 permalink: /blog/scom-data-collector/
 ---
 
-## Introduction
+## :book: Introduction
 This tool was designed to assist with troubleshooting complex System Center Operations Manager issues.
 
 ## :arrow_down_small: Quick Download Link
