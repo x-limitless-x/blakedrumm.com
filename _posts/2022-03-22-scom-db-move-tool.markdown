@@ -37,7 +37,7 @@ The script by default will attempt to gather the current database connection fro
 
 This script will log actions to the Application Event Log. Look for the Event Source: `SCOMDBMoveTool`
 
-## :question: More Information
+## :page_facing_up: More Information
 
 You will get prompted each time you run the script to accept the license agreement, unless you select do not ask me again, when you select this it will save a file to your ProgramData Directory: `C:\ProgramData\SCOM-DBMoveTool-AgreedToLicense.log`
 
