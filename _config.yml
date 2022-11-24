@@ -51,20 +51,15 @@ author_education_details:
 
 # Projects
 author_project_details:
-              - project_thumbnail: scom-data-collector.png
-                project_title: System Center Operations Manager Data Collector
-                project_description: With the SCOM Data Collector you can collect a lot of useful data to analyze and troubleshoot your System Center Operations Manager Environment! This is a go to Tool for any SCOM Admin that wants a wholistic view of their configuration and setup. Written in Powershell!
-                project_url: https://github.com/blakedrumm/SCOM-Scripts-and-SQL/releases/latest
+              - project_thumbnail: gamershub.png
+                project_title: Gamers Hub
+                project_description: A Platform built for Gamers and Game Devs
+                project_url: https://gamershub.in
                 visibility: true
-              - project_thumbnail: scom-db-move-tool.png
-                project_title: Reconfigure System Center Operations Manager for Database Move Tool
-                project_description: This application is designed to allow users to migrate their SCOM SQL Instances to a new location. With that said, the application will only edit database values if selected or potentially edit the configuration file (ConfigService.config) and Registry to allow the Management Server(s) to use the updated SQL Instance / Database.
-                project_url: https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest
-                visibility: true
-              - project_thumbnail: scom-dw-grooming-tool.png
-                project_title: System Center Operations Manager - Data Warehouse Grooming Tool
-                project_description: This tool can analyze your Data Warehouse Grooming and see what is being stored and how much of your Data Warehouse is being filled with the related data. Free and open source GUI tool written in Powershell, with multiple ways of running the script: MSI, EXE, or source PS1.
-                project_url: https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest
+              - project_thumbnail: hack4r.PNG
+                project_title: Hack4r
+                project_description: A Platform built for Hackers and Penetration Testers
+                project_url: https://hack4r.com
                 visibility: true
 
 
