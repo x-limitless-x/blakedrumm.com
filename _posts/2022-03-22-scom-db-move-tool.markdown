@@ -4,7 +4,7 @@ date:   '2022-11-23 18:21:42 -0500'
 title: "System Center Operations Manager - Reconfigure SCOM for DB Move Tool"
 categories: powershell projects operationsManager troubleshooting
 author: blakedrumm
-thumbnail: /assets/img/posts/scom-db-move-tool.png
+thumbnail: /assets/img/scom-db-move-tool.png
 toc: true
 
 summary: >- # this means to ignore newlines
