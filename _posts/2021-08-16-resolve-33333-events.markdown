@@ -14,7 +14,7 @@ keywords: resolve 33333 event id, scom management server 33333, event 33333, sco
 permalink: /blog/resolve-33333-events/
 ---
 
-## Introduction
+## :book: Introduction
  I had a case recently where my customer was having issues with the following Event ID 33333 on all the Management Servers in the Management Group.
  
  This is the Exact Event Information:
@@ -36,7 +36,7 @@ Data Access Layer rejected retry on SqlError:
  Message: Violation of PRIMARY KEY constraint 'PK_StateChangeEvent'. Cannot insert duplicate key in object 'dbo.StateChangeEvent'. The duplicate key value is (b48055d3-18f2-40f7-a0e7-a0f8bd1b44a3).
 ```
 
-## How to fix
+## :page_with_curl: How to fix
 This Powershell Script will allow you to detect for Event ID 33333 being generated and get a count of unique Servers referenced across your OperationsManager Event Log:
 ```powershell
 $events = (Get-EventLog -LogName 'Operations Manager' -Source 'DataAccessLayer' -ErrorAction SilentlyContinue | Where-Object { $_.EventID -eq 33333 })
