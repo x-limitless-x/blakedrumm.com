@@ -54,7 +54,7 @@ _or_ \
 
 ## How to use it
 >#### Example 1
->Remove SCOM BME Related Data from the OperationsManager DB, on every Agent in the Management Group:
+>Remove SCOM BME Related Data from the OperationsManager DB, for Agent1 in the Management Group:
 >```powershell
 >Get-SCOMAgent -Name Agent1.contoso.com | %{.\Remove-SCOMBaseManagedEntity.ps1 -Servers $_}
 >```
