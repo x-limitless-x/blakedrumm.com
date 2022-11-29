@@ -49,6 +49,10 @@
     max-width: 100%;
 }
 
+.about-me .card .row{
+    text-align: center;
+}
+
 /* Main Logo */
 img.top-logo {
     width: 188px;
@@ -72,7 +76,7 @@ img.top-logo {
 #author_projects .project-img {
     width: inherit;
     height: auto;
-    max-height: 301px;
+    max-height: 521px;
 }
 
 body {
