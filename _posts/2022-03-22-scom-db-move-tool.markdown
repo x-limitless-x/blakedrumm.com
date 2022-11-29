@@ -19,8 +19,8 @@ permalink: /blog/scom-db-move-tool/
 This tool allows you to reconfigure System Center Operations Manager's Databases in the configuration file, registry, and SQL Database Tables. This tool utilizes Powershell to provide a GUI for being able to easily navigate and verify the settings.
 
 ## :arrow_down_small: Latest Version
-[![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-Reconfigure-DB-Move-Tool)](https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest) \
-[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/latest/SCOM-Reconfigure-DB-Move-Tool-EXE.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DB-Move-Tool)
+[![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-Reconfigure-DB-Move-Tool)](https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest){:class="img-shields-io"} \
+[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/latest/SCOM-Reconfigure-DB-Move-Tool-EXE.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DB-Move-Tool){:class="img-shields-io"}
 
 ## :page_with_curl: How to Use
 
