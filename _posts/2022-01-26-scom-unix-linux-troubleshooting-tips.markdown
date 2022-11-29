@@ -194,10 +194,10 @@ winrm e http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimna
 
 ```
 
-> ### :notebook: Note
+> ### :notebook: Note 1
 > Verify that you have enabled Kerberos via the Management Server Registry on each Management Server in the resource pool you are using to monitor the Unix/Linux agents: [https://docs.microsoft.com/system-center/scom/manage-linux-kerberos-auth](https://docs.microsoft.com/system-center/scom/manage-linux-kerberos-auth)
 
-> ### :notebook: Note
+> ### :notebook: Note 2
 > You may be experiencing an issue with ports being blocked when Agent is in DMZ zone. Management Server needs these ports open to communicate to Domain Controller in DMZ zone (outside scom) 
 > 
 > 1. LDAP Port  389 ***or*** LDAPS Port  636
