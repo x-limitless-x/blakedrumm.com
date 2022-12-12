@@ -329,7 +329,7 @@ ___
 &nbsp;
 
 ## Linux Regular Expression (Regex)
-The SCOM console uses .NET Regex and the SCX Agent uses POSIIX Regex.
+The SCOM console uses .NET Regex and the SCX Agent uses POSIX Regex.
 
 &nbsp;
 
