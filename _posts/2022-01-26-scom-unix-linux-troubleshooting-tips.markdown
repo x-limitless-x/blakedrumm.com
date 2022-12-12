@@ -324,6 +324,13 @@ On the Unix/Linux Machine run the following command to uninstall and purge the S
 sh ./scx-<version>.<type>.<version>.<arch>.sh --purge --force
 ```
 
+___
+      
+&nbsp;
+
+## Linux Regular Expression (Regex)
+The SCOM console uses .NET Regex and the SCX Agent uses POSIIX Regex.
+      
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-troubleshooting-tips/)
 
 <!--
