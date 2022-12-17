@@ -48,15 +48,15 @@ You will need to create a new Unit Monitor.
 8. Run every **15 minutes** by default, this is a good interval to start with. Click **Next >**
 9. Type in the File Name you want to use, I used: **my_custom_cpu_monitoring_script.ps1**
 10. Copy and Paste the below script into the ***Script*** section and click **Next >**:
-    {% include code_header.html %}
-    {% highlight powershell %}
-    $api = New-Object -ComObject "MOM.ScriptAPI";
-    $PropertyBag = $api.CreatePropertyBag();
-    [int]$Result = [int]((Get-Counter "\Processor(_Total)\% Processor Time").CounterSamples.CookedValue);
-    $PropertyBag.AddValue("CPUUsage", $Result);
-    $PropertyBag
-    {% endhighlight %}
-    ![Copy and paste the above script to your script pane](/assets/img/posts/create-unit-monitor-script-pane.png){:class="img-fluid"}
+{% include code_header.html %}
+{% highlight powershell %}
+$api = New-Object -ComObject "MOM.ScriptAPI";
+$PropertyBag = $api.CreatePropertyBag();
+[int]$Result = [int]((Get-Counter "\Processor(_Total)\% Processor Time").CounterSamples.CookedValue);
+$PropertyBag.AddValue("CPUUsage", $Result);
+$PropertyBag
+{% endhighlight %}
+![Copy and paste the above script to your script pane](/assets/img/posts/create-unit-monitor-script-pane.png){:class="img-fluid"}
 11. Copy and paste the below, when everything below has been copied, click **Next >**:
     - Parameter Name column: `Property[@Name="CPUUsage"]`
     - Operator: `Greater than or equal to`
