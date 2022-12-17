@@ -99,8 +99,6 @@ We will need to modify the Management Pack in order to allow the expressions to 
 
 Leave some feedback if this helped you! :v:
 
-&nbsp;
-
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/create-custom-powershell-cpu-monitor/)
 
 <!--
