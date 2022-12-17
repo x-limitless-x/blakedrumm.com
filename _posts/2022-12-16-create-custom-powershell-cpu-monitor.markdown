@@ -78,7 +78,7 @@ You will need to create a new Unit Monitor.
 
 ### Step 2. Modify the Management Pack
 We will need to modify the Management Pack in order to allow the expressions to evaluate correctly. The Monitor is setup to use string values instead of integers, which will cause problems when we try to evaluate the health of the monitor.
-1. Go to ***Administration Tab*** -> ***Management Packs*** -> ***Installed Management Packs*** -> Search for the Management Pack where your Monitor is saved. Select and export the Management Pack to any location.
+1. Go to ***Administration Tab*** -> ***Management Packs*** -> ***Installed Management Packs*** -> Search for the Management Pack where your Monitor is saved. Select and export the Management Pack to any location. \
    ![Export Management Pack](/assets/img/posts/create-unit-monitor-export-mp.png)
 2. Navigate to the exported Management Pack xml file, open the MP XML with Notepad.
 3. Find and replace: \
