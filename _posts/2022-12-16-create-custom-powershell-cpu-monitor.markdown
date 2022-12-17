@@ -92,7 +92,7 @@ We will need to modify the Management Pack in order to allow the expressions to 
 
 Leave some feedback if this helped you! :v:
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/remove-data-from-scom-database/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/create-custom-powershell-cpu-monitor/)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
