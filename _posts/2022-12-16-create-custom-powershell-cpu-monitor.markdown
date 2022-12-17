@@ -81,13 +81,20 @@ We will need to modify the Management Pack in order to allow the expressions to 
 1. Go to ***Administration Tab*** -> ***Management Packs*** -> ***Installed Management Packs*** -> Search for the Management Pack where your Monitor is saved. Select and export the Management Pack to any location.
    ![Export Management Pack](/assets/img/posts/create-unit-monitor-export-mp.png)
 2. Navigate to the exported Management Pack xml file, open the MP XML with Notepad.
-3. Find and replace: `<XPathQuery>Property[@Name="CPUUsage"]</XPathQuery>`
-   - Replace any occurrences with the following: `<XPathQuery Type="Integer">Property[@Name="CPUUsage"]</XPathQuery>`
+3. Find and replace: \
+   `<XPathQuery>Property[@Name="CPUUsage"]</XPathQuery>`
+   - Replace any occurrences with the following: \
+     `<XPathQuery Type="Integer">Property[@Name="CPUUsage"]</XPathQuery>`
    - The above change allows us to interpret the output as integer, instead of string.
-4. Find and replace: `<Value Type="String">50</Value>`
-   - Replace any occurrences with the following: `<Value Type="Integer">50</Value>`
+4. Find and replace: \
+   `<Value Type="String">50</Value>`
+   - Replace any occurrences with the following: \
+     `<Value Type="Integer">50</Value>`
    - The above change allows us to interpret the output as integer, instead of string.
-5. Modify Line 5 in the xml file from `<Version>1.0.0.0</Version>` -> `<Version>1.0.0.1</Version>`
+5. Modify Line 5 (the version of the Management Pack) in the xml file from: \
+   `<Version>1.0.0.0</Version>` \
+   to \
+   `<Version>1.0.0.1</Version>`
 6. Save the Management Pack XML and import the Management Pack back into your environment.
 
 Leave some feedback if this helped you! :v:
