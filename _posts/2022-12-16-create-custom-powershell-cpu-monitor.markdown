@@ -20,7 +20,7 @@ Recently I had a case and I needed to assist my customer with a CPU Monitor that
 ## :red_circle: Prerequisites
 - Import Cookdown Powershell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/))
 
-## Example MP
+## :heavy_check_mark: Example MP
 You can get a copy of the Management Pack I created in this guide, here: \
 [Custom Monitor for CPU Usage](https://files.blakedrumm.com/custom.monitor.for.cpu.usage.xml) :arrow_left: **Direct Download Link**
 
