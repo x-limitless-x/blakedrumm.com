@@ -18,7 +18,7 @@ permalink: /blog/create-custom-powershell-cpu-monitor/
 Recently I had a case and I needed to assist my customer with a CPU Monitor that targets all Windows Computers. The customer is using the Powershell Authoring Community MP by Cookdown. I will document my steps to get this working as intended.
 
 ## :red_circle: Prerequisites
-- Import Cookdown Powershell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/)
+- Import Cookdown Powershell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/))
 
 ## Example MP
 You can get a copy of the Management Pack I created in this guide, here: \
