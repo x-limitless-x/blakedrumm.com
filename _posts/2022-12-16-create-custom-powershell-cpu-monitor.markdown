@@ -22,7 +22,7 @@ Recently I had a case and I needed to assist my customer with a CPU Monitor that
 
 ## Example MP
 You can get a copy of the Management Pack I created in this guide, here: \
-[Custom Monitor for CPU Usage](https://files.blakedrumm.com/custom.monitor.for.cpu.usage.xml)) :arrow_left: **Direct Download Link**
+[Custom Monitor for CPU Usage](https://files.blakedrumm.com/custom.monitor.for.cpu.usage.xml) :arrow_left: **Direct Download Link**
 
 > ## :notebook: Note
 > This guide will require you to edit the Management Pack directly, be aware that you need to be careful when editing any Management Pack to ensure you do not accidently change the wrong thing.
@@ -55,19 +55,19 @@ You will need to create a new Unit Monitor.
     $PropertyBag.AddValue("CPUUsage", $Result);
     $PropertyBag
     ```
-    ![Copy and paste the above script to your script pane](/assets/img/posts/create-unit-monitor-script-pane.png)
+    ![Copy and paste the above script to your script pane](/assets/img/posts/create-unit-monitor-script-pane.png){:class="img-fluid"}
 11. Copy and paste the below, when everything below has been copied, click **Next >**:
     - Parameter Name column: `Property[@Name="CPUUsage"]`
     - Operator: `Greater than or equal to`
     - Value: `50`
-    ![Verify values are set for Unhealthy expression](/assets/img/posts/create-unit-monitor-unhealthy.png)
+    ![Verify values are set for Unhealthy expression](/assets/img/posts/create-unit-monitor-unhealthy.png){:class="img-fluid"}
 12. Copy and paste the below, when everything below has been copied, click **Next >**:
     - Parameter Name column: `Property[@Name="CPUUsage"]`
     - Operator: `Less than`
     - Value: `50`
     ![Verify values are set for Healthy expression](/assets/img/posts/create-unit-monitor-healthy.png)
 13. Optional: Change Unhealthy from Warning to Critical.
-    ![Configure Monitor Health](/assets/img/posts/create-unit-monitor-configurehealth.png)
+    ![Configure Monitor Health](/assets/img/posts/create-unit-monitor-configurehealth.png){:class="img-fluid"}
 14. Click the ***Generate alerts for this monitor*** checkbox and change the Alert Description text to this:
     ```text
     The CPU has reached at or above 50% usage.
@@ -79,7 +79,7 @@ You will need to create a new Unit Monitor.
 ### Step 2. Modify the Management Pack
 We will need to modify the Management Pack in order to allow the expressions to evaluate correctly. The Monitor is setup to use string values instead of integers, which will cause problems when we try to evaluate the health of the monitor.
 1. Go to ***Administration Tab*** -> ***Management Packs*** -> ***Installed Management Packs*** -> Search for the Management Pack where your Monitor is saved. Select and export the Management Pack to any location. \
-   ![Export Management Pack](/assets/img/posts/create-unit-monitor-export-mp.png)
+   ![Export Management Pack](/assets/img/posts/create-unit-monitor-export-mp.png){:class="img-fluid"}
 2. Navigate to the exported Management Pack xml file, open the MP XML with Notepad.
 3. Find and replace: \
    `<XPathQuery>Property[@Name="CPUUsage"]</XPathQuery>`
