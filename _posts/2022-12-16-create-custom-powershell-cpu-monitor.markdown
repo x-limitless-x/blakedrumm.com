@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Create Custom Powershell CPU Monitor"
-date:   '2022-12-02 13:52:41 -0500'
+date:   '2022-12-17 01:25:12 -0500'
 categories: powershell operationsManager guides
 author: blakedrumm
 thumbnail: /assets/img/posts/custom-cpu-usage-monitor-alert.png
@@ -18,7 +18,7 @@ permalink: /blog/create-custom-powershell-cpu-monitor/
 Recently I had a case and I needed to assist my customer with a CPU Monitor that targets all Windows Computers. The customer is using the Powershell Authoring Community MP by Cookdown. I will document my steps to get this working as intended.
 
 ## :red_circle: Prerequisites
-- Import Cookdown Powershell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/))
+- Import Cookdown Powershell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/)
 
 ## Example MP
 You can get a copy of the Management Pack I created in this guide, here: \
@@ -65,7 +65,7 @@ You will need to create a new Unit Monitor.
     - Parameter Name column: `Property[@Name="CPUUsage"]`
     - Operator: `Less than`
     - Value: `50`
-    ![Verify values are set for Healthy expression](/assets/img/posts/create-unit-monitor-healthy.png)
+    ![Verify values are set for Healthy expression](/assets/img/posts/create-unit-monitor-healthy.png){:class="img-fluid"}
 13. Optional: Change Unhealthy from Warning to Critical.
     ![Configure Monitor Health](/assets/img/posts/create-unit-monitor-configurehealth.png){:class="img-fluid"}
 14. Click the ***Generate alerts for this monitor*** checkbox and change the Alert Description text to this:
