@@ -50,14 +50,14 @@ You will need to create a new Unit Monitor.
 10. Copy and Paste the below script into the ***Script*** section and click **Next >**:
 
     {% include code_header.html %}
-    ```powershell
+    {% highlight powershell %}
     $api = New-Object -ComObject "MOM.ScriptAPI";
     $PropertyBag = $api.CreatePropertyBag();
     [int]$Result = [int]((Get-Counter "\Processor(_Total)\% Processor Time").CounterSamples.CookedValue);
     $PropertyBag.AddValue("CPUUsage", $Result);
     $PropertyBag
-    ```
-    
+    {% endhighlight %}
+
     ![Copy and paste the above script to your script pane](/assets/img/posts/create-unit-monitor-script-pane.png){:class="img-fluid"}
 11. Copy and paste the below, when everything below has been copied, click **Next >**:
     - Parameter Name column: `Property[@Name="CPUUsage"]`
