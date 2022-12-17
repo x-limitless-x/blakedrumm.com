@@ -49,7 +49,7 @@ You will need to create a new Unit Monitor.
 9. Type in the File Name you want to use, I used: **my_custom_cpu_monitoring_script.ps1**
 10. Copy and Paste the below script into the ***Script*** section and click **Next >**:
 
-    {% include code_header.html %}
+   {% include code_header.html %}
     {% highlight powershell %}
     $api = New-Object -ComObject "MOM.ScriptAPI";
     $PropertyBag = $api.CreatePropertyBag();
