@@ -16,13 +16,20 @@ permalink: /blog/scom-db-move-tool/
 
 ## :book: Reconfigure System Center Operations Manager for Database Move Tool
 
-Welcome to the official repository for the Reconfigure System Center Operations Manager for Database Move Tool. This tool is compatible with all versions of Operations Manager and is designed to help you manage SQL connections used by Operations Manager.
+Welcome to the official repository for the Reconfigure System Center Operations Manager for Database Move Tool. This tool is compatible with all versions of Operations Manager and is designed to help you manage SQL connections used by Operations Manager. \
+
+This script automates the steps outlined here: [https://learn.microsoft.com/system-center/scom/manage-move-opsdb](https://learn.microsoft.com/system-center/scom/manage-move-opsdb)
 
 ### Features
-- Update / Verify the Database Tables for data related to SQL Connections in SCOM.
-- Update / Verify the Registry data for local / remote SCOM Management Servers.
-- Update / Verify the Configuration File for local / remote SCOM Management Servers.
-- Update / Verify the SQL Instance Configuration for CLR and SQL Service Broker.
+- Update / Verify the System Center Operations Manager SQL
+  - SQL Instance Configuration for CLR and SQL Service Broker.
+  - Database Tables for data related to SQL Connections in SCOM.
+- Update / Verify the Registry data
+  - Local SCOM Management Servers.
+  - Remote SCOM Management Servers.
+- Update / Verify the Configuration File
+  - Local SCOM Management Servers.
+  - Remote SCOM Management Servers.
 
 ### Requirements
 - System Center Operations Manager installation
