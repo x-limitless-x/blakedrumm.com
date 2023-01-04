@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-11-23 18:21:42 -0500'
-title: "System Center Operations Manager - Reconfigure SCOM for DB Move Tool"
+title: "Reconfigure System Center Operations Manager for Database Move Tool"
 categories: powershell projects operationsManager troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/scom-db-move-tool.png
@@ -10,17 +10,23 @@ toc: true
 summary: >- # this means to ignore newlines
   This application is designed to allow users to migrate their SCOM SQL Instances to a new location. With that said, the application will only edit database values if selected or potentially edit the configuration file (ConfigService.config) and Registry to allow the Management Server(s) to use the updated SQL Instance / Database.
 
-keywords: scom db move, opsmgr db tool, scom db tool, operations manager tool, powershell script for SCOM, powershell script, scom db moving tool
+keywords: scom db move, opsmgr db tool, scom db tool, operations manager tool, powershell script for SCOM, powershell script, scom db moving tool, system center
 permalink: /blog/scom-db-move-tool/
 ---
 
-## :book: Introduction
+## :book: Reconfigure System Center Operations Manager for Database Move Tool
 
-This tool allows you to reconfigure System Center Operations Manager's Databases in the configuration file, registry, and SQL Database Tables. This tool utilizes Powershell to provide a GUI for being able to easily navigate and verify the settings.
+Welcome to the official repository for the Reconfigure System Center Operations Manager for Database Move Tool. This tool is compatible with all versions of Operations Manager and is designed to help you manage SQL connections used by Operations Manager.
 
-## :arrow_down_small: Latest Version
-[![Latest Version](https://img.shields.io/github/v/release/blakedrumm/SCOM-Reconfigure-DB-Move-Tool)](https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest){:class="img-shields-io"} \
-[![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/latest/SCOM-Reconfigure-DB-Move-Tool-EXE.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DB-Move-Tool){:class="img-shields-io"}
+### Features
+- Update / Verify the Database Tables for data related to SQL Connections in SCOM.
+- Update / Verify the Registry data for local / remote SCOM Management Servers.
+- Update / Verify the Configuration File for local / remote SCOM Management Servers.
+- Update / Verify the SQL Instance Configuration for CLR and SQL Service Broker.
+
+### Requirements
+- System Center Operations Manager installation
+- Powershell 5
 
 ## :page_with_curl: How to Use
 
@@ -39,9 +45,10 @@ This script will log actions to the Application Event Log. Look for the Event So
 
 ## :page_facing_up: More Information
 
-You will get prompted each time you run the script to accept the license agreement, unless you select do not ask me again, when you select this it will save a file to your ProgramData Directory: `C:\ProgramData\SCOM-DBMoveTool-AgreedToLicense.log`
-
-If you have any questions or concerns, please leave a comment and I will do my best to assist!
+You will get prompted each time you run the script to accept the license agreement, unless you select do not ask me again, when you select this it will save a file to your ProgramData Directory:
+```
+C:\ProgramData\SCOM-DBMoveTool-AgreedToLicense.log
+```
 
 Attribution for the icon:
 <a href="https://www.flaticon.com/free-icons/database" title="database icons">Database icons created by manshagraphics - Flaticon</a>
