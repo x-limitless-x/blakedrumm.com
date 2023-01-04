@@ -14,7 +14,7 @@ keywords: scom db move, opsmgr db tool, scom db tool, operations manager tool, p
 permalink: /blog/scom-db-move-tool/
 ---
 
-## :book: Reconfigure System Center Operations Manager for Database Move Tool
+## :book: Introduction
 
 Welcome to the official repository for the Reconfigure System Center Operations Manager for Database Move Tool. This tool is compatible with all versions of Operations Manager and is designed to help you manage SQL connections used by Operations Manager. \
 
