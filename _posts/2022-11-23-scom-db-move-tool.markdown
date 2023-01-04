@@ -30,6 +30,23 @@ This script automates the steps outlined here: [https://learn.microsoft.com/syst
 - Update / Verify the Configuration File
   - Local SCOM Management Servers.
   - Remote SCOM Management Servers.
+- Language Changer combo-box which adds automatic support for 8 Languages:
+  - English
+  - Spanish (Español)
+  - Arabic (عربي)
+  - Turkish (Türkçe)
+  - Chinese (中国人)
+  - Portuguese (Português)
+  - French (Français)
+  - German (Deutsch)
+  #### A HUGE THANK YOU to the following individuals for assisting with translation in the different languages:
+  - Rafael Lujan (Spanish)
+  - Fayez Al Saadi (Arabic)
+  - Murat Coskun (Turkish)
+  - Wendi Cai (Chinese)
+  - Wagner da Costa Carvalho (Portuguese)
+  - Joana da Rocha Carvalho (French)
+  - Stefan Wuchenauer (German)
 
 ### Requirements
 - System Center Operations Manager installation
