@@ -2,7 +2,7 @@
 layout: post
 title:  "SCOM Agent Installation Error - Microsoft ESENT Keys are required"
 date:   '2023-01-05 13:12:42 -0500'
-categories: troubleshooting guides powershell operationsManager
+categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/scom-agent-esent-error.png
 toc: true
