@@ -4,7 +4,7 @@ title:  "SCOM SDK Crashing - Cannot Generate SSPI Context"
 date:   '2023-01-24 16:17:10 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
-thumbnail: /assets/img/scom-agent-esent-error.png
+thumbnail: /assets/img/posts/udl-test-sspi-context.png
 toc: true
 
 summary: >- # this means to ignore newlines
