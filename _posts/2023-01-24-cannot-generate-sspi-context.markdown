@@ -57,7 +57,7 @@ In order to resolve this issue for my customer, we had to verify the user accoun
  - Check This account supports Kerberos AES 128 bit encryption.
  - Check This account supports Kerberos AES 256 bit encryption.
 
-![Attributes for SCOM Account](/assets/img/posts/attributes-domain-controller.png)
+![Attributes for SCOM Account](/assets/img/posts/attributes-domain-controller.png){:class="img-fluid"}
 
 We were no longer having an issue with the SDK Service crashing after this change.
 
