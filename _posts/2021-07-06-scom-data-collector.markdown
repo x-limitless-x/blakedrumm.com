@@ -114,6 +114,7 @@ This will allow you to run every switch available currently:
 ```powershell
 .\DataCollector.ps1 -All
 .\DataCollector.ps1 -All -Servers Agent1
+.\DataCollector.ps1 -All -Servers Agent1, Agent2, Agent3
 .\DataCollector.ps1 -All -Servers Agent1 -ManagementServer MS01-2019.contoso.com
 .\DataCollector.ps1 -All -Yes
 ```
