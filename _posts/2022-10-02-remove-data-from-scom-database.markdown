@@ -56,14 +56,19 @@ _or_ \
 >#### Example 1
 >Remove SCOM BME Related Data from the OperationsManager DB, for Agent1 in the Management Group:
 >```powershell
->Get-SCOMAgent -Name Agent1.contoso.com | %{.\Remove-SCOMBaseManagedEntity.ps1 -Servers $_}
+>Get-SCOMAgent -Name Agent1.contoso.com | %{.\Remove-SCOMBaseManagedEntity.ps1 -Servers $_.DisplayName}
 >```
 >#### Example 2
 >Remove SCOM BME Related Data for 2 Agent machines:
 >```powershell
 >.\Remove-SCOMBaseManagedEntity.ps1 -Servers IIS-Server.contoso.com, WindowsServer.contoso.com
 >```
->#### Example 3
+>>#### Example 3
+>Remove SCOM BME Related Data for 2 Agent machines automatically with no prompts / questions:
+>```powershell
+>.\Remove-SCOMBaseManagedEntity.ps1 -Servers IIS-Server.contoso.com, WindowsServer.contoso.com -AssumeYes
+>```
+>#### Example 4
 >Remove SCOM BME IDs from the Operations Manager Database:
 >```powershell
 >.\Remove-SCOMBaseManagedEntity -Id C1E9B41B-0A35-C069-16EB-00AC43BB9C47, CB29ECDE-BCE8-2213-D5DD-0353116EDA6B
