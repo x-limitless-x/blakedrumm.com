@@ -62,7 +62,7 @@ Run it like this:
   ```
   .\Start-SCOMCertificateChecker.ps1 -All
   ```
-You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [729](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/6c8f2114ec0913b777693109086ad0ce5657c7f9/Powershell/Start-SCOMCertificateChecker.ps1#L729) to include the arguments you want to run.
+You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [751](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/6c8f2114ec0913b777693109086ad0ce5657c7f9/Powershell/Start-SCOMCertificateChecker.ps1#751) to include the arguments you want to run.
 
 ---
 
