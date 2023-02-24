@@ -66,7 +66,7 @@ Relevant Article: [https://learn.microsoft.com/system-center/scom/install-with-r
 ---
 
 ## :page_with_curl: How to fix #2
-You may also resolve the above issue by fixing SPN information for the MSSQLSvc:
+You may also resolve the above issue by fixing SPN information for the MSSQLSvc *(thank you Joana da Rocha Carvalho!)*:
 1. `nslookup` the SCOM SQL Database Instance(s)
 2. Update the SPN information for the SQL Service Account with the following command:
    `setspn -S MSSQLSvc/SERVER.contoso.com:1433 emea\SQLSVCaccount`
