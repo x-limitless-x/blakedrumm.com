@@ -51,7 +51,7 @@ System.Data.SqlClient.SqlException (0x80131904): The target principal name is in
 ClientConnectionId:c0z7eb24-124d-46ed-xe78-36q2ba9f7949
 ```
 
-## :page_with_curl: How to fix
+## :page_with_curl: How to fix #1
 In order to resolve this issue for my customer, we had to verify the user account running the Operations Manager SQL Service has AES Attributes enabled. Navigate to the user object in Active Directory and verify that the Account options have the following:
 
  - Check This account supports Kerberos AES 128 bit encryption.
@@ -62,6 +62,16 @@ In order to resolve this issue for my customer, we had to verify the user accoun
 We were no longer having an issue with the SDK Service crashing after this change.
 
 Relevant Article: [https://learn.microsoft.com/system-center/scom/install-with-rc4-disabled#configure-the-encryption-types-allowed-for-kerberos](https://learn.microsoft.com/system-center/scom/install-with-rc4-disabled#configure-the-encryption-types-allowed-for-kerberos)
+
+---
+
+## :page_with_curl: How to fix #2
+You may also resolve the above issue by fixing SPN information for the MSSQLSvc:
+1. `nslookup` the SCOM SQL Database Instance(s)
+2. Update the SPN information for the SQL Service Account with the following command:
+   `setspn -S MSSQLSvc/SERVER.contoso.com:1433 emea\SQLSVCaccount`
+3. Check SPN for SQL Service Account:
+   `setspn -L emea\SQLSVCaccount`
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/cannot-generate-sspi-context/)
 
