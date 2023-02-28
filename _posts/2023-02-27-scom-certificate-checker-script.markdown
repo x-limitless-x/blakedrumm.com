@@ -15,7 +15,7 @@ permalink: /blog/scom-certificate-checker-script/
 ---
 
 ## :book: Introduction
-This tool will allow you to check your SCOM Certificate. It is very efficient and has been improved upon over time. You may edit line `751` to allow you to change what happens when you run it from Powershell ISE.
+This tool will allow you to check your SCOM Certificate. It is very efficient and has been improved upon over time. You may edit line `751` to allow you to change what happens when you run it from Powershell ISE. Copying any pasting the script after you run MOMCertImport on a cert is the most common way to run it, which requires no arguments or modifications. Just run the script and you will see where the issue may lie.
 
 ## :page_with_curl: Where to get it
 [Start-SCOMCertificateChecker.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1) :arrow_left: **Direct Download Link** \
@@ -39,7 +39,7 @@ Argument&nbsp;List&nbsp;|Description&nbsp;|
 >   PS C:\> .\Invoke-CheckSCOMCertificates.ps1
 >   ```
 >#### Example 2
->   Check for a specific Certificate serialnumber in the Local Machine Personal Certificate store:
+>   Check for a specific Certificate Serial number in the Local Machine Personal Certificate store:
 >   ```powershell
 >   PS C:\> .\Invoke-CheckSCOMCertificates.ps1 -SerialNumber 1f00000008c694dac94bcfdc4a000000000008
 >   ```
