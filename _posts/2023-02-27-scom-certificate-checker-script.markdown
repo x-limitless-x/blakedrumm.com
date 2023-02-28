@@ -24,6 +24,14 @@ _or_ \
 _or_ \
 [Personal File Server - Start-SCOMCertificateChecker.txt](https://files.blakedrumm.com/Start-SCOMCertificateChecker.txt) :arrow_left: **Text Format Alternative Download Link**
 
+Argument List | Description |
+------------- | ----------- |
+-All | Check All Certificates in Local Machine Store. |
+-Servers | Each Server you want to Check SCOM Certificates on. |
+-SerialNumber | Check a specific Certificate serial number in the Local Machine Personal Store. Not reversed. |
+-OutputFile | Where to Output the File (txt, log, etc) for Script Execution. |
+{: .table .table-hover .table-text .d-block .overflow-auto }
+
 ## :question: Examples
 >#### Example 1
 >   Check All Certificates on 4 Servers and outputting the results to C:\Temp\Output.txt:

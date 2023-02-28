@@ -28,6 +28,7 @@ Argument List | Description |
 -Servers | Optionally each Server you want to clear SCOM Cache on. Can be an Agent, Management Server, or SCOM Gateway. This will always perform on the local server last. |
 -Shutdown | Optionally shutdown the server after clearing the SCOM cache. This will always perform on the local server last. |
 -Sleep | Time in seconds to sleep between each server. |
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
 
 
