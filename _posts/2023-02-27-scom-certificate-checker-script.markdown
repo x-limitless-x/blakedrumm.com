@@ -30,13 +30,11 @@ _or_ \
 >   ```powershell
 >   PS C:\> .\Invoke-CheckSCOMCertificates.ps1 -Servers ManagementServer1, ManagementServer2.contoso.com, Gateway.contoso.com, Agent1.contoso.com -All -OutputFile C:\Temp\Output.txt
 >   ```
-
 >#### Example 2
 >   Check for a specific Certificate serialnumber in the Local Machine Personal Certificate store:
 >   ```powershell
 >   PS C:\> .\Invoke-CheckSCOMCertificates.ps1 -SerialNumber 1f00000008c694dac94bcfdc4a000000000008
 >   ```
-
 >#### Example 3
 >   Check all certificates on the local machine:
 >   ```powershell
