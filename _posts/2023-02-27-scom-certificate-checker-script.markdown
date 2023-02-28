@@ -24,12 +24,12 @@ _or_ \
 _or_ \
 [Personal File Server - Start-SCOMCertificateChecker.txt](https://files.blakedrumm.com/Start-SCOMCertificateChecker.txt) :arrow_left: **Text Format Alternative Download Link**
 
-Argument List | Description |
+Argument&nbsp;List&nbsp;|Description&nbsp;|
 ------------- | ----------- |
--All | Check All Certificates in Local Machine Store. |
--Servers | Each Server you want to Check SCOM Certificates on. |
--SerialNumber | Check a specific Certificate serial number in the Local Machine Personal Store. Not reversed. |
--OutputFile | Where to Output the File (txt, log, etc) for Script Execution. |
+-All&nbsp;|Check&nbsp;All&nbsp;Certificates&nbsp;in&nbsp;Local&nbsp;Machine&nbsp;Store.&nbsp;|
+-Servers&nbsp;|&nbsp;Each&nbsp;Server&nbsp;you&nbsp;want&nbsp;to&nbsp;Check&nbsp;SCOM&nbsp;Certificates&nbsp;on.&nbsp;|
+-SerialNumber&nbsp;|&nbsp;Check&nbsp;a&nbsp;specific&nbsp;Certificate&nbsp;serial&nbsp;number&nbsp;in&nbsp;the&nbsp;Local&nbsp;Machine&nbsp;Personal&nbsp;Store.&nbsp;Not&nbsp;reversed.&nbsp;|
+-OutputFile&nbsp;|&nbsp;Where&nbsp;to&nbsp;Output&nbsp;the&nbsp;File&nbsp;(txt,&nbsp;log,&nbsp;etc)&nbsp;for&nbsp;Script&nbsp;Execution.&nbsp;|
 {: .table .table-hover .table-text .d-block .overflow-auto }
 
 ## :question: Examples
