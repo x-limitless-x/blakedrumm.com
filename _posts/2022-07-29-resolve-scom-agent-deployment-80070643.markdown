@@ -20,19 +20,16 @@ permalink: /blog/resolve-scom-agent-deployment-80070643/
 The Agent Management Operation Agent Install failed for remote computer Agent1.contoso.com. 
 
 
-
 Install account: CONTOSO\SCOMAdmin 
 
 
-Error Code: 80004021 
+Error Code: 80070643 
 
 
-Error Description: The operation attempted is not supported. 
+Error Description: Fatal error during installation. 
 
 
 Microsoft Installer Error Description: 
-
-
 
 
 For more information, see Windows Installer log file "C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\AgentLogs\Agent1AgentInstall.log" on the Management Server. 
