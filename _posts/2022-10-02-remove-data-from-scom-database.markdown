@@ -10,7 +10,7 @@ toc: true
 summary: >- # this means to ignore newlines
   Sometimes you need to remove data from the SCOM Database that relates to a specific server or client. If you need it done quickly, without having to open SQL Server Management Studio, or run queries manually; you can instead use this Powershell script.
 
-keywords: remove scom data permanently, remove scom agent from database, purge scom agent, purge agent from scom, purge agent, purge operations manager agent
+keywords: remove scom data permanently, remove scom agent from database, purge scom agent, purge agent from scom, purge agent, purge operations manager agent, delete scom agent, delete agent from scom, delete scom data permanently
 permalink: /blog/remove-data-from-scom-database/
 ---
 
