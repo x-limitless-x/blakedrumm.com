@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Unix / Linux System Center Operations Manager Agents Troubleshooting Tips"
+title:  "UNIX/Linux System Center Operations Manager Agents Troubleshooting Tips"
 date:   '2022-01-26 12:21:52 -0500'
 categories: troubleshooting linux operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/prerequisite-software-unix-linux.png
 toc: true
 
-summary: Tips and Tricks for troubleshooting SCOM Unix / Linux Agent issues.
+summary: Tips and Tricks for troubleshooting SCOM UNIX/Linux Agent issues.
 
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
