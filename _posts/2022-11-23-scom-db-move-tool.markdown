@@ -57,6 +57,8 @@ This script automates the steps outlined here: [https://learn.microsoft.com/syst
 [![Download Count Releases](https://img.shields.io/github/downloads/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/total.svg?style=for-the-badge&color=brightgreen)](https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases){:class="img-shields-io"} \
 [![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/latest/SCOM-Reconfigure-DB-Move-Tool-EXE.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DB-Move-Tool){:class="img-shields-io"}
 
+Check the changelog for the latest version: [Latest Changes](https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest)
+
 ## :page_with_curl: How to Use
 
 <a href="https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest/download/SCOM-Reconfigure-DB-Move-Tool-EXE.zip" target="_"><button class="btn btn-primary navbar-btn">Get Started</button></a>
