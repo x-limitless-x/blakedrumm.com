@@ -23,6 +23,8 @@ This tool can be used to modify the System Center Operations Manager Data Wareho
 [![Download Count Releases](https://img.shields.io/github/downloads/blakedrumm/SCOM-DW-Grooming-Tool/total.svg?style=for-the-badge&color=brightgreen)](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases){:class="img-shields-io"} \
 [![Download Count Latest](https://img.shields.io/github/downloads/blakedrumm/SCOM-DW-Grooming-Tool/latest/SCOM-DW-GroomingGUI-EXE-64bit.zip?style=for-the-badge&color=brightgreen)](https://aka.ms/SCOM-DW-Tool){:class="img-shields-io"}
 
+Check the changelog for the latest version: [Latest Changes](https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest)
+
 ## :page_with_curl: How to Use
 
 <a href="https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest/download/SCOM-DW-GroomingGUI-EXE-64bit.zip" target="_"><button class="btn btn-primary navbar-btn">Get Started</button></a>
