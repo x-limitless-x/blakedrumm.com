@@ -42,22 +42,22 @@ Argument&nbsp;List&nbsp;|Description&nbsp;|
 >#### Example 1
 >   Check the certificate you have currently configured for SCOM on the local machine:
 >   ```powershell
->   PS C:\> .\Invoke-CheckSCOMCertificates.ps1
+>   PS C:\> .\Start-SCOMCertificateChecker.ps1
 >   ```
 >#### Example 2
 >   Check for a specific Certificate Serial number in the Local Machine Personal Certificate store:
 >   ```powershell
->   PS C:\> .\Invoke-CheckSCOMCertificates.ps1 -SerialNumber 1f00000008c694dac94bcfdc4a000000000008
+>   PS C:\> .\Start-SCOMCertificateChecker.ps1 -SerialNumber 1f00000008c694dac94bcfdc4a000000000008
 >   ```
 >#### Example 3
 >   Check all certificates on the local machine:
 >   ```powershell
->   PS C:\> .\Invoke-CheckSCOMCertificates.ps1 -All
+>   PS C:\> .\Start-SCOMCertificateChecker.ps1 -All
 >   ```
 >#### Example 4
 >   Check All Certificates on 4 Servers and outputting the results to C:\Temp\Output.txt:
 >   ```powershell
->   PS C:\> .\Invoke-CheckSCOMCertificates.ps1 -Servers ManagementServer1, ManagementServer2.contoso.com, Gateway.contoso.com, Agent1.contoso.com -All -OutputFile C:\Temp\Output.txt
+>   PS C:\> .\Start-SCOMCertificateChecker.ps1 -Servers ManagementServer1, ManagementServer2.contoso.com, Gateway.contoso.com, Agent1.contoso.com -All -OutputFile C:\Temp\Output.txt
 >   ```
 
 
