@@ -12,7 +12,7 @@ summary: Tips and Tricks for troubleshooting SCOM UNIX/Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
-<sub>This post was last updated on October 12th, 2022</sub>
+<sub>This post was last updated on March 25th, 2023</sub>
 ## Build list containing the SCOM Linux Agent versions
 The following url contains the versions of the SCX Agent: [https://docs.microsoft.com/system-center/scom/release-build-versions](https://docs.microsoft.com/system-center/scom/release-build-versions)
 
@@ -151,6 +151,12 @@ openssl s_client -connect server.domain.com:1270 -ssl3
 
 ___
 
+## Check Linux Ciphers
+
+```shell
+openssl ciphers -V
+```
+
 &nbsp;
 
 ## Get MB / GB size of file
@@ -176,7 +182,6 @@ winrm enumerate http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent
 ### Kerberos Authentication
 ```cmd
 winrm e http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimnamespace=root/scx -r:https://<LINUXSERVERFQDN>:1270 -u:<username@contoso.com> -p:<password> -auth:Kerberos -skipcacheck -skipcncheck -encoding:utf-8
-
 ```
 
 > ### :notebook: Note 1
@@ -221,6 +226,39 @@ It is possible that:
 > ### :notebook: Note
 > Be sure to verify if the Linux agent supports the same ciphers as the Management Server / Gateway.
 > List of Ciphers Supported for Linux / Unix SCOM Agents: [https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix](https://docs.microsoft.com/system-center/scom/manage-security-crossplat-config-sslcipher#cipher-suite-support-matrix)
+
+&nbsp;
+
+___
+
+## Enumerate OMI Information on UNIX/Linux Machine
+View the **SCX_OperatingSystem** information in OMI:
+```shell
+/opt/omi/bin/omicli ei root/scx SCX_OperatingSystem
+```
+
+View the **SCX_ProcessorStatisticalInformation** information in OMI:
+```shell
+/opt/omi/bin/omicli ei root/scx SCX_ProcessorStatisticalInformation
+````
+
+Some OMI WMI Namespaces on the Linux Agent:
+```
+SCX_Agent
+SCX_DiskDrive
+SCX_DiskDriveStatisticalInformation
+SCX_EthernetPortStatistics
+SCX_FileSystem
+SCX_FileSystemStatisticalInformation
+SCX_IPProtocolEndpoint
+SCX_LogFile
+SCX_MemoryStatisticalInformation
+SCX_OperatingSystem
+SCX_ProcessorStatisticalInformation
+SCX_StatisticalInformation
+SCX_UnixProcess
+SCX_UnixProcessStatisticalInformation
+```
 
 &nbsp;
 
