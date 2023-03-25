@@ -22,26 +22,11 @@ You can run the following command on a monitored and not monitored server to com
 ```shell
 rpm -qa | egrep "^glibc|^openssl|^pam|^scx|^omi"
 ```
-<div class="responsive-table">
-<table>
-      <thead>
-        <tr>
-          <th scope="col">Agent Version</th>
-          <th scope="col">Version</th>
-          <th scope="col">Management Group Version</th>
-          <th scope="col">Release Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>scx-1.5.1-242.e16.x86_64</td>
-          <td>7.5.1068.0</td>
-          <td>SCOM 2012 R2 UR12</td>
-          <td>01/27/2017</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+
+| Agent Version | Version | Management Group Version | Release Date |
+| ------------- | ------- | ------------------------ | ------------ |
+| scx-1.5.1-242.e16.x86_64 | 7.5.1068.0 | SCOM 2012 R2 UR12 | 01/27/2017 |
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
 &nbsp;
     
