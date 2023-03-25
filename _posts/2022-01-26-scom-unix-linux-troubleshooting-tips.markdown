@@ -232,12 +232,12 @@ It is possible that:
 ___
 
 ## Enumerate OMI Information on UNIX/Linux Machine
-View the **SCX_OperatingSystem** information in OMI:
+Enumerate the **SCX_OperatingSystem** via omicli:
 ```shell
 /opt/omi/bin/omicli ei root/scx SCX_OperatingSystem
 ```
 
-View the **SCX_ProcessorStatisticalInformation** information in OMI:
+Enumerate the **SCX_ProcessorStatisticalInformation** via omicli:
 ```shell
 /opt/omi/bin/omicli ei root/scx SCX_ProcessorStatisticalInformation
 ````
