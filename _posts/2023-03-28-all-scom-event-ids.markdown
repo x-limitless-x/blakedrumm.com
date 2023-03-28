@@ -5,7 +5,7 @@ date:   '2023-03-28 09:46:42 -0500'
 categories: troubleshooting powershell operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/operations-manager-event-log.png
-toc: true
+toc: false
 
 summary: >- # this means to ignore newlines
   This article lists all current Event ID's in System Center Operations Manager.
@@ -1340,7 +1340,7 @@ permalink: /blog/all-scom-event-ids/
 |33867|Health Service Modules|Operations Manager|3221259339|Failed to initialize the IIS 7.0 state probe module from configuration. Invalid type parameter specified: %5. The value of the type parameter must be one of AppPool, WebSite or FTPSite. The workflow will unload now.  %n%n  %nHRESULT: %5  %nDetails: %6  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1   |
 |33868|Health Service Modules|Operations Manager|3221259340|Failed to initialize the IIS 7.0 aggregate state probe module using the specified configuration.The workflow will unload now.%n%n  Configuration = %n  %5%n  %nError: %6  %nDetails: %7  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1   |
 |33880|Health Service Modules|Operations Manager|3221259352|A Windows Workflow Foundation workflow failed during execution.%n  %nWorkflow Type: %1  %n%nWorkflow Identifier: %2  %n%nException Type: %3  %n%nException Message: %4  %n%nException Stack: %5   |
-|40001|Health Service Modules|Operations Manager|3221265473|Operations Manager multi input pass through transmitter failed to allocate memory, item is dropped.  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1   |{: .table .table-hover .table-text .d-block .overflow-auto }
+|40001|Health Service Modules|Operations Manager|3221265473|Operations Manager multi input pass through transmitter failed to allocate memory, item is dropped.  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1   |
 
 
 
