@@ -2,7 +2,7 @@
 layout: post
 title:  "All Operations Manager Event ID's"
 date:   '2023-03-28 09:46:42 -0500'
-categories: troubleshooting powershell operationsManager
+categories: troubleshooting operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/operations-manager-event-log.png
 toc: false
