@@ -31,10 +31,12 @@
         src="{{ page.thumbnail }}"
         alt="{{ post.title }}"
       />
-      <div id="toc_container" class="card-header">
-        <p class="toc_title">Contents</p>
-          {% include toc.html html=content class='toc_list' submenu_class='toc-submenu' item_class='toc-item' %}
-      </div>  
+      {% if page.toc == true %}
+        <div id="toc_container" class="card-header">
+          <p class="toc_title">Contents</p>
+            {% include toc.html html=content class='toc_list' submenu_class='toc-submenu' item_class='toc-item' %}
+        </div>
+      {% endif %}
       <hr />
       {{ content }}
       <br />
