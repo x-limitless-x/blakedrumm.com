@@ -69,9 +69,13 @@ Relevant Article: [https://learn.microsoft.com/system-center/scom/install-with-r
 You may also resolve the above issue by fixing SPN information for the MSSQLSvc *(thank you Joana da Rocha Carvalho!)*:
 1. `nslookup` the SCOM SQL Database Instance(s)
 2. Update the SPN information for the SQL Service Account with the following command:
-   `setspn -S MSSQLSvc/SERVER.contoso.com:1433 emea\SQLSVCaccount`
+   ```powershell
+   setspn -S MSSQLSvc/SERVER.contoso.com:1433 emea\SQLSVCaccount
+   ```
 3. Check SPN for SQL Service Account:
-   `setspn -L emea\SQLSVCaccount`
+   ```powershell
+   setspn -L emea\SQLSVCaccount
+   ```
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/cannot-generate-sspi-context/)
 
