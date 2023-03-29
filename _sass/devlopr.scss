@@ -1275,7 +1275,8 @@ footer {
 .highlight pre { background-color: #212529; padding: 20px;}
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #09a12a } /* Comment */
-.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .err { color: #f8f8f2 } /* Error */
+/*.highlight .err { color: #960050; background-color: #1e0010 }  Error */
 .highlight .k { color: #66d9ef } /* Keyword */
 .highlight .l { color: #ae81ff } /* Literal */
 .highlight .n { color: #f8f8f2 } /* Name */
@@ -1306,7 +1307,7 @@ footer {
 .highlight .nf { color: #a6e22e } /* Name.Function */
 .highlight .nl { color: #f8f8f2 } /* Name.Label */
 .highlight .nn { color: #f8f8f2 } /* Name.Namespace */
-.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .nx { color: #f8f8f2 } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
 .highlight .nt { color: #f92672 } /* Name.Tag */
 .highlight .nv { color: #f8f8f2 } /* Name.Variable */
