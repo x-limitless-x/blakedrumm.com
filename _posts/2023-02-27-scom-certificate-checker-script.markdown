@@ -35,7 +35,8 @@ Argument&nbsp;List&nbsp;|Description&nbsp;|
 -All&nbsp;|Check&nbsp;All&nbsp;Certificates&nbsp;in&nbsp;Local&nbsp;Machine&nbsp;Store.&nbsp;|
 -Servers&nbsp;|Each&nbsp;Server&nbsp;you&nbsp;want&nbsp;to&nbsp;Check&nbsp;SCOM&nbsp;Certificates&nbsp;on.&nbsp;|
 -SerialNumber&nbsp;|Check&nbsp;a&nbsp;specific&nbsp;Certificate&nbsp;serial&nbsp;number&nbsp;in&nbsp;the&nbsp;Local&nbsp;Machine&nbsp;Personal&nbsp;Store.&nbsp;Not&nbsp;reversed.&nbsp;|
--OutputFile&nbsp;|Where&nbsp;to&nbsp;Output&nbsp;the&nbsp;File&nbsp;(txt,&nbsp;log,&nbsp;etc)&nbsp;for&nbsp;Script&nbsp;Execution.&nbsp;|{: .table .table-hover .table-text .d-block .overflow-auto }
+-OutputFile&nbsp;|Where&nbsp;to&nbsp;Output&nbsp;the&nbsp;File&nbsp;(txt,&nbsp;log,&nbsp;etc)&nbsp;for&nbsp;Script&nbsp;Execution.&nbsp;|
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
 ## :question: Examples
 >#### Example 1

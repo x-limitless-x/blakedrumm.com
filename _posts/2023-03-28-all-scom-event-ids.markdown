@@ -904,6 +904,7 @@ permalink: /blog/all-scom-event-ids/
 |11409|Health Service Modules|Operations Manager|2147495057|Alert subscription data source module was unable to read the time zone configuration because of errors. Defaulting the local time fields in the data item to UTC.%n  The following error(s) were encountered:%n  Exception Message: %5%n  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1    |
 |11410|Health Service Modules|Operations Manager|2147495058|Alert subscription data source module encountered alert subscriptions that took a long time to execute their database query. Check the database and/or simplify the alert subscription criteria.%n  Alert subscription ruleid, Alert subscription query low watermark, Alert subscription query high watermark:%n%1%n   |
 |11411|Health Service Modules|Operations Manager|2147495059|Alert subscription data source module encountered alert subscriptions that were waiting for a long time to receive an acknowledgement.%n  Alert subscription ruleid, Alert subscription query low watermark, Alert subscription query high watermark:%n%1%n   |
+<!-- 
 |11412|Health Service Modules|Operations Manager|1073753236|Alert subscription data source module has recovered from the long wait to receive acknowledgements for alert subscriptions.   |
 |11413|Health Service Modules|Operations Manager|1073753237|Alert subscription data source module has recovered from the long wait to execute database queries for alert subscriptions.   |
 |11451|Health Service Modules|Operations Manager|2147495099|Validate alert subscription data source module encountered errors while validating an alert subscription data source module's configuration.%n   The following error(s) were encountered:%n  Exception Message: %5%n  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1    |
@@ -1341,7 +1342,7 @@ permalink: /blog/all-scom-event-ids/
 |33868|Health Service Modules|Operations Manager|3221259340|Failed to initialize the IIS 7.0 aggregate state probe module using the specified configuration.The workflow will unload now.%n%n  Configuration = %n  %5%n  %nError: %6  %nDetails: %7  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1   |
 |33880|Health Service Modules|Operations Manager|3221259352|A Windows Workflow Foundation workflow failed during execution.%n  %nWorkflow Type: %1  %n%nWorkflow Identifier: %2  %n%nException Type: %3  %n%nException Message: %4  %n%nException Stack: %5   |
 |40001|Health Service Modules|Operations Manager|3221265473|Operations Manager multi input pass through transmitter failed to allocate memory, item is dropped.  %n%nOne or more workflows were affected by this.   %n%nWorkflow name: %2  %nInstance name: %3  %nInstance ID: %4  %nManagement group: %1   |
-
+-->
 
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/all-scom-event-ids/)
