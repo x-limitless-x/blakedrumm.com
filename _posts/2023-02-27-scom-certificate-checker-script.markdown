@@ -18,10 +18,10 @@ permalink: /blog/scom-certificate-checker-script/
 This tool will allow you to check your SCOM Certificate. It is very efficient and has been improved upon over time. You may edit line `751` to allow you to change what happens when you run from Powershell ISE. Copying and pasting the script to Powershell ISE after you run MOMCertImport on a certificate is the most common way to run the script, which requires no arguments or modifications. Just run the script and you will see where the issue may be.
 
 ## :memo: Authors
-- Tyson Paul (https://monitoringguys.com/)
-- Lincoln Atkinson (https://blogs.technet.microsoft.com/momteam/author/latkin/)
+- Tyson Paul (***https://monitoringguys.com/***)
+- Lincoln Atkinson (***https://blogs.technet.microsoft.com/momteam/author/latkin/***)
 - Mike Kallhoff
-- Blake Drumm (https://blakedrumm.com/)
+- Blake Drumm (***https://blakedrumm.com/***)
 
 ## :page_with_curl: Where to get it
 [Start-SCOMCertificateChecker.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1) :arrow_left: **Direct Download Link** \
@@ -60,6 +60,10 @@ Argument&nbsp;List&nbsp;|Description&nbsp;|
 >   ```powershell
 >   PS C:\> .\Start-SCOMCertificateChecker.ps1 -Servers ManagementServer1, ManagementServer2.contoso.com, Gateway.contoso.com, Agent1.contoso.com -All -OutputFile C:\Temp\Output.txt
 >   ```
+
+## Example of Failure
+
+![Picture of an example of the script failing](/assets/img/posts/example-of-failure-scom-cert-checker.png)
 
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-certificate-checker-script/)
