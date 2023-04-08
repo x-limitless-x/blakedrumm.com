@@ -63,7 +63,7 @@ Argument&nbsp;List&nbsp;|Description&nbsp;|
 
 ## Example of Failure
 
-![Picture of an example of the script failing](/assets/img/posts/example-of-failure-scom-cert-checker.png)
+![Picture of an example of the script failing](/assets/img/posts/example-of-failure-scom-cert-checker.png){:class="img-fluid"}
 
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-certificate-checker-script/)
