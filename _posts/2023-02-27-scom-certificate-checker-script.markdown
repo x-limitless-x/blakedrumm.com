@@ -19,7 +19,7 @@ This tool will allow you to check your SCOM Certificate. It is very efficient an
 
 ## :memo: Authors
 - Tyson Paul (***https://monitoringguys.com/***)
-- Lincoln Atkinson (***https://blogs.technet.microsoft.com/momteam/author/latkin/***)
+- Lincoln Atkinson (***https://latkin.org/blog/***)
 - Mike Kallhoff
 - Blake Drumm (***https://blakedrumm.com/***)
 
