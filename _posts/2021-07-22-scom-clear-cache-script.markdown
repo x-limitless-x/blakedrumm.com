@@ -14,10 +14,14 @@ summary: >- # this means to ignore newlines
 keywords: clear scom cache, clear cache for scom, Management Server clear cache, clear gateway cache, clear agent cache, clean gateway, clean management server, clean agent, clean MS
 permalink: /blog/clear-scomcache/
 ---
-<sub>Article last updated on December 29th, 2021</sub>
+<sub>Article last updated on April 12th, 2023</sub>
 
-  The Clear SCOM Cache Script, which is located here: \
-  [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Clear-SCOMCache.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Clear-SCOMCache.ps1)
+# How to get it
+[Clear-SCOMCache.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Clear-SCOMCache.ps1) :arrow_left: **Direct Download Link** \
+_or_ \
+[Personal File Server - Clear-SCOMCache.ps1](https://files.blakedrumm.com/Clear-SCOMCache.ps1) :arrow_left: **Alternative Download Link** \
+_or_ \
+[Personal File Server - Clear-SCOMCache.txt](https://files.blakedrumm.com/Clear-SCOMCache.txt) :arrow_left: **Text Format Alternative Download Link**
 
 The script without any modifications or parameters clears the Operations Manager cache only on the local server, nothing else.
 
