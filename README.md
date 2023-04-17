@@ -36,7 +36,6 @@ or if you want to try fast :
 8. Happy Hacking your new site ! For Local changes you can clone locally.
 9. Enjoy!
 
-
 ### Local Development Steps :
 To work locally, follow this commands. You might need ruby and git installed.
 
