@@ -36,7 +36,7 @@ permalink: /blog/all-scom-event-ids/
 
 ---
 
-![Excel Icon](/assets/img/posts/excel-icon.png) \
+![Excel Icon](/assets/img/posts/excel-icon.png){:class="img-fluid"} \
 Link to download excel file: [https://files.blakedrumm.com/All%20SCOM%20Event%20Ids.xlsx](https://files.blakedrumm.com/All%20SCOM%20Event%20Ids.xlsx)
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/all-scom-event-ids/)
