@@ -70,7 +70,7 @@ Using RSWindowsNegotiate will result in a Kerberos authentication error if you c
 
 ### :memo: Manually set SSRS SPN's
 
--The following command allows you to set the SPN's for the SSRS Server:
+- The following command allows you to set the SPN's for the SSRS Server:
   ```
   setspn -s http/<computer-name>.<domain-name> <domain>\<domain-user-account>
   ```
