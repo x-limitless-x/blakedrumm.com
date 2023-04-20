@@ -5,7 +5,7 @@ date:   '2023-04-19 13:28:09 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/sql-server-reporting-services.png
-toc: false
+toc: true
 
 summary: >- # this means to ignore newlines
   This article shows you how to change SSRS to use Kerberos instead of NTLM.
