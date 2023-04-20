@@ -56,7 +56,7 @@ Something you need to take into account is that the SCOM installation for Report
 
 ---
 
-## Set SSRS SPN's
+## :page_with_curl: Set SSRS SPN's
 
 Using RSWindowsNegotiate will result in a Kerberos authentication error if you configured the Report Server service to run under a domain user account and you did not register a Service Principal Name (SPN) for the account. For more information on SPN's for SSRS see: \
 [Register a Service Principal Name (SPN) for a Report Server - SQL Server Reporting Services (SSRS) | Microsoft Learn](https://learn.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
