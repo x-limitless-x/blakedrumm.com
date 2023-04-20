@@ -51,7 +51,7 @@ Something you need to take into account is that the SCOM installation for Report
   $RS = "root\Microsoft\SqlServer\ReportServer\" + ((Get-CimInstance -Namespace 'root\Microsoft\SqlServer\ReportServer' -ClassName __Namespace).CimInstanceProperties).Value | Select-Object -First 1
   $RSV = $RS + "\" + (Get-CimInstance -Namespace $RS -ClassName __Namespace -ErrorAction Stop | Select-Object -First 1).Name + "\Admin"
   $RSInfo = Get-CimInstance -Namespace $RSV -ClassName MSReportServer_ConfigurationSetting -ErrorAction Stop
-  (Get-Content ($RSInfo).PathName).Replace("<RSWindowsNTLM","<RSWindowsNegotiate") | Out-File ($RSInfo).PathName
+  (Get-Content ($RSInfo).PathName).Replace("<RSWindowsNTLM","<RSWindowsNegotiate") | Out-File ($RSInfo).PathName -Encoding UTF8
   ```
 
 ---
