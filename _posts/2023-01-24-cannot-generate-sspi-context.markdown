@@ -52,7 +52,7 @@ ClientConnectionId:c0z7eb24-124d-46ed-xe78-36q2ba9f7949
 ```
 
 ## :page_with_curl: How to fix #1
-In order to resolve this issue for my customer, first we [verified if RC4 was disabled](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/decrypting-the-selection-of-supported-kerberos-encryption-types/ba-p/1628797) (RC4 was disabled). Then we had to verify the user account running the Operations Manager SQL Service has AES Attributes enabled. Navigate to the user object in Active Directory and verify that the Account options have the following:
+In order to resolve this issue for my customer, first we verified if RC4 was disabled (RC4 was disabled) ***(More Information here: [Decrypting the Selection of Supported Kerberos Encryption Types - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/decrypting-the-selection-of-supported-kerberos-encryption-types/ba-p/1628797))***. Then we had to verify the user account running the Operations Manager SQL Service has AES Attributes enabled. Navigate to the user object in Active Directory and verify that the Account options have the following:
 
  - Check This account supports Kerberos AES 128 bit encryption.
  - Check This account supports Kerberos AES 256 bit encryption.
