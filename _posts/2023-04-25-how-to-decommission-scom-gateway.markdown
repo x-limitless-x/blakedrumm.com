@@ -29,7 +29,7 @@ permalink: /blog/how-to-decommission-scom-gateway/
     >
     > Copy the ***Microsoft.EnterpriseManagement.GatewayApprovalTool.exe*** from the installation media to the Operations Manager installation directory.
 
-    The command to delete a gateway.
+    The command to delete a SCOM Gateway:
     ```
     Microsoft.EnterpriseManagement.GatewayApprovalTool.exe /ManagementServerName=<managementserverFQDN> /GatewayName=<GatewayFQDN> /Action=Delete
     ```
