@@ -14,6 +14,8 @@ keywords: scom gateway, scom gateway decommission, scom decommission
 permalink: /blog/how-to-decommission-scom-gateway/
 ---
 
+## The Steps Required
+
 1. Move any agents (Agents or Agentless) assigned to the Gateway to another server.
 
 2. Uninstall the SCOM Gateway through programs and features.
@@ -29,7 +31,7 @@ permalink: /blog/how-to-decommission-scom-gateway/
 
     The command to delete a gateway.
     ```
-    Microsoft.EnterpriseManagement.GatewayApprovalTool.exe /ManagementServerName=<managementserverFQDN> /GatewayName=<GatewayFQDN> /Action=Create
+    Microsoft.EnterpriseManagement.GatewayApprovalTool.exe /ManagementServerName=<managementserverFQDN> /GatewayName=<GatewayFQDN> /Action=Delete
     ```
 ---
 
@@ -45,6 +47,7 @@ Replace the following variables before running:
 <MoveToSecondary_MS>
 ```
 
+Be aware, the machines will need to be remotely manageable before you can run the below script. More information here: [https://kevinholman.com/2010/02/20/how-to-get-your-agents-back-to-remotely-manageable-in-scom/](https://kevinholman.com/2010/02/20/how-to-get-your-agents-back-to-remotely-manageable-in-scom/)
 ```powershell
 # ===============================
 # Author: Blake Drumm (blakedrumm@microsoft.com)
