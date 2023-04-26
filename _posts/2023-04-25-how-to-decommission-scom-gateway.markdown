@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Decommission SCOM Gateway"
 date:   '2023-04-25 15:43:02 -0500'
-categories: guides operationsManager
+categories: guides operationsManager powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-gateway-decommission.png
 toc: true
