@@ -33,6 +33,7 @@ permalink: /blog/how-to-decommission-scom-gateway/
     ```
     Microsoft.EnterpriseManagement.GatewayApprovalTool.exe /ManagementServerName=<managementserverFQDN> /GatewayName=<GatewayFQDN> /Action=Delete
     ```
+    
 ---
 
 ## Powershell Script to move Agents
