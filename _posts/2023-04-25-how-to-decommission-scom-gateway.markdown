@@ -33,12 +33,13 @@ permalink: /blog/how-to-decommission-scom-gateway/
     ```
     Microsoft.EnterpriseManagement.GatewayApprovalTool.exe /ManagementServerName=<managementserverFQDN> /GatewayName=<GatewayFQDN> /Action=Delete
     ```
-    
+
 ---
 
 ## Powershell Script to move Agents
 
-You can find the below script (and others) here: [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/Powershell/Agents%20Failover](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/Powershell/Agents%20Failover)
+You can find the below script (and others) here: \
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/Powershell/Agents%20Failover](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/tree/master/Powershell/Agents%20Failover)
 
 
 Replace the following variables before running:
