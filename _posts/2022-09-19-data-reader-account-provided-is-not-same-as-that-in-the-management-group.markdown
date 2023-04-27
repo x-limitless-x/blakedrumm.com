@@ -48,7 +48,7 @@ Here is my own take on Udish's Powershell script:
 # Original Blog Post: https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/
 # =========================================================================================================================
 # Modified by: Blake Drumm (blakedrumm@microsoft.com)
-# Last Modified: September 28th, 2022
+# Last Modified: April 27th, 2023
 # Blog Post: https://blakedrumm.com/blog/data-reader-account-provided-is-not-same-as-that-in-the-management-group/
 
 function Invoke-TimeStamp
@@ -78,24 +78,28 @@ $DWSyncClass = Get-SCOMClass -DisplayName "Data Warehouse Synchronization Server
 
 #Setting the association
 Write-Output "$(Invoke-TimeStamp)Setting the Run As Account Association for Data Warehouse Account Profile"
+$error.Clear()
 try
 {
 	Set-SCOMRunAsProfile -ErrorAction Stop -Action "Add" -Profile $DWActionAccountProfile -Account $DWActionAccount -Class $CollectionServerClass, $DataSetClass, $APMClass, $DWSyncClass
-	Write-Output "$(Invoke-TimeStamp)   Completed Successfully!"
+	Write-Output "$(Invoke-TimeStamp)Completed Successfully!"
 }
 catch
 {
-	Write-Output "$(Invoke-TimeStamp)   Unable to set the RunAs accounts, try removing all accounts from inside the RunAs Profile (`"Data Warehouse Account`"), and run the script again.`n"
+	Write-Output "$(Invoke-TimeStamp)Unable to set the RunAs accounts, try removing all accounts from inside the RunAs Profile (`"Data Warehouse Account`"), and run the script again."
+	Write-Warning "$(Invoke-TimeStamp)$error"
 }
 Write-Output "$(Invoke-TimeStamp)Setting the Run As Account Association for Data Warehouse Report Deployment Account Profile"
+$error.Clear()
 try
 {
 	Set-SCOMRunAsProfile -ErrorAction Stop -Action "Add" -Profile $ReportDeploymentProfile -Account $DWReportDeploymentAccount -Class $CollectionServerClass, $DWSyncClass
-	Write-Output "$(Invoke-TimeStamp)   Completed Successfully!"
+	Write-Output "$(Invoke-TimeStamp)Completed Successfully!"
 }
 catch
 {
-	Write-Output "$(Invoke-TimeStamp)   Unable to set the RunAs accounts, try removing all accounts from inside the RunAs Profile (`"Data Warehouse Report Deployment Account`"), and run the script again."
+	Write-Output "$(Invoke-TimeStamp)Unable to set the RunAs accounts, try removing all accounts from inside the RunAs Profile (`"Data Warehouse Report Deployment Account`"), and run the script again."
+	Write-Warning "$(Invoke-TimeStamp)$error"
 }
 
 Write-Output "$(Invoke-TimeStamp)Script ended"
