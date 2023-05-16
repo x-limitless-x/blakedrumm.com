@@ -230,11 +230,11 @@ Be mindful that the scripts are usually run overnight when there is not alot of 
    ```
    cd C:\Windows\System32\Security\AdtServer
    ```
-9. Run the below command to check current query we use. There should no filter clause to exclude the collected event.
+9. Run the below command to check current query we being used by SCOM ACS. (*There should be a no filter clause to exclude the collected event*):
    ```
    adtadmin –getquery
    ```
-10. Run the following command to add filter for the collected events.
+10. Run the following command to add filter for the collected events:
     ```
     adtadmin /setquery /query:"SELECT * FROM AdtsEvent WHERE NOT (EventID=528 or EventID=540 or EventID=680)”
     ```
