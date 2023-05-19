@@ -63,7 +63,7 @@ _or_ \
 >```powershell
 >.\Remove-SCOMBaseManagedEntity.ps1 -Servers IIS-Server.contoso.com, WindowsServer.contoso.com
 >```
->>#### Example 3
+>#### Example 3
 >Remove SCOM BME Related Data for 2 Agent machines automatically with no prompts / questions:
 >```powershell
 >.\Remove-SCOMBaseManagedEntity.ps1 -Servers IIS-Server.contoso.com, WindowsServer.contoso.com -AssumeYes
