@@ -25,6 +25,8 @@ _or_ \
 
 The script without any modifications or parameters clears the Operations Manager cache only on the local server, nothing else.
 
+## Argument List
+
 Argument List | Description |
 ------------- | ----------- |
 -All | Optionally clear all caches that SCOM could potentially use that doesnt require a reboot. Flushing DNS, Purging Kerberos Tickets, Resetting NetBIOS over TCPIP Statistics. (Combine with -Reboot for a full clear cache) |

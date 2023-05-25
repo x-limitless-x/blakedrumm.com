@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Remove Data from the SCOM Database Instantly - The Powershell Way!"
+title:  "Remove Data from the SCOM Database Instantly - The PowerShell Way!"
 date:   '2022-10-02 13:52:41 -0500'
 categories: powershell operationsManager troubleshooting projects
 author: blakedrumm
