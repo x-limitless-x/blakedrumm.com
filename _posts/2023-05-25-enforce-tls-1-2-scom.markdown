@@ -15,7 +15,7 @@ permalink: /blog/enforce-tls-1-2-scom/
 ---
 
 ## Introduction
-This PowerShell script will allow you to enforce TLS 1.2 in your SCOM Environment to help you to secure your environment. It will attempt to auto download the prerequisites if they are not present in the local directory (or if you set the parameter **DirectoryForPrerequisites** to another path it will check there). The script from a high level will do the following:
+This PowerShell script will allow you to enforce TLS 1.2 in your SCOM Environment to help you to secure your environment. (A big thank you to Kevin Holman for the original creation of his [TLS 1.2 enforcement script](https://kevinholman.com/2018/05/06/implementing-tls-1-2-enforcement-with-scom/), which this script originated from.) It will attempt to auto download the prerequisites if they are not present in the local directory (or if you set the parameter **DirectoryForPrerequisites** to another path it will check there). The script from a high level will do the following:
 1. Creates a log file to Program Data (`C:\ProgramData\SCOM_TLS_1.2_-_<Month>-<Day>-<Year>.log`).
 2. Locate or Download the prerequisites for TLS 1.2 Enforcement.
 3. Checks the SCOM Role (*Management Server, Web Console, ACS Collector*).
