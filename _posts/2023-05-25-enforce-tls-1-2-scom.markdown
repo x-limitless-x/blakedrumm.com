@@ -71,6 +71,8 @@ _or_ \
 >.\Invoke-EnforceSCOMTLS1.2.ps1 -AssumeYes
 >```
 
+Leave some feedback if this helped you! :v:
+
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/enforce-tls-1-2-scom/)
 
 <!--
