@@ -34,6 +34,8 @@ permalink: /blog/how-to-decommission-scom-gateway/
     Microsoft.EnterpriseManagement.GatewayApprovalTool.exe /ManagementServerName=<managementserverFQDN> /GatewayName=<GatewayFQDN> /Action=Delete
     ```
 
+Kevin Holman has a good guide for Management Server's here (which some items apply for Gateway's as well): [https://kevinholman.com/2016/02/03/checklist-removing-migrating-old-management-servers-to-new-ones/](https://kevinholman.com/2016/02/03/checklist-removing-migrating-old-management-servers-to-new-ones/)
+
 ---
 
 ## Powershell Script to move Agents
