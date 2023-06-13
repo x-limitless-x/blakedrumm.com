@@ -2,7 +2,7 @@
 layout: post
 title:  "SCOM Certificate Checker Script"
 date:   '2023-02-27 20:02:10 -0500'
-categories: troubleshooting guides operationsManager powershell certificates
+categories: troubleshooting certificates guides operationsManager powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-certificate-script.png
 toc: true
