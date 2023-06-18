@@ -2,7 +2,7 @@
 layout: post
 title:  "How to change SQL Server Reporting Services to use Kerberos instead of NTLM"
 date:   '2023-04-19 13:28:09 -0500'
-categories: troubleshooting guides operationsManager
+categories: troubleshooting guides operationsManager projects security
 author: blakedrumm
 thumbnail: /assets/img/posts/sql-server-reporting-services.png
 toc: true

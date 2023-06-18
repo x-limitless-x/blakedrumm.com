@@ -2,7 +2,7 @@
 layout: post
 title:  "Enforce TLS 1.2 in SCOM - The PowerShell Way!"
 date:   '2023-05-25 17:08:51 -0500'
-categories: powershell operationsManager troubleshooting projects
+categories: powershell operationsManager troubleshooting projects security
 author: blakedrumm
 thumbnail: /assets/img/posts/enforce-tls-1-2-scom.png
 toc: true
