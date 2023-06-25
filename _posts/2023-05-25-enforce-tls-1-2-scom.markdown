@@ -27,7 +27,7 @@ This PowerShell script will allow you to enforce TLS 1.2 in your SCOM Environmen
 9. Checks and/or modifies the registry to enforce TLS 1.2 (If your using Window Server 2022 (or newer) or Windows 11 (or newer) it will attempt to enforce TLS 1.2 **and** TLS 1.3).
 10. Ask to reboot the machine to finalize the configuration.
 
-## Argument List
+## :classical_building: Argument List
 
 | Parameter                    | Alias | ValueFromPipeline | Type   | Description                                                                               |
 |------------------------------|-------|-------------------|--------|-------------------------------------------------------------------------------------------|
