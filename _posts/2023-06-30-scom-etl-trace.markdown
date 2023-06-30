@@ -42,26 +42,45 @@ _or_ \
 Open Powershell Prompt as Administrator:
 >#### Examples
 >##### All Available Commands
->`.\Start-ScomETLTrace.ps1 -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI -VerboseTrace -DebugTrace -NetworkTrace -SleepSeconds -RestartSCOMServices -DetectOpsMgrEventID`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI -VerboseTrace -DebugTrace -NetworkTrace -SleepSeconds -RestartSCOMServices -DetectOpsMgrEventID
+>```
 >
 >###### Get Verbose Native ETL Trace
->`.\Start-ScomETLTrace.ps1 -GetNative -VerboseTrace`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -GetNative -VerboseTrace
+>```
 >
 >###### Gather Verbose ETL Trace and detect for 1210 Event ID (Sleep for 30 Seconds between checks)
->`.\Start-ScomETLTrace.ps1 -VerboseTrace -DetectOpsMgrEventID 1210 -SleepSeconds 30`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -VerboseTrace -DetectOpsMgrEventID 1210 -SleepSeconds 30
+>```
 >
 >###### Restart SCOM Services after starting an ETL Trace. Sleep for 2 Minutes and stop the Trace Automatically
->`.\Start-ScomETLTrace.ps1 -Sleep 120 -RestartSCOMServices`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -Sleep 120 -RestartSCOMServices
+>```
 >
 >#### Get All ETL Traces
 >###### Get Verbose Tracing for all the Default Tracing Available (just like running this: -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI)
->`.\Start-ScomETLTrace.ps1 -VerboseTrace`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -VerboseTrace
+>```
+>
 >###### Get Debug Tracing for all the Default Tracing Available (just like running this: -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI)
->`.\Start-ScomETLTrace.ps1 -DebugTrace`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -DebugTrace
+>```
+>
 >###### Get Verbose Tracing for all the Default Tracing Available and Network Tracing (just like running this: -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI)
->`.\Start-ScomETLTrace.ps1 -VerboseTrace -NetworkTrace`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -VerboseTrace -NetworkTrace
+>```
+>
 >###### Get Verbose Tracing for all the Default Tracing Available and OpsMgrModuleLogging for Linux Related Issues
->`.\Start-ScomETLTrace.ps1 -VerboseTrace -OpsMgrModuleLogging`
+>```powershell
+>.\Start-ScomETLTrace.ps1 -VerboseTrace -OpsMgrModuleLogging
+>```
 
 
 Leave some feedback if this helped you! :v:
