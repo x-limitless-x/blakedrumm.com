@@ -15,61 +15,54 @@ permalink: /blog/scom-etl-trace/
 ---
 
 ## :book: Introduction
-This PowerShell script will allow you to enforce TLS 1.2 in your SCOM Environment to help you to secure your environment. (A big thank you to Kevin Holman for the original creation of his [TLS 1.2 enforcement script](https://kevinholman.com/2018/05/06/implementing-tls-1-2-enforcement-with-scom/), which this script originated from.) It will attempt to auto download the prerequisites if they are not present in the local directory (or if you set the parameter **DirectoryForPrerequisites** to another path it will check there). The script from a high level will do the following:
-1. Creates a log file to Program Data (`C:\ProgramData\SCOM_TLS_1.2_-_<Month>-<Day>-<Year>.log`).
-2. Locate or Download the prerequisites for TLS 1.2 Enforcement.
-3. Checks the SCOM Role (*Management Server, Web Console, ACS Collector*).
-4. Checks the version of System Center Operations Manager to confirm supportability of TLS enforcement.
-5. Checks the .NET version to confirm you are on a valid version.
-6. Checks the SQL version (on both the Operations Manager and Data Warehouse Database Instances) to confirm your version of SQL supports TLS enforcement.
-7. Checks and/or installs the *(prerequisite software)* MSOLEDB driver (or SQL Client).
-8. Checks and/or installs the *(prerequisite software)* ODBC driver.
-9. Checks and/or modifies the registry to enforce TLS 1.2 (If your using Window Server 2022 (or newer) or Windows 11 (or newer) it will attempt to enforce TLS 1.2 **and** TLS 1.3).
-10. Ask to reboot the machine to finalize the configuration.
+This Tool will assist you in gathering ETL Traces. You have the options of selecting specific Tracing to gather with this script.
 
-## :classical_building: Argument List
-
-| Parameter                    | Alias | ValueFromPipeline | Type   | Description                                                                               |
-|------------------------------|-------|-------------------|--------|-------------------------------------------------------------------------------------------|
-| AssumeYes                    | yes   |                   | Switch | The script will not ask any questions. Good for unattended runs.                          |
-| DirectoryForPrerequisites    | dfp   |                   | String | The directory to save / load the prerequisites from. Default is the current directory.    |
-| ForceDownloadPrerequisites   | fdp   |                   | Switch | Force download the prerequisites to the directory specified in DirectoryForPrerequisites. |
-| SkipDotNetCheck              | sdnc  |                   | Switch | Skip the .NET Check step.                                                                 |
-| SkipDownloadPrerequisites    | sdp   |                   | Switch | Skip downloading the prerequisite files to current directory.                             |
-| SkipModifyRegistry           | smr   |                   | String | Skip any registry modifications.                                                          |
-| SkipRoleCheck                | src   |                   | Switch | Skip the SCOM Role Check step.                                                            |
-| SkipSQLQueries               | ssq   |                   | Switch | Skip any check for SQL version compatibility.                                             |
-| SkipSQLSoftwarePrerequisites | sssp  |                   | Switch | Skip the ODBC, MSOLEDBSQL, and/or Microsoft SQL Server 2012 Native Client.                |
-| SkipVersionCheck             | svc   |                   | Switch | Skip SCOM Version Check step.                                                             |
-{: .table .table-hover .table-text .d-block .overflow-auto }
-
-> ## :notebook: Note
-> You may edit line [1908](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/TLS%201.2%20Enforcement/Invoke-EnforceSCOMTLS1.2.ps1#L1908) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+The script will perform the following, in this order:
+1. Stops any existing ETL Traces
+ - *Optional:* Stops the SCOM Services
+2. Starts the ETL Trace
+ - *Optional:* Starts the SCOM Services back up
+3. Script will wait for issue to occur
+ - *Default:* Pauses Script, waits until you press Enter
+ - *Optional:* Sleeps for x Seconds (`-SleepSeconds 10`)
+ - *Optional:* Script will loop until an Event ID is detected  (`-DetectOpsMgrEventID`)
+4. Stops ETL Trace
+5. Formats ETL Trace
+6. Zips Up Output and Opens Explorer Window for Viewing File
 
 ## How to get it
 You can get a copy of the script here: \
-[Invoke-EnforceSCOMTLS1.2.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/TLS%201.2%20Enforcement/Invoke-EnforceSCOMTLS1.2.ps1) :arrow_left: **Direct Download Link** \
+[Start-ScomETLTrace.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/SCOM%20ETL%20Trace/Start-ScomETLTrace.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
-[Personal File Server - Invoke-EnforceSCOMTLS1.2.ps1](https://files.blakedrumm.com/Invoke-EnforceSCOMTLS1.2.ps1) :arrow_left: **Alternative Download Link** \
+[Personal File Server - Start-ScomETLTrace.ps1](https://files.blakedrumm.com/Start-ScomETLTrace.ps1) :arrow_left: **Alternative Download Link** \
 _or_ \
-[Personal File Server - Invoke-EnforceSCOMTLS1.2.txt](https://files.blakedrumm.com/Invoke-EnforceSCOMTLS1.2.txt) :arrow_left: **Text Format Alternative Download Link**
+[Personal File Server - Start-ScomETLTrace.txt](https://files.blakedrumm.com/Start-ScomETLTrace.txt) :arrow_left: **Text Format Alternative Download Link**
 
 ## :page_with_curl: How to use it
->#### Example 1
->Normal run:
->```powershell
->.\Invoke-EnforceSCOMTLS1.2.ps1
->```
->#### Example 2
->Set the prerequisites folder:
->```powershell
->.\Invoke-EnforceSCOMTLS1.2.ps1 -DirectoryForPrerequisites "C:\Temp"
->```
->#### Example 3
->Assume yes to all questions asked by script:
->```powershell
->.\Invoke-EnforceSCOMTLS1.2.ps1 -AssumeYes
->```
+Open Powershell Prompt as Administrator:
+>#### Examples
+>##### All Available Commands
+>    .\Start-ScomETLTrace.ps1 -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI -VerboseTrace -DebugTrace -NetworkTrace -SleepSeconds -RestartSCOMServices -DetectOpsMgrEventID
+>
+>###### Get Verbose Native ETL Trace
+>    .\Start-ScomETLTrace.ps1 -GetNative -VerboseTrace
+>
+>###### Gather Verbose ETL Trace and detect for 1210 Event ID (Sleep for 30 Seconds between checks)
+>    .\Start-ScomETLTrace.ps1 -VerboseTrace -DetectOpsMgrEventID 1210 -SleepSeconds 30
+>
+>###### Restart SCOM Services after starting an ETL Trace. Sleep for 2 Minutes and stop the Trace Automatically
+>    .\Start-ScomETLTrace.ps1 -Sleep 120 -RestartSCOMServices
+>
+>#### Get All ETL Traces
+>###### Get Verbose Tracing for all the Default Tracing Available (just like running this: -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI)
+>    .\Start-ScomETLTrace.ps1 -VerboseTrace
+>###### Get Debug Tracing for all the Default Tracing Available (just like running this: -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI)
+>    .\Start-ScomETLTrace.ps1 -DebugTrace
+>###### Get Verbose Tracing for all the Default Tracing Available and Network Tracing (just like running this: -GetAdvisor -GetApmConnector -GetBID -GetConfigService -GetDAS -GetFailover -GetManaged -GetNASM -GetNative -GetScript -GetUI)
+>    .\Start-ScomETLTrace.ps1 -VerboseTrace -NetworkTrace
+>###### Get Verbose Tracing for all the Default Tracing Available and OpsMgrModuleLogging for Linux Related Issues
+    .\Start-ScomETLTrace.ps1 -VerboseTrace -OpsMgrModuleLogging
+
 
 Leave some feedback if this helped you! :v:
 
