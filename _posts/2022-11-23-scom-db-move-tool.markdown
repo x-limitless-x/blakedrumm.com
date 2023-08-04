@@ -23,10 +23,12 @@ This script automates the steps outlined here: [https://learn.microsoft.com/syst
 >#### :spiral_notepad: Note
 > The script does not edit the Reporting Services **Data Warehouse Data Source** -> ***Connection String*** \
 > (shown here (change to https if you are using SSL Certificates): `http://<reportingServerURL>/Reports/manage/catalogitem/properties/Data%20Warehouse%20Main`) \
+> &nbsp;
 > You will need to update the Connection String value to the correct data, here is an example of mine:
 > ```
 > data source=SQL01-2022;initial catalog=OperationsManagerDW;Integrated Security=SSPI
 > ```
+> ![SQL Server Reporting Services Data Source Example](/assets/img/posts/sql-server-reporting-services-data-source-example.png)
 
 ### Features
 - Update / Verify the System Center Operations Manager SQL
