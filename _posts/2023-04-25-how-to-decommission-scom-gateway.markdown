@@ -38,6 +38,27 @@ Kevin Holman has a good guide for Management Server's here (which some items app
 
 ---
 
+## Powershell Script to move Agentless-Managed Machines
+```powershell
+#Author: Blake Drumm (blakedrumm@microsoft.com)
+#Date: August 8th, 2023
+
+#------------------------------- 
+# Variables Section 
+#------------------------------- 
+$FromGatewayServer = 'GW01-2019.contoso-2019.com' # Management Server or Gateway Server to move FROM
+$ToGatewayServer = 'MS01-2019.contoso-2019.com' # Management Server or Gateway Server to move TO 
+#-------------------------------
+
+$MSList = Get-SCOMManagementServer 
+$FromGatewayServer = $MSList | Where-Object {$_.Name -match $FromGatewayServer} 
+$ToGatewayServer =  $MSList | Where-Object {$_.Name -match $ToGatewayServer}
+
+Get-SCOMAgentlessManagedComputer | Where-Object {$_.ProxyAgentPrincipalName -match $FromGatewayServer.DisplayName} | Set-SCOMAgentlessManagedComputer -ManagedByManagementServer $ToGatewayServer -PassThru 
+```
+
+---
+
 ## Powershell Script to move Agents
 
 You can find the below script (and others) here: \
