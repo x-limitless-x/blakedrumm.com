@@ -28,7 +28,7 @@ This script automates the steps outlined here: [https://learn.microsoft.com/syst
 > ```
 > data source=SQL01-2022;initial catalog=OperationsManagerDW;Integrated Security=SSPI
 > ```
-> ![SQL Server Reporting Services Data Source Example](/assets/img/posts/sql-server-reporting-services-data-source-example.png)
+> ![SQL Server Reporting Services Data Source Example](/assets/img/posts/sql-server-reporting-services-data-source-example.png){:class="img-fluid"}
 
 ### Features
 - Update / Verify the System Center Operations Manager SQL
