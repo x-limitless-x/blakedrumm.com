@@ -15,7 +15,7 @@ permalink: /blog/failed-to-find-a-matching-agent-kit-to-install/
 ---
 ## What is the problem?
 
-The latest version of the UNIX/Linux Management Pack does not include a hotfix to allow OpenSSL 3 support in RHEL 9. The KB (5028684) needs to be applied first.
+The latest version of the UNIX/Linux Management Pack does not include a hotfix to allow OpenSSL 3 support in RHEL 9. The KB (5028684) needs to be applied first. The KB needs to be applied on the SCOM Management Server and SCOM Console components installed in your environment.
 
 ### UNIX/Linux versions
 **Linux Agent version:** `1.7.1-0` \
@@ -28,6 +28,8 @@ The latest version of the UNIX/Linux Management Pack does not include a hotfix t
 ## How to fix
 Download the hotfix listed here: \
 [https://support.microsoft.com/kb/5028684](https://support.microsoft.com/kb/5028684)
+
+You must apply the hotfix on the SCOM Management Server and SCOM Console components installed in your environment.
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/failed-to-find-a-matching-agent-kit-to-install//)
 
