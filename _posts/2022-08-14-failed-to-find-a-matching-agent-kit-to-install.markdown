@@ -15,7 +15,7 @@ permalink: /blog/failed-to-find-a-matching-agent-kit-to-install/
 ---
 ## What is the problem?
 
-The latest version of the UNIX/Linux Management Pack does not include a hotfix to allow OpenSSL 3 support in RHEL 9. The KB (5028684) needs to be applied first
+The latest version of the UNIX/Linux Management Pack does not include a hotfix to allow OpenSSL 3 support in RHEL 9. The KB (5028684) needs to be applied first.
 
 ### UNIX/Linux versions
 **Linux Agent version:** `1.7.1-0` \
