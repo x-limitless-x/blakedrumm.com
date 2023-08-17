@@ -13,33 +13,6 @@ summary: >- # this means to ignore newlines
 keywords: rebuild scom perf counters, scom perf counters, opsmgr perf counters, operations manager
 permalink: /blog/rebuild-perf-counters/
 ---
-<!--
-## Introduction
-The following event id inspired me to write this article:
-
-```
-Log Name:      Operations Manager
-Source:        Health Service Modules
-Date:          5/16/2022 2:47:00 PM
-Event ID:      10103
-Task Category: None
-Level:         Warning
-Keywords:      Classic
-User:          N/A
-Computer:      <ManagementServerFQDN>
-Description:
-In PerfDataSource, could not resolve counter instance OpsMgr DW Writer Module, Dropped Data Item Count, All Instances. Module will not be unloaded. 
-
-One or more workflows were affected by this.  
-
-Workflow name: Microsoft.SystemCenter.DataWarehouse.CollectionRule.Performance.Writer.DroppedDataItemCount 
-Instance name: <ManagementServerFQDN> 
-Instance ID: {3Z4DF6FB-B78C-33D9-BE0F-C84F7278AB92} 
-Management group: <ManagementGroupName>
-```
-
-The above tells me: `could not resolve counter instance OpsMgr DW Writer Module` for some reason SCOM is no longer able to resolve some Performance Counter names on the Management Server, which causes some of the workflows for the SCOM Data Warehouse to fail.
--->
 ## How to Rebuild
 Rebuild the Performance counters with the following Powershell Script, you can copy and paste the below script to a Powershell ISE Window running as **Administrator**:
 ```powershell
@@ -84,6 +57,34 @@ Pop-Location
 ```
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/rebuild-perf-counters/)
+
+<!--
+## Introduction
+The following event id inspired me to write this article:
+
+```
+Log Name:      Operations Manager
+Source:        Health Service Modules
+Date:          5/16/2022 2:47:00 PM
+Event ID:      10103
+Task Category: None
+Level:         Warning
+Keywords:      Classic
+User:          N/A
+Computer:      <ManagementServerFQDN>
+Description:
+In PerfDataSource, could not resolve counter instance OpsMgr DW Writer Module, Dropped Data Item Count, All Instances. Module will not be unloaded. 
+
+One or more workflows were affected by this.  
+
+Workflow name: Microsoft.SystemCenter.DataWarehouse.CollectionRule.Performance.Writer.DroppedDataItemCount 
+Instance name: <ManagementServerFQDN> 
+Instance ID: {3Z4DF6FB-B78C-33D9-BE0F-C84F7278AB92} 
+Management group: <ManagementGroupName>
+```
+
+The above tells me: `could not resolve counter instance OpsMgr DW Writer Module` for some reason SCOM is no longer able to resolve some Performance Counter names on the Management Server, which causes some of the workflows for the SCOM Data Warehouse to fail.
+-->
 
 <!--
 ## Welcome to GitHub Pages
