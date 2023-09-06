@@ -33,7 +33,7 @@ _or_ \
 [Personal File Server - Remove-SCOMBaseManagedEntity.txt](https://files.blakedrumm.com/Remove-SCOMBaseManagedEntity.txt) :arrow_left: **Text Format Alternative Download Link**
 
 > ## :notebook: Note
-> You may edit line [752](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1#L752) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [769](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1#L769) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 &nbsp;
 
@@ -71,7 +71,12 @@ _or_ \
 >#### Example 4
 >Remove SCOM BME IDs from the Operations Manager Database:
 >```powershell
->.\Remove-SCOMBaseManagedEntity -Id C1E9B41B-0A35-C069-16EB-00AC43BB9C47, CB29ECDE-BCE8-2213-D5DD-0353116EDA6B
+>.\Remove-SCOMBaseManagedEntity.ps1 -Id C1E9B41B-0A35-C069-16EB-00AC43BB9C47, CB29ECDE-BCE8-2213-D5DD-0353116EDA6B
+>```
+>#### Example 5
+>If you need to input a file that contains Agents (CSV or TXT):
+>```powershell
+>.\Remove-SCOMBaseManagedEntity.ps1 -InputFile C:\Temp\List_Of_Servers.txt
 >```
 
 Leave some feedback if this helped you! :v:
