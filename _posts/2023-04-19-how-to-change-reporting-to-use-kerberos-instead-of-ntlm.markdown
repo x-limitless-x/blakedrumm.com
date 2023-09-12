@@ -44,6 +44,8 @@ Something you need to take into account is that the SCOM installation for Report
 
   Replace `RSWindowsNTLM` with `RSWindowsNegotiate` in the config file.
 
+  My config file: [https://files.blakedrumm.com/rsreportserver.config](https://files.blakedrumm.com/rsreportserver.config)
+
 ### :zap: Automatically change SSRS Authentication with PowerShell
 
 - This script will allow you to automatically set the Authentication for SSRS to **Windows Negotiate** instead of **NTLM**:
