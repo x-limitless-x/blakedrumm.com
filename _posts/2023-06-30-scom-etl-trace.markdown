@@ -51,9 +51,19 @@ Open Powershell Prompt as Administrator:
 >.\Start-ScomETLTrace.ps1 -GetNative -VerboseTrace
 >```
 >
+>>###### Get Verbose Native ETL Trace and Format the trace
+>```powershell
+>.\Start-ScomETLTrace.ps1 -GetNative -VerboseTrace -FormatTrace
+>```
+>
 >###### Gather Verbose ETL Trace and detect for 1210 Event ID (Sleep for 30 Seconds between checks)
 >```powershell
 >.\Start-ScomETLTrace.ps1 -VerboseTrace -DetectOpsMgrEventID 1210 -SleepSeconds 30
+>```
+>
+>>###### Gather Verbose ETL Trace and detect for 1210 Event ID (Sleep for 30 Seconds between checks) and sleep for 10 seconds after finding the Event ID
+>```powershell
+>.\Start-ScomETLTrace.ps1 -VerboseTrace -DetectOpsMgrEventID 1210 -SleepSeconds 30 -SleepAfterEventDetection 10
 >```
 >
 >###### Restart SCOM Services after starting an ETL Trace. Sleep for 2 Minutes and stop the Trace Automatically
