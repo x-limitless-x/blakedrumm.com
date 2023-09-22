@@ -26,8 +26,9 @@ The script will perform the following, in this order:
  - *Default:* Pauses Script, waits until you press Enter
  - *Optional:* Sleeps for x Seconds (`-SleepSeconds 10`)
  - *Optional:* Script will loop until an Event ID is detected  (`-DetectOpsMgrEventID`)
+ - *Optional:* Script can sleep for any amount of seconds after an Event is detected. (`-SleepAfterEventDetection`)
 4. Stops ETL Trace
-5. Formats ETL Trace
+5. *Optional:* Script can attempt to Format the ETL Trace (`-FormatTrace`)
 6. Zips Up Output and Opens Explorer Window for Viewing File
 
 ## How to get it
