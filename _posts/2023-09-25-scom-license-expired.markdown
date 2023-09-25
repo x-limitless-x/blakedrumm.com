@@ -116,7 +116,7 @@ Follow the below steps to allow you to fix the Activation issue:
    # Restart the SCOM SDK Service
    Restart-Service omsdk
    ```
-7. Open the SCOM Console and verify if you go to **Help** -> **About**. Do you see (Eval) in the Console version? \
+7. Open the SCOM Console and verify if you go to **Help** -> **About**. Do you see **(Eval)** in the Console version? \
    If you see **(Retail)** (as shown below), you are activated! :sun_behind_small_cloud: \
    ![SCOM Console Activation Successful](/assets/img/posts/scom-activation-activated.png){:class="img-fluid"}
 
