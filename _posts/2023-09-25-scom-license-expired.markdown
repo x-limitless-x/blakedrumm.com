@@ -97,10 +97,15 @@ Follow the below steps to allow you to fix the Activation issue:
 2. Verify the time has been changed.
 3. Open the SCOM Console and navigate to the top of the Console window, click on **Help** -> **About** \
    ![SCOM Console Help -> About](/assets/img/posts/scom-console-help.png){:class="img-fluid"}
-4. Click on Activate and type in your License key. \
-   (the screenshot below shows the button in a grayed out state, you only see the gray button once the activation has been completed) \
-   ![SCOM Console Activate Button](/assets/img/posts/scom-activation-button.png){:class="img-fluid"}
-5. Register the Time Service to revert the changes made above, close the SCOM Console, and finally restart the SCOM SDK Service (System Center Data Access Service):
+4. Click on Activate and type in your License key: \
+   ![SCOM Console Activation - Help -> About](/assets/img/posts/scom-activation.png){:class="img-fluid"} \
+   ![SCOM Console Activation - Activation Window](/assets/img/posts/scom-activation-button.png){:class="img-fluid"}
+5. Accept the license agreement: \
+   ![SCOM Console Activation Agreement](/assets/img/posts/scom-activation-license-agreement.png){:class="img-fluid"}
+6. Successfully activated!
+   ![SCOM Console Activation Successful](/assets/img/posts/scom-activation-licensed-successfully.png){:class="img-fluid"}
+
+6. Register the Time Service to revert the changes made above, close the SCOM Console, and finally restart the SCOM SDK Service (System Center Data Access Service):
    ```powershell
    # Register the Time Service
    W32tm /register
@@ -111,7 +116,10 @@ Follow the below steps to allow you to fix the Activation issue:
    # Restart the SCOM SDK Service
    Restart-Service omsdk
    ```
-7. Open the SCOM Console and verify if you go to **Help** -> **About**. Do you see the grayed out button as pictured in the screenshot above? If so, you are activated! :sun_behind_small_cloud:
+7. Open the SCOM Console and verify if you go to **Help** -> **About**. Do you see (Eval) in the Console version? \
+   If you see **(Retail)** (as shown below), you are activated! :sun_behind_small_cloud: \
+   ![SCOM Console Activation Successful](/assets/img/posts/scom-activation-activated.png){:class="img-fluid"}
+
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-license-expired/)
 
