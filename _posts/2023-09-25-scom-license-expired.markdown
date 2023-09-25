@@ -102,7 +102,7 @@ Follow the below steps to allow you to fix the Activation issue:
    ![SCOM Console Activation - Activation Window](/assets/img/posts/scom-activation-button.png){:class="img-fluid"}
 5. Accept the license agreement: \
    ![SCOM Console Activation Agreement](/assets/img/posts/scom-activation-license-agreement.png){:class="img-fluid"}
-6. Successfully activated!
+6. Successfully activated! \
    ![SCOM Console Activation Successful](/assets/img/posts/scom-activation-licensed-successfully.png){:class="img-fluid"}
 
 6. Register the Time Service to revert the changes made above, close the SCOM Console, and finally restart the SCOM SDK Service (System Center Data Access Service):
