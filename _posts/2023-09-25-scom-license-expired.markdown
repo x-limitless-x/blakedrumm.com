@@ -96,10 +96,10 @@ Follow the below steps to allow you to fix the Activation issue:
     ```
 2. Verify the time has been changed.
 3. Open the SCOM Console and navigate to the top of the Console window, click on **Help** -> **About** \
-   ![SCOM Console Help -> About](/assets/img/posts/scom-console-help.png)
+   ![SCOM Console Help -> About](/assets/img/posts/scom-console-help.png){:class="img-fluid"}
 4. Click on Activate and type in your License key. \
    (the screenshot below shows the button in a grayed out state, you only see the gray button once the activation has been completed) \
-   ![SCOM Console Activate Button](/assets/img/posts/scom-activation-button.png)
+   ![SCOM Console Activate Button](/assets/img/posts/scom-activation-button.png){:class="img-fluid"}
 5. Register the Time Service to revert the changes made above, close the SCOM Console, and finally restart the SCOM SDK Service (System Center Data Access Service):
    ```powershell
    # Register the Time Service
