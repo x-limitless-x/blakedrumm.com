@@ -13,7 +13,7 @@ summary: >- # this means to ignore newlines
 keywords: scom, activation, operationsmanager, SCOM activation expired, systemcenter operations manager
 permalink: /blog/scom-license-expired/
 ---
-## Introduction
+## :book: Introduction
 We attempted to activate the expired license for SCOM but we were unable due to the expiration of the product. The following errors would show when attempting to activate via PowerShell. These errors would show everytime we try to activate:
 ```
 Set-SCOMLicense : Unable to proceed with the command. Ensure you are connecting to correct Management Server and have sufficient privileges to execute the command. 
@@ -81,7 +81,7 @@ Faulting package-relative application ID:
 
 ---
 
-## How to fix it
+## :page_with_curl: How to fix it
 Follow the below steps to allow you to fix the Activation issue:
 1. Run the following PowerShell script on your Management Server to unregister the Time Service, set the date 48 hours ahead of the date SCOM was installed on the Management Server, and finally restarting the SCOM services.
     ```powershell
