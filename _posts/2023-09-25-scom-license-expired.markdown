@@ -14,7 +14,7 @@ keywords: scom, activation, operationsmanager, SCOM activation expired, systemce
 permalink: /blog/scom-license-expired/
 ---
 ## :book: Introduction
-We attempted to activate the expired license for SCOM but we were unable due to the expiration of the product. The following errors would show when attempting to activate via PowerShell. These errors would show everytime we try to activate:
+We attempted to activate the expired license for SCOM but we were unable due to the expiration of the product. The following errors would show when attempting to activate via PowerShell. These errors would show every time we try to activate:
 ```
 Set-SCOMLicense : Unable to proceed with the command. Ensure you are connecting to correct Management Server and have sufficient privileges to execute the command. 
 At line:1 char:1
