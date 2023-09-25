@@ -2,7 +2,7 @@
 layout: post
 date:   '2023-09-25 12:45:01 -0500'
 title: "SCOM License Expired"
-categories: troubleshooting guides
+categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-activation.png
 toc: true
