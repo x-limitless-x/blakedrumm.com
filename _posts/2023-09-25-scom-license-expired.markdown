@@ -88,7 +88,7 @@ Follow the below steps to allow you to fix the Activation issue:
     # Unregister the Time Service
     W32tm /unregister
 
-    # Set the date 48 hours ahead of the InstalledOn date
+    # Set the Operating System date 48 hours ahead of the InstalledOn date that is in the registry
     Set-Date ([DateTime]::ParseExact($((Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Setup').InstalledOn), 'M/d/yyyy-HH:mm:ss', $null).AddHours(48))
 
     # Restart the SCOM Services (System Center Data Access Service, System Center Management Configuration, Microsoft Monitoring Agent)
