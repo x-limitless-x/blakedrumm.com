@@ -233,14 +233,14 @@ ___
 
 ## Enumerate OMI Information on UNIX/Linux Machine
 Enumerate the **SCX_OperatingSystem** via omicli:
-```shell
+```bash
 /opt/omi/bin/omicli ei root/scx SCX_OperatingSystem
 ```
 
 Enumerate the **SCX_ProcessorStatisticalInformation** via omicli:
-```shell
+```bash
 /opt/omi/bin/omicli ei root/scx SCX_ProcessorStatisticalInformation
-````
+```
 
 Some OMI WMI Namespaces on the Linux Agent:
 ```
@@ -270,19 +270,19 @@ ___
 
 > ### UNIX/Linux Certificate
 > #### Check Certificate
-> ```
+> ```bash
 > openssl x509 -in /etc/opt/omi/ssl/omi.pem -text -noout
 > ```
 > #### Generate Certificate with custom name
-> ```
+> ```bash
 > /opt/microsoft/scx/bin/tools/scxsslconfig -f -d contoso.com -h redhat
 > ```
 > #### Generate Certificate
-> ```
+> ```bash
 > /opt/microsoft/scx/bin/tools/scxsslconfig -f
 > ```
 > #### Remove Old Certificate
-> ```
+> ```bash
 > rm /etc/opt/omi/ssl/omikey.pem --force
 > ```
 
@@ -293,20 +293,20 @@ ___
 > #### Windows Management Server Commands
 > ##### Export Certificate On MS1 (Admin Powershell Prompt)
 > ```
-> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS2\c$\MS1.cer
+> & "C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe" -export \\MS2\c$\MS1.cer
 > ```
 > ##### Export Certificate On MS2 (Admin Powershell Prompt)
 > ```
-> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -export \\MS1\c$\MS2.cer
+> & "C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe" -export \\MS1\c$\MS2.cer
 > ```
 > &nbsp;
 > ##### Import Certificate On MS1 (Admin Powershell Prompt)
 > ```
-> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS1\c$\MS2.cer
+> & "C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe" -import \\MS1\c$\MS2.cer
 > ```
 > ##### Import Certificate On MS2 (Admin Powershell Prompt)
 > ```
-> & 'C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe' -import \\MS2\c$\MS1.cer
+> & "C:\Program Files\Microsoft System Center\Operations Manager\Server\scxcertconfig.exe" -import \\MS2\c$\MS1.cer
 > ```
 
 &nbsp;
@@ -343,8 +343,8 @@ ___
 &nbsp;
 
 ## Purge SCX Agent Installation
-On the Unix/Linux Machine run the following command to uninstall and purge the SCOM Linux Agent installation:
-```shell
+On the Unix/Linux Machine locate the SCOM Linux Agent installation file, and run the following command to uninstall and purge the SCOM Linux Agent installation:
+```bash
 sh ./scx-<version>.<type>.<version>.<arch>.sh --purge --force
 ```
 
@@ -354,6 +354,68 @@ ___
 
 ## Linux Regular Expression (Regex)
 The SCOM console uses .NET Regex and the SCX Agent uses POSIX Regex.
+
+___
+      
+&nbsp;
+
+## Firewalld Service
+Check that the SCOM Linux Agent (omiengine) Port is listening, which would mean the SCX Linux Agent service is listening:
+```bash
+netstat -tulpn | grep -i 1270
+```
+
+1. To open port *1270* (**any** ip address) for System Center Operations Manager (SCOM) on a Red Hat server using Firewalld, you can execute the following commands:
+
+    1. **Open the Port**: To open port 1270, you would typically use the `--add-port` option to specify the port and the protocol (either TCP or UDP, depending on your requirement).
+    
+        ```bash
+        sudo firewall-cmd --zone=public --add-port=1270/tcp --permanent
+        ```
+    
+        The `--zone=public` flag specifies that you're modifying the public zone, but you could replace `public` with the name of another zone if that's more appropriate for your setup. The `--permanent` flag makes sure the rule survives reboots.
+    
+    2. **Reload Firewalld**: After adding the port, you'll need to reload Firewalld to apply the changes:
+    
+        ```bash
+        sudo firewall-cmd --reload
+        ```
+    
+    3. **Check the Rules**: To make sure the port has been opened, you can list the rules for the public zone as follows:
+    
+        ```bash
+        sudo firewall-cmd --zone=public --list-ports
+        ```
+    
+        This should display the ports that are open, and 1270 should be among them if the previous commands were successful.
+    
+    These commands are based on the assumption that you are using the `firewall-cmd` utility, which is the default frontend for Firewalld on Red Hat.
+
+2. To open port *1270* (**specific** ip address) for System Center Operations Manager (SCOM) on a Red Hat server using Firewalld, you can execute the following commands:
+
+    Here's how you can open port 1270 for a specific IP address (e.g., `192.168.1.10`):
+    
+    ```bash
+    sudo firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.10" port port=1270 protocol=tcp accept' --permanent
+    ```
+    
+    This adds a "rich rule" to the public zone, specifying that only traffic from the IP address `192.168.1.10` is allowed to access port 1270 over TCP. Replace `192.168.1.10` with the specific IP address that needs access to your SCOM service on port 1270.
+    
+    After adding the rule, don't forget to reload the firewall to apply the changes:
+    
+    ```bash
+    sudo firewall-cmd --reload
+    ```
+    
+    To check if the rule has been successfully added, you can list all the rich rules for the public zone like so:
+    
+    ```bash
+    sudo firewall-cmd --zone=public --list-rich-rules
+    ```
+    
+    This should show your newly added rule among the list.
+
+**Note:** Be sure to check any security policies or guidelines in your organization before opening ports on a server.
 
 &nbsp;
 
