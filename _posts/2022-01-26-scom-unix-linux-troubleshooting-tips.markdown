@@ -12,7 +12,7 @@ summary: Tips and Tricks for troubleshooting SCOM UNIX/Linux Agent issues.
 keywords: unix linux troubleshooting, scom linux agent, scom solaris agent, scom redhat agent, scom unix agent, operations manager linux, scom troubleshooting, scom linux ciphers, scom linux cipher suite, scom management server ciphers, ciphers, openssl ciphers, ssl ciphers, redhat troubleshooting, solaris troubleshooting, scom troubleshooting
 permalink: /blog/scom-unix-linux-troubleshooting-tips/
 ---
-<sub>This post was last updated on March 25th, 2023</sub>
+<sub>This post was last updated on September 27th, 2023</sub>
 ## Build list containing the SCOM Linux Agent versions
 The following url contains the versions of the SCX Agent: [https://docs.microsoft.com/system-center/scom/release-build-versions](https://docs.microsoft.com/system-center/scom/release-build-versions)
 
