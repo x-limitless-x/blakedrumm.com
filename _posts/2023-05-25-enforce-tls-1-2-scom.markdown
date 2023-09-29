@@ -75,6 +75,8 @@ _or_ \
 You can run the following PowerShell script to gather your current TLS configuration: \
 [https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1)
 
+![Script example showing how TLS is configured](/assets/img/posts/check-tlssettings.png){:class="img-fluid"}
+
 ---
 
 Leave some feedback if this helped you! :v:
