@@ -71,6 +71,12 @@ _or_ \
 >.\Invoke-EnforceSCOMTLS1.2.ps1 -AssumeYes
 >```
 
+## Check TLS Configuration
+You can run the following PowerShell script to gather your current TLS configuration: \
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1)
+
+---
+
 Leave some feedback if this helped you! :v:
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/enforce-tls-1-2-scom/)
