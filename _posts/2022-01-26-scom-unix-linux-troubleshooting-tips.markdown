@@ -119,7 +119,7 @@ tail -f /var/log/messages
 ### OMI
 #### Server Log
 ```shell
-tail -f /var/opt/microsoft/scx/log/omiserver.log
+tail -f /var/opt/omi/log/omiserver.log
 ```
 
 #### Agent Log
