@@ -12,8 +12,30 @@ summary: I recently had a case where my customer was experiencing an issue when 
 keywords: unix linux agent install issue, scom solaris agent install issue, scom solaris install, unable to discover solaris server, solaris scom, scom linux agent install
 permalink: /blog/error-postinstall-linux-unix-agent/
 ---
+
+## Introduction
 My customer was running Solaris 10 (SunOS 5.10), they were having issues when attempting to install the SCOM Agent (scx-1.6.8-1.solaris.10.sparc.sh). So we dug further into things to verify why the installer was failing on the __PostInstall__ step.
 
+Discovery error is shown when attempting to discover from the SCOM Console via the Discovery Wizard:
+```
+Task invocation failed with error code -2130771918. Error message was: The SCXCertWriteAction module encountered a DoProcess exception. The workflow "Microsoft.Unix.Agent.GetCert.Task" has been unloaded.
+ 
+Module: SCXCertWriteAction
+Location: DoProcess
+Exception type: ScxCertLibException
+ 
+Exception message: Unable to create certificate context
+; {ASN1 bad tag value met.
+}
+ 
+Additional data: Sudo path: /etc/opt/microsoft/scx/conf/sudodir/
+Management group: SCOM2019
+Workflow name: Microsoft.Unix.Agent.GetCert.Task
+Object name: UNIX/Linux Resource Pool
+Object ID: {6F1686BA-C068-4C9F-F1ED-29CDD800528A}
+```
+
+## What we did
 I asked the customer to copy the SCOM Linux / Unix Agent install files (`C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\UnixAgents\DownloadedKits`) to the Solaris Machine so we can attempt a manual installation.
 
 Extract the Solaris Installer file:
