@@ -214,7 +214,10 @@ OR
     2. Go to **User Mapping** and select the Operations Manager or Operations Manager Data Warehouse database.
     3. Scroll in the **Database role membership** panel until you see `db_owner`, uncheck it and press **OK**. \
        ![SQL Server Management Studio - User Mapping for Local SQL User](/assets/img/posts/sql-db-owner-usermapping.png){:class="img-fluid"}
-6. Restart the **System Center Operations Manager Data Access Service** (omsdk) on the Management Servers.
+6. Restart the **System Center Operations Manager Data Access Service** (omsdk) on the Management Servers:
+   ```powershell
+   Restart-Service -Name OMSDK
+   ```
 
 Leave some feedback if this helped you! :v:
 
