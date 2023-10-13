@@ -135,6 +135,8 @@ catch {
 
 OR
 
+### GUI Method
+
 1. Open Authorization Manager. Open a run box and type in: 
    ```
    AzMan.msc
