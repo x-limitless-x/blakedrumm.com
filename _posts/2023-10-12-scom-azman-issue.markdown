@@ -4,7 +4,7 @@ date:   '2023-10-12 14:33:27 -0500'
 title: "SCOM SDK not staying on - AzMan Issue"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
-thumbnail: /assets/img/posts/scom-activation.png
+thumbnail: /assets/img/posts/sdk-service-stopped.png
 toc: true
 
 summary: >- # this means to ignore newlines
