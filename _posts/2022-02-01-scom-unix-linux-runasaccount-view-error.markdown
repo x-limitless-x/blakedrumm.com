@@ -37,7 +37,7 @@ We noticed an exception that will pop-up intermittently (while Console is idle o
    at System.Linq.Enumerable.ToList\[TSource](IEnumerable\`1 source)  
    at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. EnumerateScxRunAsAccount(IManagementGroupConnection managementGroupConnection) 
    at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountInfoFactory.EnumerateScxRunAsAccount() 
-   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.&lt;span style="color:yellow"&gt;&lt;GetScxRunAsAccountInstances&gt;&lt;/span&gt;b__6(Object sender, ConsoleJobEventArgs e) 
+   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.<span style="color:yellow">&lt;GetScxRunAsAccountInstances&gt;</span>b__6(Object sender, ConsoleJobEventArgs e) 
    at Microsoft.EnterpriseManagement.Mom.Internal.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler`1 job, Object sender, ConsoleJobEventArgs args)
    </pre>
 

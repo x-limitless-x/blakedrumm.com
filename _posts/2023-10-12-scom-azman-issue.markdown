@@ -133,6 +133,11 @@ catch {
 }
 ```
 
+If you are affected you will see an output of:
+<pre>
+<span style="color:red">Connection failed: The security ID structure is invalid. (Exception from HRESULT: 0x80070539</span>
+</pre>
+
 OR
 
 ### GUI Method
