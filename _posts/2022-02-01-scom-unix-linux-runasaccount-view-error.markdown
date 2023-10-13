@@ -111,10 +111,10 @@ Removing the __Orphaned RunAs account__ allowed the Unix/Linux RunAs Account vie
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-unix-linux-runasaccount-view-error/)
 
-&lt;!--
+<!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
 Tip:
 To add auto-size pictures:
 ![/assets/img/posts/example.jpg](/assets/img/posts/example.jpg){:class="img-fluid"}
---&gt;
+-->
