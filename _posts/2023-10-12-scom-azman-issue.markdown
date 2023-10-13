@@ -164,20 +164,20 @@ First you want to verify this problem is definitely related to Authorization Man
       dbname,username ,logintype ,create_date ,modify_date
       ORDER BY DBName, username
       ```
-   5. You can use the following query to edit the User Mapping for the local SQL account and remove the `db_owner` role:
-      ```sql
-      USE [OperationsManager];
-      GO
-      EXEC sp_droprolemember N'db_owner', N'LocalSQLAccount';
-      GO
-      ```
-      OR \
-      You can edit via SQL Server Management Studio.
-      1. Go to **Security** -> **Logins**, locate the local SQL account, Right Click and go to **Properties**.
-      2. Go to **User Mapping** and select the Operations Manager or Operations Manager Data Warehouse database.
-      3. Scroll in the **Database role membership** panel until you see `db_owner`, uncheck it and press **OK**. \
-         ![SQL Server Management Studio - User Mapping for Local SQL User](/assets/img/posts/sql-db-owner-usermapping.png){:class="img-fluid"}
-5. Restart the **System Center Operations Manager Data Access Service** (omsdk) on the Management Servers.
+5. You can use the following query to edit the User Mapping for the local SQL account and remove the `db_owner` role:
+    ```sql
+    USE [OperationsManager];
+    GO
+    EXEC sp_droprolemember N'db_owner', N'LocalSQLAccount';
+    GO
+    ```
+    OR \
+    You can edit via SQL Server Management Studio.
+    1. Go to **Security** -> **Logins**, locate the local SQL account, Right Click and go to **Properties**.
+    2. Go to **User Mapping** and select the Operations Manager or Operations Manager Data Warehouse database.
+    3. Scroll in the **Database role membership** panel until you see `db_owner`, uncheck it and press **OK**. \
+       ![SQL Server Management Studio - User Mapping for Local SQL User](/assets/img/posts/sql-db-owner-usermapping.png){:class="img-fluid"}
+6. Restart the **System Center Operations Manager Data Access Service** (omsdk) on the Management Servers.
 
 Leave some feedback if this helped you! :v:
 
