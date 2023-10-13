@@ -18,29 +18,31 @@ I received a case today for a customer who is having issues when attempting to o
 We noticed an exception that will pop-up intermittently (while Console is idle or active):
 
 ## Pop-Up Exception
-  > __Date:__ 2/1/2022 1:29:19 PM \
-  > __Application:__ Operations Manager \
-  > __Application Version:__ 10.19.10505.0 \
-  > __Severity:__ Error \
-  > __Message:__ \
-  > System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1. \
-  > at System.Xml.XmlTextReaderImpl.Throw(Exception e) \
-  > at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace() \
-  > at System.Xml.XmlTextReaderImpl.ParseDocumentContent() \
-  > at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace) \
-  > at System.Xml.XmlDocument.Load(XmlReader reader) \
-  > at System.Xml.XmlDocument.LoadXml(String xml)  \
-  > at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. DeserializeToScxRunAsAccount(ScxCredentialRef credentialRef) \
-  > at System.Linq.Enumerable.WhereSelectListIterator\`2.MoveNext() \
-  > at System.Collections.Generic.List\`1..ctor(IEnumerable\`1 collection) \
-  > at System.Linq.Enumerable.ToList\[TSource](IEnumerable\`1 source)  \
-  > at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. EnumerateScxRunAsAccount(IManagementGroupConnection managementGroupConnection) \
-  > at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountInfoFactory.EnumerateScxRunAsAccount() \
-  > at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.<span style="color:yellow">\<GetScxRunAsAccountInstances\></span>b__6(Object sender, ConsoleJobEventArgs e) \
-  > at Microsoft.EnterpriseManagement.Mom.Internal.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler`1 job, Object sender, ConsoleJobEventArgs args)
+   <pre>
+   __Date:__ 2/1/2022 1:29:19 PM 
+   __Application:__ Operations Manager 
+   __Application Version:__ 10.19.10505.0 
+   __Severity:__ Error 
+   __Message:__ 
+   System.Xml.XmlException: Data at the root level is invalid. Line 1, position 1. 
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e) 
+   at System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace() 
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent() 
+   at System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace) 
+   at System.Xml.XmlDocument.Load(XmlReader reader) 
+   at System.Xml.XmlDocument.LoadXml(String xml)  
+   at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. DeserializeToScxRunAsAccount(ScxCredentialRef credentialRef) 
+   at System.Linq.Enumerable.WhereSelectListIterator\`2.MoveNext() 
+   at System.Collections.Generic.List\`1..ctor(IEnumerable\`1 collection) 
+   at System.Linq.Enumerable.ToList\[TSource](IEnumerable\`1 source)  
+   at Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper. EnumerateScxRunAsAccount(IManagementGroupConnection managementGroupConnection) 
+   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountInfoFactory.EnumerateScxRunAsAccount() 
+   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.<span style="color:yellow">&lt;GetScxRunAsAccountInstances&gt;</span>b__6(Object sender, ConsoleJobEventArgs e) 
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler`1 job, Object sender, ConsoleJobEventArgs args)
+   </pre>
 
 ## Full Exception
-```
+<pre>
 DetailID = 4
 Count: 1
 Type: System.Xml.XmlException
@@ -88,7 +90,7 @@ System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.
 System.Threading.ThreadHelper.ThreadStart()
 [GCFrame]
 [DebuggerU2MCatchHandlerFrame]
-```
+</pre>
 
 ## How to Resolve
 First we ran the following Powershell command output to gather RunAs Accounts related to Unix/Linux:
