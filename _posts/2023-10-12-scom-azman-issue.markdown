@@ -120,7 +120,7 @@ First you want to verify this problem is definitely related to Authorization Man
    FROM sys.databases;
    ```
    OR \
-   You can also see the DB Owner via SQL Server Management Studio. \
+   You can also see the DB Owner via SQL Server Management Studio.
    1. Locate the Operations Manager or Operations Manager Data Warehouse Database in the Object Explorer view.
    2. Right Click the Database and select **Properties**.
    3. Click on **Files** and on the top is the DB Owner.
