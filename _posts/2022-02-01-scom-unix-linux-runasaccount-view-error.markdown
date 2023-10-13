@@ -61,7 +61,7 @@ System.Collections.Generic.List`1[[System.__Canon, mscorlib]]..ctor(System.Colle
 System.Linq.Enumerable.ToList[[System.__Canon, mscorlib]](System.Collections.Generic.IEnumerable`1&lt;System.__Canon&gt;)
 Microsoft.SystemCenter.CrossPlatform.ClientLibrary.CredentialManagement.Core.ScxRunAsAccountHelper.EnumerateScxRunAsAccount(Microsoft.SystemCenter.CrossPlatform.ClientLibrary.Common.SDKAbstraction.IManagementGroupConnection)
 Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountInfoFactory.EnumerateScxRunAsAccount()
-Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.&lt;GetScxRunAsAccountInstances&gt;b__6(System.Object, Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobEventArgs)
+Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.ScxRunAsAccountHelper.<span style="color:yellow">&lt;GetScxRunAsAccountInstances&gt;</span>b__6(System.Object, Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobEventArgs)
 Microsoft.EnterpriseManagement.Mom.Internal.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(System.ComponentModel.IComponent, System.EventHandler`1&lt;Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobEventArgs&gt;, System.Object, Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobEventArgs)
 Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobsService.RunJob(Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobDescription)
 Microsoft.EnterpriseManagement.ConsoleFramework.WindowJobsService.RunAsyncJobInThisThread(Microsoft.EnterpriseManagement.ConsoleFramework.ConsoleJobDescription)
