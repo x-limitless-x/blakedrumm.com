@@ -208,7 +208,8 @@ OR
       dbname,username ,logintype ,create_date ,modify_date
       ORDER BY DBName, username
       ```
-5. You can use the following query to edit the User Mapping for the local SQL account and remove the `db_owner` role:
+5. You can use the following query to edit the User Mapping for the local SQL account and remove the `db_owner` role: \
+   (*Example Local Account Name:* ***LocalSQLAccount*** <-- Replace with your SQL account)
     ```sql
     USE [OperationsManager];
     GO
