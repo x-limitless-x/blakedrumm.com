@@ -67,7 +67,7 @@ This script automates the process of configuring SQL Server Reporting Services (
     ```powershell
     #Author: Blake Drumm (blakedrumm@microsoft.com)
     #Date Created: 10/31/2023
-    
+    $error.Clear()
     try
     {
     	$RS = "root\Microsoft\SqlServer\ReportServer\" + (Get-CimInstance -Namespace root\Microsoft\SqlServer\ReportServer -ClassName __Namespace -ErrorAction Stop | Select-Object -First 1).Name
@@ -82,7 +82,7 @@ This script automates the process of configuring SQL Server Reporting Services (
     }
     catch
     {
-    	Write-Host "An error occurred: $_" -ForegroundColor Red
+    	Write-Host "An error occurred: $error" -ForegroundColor Red
     	return
     }
     
