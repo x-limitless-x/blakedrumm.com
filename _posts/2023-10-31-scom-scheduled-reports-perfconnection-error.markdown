@@ -87,14 +87,22 @@ The issue described in the Symptoms section occurs when the below element is mis
     {
     	Write-Host "Failed to get Management Group ID." -ForegroundColor Red
     	return
-      #exit 1
     }
     
-    # Path to ReportingServicesService.exe.config
-    $configPath = Split-Path $SSRSConfigPath
+    $SSRSParentDirectory = Split-Path $SSRSConfigPath
     
+    $error.Clear()
+    try
+    {
+    # Path to ReportingServicesService.exe.config
+    $configPath = (Resolve-Path "$SSRSParentDirectory\bin\ReportingServicesService.exe.config" -ErrorAction Stop).Path
+    }
+    catch
+    {
+    	Write-Warning "Unable to access '$SSRSParentDirectory\bin\ReportingServicesService.exe.config' : $error"
+    }
     # Load the XML content of the config file
-    [xml]$configXml = Get-Content -Path "$configPath\bin\ReportingServicesService.exe.config"
+    [xml]$configXml = Get-Content -Path $configPath
     
     # Check if the appSettings element already exists and has the correct ManagementGroupId
     $appSettings = $configXml.SelectSingleNode("/configuration/appSettings/add[@key='ManagementGroupId']")
@@ -130,7 +138,6 @@ The issue described in the Symptoms section occurs when the below element is mis
     Restart-Service -Name $RSInfo.ServiceName
     
     Write-Host "Configuration updated successfully." -ForegroundColor Green
-    
     ```
 
 ### Manual Method
