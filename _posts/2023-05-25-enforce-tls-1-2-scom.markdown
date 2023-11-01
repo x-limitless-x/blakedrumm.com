@@ -72,8 +72,13 @@ _or_ \
 >```
 
 ## Check TLS Configuration
-You can run the following PowerShell script to gather your current TLS configuration: \
-[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1)
+You can run the following PowerShell script to gather your current TLS configuration:
+### How to get it
+[Get-TLSRegistryKeys.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1) :arrow_left: **Direct Download Link** \
+_or_ \
+[Personal File Server - Get-TLSRegistryKeys.ps1](https://files.blakedrumm.com/Get-TLSRegistryKeys.ps1) :arrow_left: **Alternative Download Link** \
+_or_ \
+[Personal File Server - Get-TLSRegistryKeys.txt](https://files.blakedrumm.com/Get-TLSRegistryKeys.txt) :arrow_left: **Text Format Alternative Download Link**
 
 ![Script example showing how TLS is configured](/assets/img/posts/check-tlssettings.png){:class="img-fluid"}
 
