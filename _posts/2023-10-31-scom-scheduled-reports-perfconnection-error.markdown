@@ -87,6 +87,7 @@ The issue described in the Symptoms section occurs when the below element is mis
     {
     	Write-Host "Failed to get Management Group ID." -ForegroundColor Red
     	return
+    	#exit 1
     }
     
     $SSRSParentDirectory = Split-Path $SSRSConfigPath
@@ -94,12 +95,14 @@ The issue described in the Symptoms section occurs when the below element is mis
     $error.Clear()
     try
     {
-    # Path to ReportingServicesService.exe.config
-    $configPath = (Resolve-Path "$SSRSParentDirectory\bin\ReportingServicesService.exe.config" -ErrorAction Stop).Path
+    	# Path to ReportingServicesService.exe.config
+    	$configPath = (Resolve-Path "$SSRSParentDirectory\bin\ReportingServicesService.exe.config" -ErrorAction Stop).Path
     }
     catch
     {
     	Write-Warning "Unable to access '$SSRSParentDirectory\bin\ReportingServicesService.exe.config' : $error"
+    	return
+    	#exit 1
     }
     # Load the XML content of the config file
     [xml]$configXml = Get-Content -Path $configPath
