@@ -37,7 +37,101 @@ The issue described in the Symptoms section occurs when the below element is mis
 ## :wrench: Resolution
 
 ### PowerShell Automatic Method
-1. 
+1. Run the following script on your System Center Operations Manager Reporting Server. Be sure the PowerShell window is opened as Administrator and you have rights to query the Operations Manager Data Warehouse Database:
+    ```powershell
+    #Author: Blake Drumm (blakedrumm@microsoft.com)
+    #Date Created: 10/31/2023
+    
+    try
+    {
+    	$RS = "root\Microsoft\SqlServer\ReportServer\" + (Get-CimInstance -Namespace root\Microsoft\SqlServer\ReportServer -ClassName __Namespace -ErrorAction Stop | Select-Object -First 1).Name
+    	$RSV = $RS + "\" + (Get-CimInstance -Namespace $RS -ClassName __Namespace -ErrorAction Stop | Select-Object -First 1).Name + "\Admin"
+    	$RSInfo = Get-CimInstance -Namespace $RSV -ClassName MSReportServer_ConfigurationSetting -ErrorAction Stop
+    	
+    	# Output or use $RSInfo as needed
+    	$SSRSConfigPath = $RSInfo.PathName
+    	
+    	$DWDBInfo = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\System Center Operations Manager\12\Reporting' -ErrorAction Stop | Select-Object DWDBInstance, DWDBName
+    	
+    }
+    catch
+    {
+    	Write-Host "An error occurred: $_" -ForegroundColor Red
+    	return
+    }
+    
+    # User-defined SQL Server Instance for the Operations Manager database
+    $SQLInstance = $DWDBInfo.DWDBInstance
+    $DatabaseName = $DWDBInfo.DWDBName
+    
+    # Get the Management Group ID using SQL query
+    $connectionString = "Server=$SQLInstance;Database=$DatabaseName;Integrated Security=True;"
+    $connection = New-Object System.Data.SqlClient.SqlConnection
+    $connection.ConnectionString = $connectionString
+    $connection.Open()
+    
+    $command = $connection.CreateCommand()
+    $command.CommandText = "SELECT ManagementGroupGuid from vManagementGroup"
+    $reader = $command.ExecuteReader()
+    
+    $managementGroupId = $null
+    if ($reader.Read())
+    {
+    	$managementGroupId = $reader["ManagementGroupGuid"]
+    }
+    $reader.Close()
+    $connection.Close()
+    
+    # Check if we got the Management Group ID
+    if ($null -eq $managementGroupId)
+    {
+    	#Write-Host "Failed to get Management Group ID."
+    	Write-Host "Failed to get Management Group ID." -ForegroundColor Red
+    	return
+    }
+    
+    # Path to ReportingServicesService.exe.config
+    $configPath = Split-Path $SSRSConfigPath
+    
+    # Load the XML content of the config file
+    [xml]$configXml = Get-Content -Path "$configPath\bin\ReportingServicesService.exe.config"
+    
+    # Check if the appSettings element already exists and has the correct ManagementGroupId
+    $appSettings = $configXml.SelectSingleNode("/configuration/appSettings/add[@key='ManagementGroupId']")
+    if ($null -ne $appSettings -and $appSettings.GetAttribute("value") -eq $managementGroupId)
+    {
+    	Write-Host "Configuration is already up to date." -ForegroundColor Green
+    	return
+    	#exit 0
+    }
+    
+    # Create a backup of the existing config file
+    Copy-Item -Path $configPath -Destination "$configPath.bak"
+    
+    # Update or create the appSettings element
+    if ($null -ne $appSettings)
+    {
+    	$appSettings.SetAttribute("value", $managementGroupId)
+    }
+    else
+    {
+    	$appSettings = $configXml.CreateElement("appSettings")
+    	$addKey = $configXml.CreateElement("add")
+    	$addKey.SetAttribute("key", "ManagementGroupId")
+    	$addKey.SetAttribute("value", $managementGroupId)
+    	$appSettings.AppendChild($addKey)
+    	$configXml.SelectSingleNode("/configuration").AppendChild($appSettings)
+    }
+    
+    # Save the modified XML back to the config file
+    $configXml.Save($configPath)
+    
+    # Restart the SQL Server Reporting Services service
+    Restart-Service -Name $RSInfo.ServiceName
+    
+    Write-Host "Configuration updated successfully." -ForegroundColor Green
+    
+    ```
 
 ### Manual Method
 To resolve the issue, edit the SSRS configuration file to add a valid `<appSettings>` element.
