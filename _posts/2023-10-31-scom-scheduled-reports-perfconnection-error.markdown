@@ -18,9 +18,6 @@ permalink: /blog/scheduled-reports-perfconnection-error/
 
 In SCOM 2016 or SCOM 2019, scheduled reports fail to run. If you check report status by opening the Scheduled Reports view in the Operations Console, the status message says, “Default value or value provided for the report parameter 'PerfConnectionString' is not a valid value.”
 
-Example screenshot: \
-![Screenshot of issue](/assets/img/posts/scom-reports-perfconnection-error.png){:class="img-fluid"}
-
 ## :bulb: Cause
 
 This can occur if the `<appSettings>` element is missing from the SQL Server Reporting Services (SSRS) configuration file.
