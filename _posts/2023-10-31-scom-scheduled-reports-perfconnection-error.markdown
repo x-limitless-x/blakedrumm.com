@@ -37,6 +37,32 @@ The issue described in the Symptoms section occurs when the below element is mis
 ## :wrench: Resolution
 
 ### PowerShell Automatic Method
+#### What Does This PowerShell Script Do?
+
+This script automates the process of configuring SQL Server Reporting Services (SSRS) in a System Center Operations Manager (SCOM) environment. Below are the key steps:
+
+##### Step 1: Gather System Information
+- **Fetch SSRS Info**: Gathers essential details about the SSRS installation using Windows Management Instrumentation (WMI).
+- **Fetch SCOM Info**: Retrieves System Center Operations Manager Data Warehouse database settings from the Windows registry.
+
+##### Step 2: Fetch Management Group ID
+- **SQL Connection**: Establishes a connection to the System Center Operations Manager Data Warehouse database.
+- **Fetch ID**: Executes a SQL query to obtain the Management Group ID.
+
+##### Step 3: Locate and Check the Configuration File
+- **Locate Config**: Determines the path of the SSRS configuration file (`ReportingServicesService.exe.config`).
+- **Check Config**: Checks if the configuration file already contains the correct Management Group ID.
+
+##### Step 4: Update Configuration
+- **Backup Config**: Creates a backup of the original configuration file.
+- **Update Config**: If necessary, updates the SSRS configuration file with the new Management Group ID.
+
+##### Step 5: Finalize Changes
+- **Save Changes**: Saves the updated configuration.
+- **Restart Service**: Restarts the SSRS service to apply the changes.
+
+---
+
 1. Run the following script on your System Center Operations Manager Reporting Server. Be sure the PowerShell window is opened as Administrator and you have rights to query the Operations Manager Data Warehouse Database:
     ```powershell
     #Author: Blake Drumm (blakedrumm@microsoft.com)
