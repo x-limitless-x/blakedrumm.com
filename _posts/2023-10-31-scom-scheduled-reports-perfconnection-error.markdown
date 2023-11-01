@@ -37,6 +37,9 @@ The issue described in the Symptoms section occurs when the below element is mis
 ## :wrench: Resolution
 
 ### PowerShell Automatic Method
+
+---
+
 #### What Does This PowerShell Script Do?
 
 This script automates the process of configuring SQL Server Reporting Services (SSRS) in a System Center Operations Manager (SCOM) environment. Below are the key steps:
