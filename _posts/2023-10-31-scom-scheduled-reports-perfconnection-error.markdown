@@ -2,7 +2,7 @@
 layout: post
 date:   '2023-10-31 17:54:02 -0500'
 title:  "SCOM Scheduled Reports Fail with PerfConnectionString Error"
-categories: troubleshooting guides operationsManager
+categories: troubleshooting guides operationsManager powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-reports-perfconnection-error.png
 toc: true
