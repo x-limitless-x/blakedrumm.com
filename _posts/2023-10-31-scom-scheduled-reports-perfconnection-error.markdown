@@ -29,13 +29,17 @@ By default, this configuration file is in the following folder on the SCOM Repor
 The issue described in the Symptoms section occurs when the below element is missing from the configuration file:
 
    ```xml
-   <appSettings>
-   <add key="ManagementGroupId" value="management_group_GUID" />
-   </appSettings>
+  <appSettings>
+  	<add key="ManagementGroupId" value="management_group_GUID"/>
+  </appSettings>
    ```
 
 ## :wrench: Resolution
 
+### PowerShell Automatic Method
+1. 
+
+### Manual Method
 To resolve the issue, edit the SSRS configuration file to add a valid `<appSettings>` element.
 
 The following are the steps:
@@ -55,24 +59,24 @@ The following are the steps:
 4. Add the following element to the file immediately before the closing `</configuration>` tag:
 
    ```xml
-   <appSettings>
-   <add key="ManagementGroupId" value="management_group_GUID" />
-   </appSettings>
+    <appSettings>
+      <add key="ManagementGroupId" value="management_group_GUID"/>
+    </appSettings>
    ```
 
    In the above XML, replace `management_group_GUID` with the management group ID you obtained in Step 1.
 
    For example, the element will look like the following:
 
-   ```xml
-   <startup useLegacyV2RuntimeActivationPolicy="true">
-   <supportedRuntime version="v4.0" />
-   </startup>
-   <appSettings>
-   <add key="ManagementGroupId" value="7f263180-e7d2-9c12-a1cd-0c6c54a7341c" />
-   </appSettings>
-   </configuration>
-   ```
+    ```xml
+    <startup useLegacyV2RuntimeActivationPolicy="true">
+    	<supportedRuntime version="v4.0"/>
+    </startup>
+    <appSettings>
+    	<add key="ManagementGroupId" value="7f263180-e7d2-9c12-a1cd-0c6c54a7341c"/>
+    </appSettings>
+    </configuration>
+    ```
 
 5. Save the configuration file.
 6. Restart the SQL Server Reporting Services service.
