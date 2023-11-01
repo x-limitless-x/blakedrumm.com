@@ -85,9 +85,9 @@ The issue described in the Symptoms section occurs when the below element is mis
     # Check if we got the Management Group ID
     if ($null -eq $managementGroupId)
     {
-    	#Write-Host "Failed to get Management Group ID."
     	Write-Host "Failed to get Management Group ID." -ForegroundColor Red
     	return
+      #exit 1
     }
     
     # Path to ReportingServicesService.exe.config
