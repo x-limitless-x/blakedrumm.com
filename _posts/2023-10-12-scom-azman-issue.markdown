@@ -158,7 +158,10 @@ OR
    You will see the following pop-up: \
    `Cannot open the authorization store. The following problem occurred: The security ID structure is invalid.` \
    ![AzMan Set Store Error Example](/assets/img/posts/azman-set-store.png){:class="img-fluid"}
-4. Run the following query to determine the DB Owner for the databases:
+
+## :mag: Find and fix the issue in SQL
+
+1. Run the following query to determine the DB Owner for the databases:
    ```sql
    SELECT name AS DatabaseName, SUSER_SNAME(owner_sid) AS DatabaseOwner
    FROM sys.databases;
@@ -208,7 +211,7 @@ OR
       dbname,username ,logintype ,create_date ,modify_date
       ORDER BY DBName, username
       ```
-5. You can use the following query to edit the User Mapping for the local SQL account and remove the `db_owner` role: \
+2. You can use the following query to edit the User Mapping for the local SQL account and remove the `db_owner` role: \
    (*Example Local Account Name:* ***LocalSQLAccount*** <-- Replace with your SQL account)
     ```sql
     USE [OperationsManager];
@@ -222,7 +225,7 @@ OR
     2. Go to **User Mapping** and select the Operations Manager or Operations Manager Data Warehouse database.
     3. Scroll in the **Database role membership** panel until you see `db_owner`, uncheck it and press **OK**. \
        ![SQL Server Management Studio - User Mapping for Local SQL User](/assets/img/posts/sql-db-owner-usermapping.png){:class="img-fluid"}
-6. Restart the **System Center Operations Manager Data Access Service** (omsdk) on the Management Servers:
+3. Restart the **System Center Operations Manager Data Access Service** (omsdk) on the Management Servers:
    ```powershell
    Restart-Service -Name OMSDK
    ```
