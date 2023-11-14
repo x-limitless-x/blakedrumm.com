@@ -23,9 +23,9 @@ Today I encountered an issue where SCOM fails to generate a certificate for Unix
 >Module: SCXCertWriteAction \
 >Location: DoProcess \
 >Exception type: ScxCertLibException \
->Exception message: <span style="color:yellow">Unable to create certificate context \
->; {ASN1 bad tag value met. \
->} \
+>Exception message: <span style="color:yellow">Unable to create certificate context <br>
+>; {ASN1 bad tag value met. <br>
+>}
 ></span> \
 >Additional data: Sudo path: /etc/opt/microsoft/scx/conf/sudodir/
 >
