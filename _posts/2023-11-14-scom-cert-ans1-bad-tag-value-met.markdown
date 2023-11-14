@@ -32,7 +32,7 @@ Today I encountered an issue where SCOM fails to generate a certificate for Unix
 >Management group: SCOM2019 \
 >Workflow name: Microsoft.Unix.Agent.GetCert.Task \
 >Object name: UNIX/Linux Resource Pool \
->Object ID: {7B5B80D1-5C4A-6643-762D-60F46FB70CB8} \
+>Object ID: {7B5B80D1-5C4A-6643-762D-60F46FB70CB8}
 
 ---
 
