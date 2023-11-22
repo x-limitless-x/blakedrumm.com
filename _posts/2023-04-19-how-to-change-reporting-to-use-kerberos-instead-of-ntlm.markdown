@@ -248,7 +248,7 @@ Set-KerberosAESEncryption -UserNames "OMDAS", "OMRead" -EnableEncryption
 
 ## :memo: Restart SSRS Service
 
-- The following script allows you to restart the SSRS Service:
+The following script allows you to restart the SSRS Service:
   ```powershell
   $RS = "root\Microsoft\SqlServer\ReportServer\" + ((Get-CimInstance -Namespace 'root\Microsoft\SqlServer\ReportServer' -ClassName __Namespace).CimInstanceProperties).Value | Select-Object -First 1
   $RSV = $RS + "\" + (Get-CimInstance -Namespace $RS -ClassName __Namespace -ErrorAction Stop | Select-Object -First 1).Name + "\Admin"
