@@ -100,6 +100,8 @@ Using RSWindowsNegotiate will result in a Kerberos authentication error if you c
   setspn -l $RSInfo.WindowsServiceIdentityActual
   ```
 
+---
+
 ## :raccoon: Set the Kerberos AES Encryption Support
 Enable "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
 
@@ -235,6 +237,8 @@ function Set-KerberosAESEncryption {
 # Example usage of the function
 Set-KerberosAESEncryption -UserNames "OMDAS", "OMRead" -EnableEncryption
 ```
+
+---
 
 ## :memo: Restart SSRS Service
 
