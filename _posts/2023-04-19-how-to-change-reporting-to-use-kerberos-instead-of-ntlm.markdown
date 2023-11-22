@@ -100,10 +100,10 @@ Using RSWindowsNegotiate will result in a Kerberos authentication error if you c
   setspn -l $RSInfo.WindowsServiceIdentityActual
   ```
 
-## :raccoon: Set the Kerberos AES Encryption
+## :raccoon: Set the Kerberos AES Encryption Support
 Enable "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
 
-### :memo: Manually set the Kerberos AES Encryption
+### :memo: Manually set the Kerberos AES Encryption Support
 1. Open a run box (**Windows Key + R**).
 2. Type in `dsa.msc` and press Enter.
 3. Select the domain, right click and select **Find**.
@@ -112,7 +112,7 @@ Enable "This account supports Kerberos AES 128 bit encryption." and "This accoun
 6. Scroll down in the **Account options:** section and locate "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
    ![Example of Kerberos AES encryption support checkboxes](/assets/img/posts/kerberos-aes-encryption.png){:class="img-fluid"}
 
-### :zap: Set the Kerberos AES Encryption via PowerShell
+### :zap: Set the Kerberos AES Encryption Support via PowerShell
 Enable Kerberos AES Encryption for **OMDAS** (Data Access Service Account) and **OMRead** (Data Reader account) via PowerShell, you only have to modify the bottom line in the below script to your UserNames:
 ```powershell
 <#
