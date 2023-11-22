@@ -100,7 +100,140 @@ Using RSWindowsNegotiate will result in a Kerberos authentication error if you c
   setspn -l $RSInfo.WindowsServiceIdentityActual
   ```
 
-### :memo: Restart SSRS Service
+## :raccoon: Set the Kerberos AES Encryption
+Enable "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
+
+### :memo: Manually set the Kerberos AES Encryption
+1. Open a run box (**Windows Key + R**).
+2. Type in `dsa.msc` and press Enter.
+3. Select the domain, right click and select **Find**.
+4. Locate the Service Account for your Data Reader Account and Data Access Service Account.
+5. Open the properties and go to the Account Tab.
+6. Scroll down in the **Account options:** section and locate "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
+   ![Example of Kerberos AES encryption support checkboxes](/assets/img/posts/kerberos-aes-encryption.png){:class="img-fluid"}
+
+### :zap: Set the Kerberos AES Encryption via PowerShell
+Enable Kerberos AES Encryption for **OMDAS** (Data Access Service Account) and **OMRead** (Data Reader account) via PowerShell, you only have to modify the bottom line in the below script to your UserNames:
+```powershell
+<#
+.SYNOPSIS
+This PowerShell script is designed to manage Kerberos AES encryption settings for specified user accounts in Active Directory.
+
+.DESCRIPTION
+The Set-KerberosAESEncryption function enables or disables Kerberos Advanced Encryption Standard (AES) 128-bit and 256-bit encryption for given Active Directory user accounts. It provides options to either enable or disable these encryption settings based on the provided parameters.
+
+The script uses the System.DirectoryServices.AccountManagement namespace for accessing and modifying the properties of Active Directory user accounts. It updates the 'msDS-SupportedEncryptionTypes' property to set or unset AES 128 and AES 256 encryption types.
+
+.PARAMETERS
+- UserNames: An array of user account names (strings) in Active Directory for which the encryption settings will be modified.
+- EnableEncryption: A switch parameter. When used, the script sets the Kerberos AES 128 and 256-bit encryption for the specified user accounts.
+- DisableEncryption: A switch parameter. When used, the script unsets the Kerberos AES 128 and 256-bit encryption for the specified user accounts.
+
+.OUTPUT
+The script outputs a table with the following columns for each user account processed:
+- UserName: The name of the user account.
+- PreviousEncryptionTypes: The encryption types (AES 128, AES 256, both, or Not Set) before the script execution.
+- UpdatedEncryptionTypes: The encryption types after the script execution.
+- UpdateApplied: Indicates whether an update was applied ('Yes' or 'No').
+
+.EXAMPLE
+To enable Kerberos AES encryption for users 'OMDAS' and 'OMRead':
+Set-KerberosAESEncryption -UserNames @("OMDAS", "OMRead") -EnableEncryption
+
+.EXAMPLE
+To disable Kerberos AES encryption for users 'OMDAS' and 'OMRead':
+Set-KerberosAESEncryption -UserNames @("OMDAS", "OMRead") -DisableEncryption
+
+.NOTES
+Ensure you have appropriate permissions to modify user properties in Active Directory before running this script. It's recommended to test the script in a non-production environment first.
+
+#>
+# Add required assembly references
+Add-Type -AssemblyName System.DirectoryServices.AccountManagement
+
+# Function to manage Kerberos AES encryption settings
+function Set-KerberosAESEncryption {
+    param (
+        [string[]]$UserNames,
+        [switch]$EnableEncryption,
+        [switch]$DisableEncryption
+    )
+
+    # Define encryption type values
+    $AES128 = 0x08
+    $AES256 = 0x10
+
+    # Combine AES 128 and AES 256 bit encryption support
+    $newEncryptionTypes = $AES128 -bor $AES256
+
+    # Function to convert encryption type value to readable format
+    function ConvertTo-EncryptionTypeName {
+        param ($encryptionTypeValue)
+        switch ($encryptionTypeValue) {
+            0       { "Not Set" }
+            0x08   { "AES 128" }
+            0x10   { "AES 256" }
+            24     { "AES 128, AES 256" }
+            Default { "Unknown" }
+        }
+    }
+
+    # Initialize an array to store output data
+    $outputData = @()
+
+    foreach ($userName in $UserNames) {
+        try {
+            # Create a principal context for the domain
+            $context = New-Object System.DirectoryServices.AccountManagement.PrincipalContext([System.DirectoryServices.AccountManagement.ContextType]::Domain)
+
+            # Find the user
+            $user = [System.DirectoryServices.AccountManagement.UserPrincipal]::FindByIdentity($context, $userName)
+
+            if ($user -ne $null) {
+                # Access the underlying DirectoryEntry
+                $de = $user.GetUnderlyingObject()
+
+                # Get current encryption types
+                $currentEncryptionTypes = $de.Properties["msDS-SupportedEncryptionTypes"].Value
+                $currentEncryptionTypes = if ($currentEncryptionTypes -ne $null) { $currentEncryptionTypes -as [int] } else { 0 }
+
+                # Determine if update is needed
+                $changeNeeded = ($EnableEncryption -and $currentEncryptionTypes -ne $newEncryptionTypes) -or
+                                ($DisableEncryption -and $currentEncryptionTypes -ne 0)
+
+                # Update encryption types if needed
+                if ($changeNeeded) {
+                    $de.Properties["msDS-SupportedEncryptionTypes"].Value = if ($EnableEncryption) { $newEncryptionTypes } else { $null }
+                    $de.CommitChanges()
+                }
+
+                # Add data to the output array
+                $updatedEncryptionTypes = $de.Properties["msDS-SupportedEncryptionTypes"].Value
+                $updatedEncryptionTypes = if ($updatedEncryptionTypes -ne $null) { $updatedEncryptionTypes -as [int] } else { 0 }
+
+                $outputData += New-Object PSObject -Property @{
+                    UserName = $userName
+                    PreviousEncryptionTypes = ConvertTo-EncryptionTypeName -encryptionTypeValue $currentEncryptionTypes
+                    UpdatedEncryptionTypes = ConvertTo-EncryptionTypeName -encryptionTypeValue $updatedEncryptionTypes
+                    UpdateApplied = if ($changeNeeded) { "Yes" } else { "No" }
+                }
+            } else {
+                Write-Warning "User $userName not found."
+            }
+        } catch {
+            Write-Host "Error updating user $userName`: $_"
+        }
+    }
+
+    # Output the results in a single table
+    $outputData | Format-Table -AutoSize
+}
+
+# Example usage of the function
+Set-KerberosAESEncryption -UserNames "OMDAS", "OMRead" -EnableEncryption
+```
+
+## :memo: Restart SSRS Service
 
 - The following script allows you to restart the SSRS Service:
   ```powershell
