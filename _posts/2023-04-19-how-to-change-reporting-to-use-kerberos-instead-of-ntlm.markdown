@@ -112,7 +112,8 @@ Enable "This account supports Kerberos AES 128 bit encryption." and "This accoun
 4. Locate the Service Account for your **Data Reader Account** and **Data Access Service Account**.
 5. Open the properties and go to the Account Tab.
 6. Scroll down in the **Account options:** section and locate "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption." \
-   ![Example of Kerberos AES encryption support checkboxes](/assets/img/posts/kerberos-aes-encryption.png){:class="img-fluid"}
+   ![Example of Kerberos AES encryption support checkboxes (OMRead)](/assets/img/posts/kerberos-aes-encryption.png){:class="img-fluid"} \
+   ![Example of Kerberos AES encryption support checkboxes (OMDAS)](/assets/img/posts/kerberos-aes-encryption-2.png){:class="img-fluid"}
 
 ### :zap: Set the Kerberos AES Encryption Support via PowerShell
 Enable Kerberos AES Encryption for **OMDAS** (Data Access Service Account) and **OMRead** (Data Reader account) via PowerShell, you only have to modify the bottom line in the below script to your UserNames:
