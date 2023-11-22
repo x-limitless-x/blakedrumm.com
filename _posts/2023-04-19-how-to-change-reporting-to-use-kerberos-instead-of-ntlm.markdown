@@ -164,6 +164,12 @@ function Set-KerberosAESEncryption {
         [switch]$DisableEncryption
     )
 
+    if (-NOT $EnableEncryption -and -NOT $DisableEncryption)
+    {
+        Write-Warning "Missing required parameter: -EnableEncryption OR -DisableEncryption"
+        break
+    }
+
     # Define encryption type values
     $AES128 = 0x08
     $AES256 = 0x10
