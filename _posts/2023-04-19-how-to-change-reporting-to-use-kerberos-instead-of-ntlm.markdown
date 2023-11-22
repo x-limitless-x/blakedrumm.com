@@ -107,7 +107,7 @@ Enable "This account supports Kerberos AES 128 bit encryption." and "This accoun
 1. Open a run box (**Windows Key + R**).
 2. Type in `dsa.msc` and press Enter.
 3. Select the domain, right click and select **Find**.
-4. Locate the Service Account for your Data Reader Account and Data Access Service Account.
+4. Locate the Service Account for your **Data Reader Account** and **Data Access Service Account**.
 5. Open the properties and go to the Account Tab.
 6. Scroll down in the **Account options:** section and locate "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
    ![Example of Kerberos AES encryption support checkboxes](/assets/img/posts/kerberos-aes-encryption.png){:class="img-fluid"}
