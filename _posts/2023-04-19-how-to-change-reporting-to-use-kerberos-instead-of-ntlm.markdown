@@ -113,6 +113,7 @@ Enable "This account supports Kerberos AES 128 bit encryption." and "This accoun
 5. Open the properties and go to the Account Tab.
 6. Scroll down in the **Account options:** section and locate "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption." \
    ![Example of Kerberos AES encryption support checkboxes (OMRead)](/assets/img/posts/kerberos-aes-encryption.png){:class="img-fluid"} \
+   &nbsp; \
    ![Example of Kerberos AES encryption support checkboxes (OMDAS)](/assets/img/posts/kerberos-aes-encryption-2.png){:class="img-fluid"}
 
 ### :zap: Set the Kerberos AES Encryption Support via PowerShell
