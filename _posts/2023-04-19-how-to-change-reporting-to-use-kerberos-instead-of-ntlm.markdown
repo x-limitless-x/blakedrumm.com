@@ -102,7 +102,7 @@ Using RSWindowsNegotiate will result in a Kerberos authentication error if you c
 
 ---
 
-## :raccoon: Set the Kerberos AES Encryption Support
+## :closed_lock_with_key: Set the Kerberos AES Encryption Support
 Enable "This account supports Kerberos AES 128 bit encryption." and "This account supports Kerberos AES 256 bit encryption."
 
 ### :memo: Manually set the Kerberos AES Encryption Support
