@@ -147,6 +147,9 @@ Set-KerberosAESEncryption -UserNames @("OMDAS", "OMRead") -DisableEncryption
 .NOTES
 Ensure you have appropriate permissions to modify user properties in Active Directory before running this script. It's recommended to test the script in a non-production environment first.
 
+  Author: Blake Drumm (blakedrumm@microsoft.com)
+  Date Created: November 21st, 2023
+
 #>
 # Add required assembly references
 Add-Type -AssemblyName System.DirectoryServices.AccountManagement
