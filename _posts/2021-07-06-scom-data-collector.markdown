@@ -49,7 +49,7 @@ This tool was designed to assist with troubleshooting complex System Center Oper
 2. Open an Powershell shell __as Adminstrator__ and change to the directory the SCOM Data Collector Powershell Script is located, such as:
    ```powershell
    cd C:\Data Collector
-   .\DataCollector-v3.8.5.ps1
+   .\DataCollector-v4.0.0.ps1
    ```
 
  >### :o: Optional
