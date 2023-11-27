@@ -104,7 +104,7 @@ This script has the ability to gather the following information:
 Every Switch Available:
 
 ```powershell
-.\DataCollector.ps1 -All -AssumeYes -CaseNumber <string> -CheckCertificates -CheckGroupPolicy -CheckPorts -CheckTLS -ExportMPs -GenerateHTML -GetConfiguration -GetEventLogs -GetInstalledSoftware -GetInstallLogs -GetLocalSecurity -GetNotificationSubscriptions -GetRulesAndMonitors -GetRunAsAccounts -GetSPN -GPResult -LeastAmount -ManagementServers <array> -MSInfo32 -NoSQLPermission -PingAll -SCXAgents <array> -SCXPassword <string> -SCXUsername <string> -Servers <array> -SkipConnectivityTests -SkipGeneralInformation -SkipSQLQueries -SQLLogs -SQLOnly
+.\DataCollector.ps1 -All -ManagementServers "<array>" -Servers "<array>" -AdditionalEventLogs "<array>" -GetRulesAndMonitors -GetRunAsAccounts -CheckTLS -CheckCertificates -GetEventLogs -ExportMPs -GPResult -SQLLogs -CheckPorts -GetLocalSecurity -GetInstalledSoftware -GetSPN -AssumeYes -GetConfiguration -CheckGroupPolicy -GetInstallLogs -SkipSQLQueries -SQLOnly -SQLOnlyOpsDB -SQLOnlyDW -BuildPipeline -CaseNumber "<string>" -ExportSCXCertificates -ExportMSCertificates -GenerateHTML -GetNotificationSubscriptions -GetUserRoles -LeastAmount -MSInfo32 -NoSQLPermission -PingAll -SCXAgents "<array>" -SCXUsername "<string>" -SCXMaintenanceUsername "<string>" -SCXMonitoringUsername "<string>" -SkipBestPracticeAnalyzer -SkipConnectivityTests -SkipGeneralInformation -SQLLogs
 ```
 
 
