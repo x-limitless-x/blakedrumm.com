@@ -11,7 +11,7 @@ summary: >- # this means to ignore newlines
   Troubleshooting a SCOM issue where the certificate generation fails with an ASN1 bad tag value met error. This guide provides steps to diagnose and resolve the issue.
 
 keywords: scom, unix, linux, certificate, troubleshooting
-permalink: /blog/scom-cert-issue/
+permalink: /blog/scom-cert-ans1-bad-tag-value-met/
 ---
 ## :book: Introduction
 Today I encountered an issue where SCOM fails to generate a certificate for Unix/Linux agents with an error message stating "ASN1 bad tag value met".
@@ -74,7 +74,7 @@ Today I encountered an issue where SCOM fails to generate a certificate for Unix
 
 Leave some feedback if this helped you! :v:
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-cert-issue/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/scom-cert-ans1-bad-tag-value-met/)
 
 <!--
 ## Welcome to GitHub Pages
