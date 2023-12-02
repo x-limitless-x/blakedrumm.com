@@ -4,7 +4,7 @@ date: '2023-11-14 14:33:27 -0500'
 title: "SCOM Certificate Error - ASN1 Bad Tag Value Met"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
-thumbnail: /assets/img/posts/scom-ans1-bad-tag-value-met.png
+thumbnail: /assets/img/posts/scom-asn1-bad-tag-value-met.png
 toc: true
 
 summary: >- # this means to ignore newlines
