@@ -103,15 +103,19 @@ You can either run a PowerShell Script to check the AzMan connectivity or you ca
 ### PowerShell Method
 Open a PowerShell window as Administrator on the SCOM Management Server, copy and paste the below script:
 ```powershell
-try {
-    $SQLServerAddress = (Get-ItemPropertyValue -Path "HKLM:\SOFTWARE\Microsoft\System Center\2010\Common\Database" -Name "DatabaseServerName" -ErrorAction Stop)
-   }
-catch {
-    Write-Host "Error automatically gathering the SCOM SQL instance name: $($_.Exception.Message)" -ForegroundColor Red
+try
+{
+	$SQLServerAddress = (Get-ItemPropertyValue -Path "HKLM:\SOFTWARE\Microsoft\System Center\2010\Common\Database" -Name "DatabaseServerName" -ErrorAction Stop)
+	$SQLServerOpsDatabase = (Get-ItemPropertyValue -Path "HKLM:\SOFTWARE\Microsoft\System Center\2010\Common\Database" -Name "DatabaseName" -ErrorAction Stop)
+}
+catch
+{
+	Write-Host "Error automatically gathering the SCOM SQL instance name: $($_.Exception.Message)" -ForegroundColor Red
 }
 
-# Uncomment the below line to set the SQL Server manually instead of trying to automatically grab the information from the registry
+# Uncomment the below lines to set the SQL Server manually instead of trying to automatically grab the information from the registry
 # $SQLServerAddress = "SQL01-2019"
+# $SQLServerOpsDatabase = "OperationsManager"
 
 # Load the AzMan assembly
 [Reflection.Assembly]::LoadWithPartialName("AzRoles")
@@ -119,17 +123,19 @@ catch {
 # Create a new AzAuthorizationStore object
 $azStore = New-Object -ComObject AzRoles.AzAuthorizationStore
 
-try {
-    # Initialize the authorization store; replace with your SQL AzMan store connection string
-    $azStore.Initialize(0, "mssql://Driver={SQL Server};Server={$SQLServerAddress};/OperationsManager/AzmanStore")
-    Write-Host "Connection to AzMan store successful." -ForegroundColor Green
-    
-    # Optionally, list applications in the AzMan store to further verify connectivity
-    #$azStore.GetApplications() | ForEach-Object { Write-Host $_.Name }
+try
+{
+	# Initialize the authorization store; replace with your SQL AzMan store connection string
+	$azStore.Initialize(0, "mssql://Driver={SQL Server};Server={$SQLServerAddress};/$SQLServerOpsDatabase/AzmanStore")
+	Write-Host "Connection to AzMan store successful." -ForegroundColor Green
+	
+	# Optionally, list applications in the AzMan store to further verify connectivity
+	#$azStore.GetApplications() | ForEach-Object { Write-Host $_.Name }
 }
-catch {
-    # Catch any exceptions and display the error message
-    Write-Host "Connection failed: $($_.Exception.Message)" -ForegroundColor Red
+catch
+{
+	# Catch any exceptions and display the error message
+	Write-Host "Connection failed: $($_.Exception.Message)" -ForegroundColor Red
 }
 ```
 
