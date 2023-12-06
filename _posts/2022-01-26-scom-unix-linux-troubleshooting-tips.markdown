@@ -190,6 +190,7 @@ winrm e http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimna
 #### Example 1
 ##### Issue
 You may experience an error that contains the following when running the above Commands:
+
 <pre>
 WSManFault
     Message = The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:
@@ -197,7 +198,9 @@ Encountered an internal error in the SSL library.
 Error number:  -2147012721 0x80072F8F
 A security error occurred
 </pre>
+
 or this error via the Discovery Wizard:
+
 <pre>
 Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:
 Encountered an internal error in the SSL library.
