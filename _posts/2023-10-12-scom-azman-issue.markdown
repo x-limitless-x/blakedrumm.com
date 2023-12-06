@@ -158,7 +158,7 @@ OR
    ![Open Authorization Store](/assets/img/posts/azman-window-open-store.PNG){:class="img-fluid"}
 3. Select **<u>M</u>icrosoft SQL** and enter into the **Store name** text box: \
    ```
-   mssql://Driver={SQL Server};Server={SQLServer\Instance,OptionalPort};/OperationsManager/AzmanStore
+   mssql://Driver={SQL Server};Server={<SQLServer\Instance,OptionalPort>};/<OpsDatabaseName>/AzmanStore
    ```
    Press **Enter**. \
    You will see the following pop-up: \
