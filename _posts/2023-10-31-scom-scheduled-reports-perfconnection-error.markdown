@@ -1,14 +1,14 @@
 ---
 layout: post
 date:   '2023-10-31 17:54:02 -0500'
-title:  "SCOM Scheduled Reports Fail with PerfConnectionString Error"
+title:  "SCOM Scheduled Reports Fail with PerfConnectionString or StateConnectionString Error"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-reports-perfconnection-error.png
 toc: true
 
 summary: >-
-  This article explains how to resolve the 'PerfConnectionString' error that occurs when running scheduled reports in SCOM 2016 or SCOM 2019.
+  This article explains how to resolve the 'PerfConnectionString' or 'StateConnectionString' error that occurs when running scheduled reports in SCOM 2016 or SCOM 2019.
 
 keywords: scom, perfconnectionstring error, scheduled reports fail, scom 2016, scom 2019
 permalink: /blog/scheduled-reports-perfconnection-error/
@@ -16,7 +16,7 @@ permalink: /blog/scheduled-reports-perfconnection-error/
 
 ## :warning: Symptoms
 
-In SCOM 2016 or SCOM 2019, scheduled reports fail to run. If you check report status by opening the Scheduled Reports view in the Operations Console, the status message says, “Default value or value provided for the report parameter 'PerfConnectionString' is not a valid value.”
+In SCOM 2016 or SCOM 2019, scheduled reports fail to run. If you check report status by opening the Scheduled Reports view in the Operations Console, the status message says, “Default value or value provided for the report parameter 'PerfConnectionString' is not a valid value.” or “Default value or value provided for the report parameter 'StateConnectionString' is not a valid value.”
 
 ## :bulb: Cause
 
