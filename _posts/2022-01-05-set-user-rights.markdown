@@ -78,7 +78,7 @@ SeUndockPrivilege                         | Remove computer from docking station
 &nbsp;
 
 > ## :notebook: Note
-> You may edit line [437](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L437) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [500](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L500) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
 >## Add Users
