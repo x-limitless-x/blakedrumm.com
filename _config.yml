@@ -1,7 +1,7 @@
 title: Blake Drumm - Technical Blog
 subtitle: Things I find cool or interesting.
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the personal technical blog for Blake Drumm. Currently primarily focused towards Microsoft System Center Enterprise Management Products. I am an Microsoft Support Engineer on the System Center North America Support Team.
+  This is the personal technical blog for Blake Drumm. Currently primarily focused towards Microsoft System Center Enterprise Management Products. I am an Microsoft Support Escalation Engineer on the System Center North America Support Team.
 
 url: "https://blakedrumm.com" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -36,7 +36,7 @@ author_work_experiences:
             - company_name: Microsoft
               company_logo: microsoft.png
               company_url: https://microsoft.com
-              designation: Support Engineer
+              designation: Support Escalation Engineer
               description: System Center Enterprise Management Support Team
               visibility: true
 
