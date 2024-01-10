@@ -201,9 +201,9 @@ or this error via the Discovery Wizard:
 
 >Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors: \
 >Encountered an internal error in the SSL library. \
->It is possible that: \
->   1. The destination certificate is signed by another certificate authority not trusted by the management server. \
->   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>. \
+>It is possible that:
+>   1. The destination certificate is signed by another certificate authority not trusted by the management server.
+>   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>.
 >   3. The servers in the resource pool have not been configured to trust certificates signed by other servers in the pool.  
 
 ##### Resolution
