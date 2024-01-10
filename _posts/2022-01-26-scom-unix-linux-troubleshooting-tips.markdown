@@ -192,18 +192,18 @@ winrm e http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimna
 You may experience an error that contains the following when running the above Commands:
 
 >WSManFault  
->    Message = The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
->Encountered an internal error in the SSL library.  
->Error number:  -2147012721 0x80072F8F  
+>    Message = The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors: \
+>Encountered an internal error in the SSL library. \
+>Error number:  -2147012721 0x80072F8F \
 >A security error occurred
 
 or this error via the Discovery Wizard:
 
->Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
->Encountered an internal error in the SSL library.  
->It is possible that:  
->   1. The destination certificate is signed by another certificate authority not trusted by the management server.  
->   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>.  
+>Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors: \
+>Encountered an internal error in the SSL library. \
+>It is possible that: \
+>   1. The destination certificate is signed by another certificate authority not trusted by the management server. \
+>   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>. \
 >   3. The servers in the resource pool have not been configured to trust certificates signed by other servers in the pool.  
 
 ##### Resolution
@@ -236,19 +236,19 @@ Enumerate the **SCX_ProcessorStatisticalInformation** via omicli:
 ```
 
 Some OMI WMI Namespaces on the Linux Agent:
->SCX_Agent
->SCX_DiskDrive
->SCX_DiskDriveStatisticalInformation
->SCX_EthernetPortStatistics
->SCX_FileSystem
->SCX_FileSystemStatisticalInformation
->SCX_IPProtocolEndpoint
->SCX_LogFile
->SCX_MemoryStatisticalInformation
->SCX_OperatingSystem
->SCX_ProcessorStatisticalInformation
->SCX_StatisticalInformation
->SCX_UnixProcess
+>SCX_Agent \
+>SCX_DiskDrive \
+>SCX_DiskDriveStatisticalInformation \
+>SCX_EthernetPortStatistics \
+>SCX_FileSystem \
+>SCX_FileSystemStatisticalInformation \
+>SCX_IPProtocolEndpoint \
+>SCX_LogFile \
+>SCX_MemoryStatisticalInformation \
+>SCX_OperatingSystem \
+>SCX_ProcessorStatisticalInformation \
+>SCX_StatisticalInformation \
+>SCX_UnixProcess \
 >SCX_UnixProcessStatisticalInformation
 
 &nbsp;
