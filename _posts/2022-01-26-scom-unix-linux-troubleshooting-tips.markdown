@@ -190,30 +190,21 @@ winrm e http://schemas.microsoft.com/wbem/wscim/1/cim-schema/2/SCX_Agent?__cimna
 #### Example 1
 ##### Issue
 You may experience an error that contains the following when running the above Commands:
-<pre>
-WSManFault  
-    Message = The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
-Encountered an internal error in the SSL library.  
-Error number:  -2147012721 0x80072F8F  
-A security error occurred
-</pre>
+
+>WSManFault  
+>    Message = The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
+>Encountered an internal error in the SSL library.  
+>Error number:  -2147012721 0x80072F8F  
+>A security error occurred
 
 or this error via the Discovery Wizard:
 
-<pre>
-Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
-Encountered an internal error in the SSL library.  
-It is possible that:  
-   1. The destination certificate is signed by another certificate authority not trusted by the management server.  
-   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>.  
-   3. The servers in the resource pool have not been configured to trust certificates signed by other servers in the pool.  
-The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
-Encountered an internal error in the SSL library.  
-It is possible that:  
-   1. The destination certificate is signed by another certificate authority not trusted by the management server.  
-   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>.  
-   3. The servers in the resource pool have not been configured to trust certificates signed by other servers in the pool.
-</pre>
+>Agent verification failed. Error detail: The server certificate on the destination computer (<LINUXSERVERFQDN>:1270) has the following errors:  
+>Encountered an internal error in the SSL library.  
+>It is possible that:  
+>   1. The destination certificate is signed by another certificate authority not trusted by the management server.  
+>   2. The destination has an invalid certificate, e.g., its common name (CN) does not match the fully qualified domain name (FQDN) used for the connection.  The FQDN used for the connection is: <LINUXSERVERFQDN>.  
+>   3. The servers in the resource pool have not been configured to trust certificates signed by other servers in the pool.  
 
 ##### Resolution
 1. You could potentially import (**Merge**) the below known working ciphers by copying the text to a new file on your server called `example.reg`, right click and Merge the file into your registry:
@@ -221,7 +212,7 @@ It is possible that:
       Windows Registry Editor Version 5.00
 
       [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002]
-      "Functions"="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P521,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P521,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P521,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P521,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P521,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P384,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P521,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P521,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P384,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P521,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P521,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256"
+          "Functions"="TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P521,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA_P521,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA_P521,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384_P521,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256_P521,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P384,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384_P521,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256_P521,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P384,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA_P521,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA_P521,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256"
       ```
 2. An alternative to importing the above registry is to download and run [IISCrypto](https://www.nartac.com/Products/IISCrypto) and select **Best Practices**.
 
@@ -245,22 +236,20 @@ Enumerate the **SCX_ProcessorStatisticalInformation** via omicli:
 ```
 
 Some OMI WMI Namespaces on the Linux Agent:
-<pre>
-SCX_Agent
-SCX_DiskDrive
-SCX_DiskDriveStatisticalInformation
-SCX_EthernetPortStatistics
-SCX_FileSystem
-SCX_FileSystemStatisticalInformation
-SCX_IPProtocolEndpoint
-SCX_LogFile
-SCX_MemoryStatisticalInformation
-SCX_OperatingSystem
-SCX_ProcessorStatisticalInformation
-SCX_StatisticalInformation
-SCX_UnixProcess
-SCX_UnixProcessStatisticalInformation
-</pre>
+>SCX_Agent
+>SCX_DiskDrive
+>SCX_DiskDriveStatisticalInformation
+>SCX_EthernetPortStatistics
+>SCX_FileSystem
+>SCX_FileSystemStatisticalInformation
+>SCX_IPProtocolEndpoint
+>SCX_LogFile
+>SCX_MemoryStatisticalInformation
+>SCX_OperatingSystem
+>SCX_ProcessorStatisticalInformation
+>SCX_StatisticalInformation
+>SCX_UnixProcess
+>SCX_UnixProcessStatisticalInformation
 
 &nbsp;
 
