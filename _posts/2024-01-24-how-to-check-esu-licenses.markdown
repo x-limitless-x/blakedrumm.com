@@ -5,7 +5,7 @@ date:   '2024-01-24 12:00:00 -0500'
 categories: troubleshooting Azure
 author: blakedrumm
 thumbnail: /assets/img/posts/azure-arc.png
-toc: true
+toc: false
 
 summary: 'This article shows how to check the core usage of ESU licenses being used in Azure Arc with Resource Graph Explorer. A huge thank you to Brian McDermott and Sachin Panwar for the original guide creation.'
 
