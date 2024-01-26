@@ -29,34 +29,36 @@ Within the Azure Portal open [Resource Graph Explorer](https://portal.azure.com/
 
 ### :memo: Kusto Query (KQL)
 
-```kusto
+```kql
 resources
 | where type =~ "microsoft.hybridcompute/licenses"
-| extend sku = tostring(properties.licenseDetails.edition)
-| extend totalCores = tostring(properties.licenseDetails.processors)
-| extend coreType = case(
-    properties.licenseDetails.type =~ 'vCore','Virtual core',
-    properties.licenseDetails.type =~ 'pCore','Physical core',
-    'Unknown'
-)
-| extend status = tostring(properties.licenseDetails.state)
-| extend licenseId = tolower(tostring(id)) // Depending on what is stored in license profile, might have to get the immutableId instead
-| join kind=inner(
-    resources
-    | where type =~ "microsoft.hybridcompute/machines/licenseProfiles"
-    | extend machineId = tolower(tostring(trim_end(@"\/\w+\/(\w|\.)+", id)))
-    | extend licenseId = tolower(tostring(properties.esuProfile.assignedLicense))
-) on licenseId // Get count of license profile per license, a license profile is created for each machine that is assigned a license
-| join kind=inner(
+| extend sku = tostring(properties.licenseDetails.edition),
+          totalCores = toint(properties.licenseDetails.processors),
+          licenseId = tostring(id)
+| join kind=inner (
     resources
     | where type =~ "microsoft.hybridcompute/machines"
-    | extend machineId = tolower(id)
-    | extend coreCount = case(toint(properties.detectedProperties.coreCount) < 8, 8, toint(properties.detectedProperties.coreCount)) //minimum core count of 8 per VM for virtual cores
-) on machineId // Get core count by machine
-| extend coreCount = case(coreType=="Virtual core", coreCount, case(coreCount < 16, 16,coreCount)) //minimum core count of 16 per machine for physical cores
-| extend machineName = tostring(split(machineId, "/")[-1])
-| project machineName, machineId, licenseId, name, type, location, subscriptionId, resourceGroup, sku, totalCores, coreType, status, coreCount
-| summarize UsedCoreCount = sum(coreCount) by licenseId, name, type, location, subscriptionId, resourceGroup, sku, totalCores, coreType, status
+    | extend machineId = tostring(id),
+              coreCount = toint(properties.detectedProperties.coreCount)
+    | join kind=inner (
+        resources
+        | where type =~ "microsoft.hybridcompute/machines/licenseProfiles"
+        | extend machineId = tostring(trim_end(@"\/\w+\/(\w|\.)+", id)),
+                  licenseId = tostring(properties.esuProfile.assignedLicense)
+    ) on machineId
+    | extend coreType = case(
+        coreCount >= 16, 'pCore',
+        coreCount >= 8, 'vCore',
+        'Unknown'
+    )
+    | extend validCoreCount = case(
+        (coreType =~ 'pCore' and coreCount >= 16) or
+        (coreType =~ 'vCore' and coreCount >= 8), coreCount,
+        0 // Exclude cores that don't meet the criteria
+    )
+) on licenseId
+| summarize UsedCoreCount = sum(validCoreCount) by licenseId, name, type, location, subscriptionId, resourceGroup, sku, totalCores, coreType
+| where UsedCoreCount > 0
 ```
 
 
