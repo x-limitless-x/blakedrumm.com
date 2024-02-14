@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Azure
-permalink: /blog/categories/Azure/
+title: azure
+permalink: /blog/categories/azure/
 ---
 
 <h5> Posts by Category : {{ page.title }} </h5>
