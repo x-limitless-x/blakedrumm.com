@@ -2,7 +2,7 @@
 layout: post
 title:  "How to check core usage of ESU licenses - Azure Arc"
 date:   '2024-01-24 12:00:00 -0500'
-categories: troubleshooting Azure
+categories: troubleshooting azure
 author: blakedrumm
 thumbnail: /assets/img/posts/azure-arc.png
 toc: true
