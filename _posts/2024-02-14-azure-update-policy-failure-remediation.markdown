@@ -7,7 +7,7 @@ author: blakedrumm
 thumbnail: /assets/img/posts/azure-update-manager-policy-configure-periodic-checking.png
 toc: true
 
-summary: 'This guide shows you how you can mitigate an issue with the built-in Azure Update Manager Policy that utilizes Managed Identity and does not allow read access to Disk Encryption Set by default.'
+summary: 'This guide shows you how you can mitigate an issue with the built-in Azure Update Manager Policy that utilizes System Managed Identity and does not allow read access to Disk Encryption Set by default.'
 
 keywords: azure update manager, update manager policy, azure policy, automatic checking for missing updates, automatic updates azure policy
 permalink: /blog/azure-update-policy-failure-remediation/
