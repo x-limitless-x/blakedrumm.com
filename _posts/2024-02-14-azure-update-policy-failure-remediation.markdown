@@ -21,16 +21,16 @@ I had a case today were my customer was experiencing an error with the built-in 
 Failed to remediate resource: '/subscriptions/a84b857e-2f4b-4b79-8b92-c6f1093b6d4f/resourceGroups/rg-app-production/providers/Microsoft.Compute/virtualMachines/vmProdServer01'. The 'PUT' request failed with status code: 'Forbidden'. Inner Error: 'The client 'f4e3d2c1-b6a5-4f09-b8ed-9c2a3b1c9e4d' with object id 'f4e3d2c1-b6a5-4f09-b8ed-9c2a3b1c9e4d' has permission to perform action 'Microsoft.Compute/virtualMachines/write' on scope '/subscriptions/a84b857e-2f4b-4b79-8b92-c6f1093b6d4f/resourceGroups/rg-app-production/providers/Microsoft.Compute/virtualMachines/vmProdServer01'; however, <span style="color:yellow">it does not have permission to perform action(s) 'Microsoft.Compute/diskEncryptionSets/read' on the linked scope(s) '/subscriptions/a84b857e-2f4b-4b79-8b92-c6f1093b6d4f/resourceGroups/rg-encryption-keys/providers/Microsoft.Compute/diskEncryptionSets/desProdKeySet'</span> (respectively) or the linked scope(s) are invalid.', Correlation Id: '9e2d4b3c-a1b2-c3d4-e5f6-7g8h9i0j1k2l'.
 </pre>
 
-# :mag: Cause
+## :mag: Cause
 Built-in policy for **Configure periodic checking for missing system updates on azure virtual machines** does not utilize a role that includes the permissions needed for Disk Encryption Set read.
 
-# :wrench: Resolution
+## :wrench: Resolution
 The below PowerShell script is designed to duplicate the Virtual Machine Contributor role and will add Disk Encryption Set read access to the new custom role. Then the script duplicates the Azure Policy:
 Configure periodic checking for missing system updates on azure virtual machines
  
 Lastly the script edits the policy and replaces the assigned Role to the newly created custom role created with the script. You will need to edit line 22 to set the subscription name. On line 23 you can see the name of the new Policy that will be created with the script. You can verify the Role Definition is created correctly by searching the display name in your roles: **Virtual Machine Contributor (with Disk Encryption Set read)**
 
-## :computer: PowerShell Script
+### :computer: PowerShell Script
 ```powershell
 # ============================================================================
 # Name: VM Management Role and Update Compliance Policy Setup Script
@@ -260,7 +260,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 
 Leave some feedback if this helped you! :v:
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/azure-update-policy-failure-remediation/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/azure-update-manager-policy-failure-remediation/)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
