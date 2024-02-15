@@ -9,7 +9,7 @@ toc: true
 
 summary: 'This article shows how to check the core usage of ESU licenses being used in Azure Arc with Resource Graph Explorer. A huge thank you to Brian McDermott and Sachin Panwar for the original guide creation.'
 
-keywords: scom unix linux, scom unix runas accounts, scom runas account, unix linux runas account view error, linux error runas accounts, scom runas account view error
+keywords: azure arc, arc troubleshooting, azure arc esu license, esu license, 2012 r2 esu license
 permalink: /blog/how-to-check-esu-licenses-azure-arc/
 ---
  
