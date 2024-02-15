@@ -31,6 +31,9 @@ Configure periodic checking for missing system updates on azure virtual machines
 Lastly the script edits the policy and replaces the assigned Role to the newly created custom role created with the script. You will need to edit line 22 to set the subscription name. On line 23 you can see the name of the new Policy that will be created with the script. You can verify the Role Definition is created correctly by searching the display name in your roles: **Virtual Machine Contributor (with Disk Encryption Set read)**
 
 ### :computer: PowerShell Script
+
+[https://gist.github.com/blakedrumm/1ed524f72e9bd2456bed96ff409ae17d](https://gist.github.com/blakedrumm/1ed524f72e9bd2456bed96ff409ae17d)
+
 ```powershell
 # ============================================================================
 # Name: VM Management Role and Update Compliance Policy Setup Script
