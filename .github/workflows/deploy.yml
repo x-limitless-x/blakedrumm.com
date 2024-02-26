@@ -11,8 +11,8 @@ jobs:
     outputs:
       target: ${{ steps.set-output.outputs.target }}
     steps:
-      - uses: check-spelling/check-spelling@v0.0.22
       - name: Check Spelling
+        uses: check-spelling/check-spelling@v0.0.22
       
       - uses: actions/checkout@v4      
       - name: get deployment target
