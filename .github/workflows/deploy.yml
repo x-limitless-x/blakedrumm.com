@@ -11,8 +11,10 @@ jobs:
     outputs:
       target: ${{ steps.set-output.outputs.target }}
     steps:
-      - uses: actions/checkout@v4
-
+      - uses: check-spelling/check-spelling@v0.0.22
+      - name: Check Spelling
+      
+      - uses: actions/checkout@v4      
       - name: get deployment target
         run: |
           TARGET=$(cat DEPLOY_STRATEGY)
@@ -52,6 +54,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
         GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+            
 
   deploy-firebase:
     runs-on: ubuntu-latest
