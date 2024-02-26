@@ -120,23 +120,23 @@ Here are a few examples:
 >.\Set-UserRights.ps1 -RemoveRight -UserRight SeInteractiveLogonRight
 >```
 >#### Example 2
->Add User Right "Log on as a service" for CONTOSO\User:
+>Remove User Right "Log on as a service" for CONTOSO\User:
 >```powershell
 >.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeServiceLogonRight
 >```
 >#### Example 3
->Add User Right "Log on as a batch job" for CONTOSO\User:
+>Remove User Right "Log on as a batch job" for CONTOSO\User:
 >```powershell
 >.\Set-UserRights.ps1 -RemoveRight -Username CONTOSO\User -UserRight SeBatchLogonRight
 >```
 >#### Example 4
->Add User Right “Log on as a batch job” for user SID S-1-5-11:
+>Remove User Right “Log on as a batch job” for user SID S-1-5-11:
 >```powershell
 >.\Set-UserRights.ps1 -RemoveRight -Username S-1-5-11 -UserRight SeBatchLogonRight
 >```
 >### Remove Multiple Users / Rights / Computers
 >#### Example 5
->Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User1 and CONTOSO\User2 and run on, local machine and SQL.contoso.com:
+>Remove User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User1 and CONTOSO\User2 and run on, local machine and SQL.contoso.com:
 >```powershell
 >.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
 >```
