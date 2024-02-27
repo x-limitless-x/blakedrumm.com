@@ -22,11 +22,17 @@ Assessment failed due to this reason: "1 errors reported. The latest 100 errors 
 </pre>
 
 ## :mag: Cause
-The above error exception is saying the following:
+Details on the above exception:
+
+---
 
 | Hexadecimal Error Code | Decimal Error Code | Symbolic Name | Error Description                                   | Header   |
 |------------------|------------------|---------------|----------------------------------------------------|----------|
 | 0x80244022&nbsp;       | -2145107934&nbsp;      | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAIL&nbsp; | Same as HTTP status 503 - the service is temporarily overloaded.&nbsp; | wuerror.h&nbsp; |
+
+---
+
+&nbsp;
 
 The issue above in my customers circumstance was due to the following registry key being present: \
 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU**
