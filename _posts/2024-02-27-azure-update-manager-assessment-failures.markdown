@@ -26,7 +26,7 @@ The above error exception is saying the following:
 
 | Hexadecimal Error Code | Decimal Error Code | Symbolic Name | Error Description                                   | Header   |
 |------------------|------------------|---------------|----------------------------------------------------|----------|
-| 0x80244022       | -2145107934      | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAIL | Same as HTTP status 503 - the service is temporarily overloaded. | wuerror.h |
+| 0x80244022&nbsp;       | -2145107934&nbsp;      | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAIL&nbsp; | Same as HTTP status 503 - the service is temporarily overloaded.&nbsp; | wuerror.h&nbsp; |
 
 The issue above in my customers circumstance was due to the following registry key being present: \
 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU**
@@ -35,8 +35,8 @@ Specifically this key was changed to `1` which needed to be `0` in order to util
 
 | Entry name | Data type | Values |
 |------------|-----------|--------|
-|UseWUServer | Reg_DWORD | 1 = The computer gets its updates from a WSUS server. |
-|            |           | 0 = The computer gets its updates from Microsoft Update. |
+|UseWUServer&nbsp; | Reg_DWORD&nbsp;&nbsp; | **1** = The computer gets its updates from a WSUS server. |
+|            |           | **0** = The computer gets its updates from Microsoft Update. |
 |            |           | The WUServer value is not respected unless this key is set. |
 
 
