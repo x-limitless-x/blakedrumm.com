@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Assessment False Positives - Azure Update Manager"
-date:   '2024-02-26 21:00:00 -0500'
+date:   '2024-02-27 12:24:13 -0500'
 categories: troubleshooting azure
 author: blakedrumm
 thumbnail: /assets/img/posts/example-error-azure-update-manager-assessment.png
@@ -57,7 +57,7 @@ Set-ItemProperty -Name UseWUServer -Value 0 -Path "HKLM:\SOFTWARE\Policies\Micro
 
 Leave some feedback if this helped you! :v:
 
-![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/temp/)
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/azure-update-manager-assessment-failures/)
 
 <!--
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
