@@ -39,6 +39,7 @@ Specifically this key was changed to `1` which needed to be `0` in order to util
 |            |           | **0** = The computer gets its updates from Microsoft Update. |
 |            |           | The WUServer value is not respected unless this key is set. |
 
+&nbsp;
 
 More information on the registry keys for Automatic Updates and WSUS: \
 [https://learn.microsoft.com/windows/deployment/update/waas-wu-settings#configuring-automatic-updates-by-editing-the-registry](https://learn.microsoft.com/windows/deployment/update/waas-wu-settings#configuring-automatic-updates-by-editing-the-registry) \
