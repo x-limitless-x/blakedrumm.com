@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Assessment False Positives - Azure Update Manager"
+title:  "Assessment Failures - Azure Update Manager"
 date:   '2024-02-27 12:24:13 -0500'
 categories: troubleshooting azure
 author: blakedrumm
