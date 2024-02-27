@@ -47,6 +47,7 @@ More information on the registry keys for Automatic Updates and WSUS: \
 ## :wrench: Resolution
 Modifying the registry key above (**UseWUServer**) registry key to **0** instead of **1** allowed us to successfully utilize Azure Update Manager.
 
+### :computer: PowerShell Script
 ```powershell
 # The following code will allow you to set the UseWUServer registry key to 0
 # Which allows you to utilize Microsoft Updates instead of Software Update Services (WSUS)
