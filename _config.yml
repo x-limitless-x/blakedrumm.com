@@ -23,7 +23,7 @@ urls:
 
 author_logo: profile.png
 author: Blake Drumm
-author_bio: My name is Blake Drumm, I am working on the System Center Enterprise Management Team with Microsoft. Currently working to update public documentation for System Center products and write troubleshooting guides to assist with fixing issues that may arise while using the products. I like to blog on Operations Manager products mostly, keep checking back for new posts. My goal is to post atleast once a month if possible.
+author_bio: My name is Blake Drumm, I am working on the Azure Monitoring Enterprise Team with Microsoft. Currently working to update public documentation for System Center products and write troubleshooting guides to assist with fixing issues that may arise while using the products. I like to blog on Operations Manager and Azure Automation products, keep checking back for new posts. My goal is to post atleast once a month if possible.
 author_email: "admin@blakedrumm.com"
 author_location: Charlotte, North Carolina - United States
 author_website_url: "https://blakedrumm.com"
@@ -38,6 +38,13 @@ author_work_experiences:
               company_url: https://microsoft.com
               designation: Support Escalation Engineer
               description: System Center Enterprise Management Support Team
+              visibility: true
+
+            - company_name: Microsoft
+              company_logo: microsoft.png
+              company_url: https://microsoft.com
+              designation: Support Escalation Engineer
+              description: Azure Monitoring Enterprise Support Team
               visibility: true
 
 # Education
