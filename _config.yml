@@ -37,13 +37,6 @@ author_work_experiences:
               company_logo: microsoft.png
               company_url: https://microsoft.com
               designation: Support Escalation Engineer
-              description: System Center Enterprise Management Support Team
-              visibility: true
-
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Support Escalation Engineer
               description: Azure Monitoring Enterprise Support Team
               visibility: true
 
