@@ -61,6 +61,14 @@
     visibility: hidden;
 }
 
+html.dark-theme .markdown-body a.anchor {
+    fill: white;
+}
+
+html.dark-theme .markdown-body a.anchor:hover .octicon-link {
+    fill: rgb(173, 173, 173);
+}
+
 .markdown-body h1:hover .anchor .octicon-link, .markdown-body h2:hover .anchor .octicon-link, .markdown-body h3:hover .anchor .octicon-link, .markdown-body h4:hover .anchor .octicon-link, .markdown-body h5:hover .anchor .octicon-link, .markdown-body h6:hover .anchor .octicon-link {
     visibility: visible;
 }

@@ -23,6 +23,7 @@ Assessment failed due to this reason: "1 errors reported. The latest 100 errors 
 
 ## :mag: Cause
 Details on the above exception:
+<div class="w-100 overflow-auto" markdown="1">
 
 ---
 
@@ -32,6 +33,7 @@ Details on the above exception:
 
 ---
 
+</div>
 &nbsp;
 
 The issue above in my customers circumstance was due to the following registry key being present: \
