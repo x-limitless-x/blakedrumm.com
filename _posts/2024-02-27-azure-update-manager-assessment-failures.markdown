@@ -17,7 +17,7 @@ permalink: /blog/azure-update-manager-assessment-failures/
 I had a case today where Azure Update Manager was showing errors regarding checks for assessments, upon checking the Windows Updates installed on the machine we noticed the updates were successfully installed.
 
 ### :x: Error text
-<pre style="white-space: pre-wrap;">
+<pre class="p-2 bg-secondary rounded" style="white-space: pre-wrap;">
 Assessment failed due to this reason: "1 errors reported. The latest 100 errors are shared in details. To view all errors, review this log file on the machine:[C:\ProgramData\GuestConfig\extension_logs\Microsoft.CPlat.Core.WindowsPatchExtension] "["Windows update API failed to assess the machine for available updates. Error:Exception from HRESULT: 0x80244022, Hresult:0" at UpdateManagementAction.concrete.UpdateAssessment.GetAvailableUpdates() at UpdateManagementAction.concrete.AssessmentAction.Assess(UpdateManagementResultSummary updateActionResultSummary)]." "["Windows update API failed to assess the machine for available updates. <span style="color:yellow">Error:Exception from HRESULT: 0x80244022</span>, Hresult:0" at UpdateManagementAction.concrete.UpdateAssessment.GetAvailableUpdates() at UpdateManagementAction.concrete.AssessmentAction.Assess(UpdateManagementResultSummary updateActionResultSummary)]."
 </pre>
 
