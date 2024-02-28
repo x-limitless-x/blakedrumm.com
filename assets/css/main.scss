@@ -26,6 +26,11 @@ html.light-theme .article-container:hover .posted-date {
     color: #ffffff;
 }
 
+/* Syntax Hightlighter */
+html.light-theme .highlight .c {
+    color: #2bff59;
+}
+/* End Syntax Highligher */
 
 /* Global <pre> */
 pre {
