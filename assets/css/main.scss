@@ -7,6 +7,25 @@
 
 /* custom css goes below */
 
+.article-card-link .article-link .posted-date {
+    font-size: 15px;
+}
+
+html.dark-theme .article-container .article-link .posted-date {
+    color: #6a6a6a;
+}
+html.light-theme .article-container .article-link .posted-date {
+    color: #4b4b4b;
+}
+
+html.dark-theme .article-container:hover .posted-date {
+    color: #ffffff;
+}
+
+html.light-theme .article-container:hover .posted-date {
+    color: #ffffff;
+}
+
 
 /* Global <pre> */
 pre {
