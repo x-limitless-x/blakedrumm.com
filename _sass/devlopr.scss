@@ -7,6 +7,9 @@ $mono-typeface: Menlo, Monaco, monospace;
 $text-width: 650px;
 html{
     --white-text-color: rgb(255, 255, 255);
+    /* All Buttons */
+    --button-background-color: #0083f7;
+    --button-hover-background-color: #017be6;
 }
 html[data-theme="dark"] {
     --bold-color: rgb(238, 238, 238);
@@ -23,7 +26,6 @@ html[data-theme="dark"] {
     --social-link-color: #ffffff;
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
-    --button-background-color: #0083f7; 
 }
 html[data-theme="dark"] .table-text{
     color: white
@@ -46,7 +48,6 @@ html[data-theme="light"] {
     --social-link-color: #262222;
     --card-background-color: rgb(250, 250, 250);
     --newsletter-background-color: #00000008;
-    --button-background-color:#0083f7;
 }
 html[data-theme="light"] .table-text{
     color: black
@@ -271,9 +272,13 @@ header {
     height: 50px;
 }
 
-.btn-dark {
+.btn-dark:not(:hover) {
     background-color:var(--button-background-color) !important;
     color: var(--white-text-color);
+}
+
+.btn-dark:hover {
+    background-color:var(--button-hover-background-color) !important;
 }
 
 .img-thumbnail {
