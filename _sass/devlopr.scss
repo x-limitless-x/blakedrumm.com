@@ -23,7 +23,7 @@ html[data-theme="dark"] {
     --social-link-color: #ffffff;
     --card-background-color: rgb(32, 32, 34);
     --newsletter-background-color: #222324;
-    --button-background-color: #0083f7;
+    --button-background-color: #0083f7; 
 }
 html[data-theme="dark"] .table-text{
     color: white
@@ -272,7 +272,7 @@ header {
 }
 
 .btn-dark {
-    background-color:var(--button-background-color);
+    background-color:var(--button-background-color) !important;
     color: var(--white-text-color);
 }
 
