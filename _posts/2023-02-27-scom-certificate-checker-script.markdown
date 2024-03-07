@@ -24,11 +24,11 @@ This tool will allow you to check your SCOM Certificate. It is very efficient an
 - Blake Drumm (***https://blakedrumm.com/***)
 
 ## :page_with_curl: Where to get it
-[Start-SCOMCertificateChecker.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1) :arrow_left: **Direct Download Link** \
+[Test-SCOMCertificate.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Test-SCOMCertificate.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
-[Personal File Server - Start-SCOMCertificateChecker.ps1](https://files.blakedrumm.com/Start-SCOMCertificateChecker.ps1) :arrow_left: **Alternative Download Link** \
+[Personal File Server - Test-SCOMCertificate.ps1](https://files.blakedrumm.com/Test-SCOMCertificate.ps1) :arrow_left: **Alternative Download Link** \
 _or_ \
-[Personal File Server - Start-SCOMCertificateChecker.txt](https://files.blakedrumm.com/Start-SCOMCertificateChecker.txt) :arrow_left: **Text Format Alternative Download Link**
+[Personal File Server - Test-SCOMCertificate.txt](https://files.blakedrumm.com/Test-SCOMCertificate.txt) :arrow_left: **Text Format Alternative Download Link**
 
 ## :classical_building: Argument List
 
@@ -45,22 +45,22 @@ Argument&nbsp;List&nbsp;|Description&nbsp;|
 >#### Example 1
 >   Check the certificate you have currently configured for SCOM on the local machine:
 >   ```powershell
->   PS C:\> .\Start-SCOMCertificateChecker.ps1
+>   PS C:\> .\Test-SCOMCertificate.ps1
 >   ```
 >#### Example 2
 >   Check for a specific Certificate Serial number in the Local Machine Personal Certificate store:
 >   ```powershell
->   PS C:\> .\Start-SCOMCertificateChecker.ps1 -SerialNumber 1f00000008c694dac94bcfdc4a000000000008
+>   PS C:\> .\Test-SCOMCertificate.ps1 -SerialNumber 1f00000008c694dac94bcfdc4a000000000008
 >   ```
 >#### Example 3
 >   Check all certificates on the local machine:
 >   ```powershell
->   PS C:\> .\Start-SCOMCertificateChecker.ps1 -All
+>   PS C:\> .\Test-SCOMCertificate.ps1 -All
 >   ```
 >#### Example 4
 >   Check All Certificates on 4 Servers and outputting the results to C:\Temp\Output.txt:
 >   ```powershell
->   PS C:\> .\Start-SCOMCertificateChecker.ps1 -Servers ManagementServer1, ManagementServer2.contoso.com, Gateway.contoso.com, Agent1.contoso.com -All -OutputFile C:\Temp\Output.txt
+>   PS C:\> .\Test-SCOMCertificate.ps1 -Servers ManagementServer1, ManagementServer2.contoso.com, Gateway.contoso.com, Agent1.contoso.com -All -OutputFile C:\Temp\Output.txt
 >   ```
 
 ## Example of Failure

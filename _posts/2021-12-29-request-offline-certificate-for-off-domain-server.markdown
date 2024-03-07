@@ -56,13 +56,13 @@ certlm.msc
 ```
 
 * Run this Powershell script to check the certificate you imported: \
-[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1) \
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Test-SCOMCertificate.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Test-SCOMCertificate.ps1) \
  \
 Run it like this:
   ```
-  .\Start-SCOMCertificateChecker.ps1 -All
+  .\Test-SCOMCertificate.ps1 -All
   ```
-You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [770](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Start-SCOMCertificateChecker.ps1#L770) to include the arguments you want to run.
+You can also copy/paste the script to an Powershell ISE (Running as Administrator), you just need to edit line [770](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Test-SCOMCertificate.ps1#L770) to include the arguments you want to run.
 
 ---
 
