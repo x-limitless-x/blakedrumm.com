@@ -42,7 +42,8 @@ You can use Powershell to automate fixing the DW RunAs Profiles. I would suggest
 
 **Blog post from Udish Mudiar:** [https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/](https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/)
 
-Here is my own take on Udish's Powershell script:
+Here is my own take on Udish's Powershell script: \
+[https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Resolve-DWRunAsProfileAssociation.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Resolve-DWRunAsProfileAssociation.ps1)
 ```powershell
 # Original Author: Udish Mudiar
 # Original Blog Post: https://udishtech.com/associate-scom-data-warehouse-profile-using-powershell/
