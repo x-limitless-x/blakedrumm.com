@@ -95,7 +95,7 @@ Follow the below steps to allow you to fix the Activation issue:
     Set-Date ([DateTime]::ParseExact($((Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Setup').InstalledOn), 'M/d/yyyy-HH:mm:ss', $null).AddHours(48))
 
     # Restart the SCOM Services (System Center Data Access Service, System Center Management Configuration, Microsoft Monitoring Agent)
-    Restart-Service omsdk, cshost, healthservice
+    Restart-Service -Name omsdk, cshost, healthservice
     ```
 2. Verify the time has been changed.
 3. Open the SCOM Console and navigate to the top of the Console window, click on **Help** -> **About** \
@@ -117,7 +117,7 @@ Follow the below steps to allow you to fix the Activation issue:
    Stop-Process -Name Microsoft.EnterpriseManagement.Monitoring.Console -Force
    
    # Restart the SCOM SDK Service
-   Restart-Service omsdk
+   Restart-Service -Name omsdk
    ```
 7. Open the SCOM Console and verify if you go to **Help** -> **About**. Do you see **(Eval)** in the Console version? \
    If you see **(Retail)** (as shown below), you are activated! :sun_behind_small_cloud: \
