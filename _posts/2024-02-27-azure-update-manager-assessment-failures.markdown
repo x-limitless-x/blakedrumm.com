@@ -18,7 +18,7 @@ I had a case today where Azure Update Manager was showing errors regarding check
 
 ### :x: Error text
 <pre style="white-space: pre-wrap;">
-Assessment failed due to this reason: "1 errors reported. The latest 100 errors are shared in details. To view all errors, review this log file on the machine:[C:\ProgramData\GuestConfig\extension_logs\Microsoft.CPlat.Core.WindowsPatchExtension] "["Windows update API failed to assess the machine for available updates. Error:Exception from HRESULT: 0x80244022, Hresult:0" at UpdateManagementAction.concrete.UpdateAssessment.GetAvailableUpdates() at UpdateManagementAction.concrete.AssessmentAction.Assess(UpdateManagementResultSummary updateActionResultSummary)]." "["Windows update API failed to assess the machine for available updates. <span style="color:yellow">Error:Exception from HRESULT: 0x80244022</span>, Hresult:0" at UpdateManagementAction.concrete.UpdateAssessment.GetAvailableUpdates() at UpdateManagementAction.concrete.AssessmentAction.Assess(UpdateManagementResultSummary updateActionResultSummary)]."
+1 errors reported. The latest 100 errors are shared in details. To view all errors, review this log file on the machine: [C:\ProgramData\GuestConfig\extension_logs\Microsoft.Software Update Management.WindowsOsUpdateExtension\1.telemetryLogs]. Failed to apply patch installation. Reason: [Failed to assess the machine for available updates: Activityld = [4242741a-0959-4b6c-886b-d7385dfc62f1], Operation=[Patching], Reason:[Windows update API threw an exception while assessing the machine for available updates. <span style="color:yellow">HResult: 0x80244022</span>.. For information on diagnosing this error, see: https://aka.ms/TroubleshootVMGuestPatching.].].
 </pre>
 
 ## :mag: Cause
