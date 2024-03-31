@@ -2,7 +2,7 @@
 layout: post
 title:  "Toggle VM Power by Tag - Azure Automation"
 date:   '2024-03-31 00:57:08 -0500'
-categories: azure automation powershell
+categories: azure powershell
 author: blakedrumm
 thumbnail: /assets/img/start-stop-vms-by-tag-test-panel.png
 toc: true
