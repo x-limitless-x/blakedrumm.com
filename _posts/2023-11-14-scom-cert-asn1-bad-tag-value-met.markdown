@@ -69,8 +69,7 @@ Today I encountered an issue where SCOM fails to generate a certificate for Unix
 
 ### How to fix it
 1. Check and verify the sudoers are setup correctly: \
-[https://social.technet.microsoft.com/wiki/contents/articles/7375.scom-configuring-sudo-elevation-for-unix-and-linux-monitoring.aspx](https://social.technet.microsoft.com/wiki/contents/articles/7375.scom-configuring-sudo-elevation-for-unix-and-linux-monitoring.aspx).
-
+[https://learn.microsoft.com/system-center/scom/manage-security-unix-linux-sudoers-templates](https://learn.microsoft.com/system-center/scom/manage-security-unix-linux-sudoers-templates)
 
 Leave some feedback if this helped you! :v:
 
