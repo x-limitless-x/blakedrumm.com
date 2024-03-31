@@ -19,6 +19,32 @@ Managing the power state of Azure VMs can be a cumbersome task, especially when 
 ## :wrench: The Script
 The PowerShell script enables you to start or stop Azure VMs in bulk by specifying their subscription IDs, a tag name, and a tag value. It also supports a `-WhatIf` parameter for dry runs, allowing you to preview the changes without applying them.
 
+## :label: Preparing Your VMs
+
+To ensure your Azure VMs respond correctly to the script, you must tag them with specific key-value pairs. The script identifies VMs to start or stop based on these tags. Here's how to set up your VM tags:
+
+### Tagging VMs
+
+![Example showing a tag configured for a Virtual Machine in the Azure Portal](/assets/img/start-stop-vms-by-tag-vm-example.png)
+
+1. **Access the Azure Portal:** Navigate to the Azure Portal and find the Virtual Machines section.
+
+2. **Select a VM:** Choose the VM you want to manage with the script.
+
+3. **Add Tags:**
+    - Click on the **Tags** section in the VM's menu.
+    - Add a new tag with the **TagName** you plan to use in the script. For example, if your script uses `Environment` as the tag name, you might set the tag value to `Development` for all development VMs.
+
+### Example Tag Configuration
+
+- **Tag Name:** Environment
+- **Tag Value:** Development
+
+With this configuration, if you run the script with `Environment` as the `$TagName` and `Development` as the `$TagValue`, it will target all VMs tagged as part of your development environment.
+
+This setup allows for precise control over which VMs are affected by the script, enabling you to manage VM power states efficiently across different environments or projects.
+
+
 ## :arrow_down: How to get it
 **GitHub Gist:** [Toggle-VMPowerByTag.ps1](https://gist.github.com/blakedrumm/23163b76af766e38bcc507743472c603)
 
