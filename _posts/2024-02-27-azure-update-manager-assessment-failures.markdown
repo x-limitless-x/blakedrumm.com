@@ -9,7 +9,7 @@ toc: true
 
 summary: 'This guide shows you how to potentially fix an issue I stumbled on today with Azure Update Manager and assessments on machines connected.'
 
-keywords: azure update manager, 
+keywords: azure update manager
 permalink: /blog/azure-update-manager-assessment-failures/
 ---
  
