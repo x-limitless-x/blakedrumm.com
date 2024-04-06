@@ -8,7 +8,7 @@ thumbnail: /assets/img/scom-db-move-tool.png
 toc: true
 
 summary: >- # this means to ignore newlines
-  This application is designed to allow users to update the configuration when migrating the SCOM SQL Instances to a new location. (This tool does not move the databases, i.e. Backup / Restore)
+  This application is designed to allow users to update the configuration when migrating the SCOM SQL Instances to a new location. (This tool does not move the databases, i.e. Backup / Restore). Free and open-source GUI tool written in PowerShell, with multiple ways of running the script: MSI, EXE, or source PS1.
 
 keywords: scom db move, opsmgr db tool, scom db tool, operations manager tool, powershell script for SCOM, powershell script, scom db moving tool, system center
 permalink: /blog/scom-db-move-tool/
