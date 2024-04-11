@@ -157,6 +157,7 @@ The OpsMgr Connector has loaded the specified authentication certificate success
 >       - Check the key: `ChannelCertificateSerialNumber` this is the serial number of the certificate you imported, reversed.
 > 5. Verify that there are not any other certificates in the Local Machine Personal Store that have matching Subject Names.
 > 6. Operations Manager only uses the first CN name in the Subject of the Certificate.
+> 7. Cryptography API Key Storage Provider ([KSP](/windows/win32/secgloss/k-gly?redirectedfrom=MSDN#_security_key_storage_provider_gly)) is not supported for Operations Manager certificates.
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/create-operations-manager-certificate-template/)
 
