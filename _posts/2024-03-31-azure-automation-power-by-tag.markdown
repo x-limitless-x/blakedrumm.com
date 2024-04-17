@@ -67,6 +67,7 @@ param
 # Author: Blake Drumm (blakedrumm@microsoft.com)
 # Website: https://blakedrumm.com/
 # Date created: March 31st, 2024
+# Date modified: April 16th, 2024
 
 # Ensures you do not inherit an AzContext in your runbook
 $disableAzContextAutosave = Disable-AzContextAutosave -Scope Process
@@ -76,7 +77,7 @@ try
 {
 	# Connect to Azure
 	$AzConnection = Connect-AzAccount -Identity -AccountId cb02e61e-d392-48d7-936a-9b44bbf5f312 -ErrorAction Stop
-	Write-Output "$((Get-Date).ToLocalTime()) - Connected to Azure"
+	Write-Output "$((Get-Date).ToLocalTime()) - Connected to Azure (Account Id: $($AzConnection.Context.Account.Id))"
 }
 catch
 {
