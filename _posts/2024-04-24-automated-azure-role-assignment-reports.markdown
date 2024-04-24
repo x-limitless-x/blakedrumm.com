@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Automated Azure Role Assignment Reports via Email - Azure Automation"
