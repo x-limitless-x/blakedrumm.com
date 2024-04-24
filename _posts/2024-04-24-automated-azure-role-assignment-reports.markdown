@@ -37,6 +37,7 @@ You can download the script from the following links:
 | SMTPServer      |       |                   | String | The SMTP server used for sending the email.                                                                                                                                |
 | SubscriptionIds |       |                   | Array  | Array of Azure subscription IDs to be included in the report.                                                                                                              |
 | WhatIf          |       |                   | Switch | A switch to simulate the script execution for testing purposes without performing any actual operations.                                                                   |
+{: .table .table-hover .table-text .d-block .overflow-auto }
 
 ## :key: Configuring Permissions for Managed Identity
 
