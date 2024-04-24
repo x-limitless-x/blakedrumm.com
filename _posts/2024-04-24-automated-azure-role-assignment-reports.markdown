@@ -43,11 +43,11 @@ You can download the script from the following links:
 To enable the PowerShell script to retrieve detailed user information, such as ObjectType and DisplayName from Azure Active Directory, the UserManagedIdentity needs the "Directory Readers" permission. This role-based access control (RBAC) is assigned at the Microsoft Entra ID level (formerly known as Azure Active Directory), not at the subscription level. Follow these steps to assign the correct permissions:
 
 1. **Identify the Object ID:**
-   a. **System Assigned Identity**
+   - **System Assigned Identity**
       - Navigate to your Azure Automation Account -> Identity, select the System assigned tab. Copy the Object ID of the System Assigned identity. \
         ![Copy the System assigned Identity Object ID](/assets/img/posts/system-assigned-identity.png)
 
-   b. **User Assigned Identity**
+   - **User Assigned Identity**
       - Navigate to your Azure Automation Account -> Identity, select the User assigned tab. Click on the name of the user assigned identity you want to gather the id from. Copy the Object ID of the User Assigned identity. \
         ![Copy the System assigned Identity Object ID](/assets/img/posts/user-assigned-identity.png) \
         ![Gather the Object ID from the User Managed Identity](/assets/img/posts/user-assigned-identity-object-id.png)
@@ -62,10 +62,10 @@ To enable the PowerShell script to retrieve detailed user information, such as O
 
 3. **Assign the Role:**
    - Open Microsoft Entra Id -> Roles and Administrators. \
-     [Link to ](https://portal.azure.com/#view/Microsoft_AAD_IAM/RolesManagementMenuBlade/~/AllRoles/adminUnitObjectId//resourceScope/)
-   - In the roles list, find and click on "Directory Readers". \
+     [Azure Portal - Roles and Administrators](https://portal.azure.com/#view/Microsoft_AAD_IAM/RolesManagementMenuBlade/~/AllRoles/adminUnitObjectId//resourceScope/)
+   - In the roles list, find and click on **Directory Readers**. \
      ![Where to click for Add assignments](/assets/img/posts/add-directory-reader-assignment.png)
-   - Click "+ Add Assignments" to start the role assignment process.
+   - Click **+ Add Assignments** to start the role assignment process.
 
 4. **Add Managed Identity to Role:**
    - In the assignment interface, you might not see app registrations or managed identities by default.
@@ -79,22 +79,16 @@ To enable the PowerShell script to retrieve detailed user information, such as O
 **This configuration is essential for the script to function correctly and securely access the necessary Azure AD data!**
 
 ## :page_with_curl: How to use it
->#### Example 1
->Generate and email an Azure roles report for specified subscriptions:
->```powershell
->.\Get-AzRoleAssignmentReport.ps1 -EmailUsername 'admin@example.com' -EmailPassword (ConvertTo-SecureString 'Secure123' -AsPlainText -Force) -SMTPServer 'smtp.example.com' -From 'noreply@example.com' -To 'user1@example.com','user2@example.com' -Cc 'manager@example.com' -Subject 'Monthly Azure Report' -Body 'Attached is the monthly Azure usage report.' -SubscriptionIds 'sub1','sub2'
->```
->#### Example 2
->Generate a report and email with custom HTML content in the body:
->```powershell
->$SecurePwd = ConvertTo-SecureString 'YourSecurePassword' -AsPlainText -Force
->.\Get-AzRoleAssignmentReport.ps1 -EmailUsername 'admin@example.com' -EmailPassword $SecurePwd -From 'report@example.com' -To 'team@example.com' -Subject 'Detailed Azure Report' -Body '<html><body><h1>Azure Report</h1><p>Please check the attached detailed report.</p></body></html>' -SMTPServer 'smtp.example.com' -SubscriptionIds 'sub1','sub2','sub3'
->```
->#### Example 3
->Run the script in WhatIf mode to simulate the process without sending emails:
->```powershell
->.\Get-AzRoleAssignmentReport.ps1 -WhatIf
->```
+In order to utilize this script in your Automation Runbook, you will need to set an encrypted variable inside of the Automation Account. This will be so we can pass the EmailPassword variable securely to the script. The script has the ability to gather this password automatically if you perform the following steps.
+1. Go to **Automation Accounts** -> Select the Automation Account -> **Variables**.
+2. Click **+ Add a variable** 
+3. **New Variable**
+   - **Name:** `EmailPassword`
+   - **Description:** `This is the password for the Email Account used in SMTP for an Azure Automation Runbook`.
+   - **Type:** `String`
+   - **Value:** `<YourPassword>`
+   - **Encrypted:** `Yes` \
+![Encrypted Variables Azure Automation Account](/assets/img/posts/encrypted-variables-automation-account.png)
 
 Leave some feedback if this helped you! :v:
 
