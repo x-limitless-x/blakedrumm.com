@@ -31,7 +31,7 @@ The script will perform the following, in this order:
 5. *Optional:* Script can attempt to Format the ETL Trace (`-FormatTrace`)
 6. Zips Up Output and Opens Explorer Window for Viewing File
 
-## How to get it
+## :arrow_down: How to get it
 You can get a copy of the script here: \
 [Start-ScomETLTrace.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/SCOM%20ETL%20Trace/Start-ScomETLTrace.ps1) :arrow_left: **Direct Download Link** \
 _or_ \

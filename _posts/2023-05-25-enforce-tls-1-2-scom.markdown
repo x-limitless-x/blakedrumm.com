@@ -46,7 +46,7 @@ This PowerShell script will allow you to enforce TLS 1.2 & TLS 1.3 in your SCOM 
 > ## :notebook: Note
 > You may edit line [1909](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/TLS%201.2%20Enforcement/Invoke-EnforceSCOMTLS1.2.ps1#L1909) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
-## How to get it
+## :arrow_down: How to get it
 You can get a copy of the script here: \
 [Invoke-EnforceSCOMTLS1.2.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/TLS%201.2%20Enforcement/Invoke-EnforceSCOMTLS1.2.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
@@ -73,7 +73,7 @@ _or_ \
 
 ## Check TLS Configuration
 You can run the following PowerShell script to gather your current TLS configuration:
-### How to get it
+### :arrow_down: How to get it
 [Get-TLSRegistryKeys.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Get-TLSRegistryKeys.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
 [Personal File Server - Get-TLSRegistryKeys.ps1](https://files.blakedrumm.com/Get-TLSRegistryKeys.ps1) :arrow_left: **Alternative Download Link** \

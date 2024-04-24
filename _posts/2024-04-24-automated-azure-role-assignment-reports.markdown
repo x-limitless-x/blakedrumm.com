@@ -17,7 +17,7 @@ permalink: /blog/azure-automation-automated-azure-role-assignment-reports/
 ## :book: Introduction
 Azure cloud services management often requires monitoring and auditing user roles and group memberships. This script automates the generation and email distribution of detailed Azure subscription role assignments. It utilizes managed identity for Azure login, fetches role assignments, and compiles them into a comprehensive report sent via email.
 
-## How to get it
+## :arrow_down: How to get it
 You can download the script from the following links:
 - [Get-AzRoleAssignmentReport.ps1](https://gist.github.com/blakedrumm/8f73e82f78b675bea2968117b70fd83e) :arrow_left: **Direct Download Link**
 - [Personal File Server - Get-AzRoleAssignmentReport.ps1](https://files.blakedrumm.com/Get-AzRoleAssignmentReport.ps1) :arrow_left: **Alternative Download Link**

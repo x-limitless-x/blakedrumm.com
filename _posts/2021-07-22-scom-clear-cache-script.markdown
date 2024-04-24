@@ -16,7 +16,7 @@ permalink: /blog/clear-scomcache/
 ---
 <sub>Article last updated on April 12th, 2023</sub>
 
-# How to get it
+# :arrow_down: How to get it
 [Clear-SCOMCache.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Clear-SCOMCache.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
 [Personal File Server - Clear-SCOMCache.ps1](https://files.blakedrumm.com/Clear-SCOMCache.ps1) :arrow_left: **Alternative Download Link** \

@@ -17,7 +17,7 @@ permalink: /blog/set-and-check-user-rights-assignment/
  I stumbled across this gem ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/master/Source/Users/Grant-LogOnAsService.ps1)) that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
 ## Set User Rights
-### How to get it
+### :arrow_down: How to get it
 [Set-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
 [Personal File Server - Set-UserRights.ps1](https://files.blakedrumm.com/Set-UserRights.ps1) :arrow_left: **Alternative Download Link** \
@@ -144,7 +144,7 @@ Here are a few examples:
 ---
 
 ## Check User Rights
-### How to get it
+### :arrow_down: How to get it
 [Get-UserRights.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
 [Personal File Server - Get-UserRights.ps1](https://files.blakedrumm.com/Get-UserRights.ps1) :arrow_left: **Alternative Download Link** \

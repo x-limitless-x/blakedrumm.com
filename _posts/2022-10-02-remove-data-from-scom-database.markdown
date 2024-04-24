@@ -24,7 +24,7 @@ After the 6th or 7th time running the tsql queries I decided that I should autom
 > &nbsp; \
 > If you absolutely need to run the script, make sure you have full backups of your SCOM SQL Instances / Databases!
 
-## How to get it
+## :arrow_down: How to get it
 You can get a copy of the script here: \
 [Remove-SCOMBaseManagedEntity.ps1](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/Quick%20Fixes/Remove-SCOMBaseManagedEntity.ps1) :arrow_left: **Direct Download Link** \
 _or_ \
