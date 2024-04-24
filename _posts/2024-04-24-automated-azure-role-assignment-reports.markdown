@@ -40,17 +40,17 @@ You can download the script from the following links:
 
 ## :key: Configuring Permissions for Managed Identity
 
-To enable the PowerShell script to retrieve detailed user information, such as ObjectType and DisplayName from Azure Active Directory, the UserManagedIdentity needs the "Directory Readers" permission. This role-based access control (RBAC) is assigned at the Microsoft Entra ID level (formerly known as Azure Active Directory), not at the subscription level. Follow these steps to assign this permission:
+To enable the PowerShell script to retrieve detailed user information, such as ObjectType and DisplayName from Azure Active Directory, the UserManagedIdentity needs the "Directory Readers" permission. This role-based access control (RBAC) is assigned at the Microsoft Entra ID level (formerly known as Azure Active Directory), not at the subscription level. Follow these steps to assign the correct permissions:
 
 1. **Identify the Object ID:**
    a. **System Assigned Identity**
-     - Navigate to your Azure Automation Account -> Identity, Select System assigned tab. Copy the Object ID of the System Assigned identity.
-     ![Copy the System assigned Identity Object ID](/assets/img/posts/system-assigned-identity.png)
+      - Navigate to your Azure Automation Account -> Identity, select the System assigned tab. Copy the Object ID of the System Assigned identity. \
+        ![Copy the System assigned Identity Object ID](/assets/img/posts/system-assigned-identity.png)
 
    b. **User Assigned Identity**
-     - Navigate to your Azure Automation Account -> Identity, Select User assigned tab. Click on the name of the user assigned identity you want to gather the id from. Copy the Object ID of the System Assigned identity.
-     ![Copy the System assigned Identity Object ID](/assets/img/posts/user-assigned-identity.png) \
-     ![Gather the Object ID from the User Managed Identity](/assets/img/posts/user-assigned-identity-object-id.png)
+      - Navigate to your Azure Automation Account -> Identity, select the User assigned tab. Click on the name of the user assigned identity you want to gather the id from. Copy the Object ID of the User Assigned identity. \
+        ![Copy the System assigned Identity Object ID](/assets/img/posts/user-assigned-identity.png) \
+        ![Gather the Object ID from the User Managed Identity](/assets/img/posts/user-assigned-identity-object-id.png)
 
 2. **Set Azure role assignments**
    - Select **Azure role assignments**
