@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Automated Azure Role Assignment Reports via Email - Azure Automation"
-date:   '2024-04-24 00:01:02 -0500'
+date:   '2024-04-23 23:28:02 -0500'
 categories: azure powershell guides
 author: blakedrumm
 thumbnail: /assets/img/posts/azure-role-assignments-email.png
