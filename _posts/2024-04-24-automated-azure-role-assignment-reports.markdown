@@ -60,20 +60,20 @@ To enable the PowerShell script to retrieve detailed user information, such as O
    - Set the role to (use what your company allows here, this is just what I used in my testing): **Reader** \
      ![Subscription reader RBAC permission](/assets/img/posts/add-role-assignments-subscription-reader.png)
 
-2. **Assign the Role:**
+3. **Assign the Role:**
    - Open Microsoft Entra Id -> Roles and Administrators. \
      [Link to ](https://portal.azure.com/#view/Microsoft_AAD_IAM/RolesManagementMenuBlade/~/AllRoles/adminUnitObjectId//resourceScope/)
    - In the roles list, find and click on "Directory Readers". \
      ![Where to click for Add assignments](/assets/img/posts/add-directory-reader-assignment.png)
    - Click "+ Add Assignments" to start the role assignment process.
 
-3. **Add Managed Identity to Role:**
+4. **Add Managed Identity to Role:**
    - In the assignment interface, you might not see app registrations or managed identities by default.
    - Paste the Object ID (from step 1) into the search field. This should display the name and ID of your Azure Automation Account.
    - Select your account and confirm the assignment. \
      ![How to add a object id for assignment](/assets/img/posts/add-directory-reader-assignment-object-id.png)
 
-4. **Verify Permissions:**
+5. **Verify Permissions:**
    - Once the "Directory Readers" permission is assigned, the script will be able to pull the Object Type and DisplayName along with other outputs from `Get-AzRoleAssignment`.
 
 **This configuration is essential for the script to function correctly and securely access the necessary Azure AD data!**
