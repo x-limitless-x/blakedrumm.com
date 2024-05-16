@@ -21,7 +21,7 @@ While working with Azure, I encountered an authorization error while attempting 
 ## The Error
 
 While creating a maintenance configuration, I encountered the following error:
->The client 'user@contoso.com' with object id '8b4fd821-05b6-4938-9949-18782893c5ed' <span style="color:yellow">does not have authorization to perform action 'Microsoft.Resources/deployments/validate/action'</span> over scope '/subscriptions/a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p/resourceGroups/DeleteThisResourceGroup/providers/Microsoft.Resources/deployments/TestConfiguration_1715820611290' or the scope is invalid. If access was recently granted, please refresh your credentials. (Code: AuthorizationFailed)
+><span style="color:yellow">The client 'user@contoso.com'</span> with object id '8b4fd821-05b6-4938-9949-18782893c5ed' <span style="color:yellow">does not have authorization to perform action 'Microsoft.Resources/deployments/validate/action'</span> over scope '/subscriptions/a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p/resourceGroups/DeleteThisResourceGroup/providers/Microsoft.Resources/deployments/TestConfiguration_1715820611290' or the scope is invalid. If access was recently granted, please refresh your credentials. (Code: AuthorizationFailed)
 
 This error message indicates a lack of permissions necessary to perform specific actions within the Azure portal.
 
