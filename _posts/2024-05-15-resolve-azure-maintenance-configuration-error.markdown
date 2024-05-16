@@ -38,9 +38,8 @@ I developed a PowerShell script that creates a custom role to grant a user the n
 # Create-MaintenanceConfigManagerRole.ps1
 # Script to create a custom role for managing Azure Maintenance Configurations
 # Author: Blake Drumm (blakedrumm@microsoft.com)
-# Website: https://blakedrumm.com/
+# Website: https://blakedrumm.com/blog/resolve-azure-maintenance-configuration-error/
 # Date created: May 15th, 2024
-# Date modified: May 15th, 2024
 
 # Define custom variables
 $subscriptionId = "a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p"
