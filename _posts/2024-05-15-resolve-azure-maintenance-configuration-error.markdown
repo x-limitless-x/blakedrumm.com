@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Resolving Azure Maintenance Configuration Authorization Errors"
+title:  "Resolving Azure Maintenance Configuration Authorization Errors - Azure Update Manager"
 date:   '2024-05-15 10:00:00 -0500'
-categories: azure troubleshooting automation
+categories: azure powershell troubleshooting guide
 author: blakedrumm
 thumbnail: /assets/img/posts/azure-authorization-error.png
 toc: true
