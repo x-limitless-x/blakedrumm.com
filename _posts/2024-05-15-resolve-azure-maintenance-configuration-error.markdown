@@ -104,14 +104,14 @@ New-AzRoleAssignment -RoleDefinitionName $customRoleName -UserPrincipalName $use
 #>
 ```
 
-:bulb: How to Use It
+## :bulb: How to Use It
 To implement this solution:
 
 1. **Modify the script** with your specific details, including subscription ID, resource group name, and user principal name.
 2. **Execute the script** in your PowerShell environment to create the custom role and assign it.
 3. **Verify the permissions** are correctly applied by attempting to create a Maintenance Configuration again.
 
-:speech_balloon: Conclusion
+## :speech_balloon: Conclusion
 By understanding and addressing Azure permission errors through custom role creation, administrators can ensure smoother operation, enhance security, and reduce manual workload. Feel free to modify the script to fit your specific needs and share your feedback on how it worked for you! :v:
 
 ![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/resolve-azure-maintenance-configuration-error/)
