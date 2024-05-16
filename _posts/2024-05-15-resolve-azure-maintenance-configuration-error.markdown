@@ -104,7 +104,7 @@ New-AzRoleAssignment -RoleDefinitionName $customRoleName -UserPrincipalName $use
 #>
 ```
 
-## :bulb: How to Use It
+## :bulb: How to use it
 To implement this solution:
 
 1. **Modify the script** with your specific details, including subscription ID, resource group name, and user principal name.
