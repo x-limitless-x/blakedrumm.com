@@ -1,0 +1,84 @@
+---
+
+layout: post
+title:  "PowerShell: SCOM's Best Friend - Insights from Scomathon 2024"
+date:   '2024-06-18 10:00:00 -0500'
+categories: scom powershell
+author: blakedrumm
+thumbnail: /assets/img/posts/scomathon-2024.png
+toc: true
+
+summary: >- # this means to ignore newlines
+  A detailed recap of my Scomathon 2024 presentation on how PowerShell can enhance your SCOM environment—covering key scripts, automation techniques, and best practices to make the most out of your System Center Operations Manager.
+
+keywords: scom, powershell, scomathon 2024, scom automation, scom best practices, powershell scripting, scom performance
+permalink: /blog/powershell-scom-best-friend/
+
+---
+
+## :book: Introduction
+
+At Scomathon 2024, I had the privilege of presenting on a topic that is near and dear to my heart: "PowerShell: SCOM's Best Friend." In this blog post, I'll be sharing the key takeaways from my presentation, along with some practical PowerShell scripts that can significantly enhance your SCOM environment. Whether you're just starting with SCOM or are a seasoned professional, there's something here for everyone.
+
+For those who couldn't attend, you can watch my presentation here: [https://www.youtube.com/watch?v=ewcJpC0iFqY](https://www.youtube.com/watch?v=ewcJpC0iFqY)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ewcJpC0iFqY?si=FtH07844yFjErQEe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## :classical_building: Why PowerShell for SCOM?
+
+PowerShell is a powerful scripting language that can automate and simplify many tasks within System Center Operations Manager (SCOM). From managing alerts and notifications to performing regular maintenance and configuration tasks, PowerShell can be your go-to tool for enhancing the efficiency and functionality of your SCOM environment.
+
+### :page_with_curl: Key Benefits
+
+- **Automation:** Schedule and automate repetitive tasks to save time and reduce errors.
+- **Flexibility:** Modify and extend scripts to meet your specific needs.
+- **Integration:** Seamlessly integrate with other Windows services and applications.
+
+## :hammer_and_wrench: Tools and Techniques
+
+During the presentation, I covered a variety of tools and techniques that are particularly useful for SCOM administrators. Below are the links to the tools discussed. **Please note that these scripts require compliance with the MIT license**.
+
+### 1. [System Center Operations Manager Data Warehouse Grooming Tool](/blog/scom-dw-grooming-tool)
+
+This tool analyzes your Data Warehouse Grooming to see what is being stored and how much of your Data Warehouse is filled with the related data. It is available in multiple formats: MSI, EXE, or source PS1.
+
+### 2. [SCOM Data Collector](/blog/scom-data-collector)
+
+With the SCOM Data Collector, you can collect useful data to analyze and troubleshoot your SCOM Environment. It's an essential tool for any SCOM Admin who wants a holistic view of their configuration and setup.
+
+### 3. [Reconfigure System Center Operations Manager for Database Move Tool](/blog/scom-db-move-tool)
+
+This application aids in updating the configuration when migrating SCOM SQL Instances.
+
+### 4. [Remove Data from the SCOM Database Instantly - The PowerShell Way!](/blog/remove-data-from-scom-database/)
+
+This guide allows for quick removal of specific data from the SCOM Database without needing SQL Server Management Studio.
+
+### 5. [SCOM Certificate Checker Script](/blog/scom-certificate-checker-script/)
+
+Check the validity of SCOM Certificates on an Agent, Gateway, or Management Server.
+
+### 6. [Enforce TLS 1.2 & TLS 1.3 in SCOM - The PowerShell Way!](/blog/enforce-tls-1-2-scom/)
+
+Configure your SCOM Environment for a more secure configuration with TLS 1.2 and TLS 1.3.
+
+## :star: Best Practices
+
+Here are some best practices to keep in mind when using PowerShell with SCOM:
+
+- **Test Scripts:** Always test scripts in a non-production environment before deploying them live.
+- **Error Handling:** Implement robust error handling to manage exceptions and failures gracefully.
+- **Documentation:** Keep your scripts well-documented to ensure they are understandable and maintainable.
+
+## :rocket: Conclusion
+
+PowerShell truly is SCOM's best friend, offering unparalleled flexibility and control. By leveraging the tools and techniques discussed in my Scomathon 2024 presentation, you can enhance your SCOM environment, automate tedious tasks, and focus on what truly matters—optimizing your IT operations.
+
+## :link: Additional Resources
+
+- [Official PowerShell Documentation](https://docs.microsoft.com/powershell/)
+- [System Center Operations Manager Documentation](https://docs.microsoft.com/system-center/scom/)
+
+Leave some feedback if this helped you! :v:
+
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/powershell-scom-best-friend/)
