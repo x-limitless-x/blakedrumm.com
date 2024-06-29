@@ -3,7 +3,7 @@
 layout: post
 title:  "PowerShell: SCOM's Best Friend - Insights from Scomathon 2024"
 date:   '2024-06-18 10:00:00 -0500'
-categories: scom powershell conferences tutorials
+categories: operationsManager powershell projects
 author: blakedrumm
 thumbnail: /assets/img/posts/scomathon-2024.png
 toc: true
