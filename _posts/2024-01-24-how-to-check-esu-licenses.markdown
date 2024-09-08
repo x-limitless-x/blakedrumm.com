@@ -23,7 +23,7 @@ This approach is a game-changer. It not only saves time but also gives a more ac
 ## :chart_with_upwards_trend: Steps to Gather Data
 
 ### :mag: Open Resource Graph Explorer
-Within the Azure Portal open [Resource Graph Explorer](https://portal.azure.com/#view/HubsExtension/ArgQueryBlade).
+Within the Azure Portal open [Resource Graph Explorer](https://portal.azure.com/#view/HubsExtension/ArgQueryBlade){:target="_blank"}.
 
 ![Resource Graph Explorer](/assets/img/posts/resource-graph-explorer.png){:class="img-fluid"}
 
