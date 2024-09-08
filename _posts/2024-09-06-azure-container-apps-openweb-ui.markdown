@@ -132,12 +132,14 @@ Before starting, make sure you have the following:
 		1. **Name / suffix** set the name of the revision to something you will recognize. (I used `live`)
 		2. Click on the container image `ai-openwebcontainer` shown in the Container Image table
 		   ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
-		3. When the **Edit a container** menu opens, select the **Volume mounts** tab.
-		4. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
-		   - **Volume name:** `ai-openweb-volume`
-		   - **Mount path:** `/app/backend/data`
-		   - **Sub path (optional):** Leave this empty
-		5. Click save
+		3. The **Edit a container** will open.
+		   1. In the **Basics** tab you can add your Environment variables at the bottom of the tab. Here are all the environmental variables that OpenWeb UI Supports: [https://docs.openwebui.com/getting-started/env-configuration/](https://docs.openwebui.com/getting-started/env-configuration/)
+		   2. Select the **Volume mounts** tab.
+		   3. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
+		      - **Volume name:** `ai-openweb-volume`
+		      - **Mount path:** `/app/backend/data`
+		      - **Sub path (optional):** Leave this empty
+		   4. Click save
 
         - Lastly, you will need to select the Scale tab.
 
