@@ -101,7 +101,7 @@ Before starting, make sure you have the following:
 5. **Gather data from Storage Accounts**
    1. Search for **Storage accounts**, select the storage account we created **openwebuistorageaccount**.
    2. Expand **Security + networking** and select **Access keys**.
-   3. Click show on any of the 4 keys listed, **copy one** for us to use in the next step.
+   3. Click show on one of the 2 keys listed, **copy one** for us to use in the next step.
 
 6. **Link Azure Files to Container Apps Environment**
    1. Search for **Container Apps Environments**.
