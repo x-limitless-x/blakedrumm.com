@@ -21,10 +21,8 @@ Deploying OpenWeb UI on Azure allows you to host an interactive AI webpage. Howe
 
 Before starting, make sure you have the following:
 
-- **Azure Account**: An active Azure subscription.
-- **Azure CLI**: Installed on your machine ([installation guide](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)).
+- **Azure Account**: An active Azure subscription with permissions to create new resources.
 - **OpenWeb UI Container Image**: The container image from GitHub Container Registry (`ghcr.io/open-webui/open-webui:main`).
-- **Azure Storage Account**: For persistent storage using Azure File Shares.
 - **OpenAI API Key**: [Optional] In order to utilize OpenAI in OpenWeb UI, you will need an OpenAI API Key.
 
 ## :rocket: Setting Up OpenWeb UI with Azure Container Apps
