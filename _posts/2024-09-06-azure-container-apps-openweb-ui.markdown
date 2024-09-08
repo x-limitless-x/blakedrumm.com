@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Setup OpenWeb UI AI Webpage - Azure Container Apps"
-date:   '2024-12-20 00:35:08 -0500'
+date:   '2024-09-07 22:35:08 -0500'
 categories: azure guides containerapps
 author: blakedrumm
-thumbnail: /assets/img/openweb-ui-container-apps.png
+thumbnail: /assets/img/posts/openweb-ui-logged-in.png
 toc: true
 
 summary: 'Learn how to deploy an OpenWeb UI AI webpage using Azure Container Apps. We’ll explore the architecture’s limitations regarding scaling, discuss cost-effective hosting options, and compare Azure Container Apps to Kubernetes.'
@@ -25,7 +25,7 @@ Before starting, make sure you have the following:
 - **Azure CLI**: Installed on your machine ([installation guide](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)).
 - **OpenWeb UI Container Image**: The container image from GitHub Container Registry (`ghcr.io/open-webui/open-webui:main`).
 - **Azure Storage Account**: For persistent storage using Azure File Shares.
-- **OpenAI API Key**: [Optional] In order to utilize OpenAI in OpenWeb UI, you will need an API Key.
+- **OpenAI API Key**: [Optional] In order to utilize OpenAI in OpenWeb UI, you will need an OpenAI API Key.
 
 ## :rocket: Setting Up OpenWeb UI with Azure Container Apps
 
@@ -91,7 +91,7 @@ Before starting, make sure you have the following:
 
 		<u>**Ingress tab**</u>
 		1. Toggle **Ingress** to `Enabled`
-		2. **Ingress traffic** set to `Limited to Container Apps Environment`
+		2. **Ingress traffic** set to `Accept traffic from anywhere: Applies if 'internal' setting is set to false on the Container Apps environment`
 		3. **Ingress Type** set to `HTTP`
 		4. **Target port** set to `8080`
 		5. Leave the rest of the options as the defaults.
@@ -117,89 +117,40 @@ Before starting, make sure you have the following:
    1. Search for **Container Apps**, select the container app we created **ai-openwebcontainer**
    2. Expand **Application**, select **Containers**. Select **Edit and deploy**.
 
-   		<u>**Container tab**</u>
-		1. **Name / suffix** set the name of the revision to something you will recognize. (I used `v2`)
-
-		- Proceed to **Next: Scale**.
-
-		<u>**Scale tab**</u>
-		1. **Min replicas** set to 1 (if you want the instance to spin up on demand and deallocate when not in use, set this to `0` instead)
-		2. **Max replicas** set to 1 (the max cannot be more than 1 due to design of Docker container for OpenWeb UI)
-
-		- Proceed to **Next: Volumes**.
+        - First, you will need to select the Volumes tab.
 
    		<u>**Volumes tab**</u>
 		1. Select **+ Add**
 		   1. **Volume type** set to `Azure file volume`
-		   2. **Name** set to whatever name you would like.
+		   2. **Name** set to whatever name you would like (I used `ai-openweb-volume`).
 		   3. **File share** select the file share we created `openwebcontainerfileshare`
 		   4. **Mount options** set to `nobrl` [more information](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/storage/mountoptions-settings-azure-files#other-useful-settings)
+
+        - Now you will need to select the Container tab.
+
+   		<u>**Container tab**</u>
+		1. **Name / suffix** set the name of the revision to something you will recognize. (I used `live`)
+		2. Click on the container image `ai-openwebcontainer` shown in the Container Image table
+		   ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
+		3. When the **Edit a container** menu opens, select the **Volume mounts** tab.
+		4. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
+		   - **Volume name:** `ai-openweb-volume`
+		   - **Mount path:** `/app/backend/data`
+		   - **Sub path (optional):** Leave this empty
+		5. Click save
+
+        - Lastly, you will need to select the Scale tab.
+
+		<u>**Scale tab**</u>
+		1. **Min replicas** set to `1` (If you want the instance to spin up on demand and deallocate when not in use, set this to `0` instead. Personally, I prefer the application to remain running, so I don't have to wait for Azure Container Apps to activate the container.)
+		2. **Max replicas** set to `1` (the max cannot be more than 1 due to design of Docker container for OpenWeb UI)
 
 	- Select **Create** to create the revision.
 
 6. **Access the Application**:
-    - In the **Container App** view expand **Application** and select **Revisions and replicas**
-
-
-### Step-by-Step Guide (Azure CLI)
-
-For those who prefer the command line, here's how to deploy OpenWeb UI using the Azure CLI:
-
-1. **Login to Azure**:
-
-    ```bash
-    az login
-    ```
-
-2. **Create a Resource Group**:
-
-    ```bash
-    az group create --name OpenWebUI-ContainerApp-RG --location eastus
-    ```
-
-3. **Create a Storage Account and File Share**:
-
-    ```bash
-    az storage account create --name aistorageaccount --resource-group OpenWebUI-ContainerApp-RG --location eastus --sku Standard_LRS
-    az storage share-rm create --name ai-storage-file-share --resource-group OpenWebUI-ContainerApp-RG --storage-account aistorageaccount
-    ```
-
-4. **Create a Container App Environment**:
-
-    ```bash
-    az containerapp env create --name AIDockerEnvironment --resource-group OpenWebUI-ContainerApp-RG --location eastus
-    ```
-
-5. **Deploy the Container App**:
-
-    ```bash
-    az containerapp create \
-      --name ai-openwebcontainer \
-      --resource-group OpenWebUI-ContainerApp-RG \
-      --environment AIDockerEnvironment \
-      --image ghcr.io/open-webui/open-webui:main \
-      --ingress external \
-      --target-port 8080 \
-      --cpu 2 \
-      --memory 4Gi \
-      --min-replicas 1 \
-      --max-replicas 1 \
-      --env-vars OPENAI_API_KEYS=sk-proj-xxxx \
-                OPENAI_API_BASE_URLS="https://api.openai.com/v1;https://api.mistral.ai/v1" \
-                PORT=8080 \
-                ENV=prod \
-      --azure-file-volume-mount ai-volume=/app/backend/data \
-      --azure-file-volume ai-storage-file-share=aistorageaccount
-    ```
-
-6. **Retrieve the App URL**:
-
-    ```bash
-    az containerapp show --name ai-openwebcontainer --resource-group OpenWebUI-ContainerApp-RG --query properties.configuration.ingress.fqdn
-    ```
-
-7. **Access the Application**:
-    Open the URL from the output in your browser.
+    1. In the **Container App** view, expand **Application** and select **Revisions and replicas**.
+    2. Click the Active revision that ends with `live` (or whatever you configured your revision name to)
+	3. In the **Revision details** menu select the **Revision URL** this is the published URL for your container app revision. (the main URL is in the **Overview** blade of your container app. Its called the **Application Url**.)
 
 ## :gear: Scaling Limitations of OpenWeb UI
 
@@ -234,7 +185,7 @@ When comparing **Azure Container Apps** and **Azure Kubernetes Service (AKS)**, 
 
 ## :mag: Conclusion
 
-In this guide, we deployed OpenWeb UI using Azure Container Apps and explored its scalability limitations. For most users, sticking with a single-instance deployment in Container Apps is the most cost-effective and stable approach. If scaling is essential, consider moving to a Kubernetes-based solution where the frontend and backend can be decoupled.
+In this guide, we deployed OpenWeb UI using Azure Container Apps and explored its scalability limitations. For most users, sticking with a single-instance deployment in Container Apps is the most cost-effective and stable approach. If scaling is essential, consider moving to the [Kubernetes-based solution](https://docs.openwebui.com/getting-started/installation) where the frontend and backend can be decoupled.
 
 ## :thought_balloon: Feedback
 
