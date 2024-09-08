@@ -60,6 +60,7 @@ Before starting, make sure you have the following:
 
 4. **Create a Container App**
     - Search for **Container Apps**, create a new container app.
+
       **<u>Basics tab</u>**
       1. **Container app name** set the name to `ai-openwebcontainer`.
       2. **Deployment source** set to `Container image`.
