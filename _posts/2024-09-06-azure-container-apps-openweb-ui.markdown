@@ -40,15 +40,15 @@ Before starting, make sure you have the following:
 3. **Create a Storage Account**
     - Search for **Storage accounts**, create a new one (For example: `openwebuistorageaccount` (lowercase required)) in the `OpenWebUI-ContainerApp-RG` resource group.
 	  - During creation of the Storage account there may need to be configuration changes: \
-	    <u>**Basics tab**</u>
+	    **<u>Basics tab</u>**
 		1. **Primary service** select `Azure Files`.
 		2. **Performance** you can set `Standard` unless you have a specific need for `Premium`.
 		3. **Redundancy** you can set `Locally-redundant storage (LRS)` unless you have a specific need for the other options.
 
-		<u>**Networking tab**</u>
+		**<u>Networking tab</u>**
 		1. **Network access** select `Enable public access from all networks` (default option) unless you have a specific need for the other options (the other options require additional configuration which will not be covered in this guide).
 
-		<u>**Other tabs**</u>
+		**<u>Other tabs</u>**
 		1. Leave the defaults and create the storage account.
 
     - After the storage account is created there are additional steps required.
@@ -61,7 +61,7 @@ Before starting, make sure you have the following:
 
 4. **Create a Container App**
     - Search for **Container Apps**, create a new container app.
-		<u>**Basics tab**</u>
+		**<u>Basics tab</u>**
 		1. **Container app name** set the name to `ai-openwebcontainer`.
 		2. **Deployment source** set to `Container image`.
 		3. **Region** set `East US`.
@@ -74,7 +74,7 @@ Before starting, make sure you have the following:
 
            - Proceed to **Next: Container**.
 
-		<u>**Container tab**</u>
+		**<u>Container tab</u>**
 		1. **Image source** set to `Docker Hub or other registries`
 		2. **Image type** set to `Public`
 		3. **Registry login server** set to `ghcr.io`
@@ -86,10 +86,10 @@ Before starting, make sure you have the following:
     	   
 		   - Proceed to **Next: Bindings**.
 
-		<u>**Bindings tab**</u>
+		**<u>Bindings tab</u>**
 		1. Nothing needs to be modified on this tab, click **Next: Ingress**
 
-		<u>**Ingress tab**</u>
+		**<u>Ingress tab</u>**
 		1. Toggle **Ingress** to `Enabled`
 		2. **Ingress traffic** set to `Accept traffic from anywhere: Applies if 'internal' setting is set to false on the Container Apps environment`
 		3. **Ingress Type** set to `HTTP`
@@ -119,7 +119,7 @@ Before starting, make sure you have the following:
 
         - First, you will need to select the Volumes tab.
 
-   		<u>**Volumes tab**</u>
+   		**<u>Volumes tab</u>**
 		1. Select **+ Add**
 		   1. **Volume type** set to `Azure file volume`
 		   2. **Name** set to whatever name you would like (I used `ai-openweb-volume`).
@@ -128,7 +128,7 @@ Before starting, make sure you have the following:
 
         - Now you will need to select the Container tab.
 
-   		<u>**Container tab**</u>
+   		**<u>Container tab</u>**
 		1. **Name / suffix** set the name of the revision to something you will recognize. (I used `live`)
 		2. Click on the container image `ai-openwebcontainer` shown in the Container Image table
 		   ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
@@ -143,7 +143,7 @@ Before starting, make sure you have the following:
 
         - Lastly, you will need to select the Scale tab.
 
-		<u>**Scale tab**</u>
+		**<u>Scale tab</u>**
 		1. **Min replicas** set to `1` (If you want the instance to spin up on demand and deallocate when not in use, set this to `0` instead. Personally, I prefer the application to remain running, so I don't have to wait for Azure Container Apps to activate the container.)
 		2. **Max replicas** set to `1` (the max cannot be more than 1 due to design of Docker container for OpenWeb UI)
 
