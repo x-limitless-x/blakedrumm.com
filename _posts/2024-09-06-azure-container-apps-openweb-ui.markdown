@@ -199,3 +199,5 @@ In this guide, we deployed OpenWeb UI using Azure Container Apps and explored it
 ## :thought_balloon: Feedback
 
 Have you tried deploying OpenWeb UI on Azure? What’s your experience with its scaling capabilities? Share your insights in the comments below.
+
+![Page Views](https://counter.blakedrumm.com/count/tag.svg?url=blakedrumm.com/blog/azure-container-apps-openweb-ui/)
