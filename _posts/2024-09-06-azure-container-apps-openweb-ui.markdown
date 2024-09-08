@@ -31,22 +31,22 @@ Before starting, make sure you have the following:
 
 1. **Access the Azure Portal**: Log in to [Azure Portal](https://portal.azure.com/).
 
-2. **Create a Resource Group**
+2. **Create a Resource Group** \
     - Search for **Resource groups** and create a new one named `OpenWebUI-ContainerApp-RG`.
     - Select a region like **East US** be sure you are consistent with the region through this guide.
 
-3. **Create a Storage Account**
+3. **Create a Storage Account** \
     - Search for **Storage accounts**, create a new one (For example: `openwebuistorageaccount` (lowercase required)) in the `OpenWebUI-ContainerApp-RG` resource group.
 	  - During creation of the Storage account there may need to be configuration changes: \
-	    **<u>Basics tab</u>**
+	    **<u>Basics tab</u>** \
 		1. **Primary service** select `Azure Files`.
 		2. **Performance** you can set `Standard` unless you have a specific need for `Premium`.
 		3. **Redundancy** you can set `Locally-redundant storage (LRS)` unless you have a specific need for the other options.
 
-		**<u>Networking tab</u>**
+		**<u>Networking tab</u>** \
 		1. **Network access** select `Enable public access from all networks` (default option) unless you have a specific need for the other options (the other options require additional configuration which will not be covered in this guide).
 
-		**<u>Other tabs</u>**
+		**<u>Other tabs</u>** \
 		1. Leave the defaults and create the storage account.
 
     - After the storage account is created there are additional steps required.
@@ -57,9 +57,9 @@ Before starting, make sure you have the following:
 		 3. On the **Backup** tab I disable backup, as I do not want to incur any additional charges. But if you can afford it, keep it enabled to keep your files safe in the event of data loss.
 		 4. Create the file share.
 
-4. **Create a Container App**
+4. **Create a Container App** \
     - Search for **Container Apps**, create a new container app.
-		**<u>Basics tab</u>**
+		**<u>Basics tab</u>** \
 		1. **Container app name** set the name to `ai-openwebcontainer`.
 		2. **Deployment source** set to `Container image`.
 		3. **Region** set `East US`.
@@ -72,7 +72,7 @@ Before starting, make sure you have the following:
 
            - Proceed to **Next: Container**.
 
-		**<u>Container tab</u>**
+		**<u>Container tab</u>** \
 		1. **Image source** set to `Docker Hub or other registries`
 		2. **Image type** set to `Public`
 		3. **Registry login server** set to `ghcr.io`
@@ -84,10 +84,10 @@ Before starting, make sure you have the following:
     	   
 		   - Proceed to **Next: Bindings**.
 
-		**<u>Bindings tab</u>**
+		**<u>Bindings tab</u>** \
 		1. Nothing needs to be modified on this tab, click **Next: Ingress**
 
-		**<u>Ingress tab</u>**
+		**<u>Ingress tab</u>** \
 		1. Toggle **Ingress** to `Enabled`
 		2. **Ingress traffic** set to `Accept traffic from anywhere: Applies if 'internal' setting is set to false on the Container Apps environment`
 		3. **Ingress Type** set to `HTTP`
@@ -96,12 +96,12 @@ Before starting, make sure you have the following:
 
 	- Select **Review + create** to create the Container App.
 
-5. **Gather data from Storage Accounts**
+5. **Gather data from Storage Accounts** \
    1. Search for **Storage accounts**, select the storage account we created **openwebuistorageaccount**.
    2. Expand **Security + networking** and select **Access keys**.
    3. Click show on one of the 2 keys listed, **copy one** for us to use in the next step.
 
-6. **Link Azure Files to Container Apps Environment**
+6. **Link Azure Files to Container Apps Environment** \
    1. Search for **Container Apps Environments**.
    2. Expand **Settings**, then select **Azure Files**, we are going to Add a new file share to the container apps environment.
       1. **Name** set a name (`openwebcontainerfileshare`) for the file share in the container apps environment.
@@ -111,7 +111,7 @@ Before starting, make sure you have the following:
 	  5. **Access mode** set to `Read/Write`
 
 
-7. **Mount Azure File Share to Container App**
+7. **Mount Azure File Share to Container App** \
    1. Search for **Container Apps**, select the container app we created **ai-openwebcontainer**
    2. Expand **Application**, select **Containers**. Select **Edit and deploy**.
 
