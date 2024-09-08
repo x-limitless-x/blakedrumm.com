@@ -154,6 +154,8 @@ Search for **Container Apps**, create a new container app.
 2. Click the Active revision that ends with `live` (or whatever you configured your revision name to)
 3. In the **Revision details** menu select the **Revision URL** this is the published URL for your container app revision. (the main URL is in the **Overview** blade of your container app. Its called the **Application Url**.)
 
+---
+
 ## :gear: Scaling Limitations of OpenWeb UI
 
 Due to OpenWeb UI's architecture, where both frontend and backend are housed in the same container, scaling the application horizontally (adding more replicas) is problematic. Here’s why:
