@@ -88,7 +88,7 @@ Search for **Container Apps**, create a new container app.
   - Proceed to **Next: Bindings**.
 
   - **<u>Bindings tab</u>**
-    1. Nothing needs to be modified on this tab, click **Next: Ingress**
+    1. Nothing needs to be modified on this tab.
            
   - Proceed to **Next: Ingress**.
         
