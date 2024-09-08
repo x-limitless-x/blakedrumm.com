@@ -39,16 +39,16 @@ Before starting, make sure you have the following:
     - Search for **Storage accounts**, create a new one (For example: `openwebuistorageaccount` (lowercase required)) in the `OpenWebUI-ContainerApp-RG` resource group.
       - During creation of the Storage account there may need to be configuration changes:
 
-	**<u>Basics tab</u>**
-	1. **Primary service** select `Azure Files`.
-	2. **Performance** you can set `Standard` unless you have a specific need for `Premium`.
-	3. **Redundancy** you can set `Locally-redundant storage (LRS)` unless you have a specific need for the other options.
+	- **<u>Basics tab</u>**
+	  1. **Primary service** select `Azure Files`.
+	  2. **Performance** you can set `Standard` unless you have a specific need for `Premium`.
+	  3. **Redundancy** you can set `Locally-redundant storage (LRS)` unless you have a specific need for the other options.
 	
-	**<u>Networking tab</u>**
-	1. **Network access** select `Enable public access from all networks` (default option) unless you have a specific need for the other options (the other options require additional configuration which will not be covered in this guide).
+	- **<u>Networking tab</u>**
+	  1. **Network access** select `Enable public access from all networks` (default option) unless you have a specific need for the other options (the other options require additional configuration which will not be covered in this guide).
 	
-	**<u>Other tabs</u>**
-	1. Leave the defaults and create the storage account.
+	- **<u>Other tabs</u>**
+	  1. Leave the defaults and create the storage account.
 
     - After the storage account is created there are additional steps required.
       1. Search for **Storage accounts**. Locate the storage account (***openwebuistorageaccount***) and select it.
@@ -61,42 +61,42 @@ Before starting, make sure you have the following:
 4. **Create a Container App**
     - Search for **Container Apps**, create a new container app.
 
-      **<u>Basics tab</u>**
-      1. **Container app name** set the name to `ai-openwebcontainer`.
-      2. **Deployment source** set to `Container image`.
-      3. **Region** set `East US`.
-      4. **Container Apps Environment** create a new container apps environment. There is additional configuration needed for the container app environment:
-	 1. Set the **Environment Name** to `OpenWebContainerEnvironment`.
-	 2. Leave the rest of the options as the defaults.
-	 3. Create the Container Apps Environment.
+      - **<u>Basics tab</u>**
+        1. **Container app name** set the name to `ai-openwebcontainer`.
+        2. **Deployment source** set to `Container image`.
+        3. **Region** set `East US`.
+        4. **Container Apps Environment** create a new container apps environment. There is additional configuration needed for the container app environment:
+	   1. Set the **Environment Name** to `OpenWebContainerEnvironment`.
+	   2. Leave the rest of the options as the defaults.
+	   3. Create the Container Apps Environment.
 	   
-	    ![Example of how to setup container app basics tab](/assets/img/posts/create-container-app-basics-tab-filled-out.png)
+	      ![Example of how to setup container app basics tab](/assets/img/posts/create-container-app-basics-tab-filled-out.png)
 
       - Proceed to **Next: Container**.
 
-        **<u>Container tab</u>**
-	1. **Image source** set to `Docker Hub or other registries`
-	2. **Image type** set to `Public`
-	3. **Registry login server** set to `ghcr.io`
-	4. **Image and tag** set to `open-webui/open-webui:main`
-	5. **CPU and Memory** set to what you are comfortable with, I set to `2 CPU cores, 4 Gi memory` but this can be lower if needed.
-	6. Leave the rest of the options as the defaults (we will configure the environmental variables in a few steps).
+        - **<u>Container tab</u>**
+	  1. **Image source** set to `Docker Hub or other registries`
+	  2. **Image type** set to `Public`
+	  3. **Registry login server** set to `ghcr.io`
+	  4. **Image and tag** set to `open-webui/open-webui:main`
+	  5. **CPU and Memory** set to what you are comfortable with, I set to `2 CPU cores, 4 Gi memory` but this can be lower if needed.
+	  6. Leave the rest of the options as the defaults (we will configure the environmental variables in a few steps).
 		   
-	   ![Example of how to setup container app container tab - picture 1](/assets/img/posts/create-container-app-container-tab-filled-out.png)
+	     ![Example of how to setup container app container tab - picture 1](/assets/img/posts/create-container-app-container-tab-filled-out.png)
     	   
       - Proceed to **Next: Bindings**.
 
-        **<u>Bindings tab</u>**
-        1. Nothing needs to be modified on this tab, click **Next: Ingress**
+        - **<u>Bindings tab</u>**
+          1. Nothing needs to be modified on this tab, click **Next: Ingress**
            
       - Proceed to **Next: Ingress**.
         
-        **<u>Ingress tab</u>**
-        1. Toggle **Ingress** to `Enabled`
-        2. **Ingress traffic** set to `Accept traffic from anywhere: Applies if 'internal' setting is set to false on the Container Apps environment`
-        3. **Ingress Type** set to `HTTP`
-        4. **Target port** set to `8080`
-        5. Leave the rest of the options as the defaults.
+        - **<u>Ingress tab</u>**
+          1. Toggle **Ingress** to `Enabled`
+          2. **Ingress traffic** set to `Accept traffic from anywhere: Applies if 'internal' setting is set to false on the Container Apps environment`
+          3. **Ingress Type** set to `HTTP`
+          4. **Target port** set to `8080`
+          5. Leave the rest of the options as the defaults.
 
       - Select **Review + create** to create the Container App.
 
@@ -121,33 +121,33 @@ Before starting, make sure you have the following:
 
       - First, you will need to select the Volumes tab.
 
-	**<u>Volumes tab</u>**
-	1. Select **+ Add**
-	   1. **Volume type** set to `Azure file volume`
-	   2. **Name** set to whatever name you would like (I used `ai-openweb-volume`).
-	   3. **File share** select the file share we created `openwebcontainerfileshare`
-	   4. **Mount options** set to `nobrl` [more information](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/storage/mountoptions-settings-azure-files#other-useful-settings){:target="_blank"}
+	- **<u>Volumes tab</u>**
+	  1. Select **+ Add**
+	     1. **Volume type** set to `Azure file volume`
+	     2. **Name** set to whatever name you would like (I used `ai-openweb-volume`).
+	     3. **File share** select the file share we created `openwebcontainerfileshare`
+	     4. **Mount options** set to `nobrl` [more information](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/storage/mountoptions-settings-azure-files#other-useful-settings){:target="_blank"}
 
       - Now you will need to select the Container tab.
 
-   	**<u>Container tab</u>**
-   	1. **Name / suffix** set the name of the revision to something you will recognize. (I used `live`)
-   	2. Click on the container image `ai-openwebcontainer` shown in the Container Image table
-   	   ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
-   	3. The **Edit a container** will open.
-	   1. In the **Basics** tab you can add your Environment variables at the bottom of the tab. Here are all the environmental variables that OpenWeb UI Supports: [https://docs.openwebui.com/getting-started/env-configuration/](https://docs.openwebui.com/getting-started/env-configuration/){:target="_blank"}
-	   2. Select the **Volume mounts** tab.
-	   3. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
-	      - **Volume name:** `ai-openweb-volume`
-	      - **Mount path:** `/app/backend/data`
-	      - **Sub path (optional):** Leave this empty
-	   4. Click save
+   	- **<u>Container tab</u>**
+   	  1. **Name / suffix** set the name of the revision to something you will recognize. (I used `live`)
+   	  2. Click on the container image `ai-openwebcontainer` shown in the Container Image table
+   	     ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
+   	  3. The **Edit a container** will open.
+	     1. In the **Basics** tab you can add your Environment variables at the bottom of the tab. Here are all the environmental variables that OpenWeb UI Supports: [https://docs.openwebui.com/getting-started/env-configuration/](https://docs.openwebui.com/getting-started/env-configuration/){:target="_blank"}
+	     2. Select the **Volume mounts** tab.
+	     3. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
+	        - **Volume name:** `ai-openweb-volume`
+	        - **Mount path:** `/app/backend/data`
+	        - **Sub path (optional):** Leave this empty
+	     4. Click save
 
       - Lastly, you will need to select the Scale tab.
 
-	**<u>Scale tab</u>**
-	1. **Min replicas** set to `1` (If you want the instance to spin up on demand and deallocate when not in use, set this to `0` instead. Personally, I prefer the application to remain running, so I don't have to wait for Azure Container Apps to activate the container.)
-	2. **Max replicas** set to `1` (the max cannot be more than 1 due to design of Docker container for OpenWeb UI)
+	- **<u>Scale tab</u>**
+	  1. **Min replicas** set to `1` (If you want the instance to spin up on demand and deallocate when not in use, set this to `0` instead. Personally, I prefer the application to remain running, so I don't have to wait for Azure Container Apps to activate the container.)
+	  2. **Max replicas** set to `1` (the max cannot be more than 1 due to design of Docker container for OpenWeb UI)
 
       - Select **Create** to create the revision.
 
