@@ -23,7 +23,7 @@ Before starting, make sure you have the following:
 
 - **Azure Account**: An active Azure subscription with permissions to create new resources.
 - **OpenWeb UI Container Image**: The container image from GitHub Container Registry (`ghcr.io/open-webui/open-webui:main`).
-- **OpenAI API Key**: [Optional] In order to utilize OpenAI in OpenWeb UI, you will need an OpenAI API Key.
+- **OpenAI API Key**: [Optional] In order to utilize OpenAI in OpenWeb UI, you will need an OpenAI API Key. [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 
 ## :rocket: Setting Up OpenWeb UI with Azure Container Apps
 
@@ -133,13 +133,18 @@ Search for **Container Apps**, create a new container app.
         ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
      3. The **Edit a container** menu will open.
         1. In the **Basics** tab you can add your Environment variables at the bottom of the tab. Here are all the environmental variables that OpenWeb UI Supports: [https://docs.openwebui.com/getting-started/env-configuration/](https://docs.openwebui.com/getting-started/env-configuration/){:target="_blank"}
-        2. Select the **Volume mounts** tab.
-        3. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
+           - Add a new environmental variable ***(keep in mind this method will expose your API key in plain text. If you want security you need to save it as a secret)***:
+             - **Name:** `OPENAI_API_KEY`
+             - **Source:** `Manual entry`
+             - **Value:** `<OpenAI-API-Key>` [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+
+        3. Select the **Volume mounts** tab.
+        4. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
            - **Volume name:** `ai-openweb-volume`
            - **Mount path:** `/app/backend/data`
            - **Sub path (optional):** Leave this empty
 
-        4. Click save
+        5. Click save
 
    - Lastly, you will need to select the Scale tab.
 
