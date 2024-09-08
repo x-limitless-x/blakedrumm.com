@@ -138,7 +138,8 @@ Search for **Container Apps**, create a new container app.
            - **Volume name:** `ai-openweb-volume`
            - **Mount path:** `/app/backend/data`
            - **Sub path (optional):** Leave this empty
-	4. Click save
+
+        4. Click save
 
    - Lastly, you will need to select the Scale tab.
 
