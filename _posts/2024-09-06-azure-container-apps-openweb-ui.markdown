@@ -70,7 +70,7 @@ Before starting, make sure you have the following:
 	 2. Leave the rest of the options as the defaults.
 	 3. Create the Container Apps Environment.
 	   
-         ![Example of how to setup container app basics tab](/assets/img/posts/create-container-app-basics-tab-filled-out.png)
+	    ![Example of how to setup container app basics tab](/assets/img/posts/create-container-app-basics-tab-filled-out.png)
 
       - Proceed to **Next: Container**.
 
