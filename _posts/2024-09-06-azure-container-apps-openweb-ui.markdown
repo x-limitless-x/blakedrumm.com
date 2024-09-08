@@ -118,19 +118,16 @@ Before starting, make sure you have the following:
 7. **Mount Azure File Share to Container App**
    1. Search for **Container Apps**, select the container app we created **ai-openwebcontainer**
    2. Expand **Application**, select **Containers**. Select **Edit and deploy**.
-
-      - First, you will need to select the Volumes tab.
-
+	- First, you will need to select the Volumes tab.
 	- **<u>Volumes tab</u>**
 	  1. Select **+ Add**
 	     1. **Volume type** set to `Azure file volume`
 	     2. **Name** set to whatever name you would like (I used `ai-openweb-volume`).
 	     3. **File share** select the file share we created `openwebcontainerfileshare`
 	     4. **Mount options** set to `nobrl` [more information](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/storage/mountoptions-settings-azure-files#other-useful-settings){:target="_blank"}
+      	- Now you will need to select the Container tab.
 
-      - Now you will need to select the Container tab.
-
-   	- **<u>Container tab</u>**
+	- **<u>Container tab</u>**
    	  1. **Name / suffix** set the name of the revision to something you will recognize. (I used `live`)
    	  2. Click on the container image `ai-openwebcontainer` shown in the Container Image table
    	     ![Where to click, to configure the container image](/assets/img/posts/edit-container-app-revision-container-image-select.png)
@@ -143,13 +140,13 @@ Before starting, make sure you have the following:
 	        - **Sub path (optional):** Leave this empty
 	     4. Click save
 
-      - Lastly, you will need to select the Scale tab.
+	- Lastly, you will need to select the Scale tab.
 
 	- **<u>Scale tab</u>**
 	  1. **Min replicas** set to `1` (If you want the instance to spin up on demand and deallocate when not in use, set this to `0` instead. Personally, I prefer the application to remain running, so I don't have to wait for Azure Container Apps to activate the container.)
 	  2. **Max replicas** set to `1` (the max cannot be more than 1 due to design of Docker container for OpenWeb UI)
 
-      - Select **Create** to create the revision.
+	- Select **Create** to create the revision.
 
 6. **Access the Application**:
     1. In the **Container App** view, expand **Application** and select **Revisions and replicas**.
