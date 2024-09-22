@@ -136,7 +136,7 @@ Search for **Container Apps**, create a new container app.
            - Add a new environmental variable ***(keep in mind this method will expose your API key in plain text. If you want security you need to save it as a secret)***:
              - **Name:** `OPENAI_API_KEY`
              - **Source:** `Manual entry`
-             - **Value:** `<OpenAI-API-Key>` [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+             - **Value:** `<OpenAI-API-Key>` [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys){:target="_blank"}
 
         3. Select the **Volume mounts** tab.
         4. Select the dropdown under volume name and select the Azure file volume that we created in the Volumes tab.
