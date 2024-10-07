@@ -78,7 +78,7 @@ SeUndockPrivilege                         | Remove computer from docking station
 &nbsp;
 
 > ## :notebook: Note
-> You may edit line [559](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L559) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [558](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L558) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
 >## Add Users
@@ -156,13 +156,15 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 ![UserAccountsRights](/assets/img/posts/get-user-right.png){:class="img-fluid"}
 
 > ## Note
-> You may edit line [491](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L491) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [494](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L494) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 Here are a few examples:
 ### Local Computer
 Get Local User Account Rights and output to text in console:
 ```powershell
 .\Get-UserRights.ps1
+# or
+.\Get-UserRights.ps1 -UserName DOMAIN\Username
 ```
 
 ### Remote Computer
@@ -191,9 +193,9 @@ Output to Text in 'C:\Temp':
 
 PassThru object to allow manipulation / filtering:
 ```powershell
-.\Get-UserRights.ps1 -ComputerName SQL.contoso.com -PassThru | Where {$_.Principal -match "Administrator"}
+.\Get-UserRights.ps1 -ComputerName SQL.contoso.com -UserName DOMAIN\SQLUser -PassThru | Where-Object {$_.Privilege -match 'SeInteractiveLogonRight'}
 # or
-.\Get-UserRights.ps1 -PassThru | ? {$_.Privilege -match 'SeServiceLogonRight'}
+.\Get-UserRights.ps1 -PassThru | Where-Object {$_.Privilege -match 'SeServiceLogonRight'}
 ```
 
 Leave some feedback if this helped you! :v:
