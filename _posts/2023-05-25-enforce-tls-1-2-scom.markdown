@@ -44,7 +44,7 @@ This PowerShell script will allow you to enforce TLS 1.2 & TLS 1.3 in your SCOM 
 {: .table .table-hover .table-text .d-block .overflow-auto }
 
 > ## :notebook: Note
-> You may edit line [1905](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/TLS%201.2%20Enforcement/Invoke-EnforceSCOMTLS1.2.ps1#L1905) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [1904](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/TLS%201.2%20Enforcement/Invoke-EnforceSCOMTLS1.2.ps1#L1904) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
 
 ## :arrow_down: How to get it
 You can get a copy of the script here: \
