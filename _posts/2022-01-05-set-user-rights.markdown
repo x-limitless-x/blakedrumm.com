@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Set and Check User Rights Assignment via Powershell"
+title:  "Set and Check User Rights Assignment via PowerShell"
 date:   '2022-01-05 23:41:26 -0500'
 categories: powershell operationsManager troubleshooting projects 
 author: blakedrumm
 thumbnail: /assets/img/posts/set-user-rights.png
 toc: true
 
-summary: You can add, remove, and check User Rights Assignment (remotely / locally) with the following Powershell scripts.
+summary: You can add, remove, and check User Rights Assignment (remotely / locally) with the following PowerShell scripts.
 
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell, add logon locally, powershell local security policy, logon as batch powershell, local user account rights
 permalink: /blog/set-and-check-user-rights-assignment/
@@ -78,7 +78,7 @@ SeUndockPrivilege                         | Remove computer from docking station
 &nbsp;
 
 > ## :notebook: Note
-> You may edit line [558](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L558) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [558](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L558) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the PowerShell ISE.
 
 Here are a few examples:
 >## Add Users
@@ -151,12 +151,12 @@ _or_ \
 _or_ \
 [Personal File Server - Get-UserRights.txt](https://files.blakedrumm.com/Get-UserRights.txt) :arrow_left: **Text Format Alternative Download Link**
 
-In order to check the Local User Rights, you will need to run the above (Get-UserRights), you may copy and paste the above script in your Powershell ISE and press play.
+In order to check the Local User Rights, you will need to run the above (Get-UserRights), you may copy and paste the above script in your PowerShell ISE and press play.
 
 ![UserAccountsRights](/assets/img/posts/get-user-right.png){:class="img-fluid"}
 
 > ## Note
-> You may edit line [494](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L494) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the Powershell ISE.
+> You may edit line [494](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L494) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the PowerShell ISE.
 
 Here are a few examples:
 ### Local Computer
