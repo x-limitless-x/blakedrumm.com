@@ -107,7 +107,7 @@ Here are a few examples:
 >#### Example 5
 >Add User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User1 and CONTOSO\User2 and run on, local machine and SQL.contoso.com:
 >```powershell
->.\Set-UserRights.ps1 -AddRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
+>.\Set-UserRights.ps1 -AddRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName "$env:COMPUTERNAME", "SQL.contoso.com" -UserName "CONTOSO\User1", "CONTOSO\User2"
 >```
 
 &nbsp;
@@ -138,7 +138,7 @@ Here are a few examples:
 >#### Example 5
 >Remove User Right "Log on as a service" and "Log on as a batch job" for CONTOSO\User1 and CONTOSO\User2 and run on, local machine and SQL.contoso.com:
 >```powershell
->.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName $env:COMPUTERNAME, SQL.contoso.com -UserName CONTOSO\User1, CONTOSO\User2
+>.\Set-UserRights.ps1 -RemoveRight -UserRight SeServiceLogonRight, SeBatchLogonRight -ComputerName "$env:COMPUTERNAME", "SQL.contoso.com" -UserName "CONTOSO\User1", "CONTOSO\User2"
 >```
 
 ---
@@ -175,7 +175,7 @@ Get Remote SQL Server User Account Rights:
 
 Get Local Machine and SQL Server User Account Rights:
 ```powershell
-.\Get-UserRights.ps1 -ComputerName $env:COMPUTERNAME, SQL.contoso.com
+.\Get-UserRights.ps1 -ComputerName "$env:COMPUTERNAME", "SQL.contoso.com"
 ```
 
 ### Output Types
