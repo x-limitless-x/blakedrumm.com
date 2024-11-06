@@ -12,7 +12,7 @@ summary: You can add, remove, and check User Rights Assignment (remotely / local
 keywords: user rights assignment, powershell script, local security policy, secpol.msc, assign user rights via powershell, change user rights via powershell, add logon locally, powershell local security policy, logon as batch powershell, local user account rights
 permalink: /blog/set-and-check-user-rights-assignment/
 ---
-<sub>This post was last updated on October 11th, 2024</sub>
+<sub>This post was last updated on November 5th, 2024</sub>
 
  I stumbled across this gem ([weloytty/Grant-LogonAsService.ps1](https://github.com/weloytty/QuirkyPSFunctions/blob/master/Source/Users/Grant-LogOnAsService.ps1)) that allows you to grant Logon as a Service Right for a User. I modified the script you can now run the Powershell script against multiple machines, users, and user rights.
  
@@ -78,7 +78,7 @@ SeUndockPrivilege                         | Remove computer from docking station
 &nbsp;
 
 > ## :notebook: Note
-> You may edit line [558](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L558) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the PowerShell ISE.
+> You may edit line [564](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Set-UserRights.ps1#L564) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the PowerShell ISE.
 
 Here are a few examples:
 >## Add Users
@@ -156,7 +156,7 @@ In order to check the Local User Rights, you will need to run the above (Get-Use
 ![UserAccountsRights](/assets/img/posts/get-user-right.png){:class="img-fluid"}
 
 > ## Note
-> You may edit line [494](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L494) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the PowerShell ISE.
+> You may edit line [493](https://github.com/blakedrumm/SCOM-Scripts-and-SQL/blob/master/Powershell/General%20Functions/Get-UserRights.ps1#L493) in the script to change what happens when the script is run without any arguments or parameters, this also allows you to change what happens when the script is run from the PowerShell ISE.
 
 Here are a few examples:
 ### Local Computer
