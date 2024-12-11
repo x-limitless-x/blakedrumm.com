@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create Custom Powershell CPU Monitor"
+title:  "Create Custom PowerShell CPU Monitor"
 date:   '2022-12-17 01:25:12 -0500'
 categories: powershell operationsManager guides
 author: blakedrumm
@@ -8,17 +8,17 @@ thumbnail: /assets/img/posts/custom-cpu-usage-monitor-alert.png
 toc: true
 
 summary: >- # this means to ignore newlines
-  This article shows you how to create a CPU Usage Monitor that runs via Powershell script. You can also download the example MP for testing.
+  This article shows you how to create a CPU Usage Monitor that runs via PowerShell script. You can also download the example MP for testing.
 
 keywords: create powershell monitor, create scom powershell monitor, scom powershell monitor, monitor scom with powershell, cpu usage monitor scom, custom cpu usage monitor, cpu usage monitor powershell scom
 permalink: /blog/create-custom-powershell-cpu-monitor/
 ---
 
 ## :book: Introduction
-Recently I had a case and I needed to assist my customer with a CPU Monitor that targets all Windows Computers. The customer is using the Powershell Authoring Community MP by Cookdown. I will document my steps to get this working as intended.
+Recently I had a case and I needed to assist my customer with a CPU Monitor that targets all Windows Computers. The customer is using the PowerShell Authoring Community MP by Cookdown. I will document my steps to get this working as intended.
 
 ## :red_circle: Prerequisites
-- Import Cookdown Powershell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/))
+- Import Cookdown PowerShell Monitoring - Community Management Pack ([https://www.cookdown.com/scom-essentials/powershell-authoring/](https://www.cookdown.com/scom-essentials/powershell-authoring/))
 
 ## :heavy_check_mark: Example MP
 You can get a copy of the Management Pack I created in this guide, here: \
