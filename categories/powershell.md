@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Powershell
+title: PowerShell
 permalink: /blog/categories/powershell/
 ---
 
