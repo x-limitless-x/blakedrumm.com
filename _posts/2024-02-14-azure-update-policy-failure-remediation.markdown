@@ -2,7 +2,7 @@
 layout: post
 title:  "Configure periodic checking for missing system updates on azure virtual machines - Azure Update Manager Policy"
 date:   '2024-02-14 21:00:00 -0500'
-categories: troubleshooting azure
+categories: troubleshooting azure updateManager
 author: blakedrumm
 thumbnail: /assets/img/posts/azure-update-manager-policy-configure-periodic-checking.png
 toc: true
