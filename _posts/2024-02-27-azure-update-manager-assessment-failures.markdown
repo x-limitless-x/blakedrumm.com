@@ -2,7 +2,7 @@
 layout: post
 title:  "Assessment Failures - Azure Update Manager"
 date:   '2024-02-27 12:24:13 -0500'
-categories: troubleshooting azure
+categories: troubleshooting azure updateManager
 author: blakedrumm
 thumbnail: /assets/img/posts/example-error-azure-update-manager-assessment.png
 toc: true
