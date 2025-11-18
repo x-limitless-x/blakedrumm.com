@@ -3,46 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Azure Communication Services Email Sample</title>
+  <meta name="color-scheme" content="light dark" />
+  <title>Welcome to Azure Communication Service Email APIs</title>
 
   <!-- ==========================================================
        CSS Styles: Mobile adjustments + Dark mode compatibility
        ========================================================== -->
   <style>
-    /* Page baseline */
+    :root {
+      color-scheme: light dark;
+    }
+
+    /* Base (light mode defaults) */
     body {
       margin: 0;
       padding: 0;
       background: #f5f7fa;
       font-family: Segoe UI, Arial, sans-serif;
+      color: #1b1f23;
+    }
+
+    /* Make sure tables inherit a sane base color */
+    table, td, p, span {
+      color: inherit;
     }
 
     /* Mobile responsive scaling */
     @media only screen and (max-width: 600px) {
-      .container { width: 100% !important; }
-      .hero-text { font-size: 22px !important; }
-      .cta-button { padding: 14px 26px !important; }
+      .container {
+        width: 100% !important;
+      }
+      .hero-text {
+        font-size: 22px !important;
+      }
+      .cta-button {
+        padding: 14px 26px !important;
+      }
     }
 
-    /* Dark mode (safe for most modern clients/browsers) */
+    /* Dark mode (for browser / OS dark theme) */
     @media (prefers-color-scheme: dark) {
-      body {
-        background: #111111 !important;
-        color: #ffffff !important;
+      html, body {
+        background: #050608 !important;
+        color: #f3f4f6 !important;
       }
+
       .container {
-        background: #1e1e1e !important;
-        color: #ffffff !important;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.6) !important;
+        background: #15181d !important;
+        color: #f3f4f6 !important;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.75) !important;
       }
-      .hero-text { color: #ffffff !important; }
+
+      .hero-text {
+        color: #ffffff !important;
+      }
+
       .info-card {
-        background: #243447 !important;
+        background: #1f2733 !important;
         border-color: #3b4a60 !important;
-        color: #ffffff !important;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+        color: #e5e7eb !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
       }
-      a { color: #4aa3ff !important; }
+
+      /* General text: make everything lighter for readability */
+      table, td, p, span {
+        color: #e5e7eb !important;
+      }
+
+      /* Muted / footer-style text – still lighter than before */
+      .muted, .muted * {
+        color: #c7d2e3 !important;
+      }
+
+      a {
+        color: #4aa3ff !important;
+      }
     }
   </style>
 </head>
@@ -50,8 +85,8 @@
 <body>
 
   <!-- ==========================================================
-       Preheader text (for email). On a normal webpage this will
-       be hidden but leaving it here keeps the layout identical.
+       Preheader text: Hidden content shown in inbox preview
+       (kept for parity with the email version; harmless on web)
        ========================================================== -->
   <div style="display:none!important;visibility:hidden;opacity:0;color:transparent;
               height:0;width:0;overflow:hidden;mso-hide:all;">
@@ -90,12 +125,11 @@
 
           <!-- ====================================================
                Optional: View in browser link (top of content)
-               On the hosted page this will just refresh the page.
-               In the email, you point this to this page's URL.
+               On the hosted version, this can simply reload the page.
                ==================================================== -->
           <tr>
             <td style="padding:16px 32px 0 32px;text-align:right;font-size:11px;color:#7a8693;">
-              <a href="#" onclick="window.location.reload(); return false;"
+              <a href="#" onclick="window.location.reload();return false;"
                  target="_self" style="color:#0067b8;text-decoration:none;">
                 View this email in your browser
               </a>
@@ -104,7 +138,6 @@
 
           <!-- ====================================================
                Security verification bar (informational)
-               Extra top padding to create breathing room
                ==================================================== -->
           <tr>
             <td style="padding:18px 32px 0 32px;">
@@ -198,7 +231,7 @@
           </tr>
 
           <!-- ====================================================
-               Call-to-action button (bulletproof-ish for email, fine for web)
+               Call-to-action button (bulletproof for Outlook, still fine on web)
                ==================================================== -->
           <tr>
             <td style="padding:14px 32px 8px 32px;text-align:center;">
@@ -248,7 +281,8 @@
                Footer + legal text
                ==================================================== -->
           <tr>
-            <td style="padding:22px 32px 28px 32px;color:#666;font-size:12px;line-height:1.4;">
+            <td class="muted"
+                style="padding:22px 32px 28px 32px;color:#666;font-size:12px;line-height:1.4;">
 
               <!-- Powered by line -->
               <p style="margin:16px 0 8px 0;font-size:11px;color:#88939c;text-align:center;">
@@ -257,19 +291,18 @@
 
               <!-- Reply routing note -->
               <p style="margin:8px 0 8px 0;">
-                Replies will be directed to
-                <strong>blakedrumm@microsoft.com</strong>.
-                Please do not reply to the sender address directly.
+                Replies will be directed to the reply-to address configured on your Azure Communication Services
+                email sample. Please do not reply directly to the sender address shown in this example.
               </p>
 
               <!-- Not expected disclaimer -->
               <p style="margin:0 0 8px 0;">
-                If you were not expecting this email, you may safely ignore or delete it.
+                If you were not expecting this email sample, you may safely ignore or close this page.
               </p>
 
               <!-- Copyright -->
               <p style="margin:0;font-size:11px;color:#88939c;">
-                &copy; <span id="year"></span> Your Organization. All rights reserved.
+                &copy; 2025 Your Organization. All rights reserved.
               </p>
 
               <!-- Image attribution -->
@@ -277,9 +310,9 @@
                 Images: Public domain / CC0 (Wikimedia Commons).
               </p>
 
-              <!-- Tracking Id for correlation (static note for web version) -->
+              <!-- Tracking Id note -->
               <p style="margin:4px 0 0 0;font-size:10px;color:#a0a8b1;">
-                Tracking Id: <span>Provided by the ACS email sample at send time.</span>
+                Tracking Id: Provided by the Azure Communication Services email sample at send time.
               </p>
 
             </td>
@@ -291,16 +324,6 @@
       </td>
     </tr>
   </table>
-
-  <script>
-    // Set current year in footer for the hosted version
-    (function () {
-      var span = document.getElementById("year");
-      if (span) {
-        span.textContent = new Date().getFullYear();
-      }
-    })();
-  </script>
 
 </body>
 </html>
