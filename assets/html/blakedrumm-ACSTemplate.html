@@ -2,56 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Azure Communication Service Email APIs</title>
 
-  <!-- ==========================================================
-       CSS Styles: Mobile adjustments + Dark mode compatibility
-       ========================================================== -->
   <style>
-    :root {
-      color-scheme: light dark;
-    }
-
-    /* Base (light mode defaults) */
     body {
       margin: 0;
       padding: 0;
       background: #f5f7fa;
       font-family: Segoe UI, Arial, sans-serif;
-      color: #1b1f23;
     }
 
-    /* Make sure tables inherit a sane base color */
-    table, td, p, span {
-      color: inherit;
-    }
-
-    /* Mobile responsive scaling */
-    @media only screen and (max-width: 600px) {
-      .container {
-        width: 100% !important;
-      }
-      .hero-text {
-        font-size: 22px !important;
-      }
-      .cta-button {
-        padding: 14px 26px !important;
-      }
-    }
-
-    /* Dark mode (for browser / OS dark theme) */
+    /* ---------- DARK MODE OVERRIDES (Hosted Web Version) ---------- */
     @media (prefers-color-scheme: dark) {
       html, body {
         background: #050608 !important;
-        color: #f3f4f6 !important;
+        color: #f7f8fa !important;
       }
 
       .container {
-        background: #15181d !important;
-        color: #f3f4f6 !important;
-        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.75) !important;
+        background: #181b21 !important;
+        color: #f7f8fa !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.75) !important;
       }
 
       .hero-text {
@@ -59,57 +31,53 @@
       }
 
       .info-card {
-        background: #1f2733 !important;
-        border-color: #3b4a60 !important;
-        color: #e5e7eb !important;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+        background: #232a35 !important;
+        border-color: #4a5972 !important;
+        color: #e9ebf0 !important;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.6) !important;
       }
 
-      /* General text: make everything lighter for readability */
-      table, td, p, span {
-        color: #e5e7eb !important;
+      table, td, p, span, li {
+        color: #f1f3f6 !important;
       }
 
-      /* Muted / footer-style text – still lighter than before */
-      .muted, .muted * {
-        color: #c7d2e3 !important;
+      .muted, .muted *, 
+      p[style*="font-size:11px"], 
+      p[style*="font-size:10px"] {
+        color: #d3d8e2 !important;
       }
 
       a {
         color: #4aa3ff !important;
       }
+
+      td[style*="text-align:right"] a {
+        color: #cbd5e1 !important;
+      }
+    }
+
+    /* ---------- MOBILE RESPONSIVE ADJUSTMENTS ---------- */
+    @media only screen and (max-width:600px) {
+      .container { width: 100% !important; }
+      .hero-text { font-size: 22px !important; }
+      .cta-button { padding: 14px 26px !important; }
     }
   </style>
-</head>
 
+</head>
 <body>
 
-  <!-- ==========================================================
-       Preheader text: Hidden content shown in inbox preview
-       (kept for parity with the email version; harmless on web)
-       ========================================================== -->
-  <div style="display:none!important;visibility:hidden;opacity:0;color:transparent;
-              height:0;width:0;overflow:hidden;mso-hide:all;">
-    Welcome to Azure Communication Service Email APIs – your email was sent successfully.
-  </div>
-
-  <!-- ==========================================================
-       Outer wrapper table (full width)
-       ========================================================== -->
+  <!-- Outer wrapper -->
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f5f7fa;">
     <tr>
       <td align="center" style="padding:30px 10px;">
 
-        <!-- ======================================================
-             Main container (600px fixed, centered)
-             ====================================================== -->
+        <!-- Main container -->
         <table role="presentation" class="container" width="600" cellspacing="0" cellpadding="0" border="0"
                style="width:600px;max-width:600px;background:#ffffff;border-radius:10px;
                       overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.10);">
 
-          <!-- ====================================================
-               Header section with Azure branding
-               ==================================================== -->
+          <!-- Header -->
           <tr>
             <td style="background:#004578;padding:28px 32px;text-align:center;">
               <img src="https://blakedrumm.com/assets/img/Microsoft_Azure_Logo.png"
@@ -118,27 +86,19 @@
                    style="display:block;margin:0 auto 12px;" />
 
               <div class="hero-text" style="color:#ffffff;font-size:26px;font-weight:600;line-height:1.3;">
-                Welcome to Azure Communication Service Email APIs
+                Welcome to Azure Communication Service<br/>Email APIs
               </div>
             </td>
           </tr>
 
-          <!-- ====================================================
-               Optional: View in browser link (top of content)
-               On the hosted version, this can simply reload the page.
-               ==================================================== -->
+          <!-- “View in Browser” -->
           <tr>
             <td style="padding:16px 32px 0 32px;text-align:right;font-size:11px;color:#7a8693;">
-              <a href="#" onclick="window.location.reload();return false;"
-                 target="_self" style="color:#0067b8;text-decoration:none;">
-                View this email in your browser
-              </a>
+              <a href="#" style="color:#0067b8;text-decoration:none;">View this email in your browser</a>
             </td>
           </tr>
 
-          <!-- ====================================================
-               Security verification bar (informational)
-               ==================================================== -->
+          <!-- Security Bar -->
           <tr>
             <td style="padding:18px 32px 0 32px;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
@@ -152,9 +112,7 @@
             </td>
           </tr>
 
-          <!-- ====================================================
-               Intro text section
-               ==================================================== -->
+          <!-- Intro Text -->
           <tr>
             <td style="padding:22px 32px 12px 32px;color:#333;font-size:15px;line-height:1.55;">
               <p style="margin:0 0 14px 0;">Hello,</p>
@@ -165,16 +123,13 @@
             </td>
           </tr>
 
-          <!-- ====================================================
-               Feature cards (3 columns, softer radius & shadow)
-               ==================================================== -->
+          <!-- Feature Cards -->
           <tr>
             <td style="padding:8px 20px 12px 20px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-                     style="border-collapse:collapse;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
                 <tr>
 
-                  <!-- Feature Card 1 -->
+                  <!-- Card 1 -->
                   <td style="width:33.33%;padding:12px;">
                     <table role="presentation" width="100%" class="info-card"
                            style="background:#f0f6ff;border:1px solid #d6e6f7;border-radius:8px;
@@ -185,13 +140,14 @@
                                alt="API and coding symbol"
                                width="72" height="72"
                                style="display:block;margin:0 auto 12px;" />
-                          <strong>Flexible APIs</strong><br />Integrate email flows into existing services.
+                          <strong>Flexible APIs</strong><br />
+                          Integrate email flows into existing services.
                         </td>
                       </tr>
                     </table>
                   </td>
 
-                  <!-- Feature Card 2 -->
+                  <!-- Card 2 -->
                   <td style="width:33.33%;padding:12px;">
                     <table role="presentation" width="100%" class="info-card"
                            style="background:#f0f6ff;border:1px solid #d6e6f7;border-radius:8px;
@@ -199,16 +155,17 @@
                       <tr>
                         <td style="padding:18px 14px;text-align:center;font-size:13px;color:#0a3c6d;">
                           <img src="https://blakedrumm.com/assets/img/BIDSSLines.png"
-                               alt="Analytics and tracking chart icon"
+                               alt="Tracking chart icon"
                                width="72" height="72"
                                style="display:block;margin:0 auto 12px;" />
-                          <strong>Operation Tracking</strong><br />Monitor send status programmatically.
+                          <strong>Operation Tracking</strong><br />
+                          Monitor send status programmatically.
                         </td>
                       </tr>
                     </table>
                   </td>
 
-                  <!-- Feature Card 3 -->
+                  <!-- Card 3 -->
                   <td style="width:33.33%;padding:12px;">
                     <table role="presentation" width="100%" class="info-card"
                            style="background:#f0f6ff;border:1px solid #d6e6f7;border-radius:8px;
@@ -219,7 +176,8 @@
                                alt="Security shield icon"
                                width="72" height="72"
                                style="display:block;margin:0 auto 12px;" />
-                          <strong>Secure Delivery</strong><br />Reliability backed by Azure infrastructure.
+                          <strong>Secure Delivery</strong><br />
+                          Reliability backed by Azure infrastructure.
                         </td>
                       </tr>
                     </table>
@@ -230,19 +188,15 @@
             </td>
           </tr>
 
-          <!-- ====================================================
-               Call-to-action button (bulletproof for Outlook, still fine on web)
-               ==================================================== -->
+          <!-- CTA Button -->
           <tr>
             <td style="padding:14px 32px 8px 32px;text-align:center;">
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
                 <tr>
                   <td bgcolor="#0067b8" style="border-radius:4px;">
                     <a href="https://learn.microsoft.com/azure/communication-services/?WT.mc_id=email"
-                       class="cta-button"
                        style="display:inline-block;padding:16px 38px;font-size:15px;font-weight:600;
-                              font-family:Segoe UI, Arial, sans-serif;color:#ffffff;text-decoration:none;
-                              mso-line-height-rule:exactly;"
+                              font-family:Segoe UI, Arial, sans-serif;color:#ffffff;text-decoration:none;"
                        target="_blank" rel="noopener">
                       Explore Documentation
                     </a>
@@ -259,67 +213,59 @@
             </td>
           </tr>
 
-          <!-- ====================================================
-               Social / helpful links section
-               ==================================================== -->
+          <!-- Footer Links -->
           <tr>
             <td style="padding:18px 32px 0 32px;text-align:center;">
-              <p style="margin:0 0 8px 0;font-size:12px;color:#666;">
+              <p style="margin:0 0 8px 0;font-size:12px;">
                 Learn more and stay connected:
               </p>
-              <p style="margin:0;font-size:12px;color:#666;">
+              <p style="margin:0;font-size:12px;">
                 <a href="https://learn.microsoft.com/azure/communication-services/"
-                   target="_blank" style="color:#0067b8;text-decoration:none;">Azure Communication Services Docs</a>
+                   style="color:#0067b8;text-decoration:none;" target="_blank">
+                   Azure Communication Services Docs
+                </a>
                 &nbsp;•&nbsp;
                 <a href="https://techcommunity.microsoft.com/"
-                   target="_blank" style="color:#0067b8;text-decoration:none;">Microsoft Tech Community</a>
+                   style="color:#0067b8;text-decoration:none;" target="_blank">
+                   Microsoft Tech Community
+                </a>
               </p>
             </td>
           </tr>
 
-          <!-- ====================================================
-               Footer + legal text
-               ==================================================== -->
+          <!-- Legal Footer -->
           <tr>
-            <td class="muted"
-                style="padding:22px 32px 28px 32px;color:#666;font-size:12px;line-height:1.4;">
+            <td style="padding:22px 32px 28px 32px;font-size:12px;line-height:1.4;color:#666;">
 
-              <!-- Powered by line -->
-              <p style="margin:16px 0 8px 0;font-size:11px;color:#88939c;text-align:center;">
+              <p style="margin:16px 0 8px 0;font-size:11px;text-align:center;color:#88939c;">
                 Powered by Azure Communication Services
               </p>
 
-              <!-- Reply routing note -->
-              <p style="margin:8px 0 8px 0;">
-                Replies will be directed to the reply-to address configured on your Azure Communication Services
-                email sample. Please do not reply directly to the sender address shown in this example.
+              <p style="margin:8px 0;font-size:12px;">
+                Replies will be directed to the reply-to address configured on your Azure Communication Services email sample.
               </p>
 
-              <!-- Not expected disclaimer -->
               <p style="margin:0 0 8px 0;">
                 If you were not expecting this email sample, you may safely ignore or close this page.
               </p>
 
-              <!-- Copyright -->
               <p style="margin:0;font-size:11px;color:#88939c;">
-                &copy; 2025 Your Organization. All rights reserved.
+                © 2025 Your Organization. All rights reserved.
               </p>
 
-              <!-- Image attribution -->
               <p style="margin:4px 0 0 0;font-size:10px;color:#a0a8b1;">
                 Images: Public domain / CC0 (Wikimedia Commons).
               </p>
 
-              <!-- Tracking Id note -->
               <p style="margin:4px 0 0 0;font-size:10px;color:#a0a8b1;">
-                Tracking Id: Provided by the Azure Communication Services email sample at send time.
+                Tracking Id: Provided by the ACS email sample at send time.
               </p>
 
             </td>
           </tr>
 
         </table>
-        <!-- End main container -->
+        <!-- End container -->
 
       </td>
     </tr>
