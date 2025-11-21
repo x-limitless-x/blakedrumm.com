@@ -11,7 +11,7 @@ jobs:
     outputs:
       target: ${{ steps.set-output.outputs.target }}
     steps:      
-      - uses: actions/checkout@v4      
+      - uses: actions/checkout@v6      
       - name: get deployment target
         run: |
           TARGET=$(cat DEPLOY_STRATEGY)
@@ -43,7 +43,7 @@ jobs:
     if: needs.set-deploy-type.outputs.target == 'gh-pages'
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Deploy Jekyll Site
       uses: x-limitless-x/jekyll-deploy-action@master
@@ -59,7 +59,7 @@ jobs:
     if: needs.set-deploy-type.outputs.target == 'firebase'
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: setup ruby
       uses: ruby/setup-ruby@v1
