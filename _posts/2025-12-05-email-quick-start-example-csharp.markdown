@@ -163,7 +163,7 @@ The console tool makes diagnosing these issues much easier — if an outbound ca
 You can download the tool or review the source code here:
 
 > 🔗 **Download the ACS Outbound Calling Tool Executable**  
-> [https://files.blakedrumm.com/ACS-CallExample-Console-Exe.zip](https://files.blakedrumm.com/ACS-CallExample-Console-Exe.zip)
+> [https://files.blakedrumm.com/ACS-CallExample-Console-Executable.zip](https://files.blakedrumm.com/ACS-CallExample-Console-Executable.zip)
 
 > 🔗 **Source Code Repository**  
 > [https://github.com/blakedrumm/ACS-CallExample-Console](https://github.com/blakedrumm/ACS-CallExample-Console)
