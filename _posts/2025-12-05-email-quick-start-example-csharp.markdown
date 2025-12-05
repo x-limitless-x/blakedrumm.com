@@ -57,7 +57,6 @@ One important part of building this tool was understanding how ACS behaves acros
 Instead, ACS gives you:
 
 - `CallConnectionId`  
-- `ServerCallId`  
 
 These identifiers uniquely represent the server-side call object and can be used:
 
