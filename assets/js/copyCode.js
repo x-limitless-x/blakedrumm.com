@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (preElement) {
       const codeElement = preElement.querySelector('code');
       if (codeElement) {
-        const lines = codeElement.innerText.split('\n');
+        const lines = codeElement.textContent.split('\n');
         
         if (lines.length > MAX_LINES) {
           // Add collapsed class initially
