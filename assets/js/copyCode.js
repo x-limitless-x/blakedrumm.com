@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Assemble and insert
     codeHeader.appendChild(copyButton);
-    codeBlock.insertBefore(codeHeader, codeBlock.firstChild);
     codeBlock.parentNode.insertBefore(codeHeader, codeBlock);
     
     // Check if code block is long and add expand/collapse functionality

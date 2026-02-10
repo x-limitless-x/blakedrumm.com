@@ -48,15 +48,18 @@ html.light-theme pre {
     background-color: #8b8b8b;
 }
 
-/* Code header for copy button - positioned absolutely within .highlighter-rouge container */
-/* Note: Requires .highlighter-rouge to have position: relative (set in _sass/devlopr.scss) */
+/* Code header for copy button - positioned as sibling before .highlighter-rouge */
 .code-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
+    position: relative;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: -2.5rem;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+.code-header .copy-code-button {
+    pointer-events: auto;
   }
   
 .copy-code-button {
