@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   codeBlocks.forEach((codeBlock) => {
     // Skip if code header already exists
-    if (codeBlock.previousElementSibling?.classList.contains('code-header')) {
+    if (codeBlock.querySelector('.code-header')) {
       return;
     }
     
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Assemble and insert
     codeHeader.appendChild(copyButton);
+    codeBlock.insertBefore(codeHeader, codeBlock.firstChild);
     codeBlock.parentNode.insertBefore(codeHeader, codeBlock);
     
     // Check if code block is long and add expand/collapse functionality
