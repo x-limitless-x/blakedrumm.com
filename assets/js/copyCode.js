@@ -1,6 +1,7 @@
 // Automatically inject code headers before code blocks
 document.addEventListener('DOMContentLoaded', () => {
   const codeBlocks = document.querySelectorAll('.highlighter-rouge');
+  const MAX_LINES = 100; // Maximum lines to show when collapsed
   
   codeBlocks.forEach((codeBlock) => {
     // Skip if code header already exists
@@ -44,5 +45,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // Assemble and insert
     codeHeader.appendChild(copyButton);
     codeBlock.parentNode.insertBefore(codeHeader, codeBlock);
+    
+    // Check if code block is long and add expand/collapse functionality
+    const preElement = codeBlock.querySelector('pre');
+    if (preElement) {
+      const codeElement = preElement.querySelector('code');
+      if (codeElement) {
+        const lines = codeElement.textContent.split('\n');
+        
+        if (lines.length > MAX_LINES) {
+          // Add collapsed class initially
+          codeBlock.classList.add('code-block-collapsed');
+          
+          // Create expand button
+          const expandButton = document.createElement('button');
+          expandButton.className = 'expand-code-button';
+          expandButton.setAttribute('type', 'button');
+          
+          // Create icon and text elements separately for security
+          const createButtonContent = (isExpanded) => {
+            // Clear existing content
+            expandButton.textContent = '';
+            
+            const icon = document.createElement('span');
+            icon.className = 'expand-icon';
+            icon.textContent = isExpanded ? '▲' : '▼';
+            
+            const text = document.createTextNode(isExpanded ? ' Collapse code' : ` Show full code (${lines.length} lines)`);
+            
+            expandButton.appendChild(icon);
+            expandButton.appendChild(text);
+          };
+          
+          // Set initial button content
+          createButtonContent(false);
+          
+          // Add click event to expand button
+          expandButton.addEventListener('click', () => {
+            if (codeBlock.classList.contains('code-block-collapsed')) {
+              codeBlock.classList.remove('code-block-collapsed');
+              codeBlock.classList.add('code-block-expanded');
+              createButtonContent(true);
+            } else {
+              codeBlock.classList.add('code-block-collapsed');
+              codeBlock.classList.remove('code-block-expanded');
+              createButtonContent(false);
+              // Scroll to the top of the code block when collapsing
+              codeBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          });
+          
+          // Insert expand button after the code block
+          codeBlock.parentNode.insertBefore(expandButton, codeBlock.nextSibling);
+        }
+      }
+    }
   });
 });
