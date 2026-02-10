@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
     
-    // Assemble and insert
+    // Assemble and insert - insert inside the code block as first child
     codeHeader.appendChild(copyButton);
-    codeBlock.parentNode.insertBefore(codeHeader, codeBlock);
+    codeBlock.insertBefore(codeHeader, codeBlock.firstChild);
     
     // Check if code block is long and add expand/collapse functionality
     const preElement = codeBlock.querySelector('pre');
