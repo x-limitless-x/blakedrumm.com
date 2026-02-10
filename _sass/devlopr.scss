@@ -1285,6 +1285,49 @@ footer {
      }
  }
 
+ /* Code Header with Copy Button */
+.code-header {
+    position: relative;
+    margin-bottom: -10px;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #d4d4d4;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.copy-code-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.copy-code-button:active {
+    transform: scale(0.95);
+}
+
+.copy-code-button.fa-check {
+    color: #4caf50;
+}
+
+/* Ensure code blocks have relative positioning for button placement */
+.highlighter-rouge {
+    position: relative;
+}
+
+.highlighter-rouge .highlight {
+    position: relative;
+}
+
  /* Syntax Hightlighter */
 .highlight pre { background-color: #212529; padding: 20px;}
 .highlight .hll { background-color: #272822; }
