@@ -48,6 +48,8 @@ html.light-theme pre {
     background-color: #8b8b8b;
 }
 
+/* Code header for copy button - positioned absolutely within .highlighter-rouge container */
+/* Note: Requires .highlighter-rouge to have position: relative (set in _sass/devlopr.scss) */
 .code-header {
     position: absolute;
     top: 0;
@@ -76,12 +78,17 @@ html.dark-theme .copy-code-button {
     color: #f8f8f2;
 }
 
-html.light-theme .copy-code-button {
-    color: #ffffff;
+html.dark-theme .copy-code-button:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.copy-code-button:hover {
-    background: rgba(0, 0, 0, 0.5);
+html.light-theme .copy-code-button {
+    color: #2d2d2d;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+html.light-theme .copy-code-button:hover {
+    background: rgba(255, 255, 255, 0.7);
 }
 
 #toc_container {
