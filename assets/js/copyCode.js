@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   codeBlocks.forEach((codeBlock) => {
     // Skip if code header already exists
-    if (codeBlock.previousElementSibling?.classList.contains('code-header')) {
+    if (codeBlock.querySelector('.code-header')) {
       return;
     }
     
@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Assemble and insert
     codeHeader.appendChild(copyButton);
-    codeBlock.parentNode.insertBefore(codeHeader, codeBlock);
+    codeBlock.insertBefore(codeHeader, codeBlock.firstChild);
   });
 });
