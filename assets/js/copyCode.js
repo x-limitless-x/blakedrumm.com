@@ -21,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add click event to copy button
     copyButton.addEventListener('click', () => {
       const code = codeBlock.innerText;
+      
+      // Check if Clipboard API is available
+      if (!navigator.clipboard) {
+        console.error('Clipboard API not available');
+        return;
+      }
+      
       window.navigator.clipboard.writeText(code).then(() => {
         copyButton.classList.remove('fa-copy');
         copyButton.classList.add('fa-check');

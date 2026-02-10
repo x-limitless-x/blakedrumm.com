@@ -1291,6 +1291,7 @@ footer {
     margin-bottom: -10px;
 }
 
+/* Copy button is positioned absolutely within the code-header */
 .copy-code-button {
     position: absolute;
     top: 8px;
@@ -1319,12 +1320,8 @@ footer {
     color: #4caf50;
 }
 
-/* Ensure code blocks have relative positioning for button placement */
+/* Ensure code blocks have relative positioning for proper layout */
 .highlighter-rouge {
-    position: relative;
-}
-
-.highlighter-rouge .highlight {
     position: relative;
 }
 
