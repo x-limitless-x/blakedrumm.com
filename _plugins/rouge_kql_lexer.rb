@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rouge'
+
 module Rouge
   module Lexers
     # KQL (Kusto Query Language) lexer for Azure Data Explorer and Log Analytics
