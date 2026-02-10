@@ -61,18 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
           const expandButton = document.createElement('button');
           expandButton.className = 'expand-code-button';
           expandButton.setAttribute('type', 'button');
-          expandButton.innerHTML = '<span class="expand-icon">▼</span> Show full code (' + lines.length + ' lines)';
+          
+          // Create icon and text elements separately for security
+          const createButtonContent = (isExpanded) => {
+            // Clear existing content
+            expandButton.textContent = '';
+            
+            const icon = document.createElement('span');
+            icon.className = 'expand-icon';
+            icon.textContent = isExpanded ? '▲' : '▼';
+            
+            const text = document.createTextNode(isExpanded ? ' Collapse code' : ` Show full code (${lines.length} lines)`);
+            
+            expandButton.appendChild(icon);
+            expandButton.appendChild(text);
+          };
+          
+          // Set initial button content
+          createButtonContent(false);
           
           // Add click event to expand button
           expandButton.addEventListener('click', () => {
             if (codeBlock.classList.contains('code-block-collapsed')) {
               codeBlock.classList.remove('code-block-collapsed');
               codeBlock.classList.add('code-block-expanded');
-              expandButton.innerHTML = '<span class="expand-icon">▲</span> Collapse code';
+              createButtonContent(true);
             } else {
               codeBlock.classList.add('code-block-collapsed');
               codeBlock.classList.remove('code-block-expanded');
-              expandButton.innerHTML = '<span class="expand-icon">▼</span> Show full code (' + lines.length + ' lines)';
+              createButtonContent(false);
               // Scroll to the top of the code block when collapsing
               codeBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
