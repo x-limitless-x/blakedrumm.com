@@ -3,7 +3,7 @@
 module Rouge
   module Lexers
     # KQL (Kusto Query Language) lexer for Azure Data Explorer and Log Analytics
-    class KQL < RegexLexer
+    class KQL < Rouge::RegexLexer
       title "KQL"
       desc "Kusto Query Language (KQL) for Azure Data Explorer and Azure Monitor"
       tag 'kql'
