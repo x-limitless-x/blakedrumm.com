@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       
-      window.navigator.clipboard.writeText(code).then(() => {
+      navigator.clipboard.writeText(code).then(() => {
         copyButton.classList.remove('fa-copy');
         copyButton.classList.add('fa-check');
         
