@@ -66,7 +66,7 @@ module Rouge
         rule %r/\[([^\]]+)\]/, Name::Variable
 
         # Operators and punctuation
-        rule %r/[~!%^&*+=\|?:<>/-]+/, Operator
+        rule %r/[~!%^&*+=\|?:<>\/-]+/, Operator
         rule %r/[{}()\[\],.;]/, Punctuation
 
         # Keywords
