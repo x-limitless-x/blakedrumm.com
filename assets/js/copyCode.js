@@ -1,3 +1,57 @@
+// Gzip compress and base64 encode a string (for Azure query URL parameters)
+async function gzipBase64Encode(text) {
+  var encoder = new TextEncoder();
+  var data = encoder.encode(text);
+  var cs = new CompressionStream('gzip');
+  var writer = cs.writable.getWriter();
+  writer.write(data);
+  writer.close();
+  var reader = cs.readable.getReader();
+  var chunks = [];
+  while (true) {
+    var result = await reader.read();
+    if (result.done) break;
+    chunks.push(result.value);
+  }
+  var totalLength = chunks.reduce(function(sum, chunk) { return sum + chunk.length; }, 0);
+  var compressed = new Uint8Array(totalLength);
+  var offset = 0;
+  for (var i = 0; i < chunks.length; i++) {
+    compressed.set(chunks[i], offset);
+    offset += chunks[i].length;
+  }
+  var binary = '';
+  for (var j = 0; j < compressed.length; j++) {
+    binary += String.fromCharCode(compressed[j]);
+  }
+  return btoa(binary);
+}
+
+// Azure service configurations for KQL "Try in Azure" button
+// Supported services: "dataexplorer", "loganalytics", "sentinel"
+// Set per code block with: data-azure-service="<service>" on wrapper div or via Kramdown IAL
+var AZURE_SERVICES = {
+  dataexplorer: {
+    label: 'Try in Azure Data Explorer',
+    buildUrl: function(encoded) {
+      return 'https://dataexplorer.azure.com/clusters/help/databases/Samples?query=' + encodeURIComponent(encoded);
+    }
+  },
+  loganalytics: {
+    label: 'Try in Log Analytics',
+    buildUrl: function(encoded) {
+      return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/openedFromBlade/LogsBlade';
+    }
+  },
+  sentinel: {
+    label: 'Try in Sentinel',
+    buildUrl: function(encoded) {
+      return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/openedFromBlade/LogsBlade';
+    }
+  }
+};
+var DEFAULT_AZURE_SERVICE = 'loganalytics';
+
 // Automatically inject code headers before code blocks
 document.addEventListener('DOMContentLoaded', () => {
   const codeBlocks = document.querySelectorAll('div.highlighter-rouge');
@@ -15,14 +69,59 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Extract language from the code element's class (e.g., "language-powershell")
     const codeElement = codeBlock.querySelector('code[class*="language-"]');
+    let language = null;
     if (codeElement) {
       const langMatch = codeElement.className.match(/language-(\S+)/);
       if (langMatch) {
+        language = langMatch[1].toLowerCase();
         const langLabel = document.createElement('span');
         langLabel.className = 'code-lang-label';
         langLabel.textContent = langMatch[1];
         codeHeader.appendChild(langLabel);
       }
+    }
+
+    // Create button actions container
+    const actionsContainer = document.createElement('div');
+    actionsContainer.className = 'code-header-actions';
+
+    // Add "Try in Azure" button for KQL/Kusto code blocks
+    if (language === 'kql' || language === 'kusto') {
+      // Determine which Azure service to use:
+      // 1. Check data-azure-service on this element or closest ancestor (via Kramdown IAL or wrapper div)
+      // 2. Fall back to DEFAULT_AZURE_SERVICE
+      // Supported values: "dataexplorer", "loganalytics", "sentinel"
+      const serviceEl = codeBlock.closest('[data-azure-service]');
+      const serviceKey = (serviceEl ? serviceEl.getAttribute('data-azure-service') : DEFAULT_AZURE_SERVICE).toLowerCase();
+      const service = AZURE_SERVICES[serviceKey] || AZURE_SERVICES[DEFAULT_AZURE_SERVICE];
+
+      const tryAzureButton = document.createElement('button');
+      tryAzureButton.className = 'try-azure-button';
+      tryAzureButton.setAttribute('type', 'button');
+      tryAzureButton.setAttribute('aria-label', service.label);
+
+      const iconSpan = document.createElement('i');
+      iconSpan.className = 'fas fa-external-link-alt';
+      iconSpan.setAttribute('aria-hidden', 'true');
+
+      const btnText = document.createTextNode(' ' + service.label);
+      tryAzureButton.appendChild(iconSpan);
+      tryAzureButton.appendChild(btnText);
+
+      tryAzureButton.addEventListener('click', async () => {
+        const codeContent = codeBlock.querySelector('pre code');
+        const code = codeContent ? codeContent.textContent : '';
+        let url;
+        try {
+          const encoded = await gzipBase64Encode(code);
+          url = service.buildUrl(encoded);
+        } catch (err) {
+          url = service.buildUrl(encodeURIComponent(code));
+        }
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+
+      actionsContainer.appendChild(tryAzureButton);
     }
     
     // Create copy button
@@ -56,7 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Assemble and insert - insert inside the code block as first child
-    codeHeader.appendChild(copyButton);
+    actionsContainer.appendChild(copyButton);
+    codeHeader.appendChild(actionsContainer);
     codeBlock.insertBefore(codeHeader, codeBlock.firstChild);
     
     // Check if code block is long and add expand/collapse functionality
