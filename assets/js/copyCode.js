@@ -31,11 +31,9 @@ async function gzipBase64Encode(text) {
 // Supported services: "dataexplorer", "loganalytics", "loganalyticsdemo", "sentinel"
 // Set per code block with: data-azure-service="<service>" on wrapper div or via Kramdown IAL
 function buildLogAnalyticsUrl(encoded) {
-  return 'https://portal.azure.com/#blade/Microsoft_OperationsManagementSuite_Workspace/AnalyticsBlade/initiator/AnalyticsShareLinkToQuery/isQueryEditorVisible/true/query/' + encodeURIComponent(encoded) + '/isQueryBase64Compressed/true';
+  return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/isQueryBase64Compressed/true';
 }
-function buildLogAnalyticsDemoUrl(encoded) {
-  return 'https://portal.azure.com/#blade/Microsoft_OperationsManagementSuite_Workspace/AnalyticsBlade/initiator/AnalyticsShareLinkToQuery/isQueryEditorVisible/true/query/' + encodeURIComponent(encoded) + '/isQueryBase64Compressed/true';
-}
+var buildLogAnalyticsDemoUrl = buildLogAnalyticsUrl;
 const AZURE_SERVICES = {
   dataexplorer: {
     label: 'Try in Azure Data Explorer',
