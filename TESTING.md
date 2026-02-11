@@ -72,6 +72,24 @@ This repository uses GitHub Actions to automatically:
 
 ## Local Development
 
+### Quick Start (Recommended)
+
+Use the provided helper script for easy setup:
+
+```bash
+# Interactive menu
+./dev.sh
+
+# Or use direct commands
+./dev.sh install   # Install dependencies
+./dev.sh build     # Build the site
+./dev.sh serve     # Serve locally with live reload
+./dev.sh clean     # Clean build artifacts
+./dev.sh setup     # Full setup (install + build + serve)
+```
+
+### Manual Setup
+
 ### Prerequisites
 
 - Ruby 3.0 or higher

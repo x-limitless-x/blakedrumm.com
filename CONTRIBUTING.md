@@ -14,6 +14,10 @@ Contributions are more than just welcome! Fork this repo and create a new branch
 
 3. **Make your changes and test locally**
    ```bash
+   # Quick way - use the helper script
+   ./dev.sh setup
+   
+   # Or manually:
    # Install dependencies
    gem install bundler --user-install
    export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
@@ -22,7 +26,7 @@ Contributions are more than just welcome! Fork this repo and create a new branch
    
    # Build and test
    bundle exec jekyll build
-   bundle exec jekyll serve
+   bundle exec jekyll serve --livereload
    ```
    
    Visit `http://localhost:4000` to preview your changes.
@@ -58,6 +62,13 @@ You can view the preview deployment by checking the bot comment on your PR.
 
 To run the site locally:
 
+**Quick way (recommended):**
+```bash
+# Use the helper script
+./dev.sh setup
+```
+
+**Manual way:**
 ```bash
 # First time setup
 gem install bundler --user-install
