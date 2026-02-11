@@ -28,9 +28,12 @@ async function gzipBase64Encode(text) {
 }
 
 // Azure service configurations for KQL "Try in Azure" button
-// Supported services: "dataexplorer", "loganalytics", "sentinel"
+// Supported services: "dataexplorer", "loganalytics", "loganalyticsdemo", "sentinel"
 // Set per code block with: data-azure-service="<service>" on wrapper div or via Kramdown IAL
 function buildLogAnalyticsUrl(encoded) {
+  return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/LogsBlade/query/' + encodeURIComponent(encoded);
+}
+function buildLogAnalyticsDemoUrl(encoded) {
   return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/openedFromBlade/LogsBlade';
 }
 const AZURE_SERVICES = {
@@ -43,6 +46,10 @@ const AZURE_SERVICES = {
   loganalytics: {
     label: 'Try in Log Analytics',
     buildUrl: buildLogAnalyticsUrl
+  },
+  loganalyticsdemo: {
+    label: 'Try in Log Analytics (Demo)',
+    buildUrl: buildLogAnalyticsDemoUrl
   },
   sentinel: {
     label: 'Try in Sentinel',
@@ -95,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Determine which Azure service to use:
       // 1. Check data-azure-service on this element or closest ancestor (via Kramdown IAL or wrapper div)
       // 2. Fall back to DEFAULT_AZURE_SERVICE
-      // Supported values: "dataexplorer", "loganalytics", "sentinel"
+      // Supported values: "dataexplorer", "loganalytics", "loganalyticsdemo", "sentinel"
       const serviceEl = codeBlock.closest('[data-azure-service]');
       const serviceKey = (serviceEl ? serviceEl.getAttribute('data-azure-service') : DEFAULT_AZURE_SERVICE).toLowerCase();
       const service = AZURE_SERVICES[serviceKey] || AZURE_SERVICES[DEFAULT_AZURE_SERVICE];
