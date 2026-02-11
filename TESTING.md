@@ -90,12 +90,12 @@ Use the provided helper script for easy setup:
 
 ### Manual Setup
 
-### Prerequisites
+#### Prerequisites
 
 - Ruby 3.0 or higher
 - Bundler
 
-### Setup
+#### Setup Commands
 
 ```bash
 # Install bundler (if not already installed)
