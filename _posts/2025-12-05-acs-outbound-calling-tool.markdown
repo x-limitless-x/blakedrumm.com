@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Azure Communication Services (ACS) - Outbound Calling with a Lightweight Console Tool"
+title:  "Outbound Calling with a Lightweight Console Tool - Azure Communication Services (ACS)"
 date:   '2025-12-05 16:00:00 -0500'
 categories: azure guides communication-services acs troubleshooting
 author: blakedrumm

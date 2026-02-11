@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Azure Communication Services (ACS) - Deep-Dive Email Delivery Analysis with KQL"
+title:  "Deep-Dive Email Delivery Analysis with KQL - Azure Communication Services (ACS)"
 date:   '2026-02-10 14:00:00 -0500'
 categories: azure guides communication-services acs troubleshooting
 author: blakedrumm
