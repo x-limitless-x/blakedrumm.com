@@ -66,18 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const codeHeader = document.createElement('div');
     codeHeader.className = 'code-header';
     
-    // Extract language from the code element's class (e.g., "language-powershell")
+    // Extract language from the code element's class or the wrapper div's class
+    // Jekyll/Rouge puts "language-xxx" on the wrapper div (e.g., "language-kql highlighter-rouge")
+    // but the inner <code> element may not have a language class
     const codeElement = codeBlock.querySelector('code[class*="language-"]');
     let language = null;
+    let langMatch = null;
     if (codeElement) {
-      const langMatch = codeElement.className.match(/language-(\S+)/);
-      if (langMatch) {
-        language = langMatch[1].toLowerCase();
-        const langLabel = document.createElement('span');
-        langLabel.className = 'code-lang-label';
-        langLabel.textContent = langMatch[1];
-        codeHeader.appendChild(langLabel);
-      }
+      langMatch = codeElement.className.match(/language-(\S+)/);
+    }
+    if (!langMatch) {
+      langMatch = codeBlock.className.match(/language-(\S+)/);
+    }
+    if (langMatch && langMatch[1].toLowerCase() !== 'plaintext') {
+      language = langMatch[1].toLowerCase();
+      const langLabel = document.createElement('span');
+      langLabel.className = 'code-lang-label';
+      langLabel.textContent = langMatch[1];
+      codeHeader.appendChild(langLabel);
     }
 
     // Create button actions container
