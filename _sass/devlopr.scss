@@ -1331,6 +1331,52 @@ html.light-theme .code-header {
     color: #4caf50;
 }
 
+/* Actions container for buttons in code header */
+.code-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Try in Azure button for KQL code blocks */
+.try-azure-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+html.dark-theme .try-azure-button {
+    color: #7cb7ff;
+    background-color: transparent;
+}
+
+html.dark-theme .try-azure-button:hover {
+    background-color: rgba(124, 183, 255, 0.12);
+    border-color: rgba(124, 183, 255, 0.25);
+}
+
+html.light-theme .try-azure-button {
+    color: #0078d4;
+    background-color: transparent;
+}
+
+html.light-theme .try-azure-button:hover {
+    background-color: rgba(0, 120, 212, 0.08);
+    border-color: rgba(0, 120, 212, 0.2);
+}
+
+.try-azure-button:active {
+    transform: scale(0.95);
+}
+
 /* Ensure code blocks have relative positioning for proper layout */
 div.highlighter-rouge {
     position: relative;
