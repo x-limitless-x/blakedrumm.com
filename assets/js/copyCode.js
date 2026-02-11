@@ -30,7 +30,10 @@ async function gzipBase64Encode(text) {
 // Azure service configurations for KQL "Try in Azure" button
 // Supported services: "dataexplorer", "loganalytics", "sentinel"
 // Set per code block with: data-azure-service="<service>" on wrapper div or via Kramdown IAL
-var AZURE_SERVICES = {
+function buildLogAnalyticsUrl(encoded) {
+  return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/openedFromBlade/LogsBlade';
+}
+const AZURE_SERVICES = {
   dataexplorer: {
     label: 'Try in Azure Data Explorer',
     buildUrl: function(encoded) {
@@ -39,18 +42,14 @@ var AZURE_SERVICES = {
   },
   loganalytics: {
     label: 'Try in Log Analytics',
-    buildUrl: function(encoded) {
-      return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/openedFromBlade/LogsBlade';
-    }
+    buildUrl: buildLogAnalyticsUrl
   },
   sentinel: {
     label: 'Try in Sentinel',
-    buildUrl: function(encoded) {
-      return 'https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade/resourceId/%2FDemo/source/LogsBlade.AnalyticsShareLinkToQuery/q/' + encodeURIComponent(encoded) + '/openedFromBlade/LogsBlade';
-    }
+    buildUrl: buildLogAnalyticsUrl
   }
 };
-var DEFAULT_AZURE_SERVICE = 'loganalytics';
+const DEFAULT_AZURE_SERVICE = 'loganalytics';
 
 // Automatically inject code headers before code blocks
 document.addEventListener('DOMContentLoaded', () => {
