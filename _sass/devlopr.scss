@@ -1285,14 +1285,24 @@ footer {
      }
  }
 
- /* Code Header with Copy Button */
+ /* Code Header with Copy Button and Language Label - inline bar above code */
 .code-header {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
-    justify-content: flex-end;
-    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 4px 4px 12px;
+    border-radius: 0.375rem 0.375rem 0 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html.dark-theme .code-header {
+    background-color: #2b2b2b;
+    border-bottom: 1px solid #404040;
+}
+
+html.light-theme .code-header {
+    background-color: #e8e8e8;
+    border-bottom: 1px solid #c8c8c8;
 }
 
 /* Copy button is positioned within the code-header */
