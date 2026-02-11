@@ -1,6 +1,6 @@
 // Automatically inject code headers before code blocks
 document.addEventListener('DOMContentLoaded', () => {
-  const codeBlocks = document.querySelectorAll('.highlighter-rouge');
+  const codeBlocks = document.querySelectorAll('div.highlighter-rouge');
   const MAX_LINES = 100; // Maximum lines to show when collapsed
   
   codeBlocks.forEach((codeBlock) => {
