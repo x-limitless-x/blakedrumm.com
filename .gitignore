@@ -11,4 +11,4 @@ _site/
 
 .bundle
 .bundle/
-vendor/
+vendor/vendor/
