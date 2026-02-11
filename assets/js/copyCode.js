@@ -13,6 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const codeHeader = document.createElement('div');
     codeHeader.className = 'code-header';
     
+    // Extract language from the code element's class (e.g., "language-powershell")
+    const codeElement = codeBlock.querySelector('code[class*="language-"]');
+    if (codeElement) {
+      const langMatch = codeElement.className.match(/language-(\S+)/);
+      if (langMatch) {
+        const langLabel = document.createElement('span');
+        langLabel.className = 'code-lang-label';
+        langLabel.textContent = langMatch[1];
+        codeHeader.appendChild(langLabel);
+      }
+    }
+    
     // Create copy button
     const copyButton = document.createElement('button');
     copyButton.className = 'copy-code-button fas fa-copy';
@@ -21,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add click event to copy button
     copyButton.addEventListener('click', () => {
-      const code = codeBlock.innerText;
+      const codeContent = codeBlock.querySelector('pre code');
+      const code = codeContent ? codeContent.textContent : codeBlock.innerText;
       
       // Check if Clipboard API is available
       if (!navigator.clipboard) {

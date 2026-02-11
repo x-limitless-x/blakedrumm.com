@@ -1285,13 +1285,15 @@ footer {
      }
  }
 
- /* Code Header with Copy Button */
+ /* Code Header with Copy Button and Language Label */
 .code-header {
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     z-index: 10;
 }
 
