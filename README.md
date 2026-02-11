@@ -9,6 +9,21 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![Bakers](https://opencollective.com/devlopr-jekyll/tiers/badge.svg)](https://opencollective.com/devlopr-jekyll/)
 
+---
+
+## 🧪 Automated Testing & PR Previews
+
+This repository includes automated testing and preview deployments for pull requests!
+
+- **✅ Automated builds** - Every PR is automatically built and tested
+- **📝 Markdown linting** - Blog posts are checked for formatting issues  
+- **🔍 PR previews** - See your changes live before merging
+- **📚 Full documentation** - See [TESTING.md](TESTING.md) for details
+
+When you create a PR, a preview will be automatically deployed and a comment will be posted with the preview URL.
+
+---
+
 
 You can use Devlopr as a starter for building your own Site. we purposely keep the styling minimal and bare to make it easier to add your own flare and markup. (Under Active Development) !
 
