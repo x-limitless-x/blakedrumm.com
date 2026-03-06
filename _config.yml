@@ -27,7 +27,11 @@ author_bio: My name is Blake Drumm, I am working on the Azure Monitoring Enterpr
 author_email: "admin@blakedrumm.com"
 author_location: Charlotte, North Carolina - United States
 author_website_url: "https://blakedrumm.com"
-typewrite-text: welcome to my technical blog, keep checking back for new information
+typewrite-text:
+  - welcome to my technical blog, keep checking back for new information
+  - welcome to my technical blog, keep checking back for new blog posts
+  - welcome to my technical blog, keep checking back for new troubleshooting guides
+  - welcome to my technical blog, keep checking back for new projects
 hero_cover_img: cover-photo.jpg # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 timezone: America/New_York # list of all timezones here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
