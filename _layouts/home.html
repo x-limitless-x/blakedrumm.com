@@ -9,7 +9,7 @@ image: /assets/img/blake-drumm-logo.png
   $(document).ready(function() {
     var phrases = [{% for phrase in site.typewrite-text %}"{{ phrase }}"{% unless forloop.last %}, {% endunless %}{% endfor %}];
 
-    // Find the longest common prefix shared by all phrases
+    /* Find the longest common prefix shared by all phrases */
     var prefix = phrases[0] || '';
     for (var i = 1; i < phrases.length; i++) {
       while (phrases[i].indexOf(prefix) !== 0) {
@@ -18,7 +18,7 @@ image: /assets/img/blake-drumm-logo.png
     }
 
     var suffixes = phrases.map(function(p) { return p.substring(prefix.length); });
-    // If all suffixes are empty (single phrase or identical phrases), animate the whole text
+    /* If all suffixes are empty (single phrase or identical phrases), animate the whole text */
     if (suffixes.every(function(s) { return s === ''; })) {
       prefix = '';
       suffixes = phrases.slice(0, 1);
