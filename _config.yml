@@ -210,6 +210,9 @@ jekyll_admin:
 # gh-pages - For Github Pages
 # firebase - For Firebase Hosting
 
+include:
+  - .well-known
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
