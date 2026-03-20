@@ -212,6 +212,7 @@ jekyll_admin:
 
 include:
   - .well-known
+  - .nojekyll
 
 exclude:
   - .sass-cache/
