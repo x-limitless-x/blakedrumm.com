@@ -212,6 +212,7 @@ jekyll_admin:
 
 include:
   - .well-known
+  - .nojekyll
 
 exclude:
   - .sass-cache/
@@ -224,6 +225,28 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # Development infrastructure – not part of the served site
+  - Dockerfile
+  - docker-compose-dev.yml
+  - docker-compose-prod.yml
+  - nginx/
+  - dev.sh
+  - Procfile
+  - config.ru
+  - netlify.toml
+  - firebase.json
+  - DEPLOY_STRATEGY
+  - bower.json
+  - devlopr.gemspec
+  - app.json
+  # Development documentation and screenshots
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - README.md
+  - SETUP.md
+  - TESTING.md
+  - screenshot.png
+  - screenshot2.png
   - assets/bower_components/isotope-layout/README.md
   - assets/bower_components/icono/README.md
   - assets/bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-svg-core/README.md
