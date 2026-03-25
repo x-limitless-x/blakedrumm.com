@@ -1090,7 +1090,7 @@ This script is helpful for:
 
 ## :brain: Final Thoughts
 
-When Azure Automation runbooks fail to send email through Azure Communication Services, the root cause is very often a missing or incorrect RBAC role assignment on the ACS resource. This script automates the validation process and produces clear, actionable output that can be shared with team members or included in support cases.
+When Azure Automation runbooks fail to send email through Azure Communication Services, the root cause is very often a missing or incorrect RBAC role assignment on the ACS resource. This script automates the validation process and produces clear, actionable output.
 
 If you encounter ACS email failures from Automation:
 - Run this script first to validate RBAC
