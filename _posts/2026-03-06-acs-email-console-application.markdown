@@ -23,6 +23,8 @@ While the official SDK documentation demonstrates the basic steps required to se
 - Tracking identifiers for correlation
 - Logging and troubleshooting visibility
 - Automation-friendly execution behavior
+- Repeat-send testing
+- Interactive prompting for missing configuration
 
 To explore these scenarios, I built a small **C# console application** that demonstrates sending a formatted email using the ACS Email SDK while implementing several practical features that are commonly required in production environments.
 
@@ -37,7 +39,7 @@ You can download the full source code used in this article here:
 > 🔗 **Download the Email Quickstart Console Application**  
 > [https://files.blakedrumm.com/EmailQuickstart-ACS.zip](https://files.blakedrumm.com/EmailQuickstart-ACS.zip)
 
-After downloading, extract the archive and open the project folder in your preferred IDE such as **Visual Studio** or **VS Code**.
+After downloading, extract the archive and open the project folder in your preferred IDE such as **Visual Studio** or **VS Code**. If you are running from source, install the **.NET 9 SDK** first.
 
 ---
 
@@ -54,6 +56,8 @@ Key capabilities include:
 - Polling the **EmailSendOperation** until completion
 - Logging timestamps and send duration
 - Supporting **interactive and automated execution modes**
+- Supporting **repeat sends** for testing and validation
+- Prompting for missing sender, recipient, and repeat values in interactive mode
 
 Because of this functionality, the tool can be used as both:
 
@@ -67,7 +71,7 @@ Because of this functionality, the tool can be used as both:
 
 The application flow mirrors how the ACS Email service processes messages.
 
-```text
+```plaintext
 Console Application
         ↓
 Azure.Communication.Email SDK
@@ -87,9 +91,11 @@ Before running the application, ensure the following requirements are met.
 
 ### 1. Install .NET
 
-The application requires the .NET 9.0 Runtime.
+If you are downloading the **source code** and running it with `dotnet build` or `dotnet run`, install the **.NET 9 SDK**.
 
-[https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=9.0.0&arch=x64&rid=win-x64](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=9.0.0&arch=x64&rid=win-x64)
+> Download: [https://dotnet.microsoft.com/download/dotnet/9.0](https://dotnet.microsoft.com/download/dotnet/9.0)
+
+If you later publish the app as a **framework-dependent** executable for other users, they only need the **.NET 9 Runtime**. They do **not** need the SDK unless they plan to build the project themselves.
 
 ---
 
@@ -103,7 +109,7 @@ In the Azure Portal:
 
 Example format:
 
-```text
+```plaintext
 endpoint=https://<resource>.communication.azure.com/;accesskey=<key>
 ```
 
@@ -120,13 +126,13 @@ Without this configuration, email sends will fail.
 
 ---
 
-### 4. Install the Required SDK
+### 4. NuGet Package Dependency
 
-The project references the ACS Email SDK.
+This sample already includes the required ACS Email package reference.
 
 If you are creating a new project manually, install it using:
 
-```bash
+```sh
 dotnet add package Azure.Communication.Email
 ```
 
@@ -134,15 +140,13 @@ dotnet add package Azure.Communication.Email
 
 ## 🔑 Configure the Connection String
 
-The application reads the ACS connection string from an environment variable.
+The application reads the ACS connection string from this environment variable:
 
-Environment variable name:
-
-```text
+```plaintext
 COMMUNICATION_SERVICES_CONNECTION_STRING
 ```
 
-### Windows (Command Prompt)
+### Windows Command Prompt
 
 ```powershell
 setx COMMUNICATION_SERVICES_CONNECTION_STRING "endpoint=https://<resource>.communication.azure.com/;accesskey=<key>"
@@ -154,7 +158,9 @@ setx COMMUNICATION_SERVICES_CONNECTION_STRING "endpoint=https://<resource>.commu
 $env:COMMUNICATION_SERVICES_CONNECTION_STRING="endpoint=https://<resource>.communication.azure.com/;accesskey=<key>"
 ```
 
-When the application starts, it validates that this variable exists before attempting to send an email.
+In **interactive mode on Windows**, if the connection string is missing, the application can open the built-in **Environment Variables** dialog and wait until the variable is detected.
+
+In **non-interactive mode**, the variable must already be set before running the application.
 
 ---
 
@@ -162,27 +168,46 @@ When the application starts, it validates that this variable exists before attem
 
 Navigate to the project directory and run:
 
-```bash
+```sh
 dotnet build
 ```
+
+If you downloaded the source code, this step restores NuGet dependencies automatically and compiles the application.
 
 ---
 
 ## ▶️ Run the Application
 
-You can run the application using:
+You can run the application from source using:
 
-```bash
+```sh
 dotnet run
 ```
 
-Or execute the compiled binary:
+You can also force a specific mode:
 
-```text
-EmailQuickstart-WithCustomHeaders.exe
+### Interactive mode
+
+```sh
+dotnet run -- --interactive
 ```
 
-When executed, the application sends a test email and logs progress in the console.
+### Non-interactive mode
+
+```sh
+dotnet run -- --noninteractive
+```
+
+### Repeat multiple sends
+
+```sh
+dotnet run -- --noninteractive --repeat 30
+```
+
+If `--sender` or `--to` are not supplied in interactive mode, the application prompts for them.  
+If `--repeat` is not supplied on the command line and `ACS_REPEAT_COUNT` is not set, the application also prompts for the repeat count.
+
+If you publish the project, you can also run the compiled executable directly.
 
 ---
 
@@ -192,14 +217,20 @@ If the application detects it is running in a terminal session, it enters **inte
 
 Available commands:
 
-```text
+```plaintext
 Ctrl + R  → resend email
 Enter     → exit application
 ```
 
-This allows rapid testing without restarting the program.
+Interactive mode is useful for repeated testing because the application can prompt for missing values such as:
 
-If the application runs in **non-interactive mode**, it sends a single email and exits automatically.
+- sender address
+- recipient list
+- repeat count
+
+If the application runs in **non-interactive mode**, it sends the configured email operation and exits automatically without waiting for input.
+
+> Note: `--repeat` normally implies non-interactive behavior, but `--interactive` takes precedence if both are supplied.
 
 ---
 
@@ -222,7 +253,7 @@ The template contains placeholder tokens that are dynamically replaced before se
 
 Examples include:
 
-```text
+```plaintext
 ##TRACKING_ID##
 ##VIEW_IN_BROWSER_URL##
 ##REPLY_TO_EMAILS##
@@ -236,7 +267,7 @@ The project demonstrates the use of **custom email headers** to include metadata
 
 Examples include:
 
-```text
+```plaintext
 Importance: normal
 X-Mailer
 X-Campaign
@@ -277,7 +308,7 @@ This allows correlation between:
 
 ### Step 1 — Initialize the Email Client
 
-The application creates an EmailClient using the ACS connection string.
+The application creates an `EmailClient` using the ACS connection string.
 
 ```csharp
 var emailClient = new EmailClient(connectionString);
@@ -301,7 +332,7 @@ An `EmailMessage` object is constructed containing:
 
 ### Step 3 — Submit the Send Request
 
-The EmailClient submits the message to Azure Communication Services.
+The `EmailClient` submits the message to Azure Communication Services.
 
 ACS returns an **EmailSendOperation**, which represents the asynchronous send request.
 
@@ -325,7 +356,7 @@ Structured logs are written to the console including timestamp and execution dur
 
 Example output:
 
-```text
+```plaintext
 [2026-01-16T20:03:14Z +2.31s] [INFO] Email send operation started.
 ```
 
@@ -341,6 +372,8 @@ This console application is helpful for:
 - verifying domain and sender configuration
 - generating diagnostic logs
 - validating HTML email templates
+- testing repeated send behavior
+- validating interactive and scheduled execution paths
 
 It effectively acts as a **developer testing harness for Azure Communication Services Email**.
 
@@ -385,6 +418,8 @@ This console application demonstrates several useful capabilities including:
 - reply-to handling
 - asynchronous operation polling
 - structured logging
+- repeat-send testing
+- interactive prompting for missing values
 
 Tools like this make it easier to validate deployments, troubleshoot issues, and experiment with ACS email functionality before integrating it into larger systems.
 
