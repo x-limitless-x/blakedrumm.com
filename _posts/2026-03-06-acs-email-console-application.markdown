@@ -87,9 +87,9 @@ Before running the application, ensure the following requirements are met.
 
 ### 1. Install .NET
 
-The application requires the .NET SDK.
+The application requires the .NET 9.0 Runtime.
 
-[https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+[https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=9.0.0&arch=x64&rid=win-x64](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=9.0.0&arch=x64&rid=win-x64)
 
 ---
 
