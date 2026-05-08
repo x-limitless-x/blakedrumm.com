@@ -22,7 +22,8 @@ ArmClient-PS recreates the core [ARMClient](https://github.com/projectkudu/ARMCl
 
 It supports the standard ARM verbs (**GET**, **POST**, **PUT**, **PATCH**, **DELETE**), ships with a built-in catalog of common ARM operation presets, polls long-running ARM operations to completion, validates its own packaged files before use, and prefers secure, process-scoped authentication behavior by default.
 
->#### :spiral_notepad: Note {:.no_toc}
+> :spiral_notepad: **Note**
+>
 > ArmClient-PS is compatible with **Windows PowerShell 5.1** and **PowerShell 7.x**, and supports all Azure cloud environments — `AzureCloud`, `AzureUSGovernment`, `AzureChinaCloud`, `AzureUSNat`, `AzureUSSec`, and any custom environment registered with `Add-AzEnvironment` (such as Azure Stack Hub).
 
 ---
@@ -68,7 +69,8 @@ The tool ships as a self-contained folder structure:
 └── Output\
 ```
 
->#### :spiral_notepad: Note {:.no_toc}
+> :spiral_notepad: **Note**
+>
 > `Logs\` and `Output\` are runtime folders and are not intended for source control. They are created and populated as the script executes.
 
 ---
