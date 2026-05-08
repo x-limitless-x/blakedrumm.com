@@ -21,15 +21,16 @@
                {% assign author_data = site.data.authors[author] %}
                <img
                 src="{{site.url}}{{site.baseurl}}{{ post.thumbnail }}"
-                width="100px"
-                height="100px"
+                alt="{{ post.title | escape }} thumbnail"
+                loading="lazy"
              />
               {% endif %}
             {% endif %}
 
           </div>
           <div class="article-link">
-              <p class="recent-article-link">{{post.title}} <span class="posted-date"> - <i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i></span></p>
+              <p class="recent-article-link">{{post.title}}</p>
+              <span class="posted-date"><i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i></span>
             </div>
             <div class="article-alert">
             {% for cat in post.category limit:1 %}

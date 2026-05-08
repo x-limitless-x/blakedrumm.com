@@ -35,9 +35,15 @@ It supports the standard ARM verbs (**GET**, **POST**, **PUT**, **PATCH**, **DEL
 
 Source code is hosted on GitHub: [https://github.com/blakedrumm/AzArmClient-PS](https://github.com/blakedrumm/AzArmClient-PS)
 
-To get started, clone the repository or download the latest source as a ZIP from the **Code** button on GitHub.
+To get started, clone the repository or download the latest source as a ZIP from the **Code** button on GitHub. For the easiest path — a ready-to-run package with `Az.Accounts` and dependencies already bundled — use the direct download below.
 
 <a href="https://github.com/blakedrumm/AzArmClient-PS" class="btn btn-primary navbar-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+&nbsp;
+<a href="https://files.blakedrumm.com/AzArmClient-PS.zip" class="btn btn-primary navbar-btn" target="_blank" rel="noopener noreferrer">Download Bundled ZIP</a>
+
+> :spiral_notepad: **Note**
+>
+> The bundled ZIP at [https://files.blakedrumm.com/AzArmClient-PS.zip](https://files.blakedrumm.com/AzArmClient-PS.zip) ships the script, the `Modules\` folder, and the `Manifest\` folder pre-built. Just extract and run — no `Build-BundledModules.ps1` step required on the receiving machine.
 
 ---
 

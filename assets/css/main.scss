@@ -11,6 +11,27 @@
     font-size: 15px;
 }
 
+html.dark-theme .article-img img {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+html.light-theme .article-img img {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 576px) {
+    .article-container {
+        grid-template-columns: 80px 1fr auto;
+        column-gap: 10px;
+    }
+    .article-img img {
+        width: 80px;
+        height: 60px;
+    }
+    .recent-article-link {
+        font-size: 16px;
+    }
+}
+
 html.dark-theme .article-container .article-link .posted-date {
     color: #6a6a6a;
 }
