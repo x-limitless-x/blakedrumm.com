@@ -27,7 +27,7 @@ Check the changelog for the latest version: [Latest Changes](https://github.com/
 
 ## :page_with_curl: How to Use
 
-<a href="https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest/download/SCOM-DW-GroomingGUI-EXE-64bit.zip" target="_"><button class="btn btn-primary navbar-btn">Get Started</button></a>
+<a href="https://github.com/blakedrumm/SCOM-DW-Grooming-Tool/releases/latest/download/SCOM-DW-GroomingGUI-EXE-64bit.zip" class="btn btn-primary navbar-btn" target="_blank" rel="noopener noreferrer">Get Started</a>
 
 [https://aka.ms/SCOM-DW-Grooming-Tool](https://aka.ms/SCOM-DW-Grooming-Tool)
 

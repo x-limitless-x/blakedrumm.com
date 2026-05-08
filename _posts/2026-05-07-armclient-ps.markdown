@@ -1,8 +1,8 @@
 ---
 layout: post
-date:   '2026-05-07 21:00:00 -0500'
 title: "ArmClient-PS - A Single-Script Azure Resource Manager Support Tool"
-categories: azure powershell projects arm troubleshooting
+date:   '2026-05-07 21:00:00 -0500'
+categories: azure powershell projects troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/posts/armclient-ps.png
 toc: true
@@ -37,19 +37,33 @@ Source code is hosted on GitHub: [https://github.com/blakedrumm/AzArmClient-PS](
 
 To get started, clone the repository or download the latest source as a ZIP from the **Code** button on GitHub.
 
-<a href="https://github.com/blakedrumm/AzArmClient-PS" target="_"><button class="btn btn-primary navbar-btn">View on GitHub</button></a>
+<a href="https://github.com/blakedrumm/AzArmClient-PS" class="btn btn-primary navbar-btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+
+---
+
+## :red_circle: Prerequisites
+
+Before running ArmClient-PS, make sure the following requirements are met:
+
+- **PowerShell host** — Windows PowerShell **5.1** or PowerShell **7.x**.
+- **Az.Accounts** — bundled with the package; no installation required. A newer locally installed version is used automatically when valid.
+- **Azure sign-in** — an account that can sign in to the target Azure environment (`AzureCloud`, `AzureUSGovernment`, `AzureChinaCloud`, `AzureUSNat`, `AzureUSSec`, or any environment registered with `Add-AzEnvironment`).
+- **ARM permissions** — the signed-in identity needs the appropriate RBAC role for the resource the call targets (for example, **Reader** for GET and **Contributor** for write verbs).
+- **Network access** — outbound HTTPS to the target ARM endpoint and any Azure-AD authority for the chosen cloud.
+- **Intact package layout** — the script, `Modules\`, and `Manifest\` folders must ship together so SHA-256 validation can succeed.
 
 ---
 
 ## :dart: Goals
 
-- Ship as a **zip-friendly support package**.
-- Prefer **secure, process-scoped authentication** behavior.
-- **Validate packaged files** before use.
-- Support ARM **GET, POST, PUT, PATCH, and DELETE** operations.
-- Allow **newer valid locally installed modules** when they are safer or more current than the bundled version.
-- Provide a **catalog of ARM operation presets** so engineers don't have to remember API versions and path templates.
-- **Poll long-running ARM operations** automatically until they reach a terminal state.
+The design goals describe **why** ArmClient-PS exists. The concrete capabilities that satisfy each goal are listed in the **Key Features** section below.
+
+- **Be redistributable** — ship as a single zip-friendly support package that runs without internet access to the PowerShell Gallery.
+- **Stay secure by default** — prefer process-scoped authentication and never persist credentials past the session.
+- **Be tamper-evident** — validate packaged files before they are loaded or executed.
+- **Behave predictably across hosts** — produce the same module resolution result on any engineer's workstation, regardless of installed `Az.*` versions.
+- **Lower the barrier to ARM calls** — let engineers run common operations without remembering ARM paths or API versions.
+- **Hide async plumbing** — treat long-running ARM operations like synchronous calls from the caller's perspective.
 
 ---
 
@@ -260,8 +274,8 @@ Default behavior is deterministic and predictable:
 
 - Use a **bundled module** when no newer valid installed version is available.
 - Prefer a **newer installed version** when it is valid and importable.
-- Use `-PreferBundledModules` to **force bundled content**.
-- Use `-PreferInstalledModules` to make the **installed-module preference explicit**.
+- Use `-PreferBundledModules` to **force bundled content** and ignore any installed copy, even if it is newer.
+- Use `-PreferInstalledModules` to **always prefer an installed copy** when one is valid and importable, even if the bundled version is newer.
 
 Module dependencies are resolved depth-first based on each manifest's `RequiredModules`, and circular references are surfaced as a clean error rather than an infinite loop. This means the same package behaves consistently across engineer workstations, even when their local `Az.*` versions drift.
 

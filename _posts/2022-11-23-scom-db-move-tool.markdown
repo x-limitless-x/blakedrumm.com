@@ -71,7 +71,7 @@ Check the changelog for the latest version: [Latest Changes](https://github.com/
 
 ## :page_with_curl: How to Use
 
-<a href="https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest/download/SCOM-Reconfigure-DB-Move-Tool-EXE.zip" target="_"><button class="btn btn-primary navbar-btn">Get Started</button></a>
+<a href="https://github.com/blakedrumm/SCOM-Reconfigure-DB-Move-Tool/releases/latest/download/SCOM-Reconfigure-DB-Move-Tool-EXE.zip" class="btn btn-primary navbar-btn" target="_blank" rel="noopener noreferrer">Get Started</a>
 
 [https://aka.ms/SCOM-DB-Move-Tool](https://aka.ms/SCOM-DB-Move-Tool)
 
