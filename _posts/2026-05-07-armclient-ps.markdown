@@ -304,7 +304,7 @@ Following this flow guarantees that the package on the receiving end will pass i
 
 ARMClient has been a staple troubleshooting tool for years, but installing it (and the Az modules it depends on) isn't always practical in restricted or sovereign environments. ArmClient-PS is my answer to that — a single, validated, redistributable PowerShell script that lets you make ARM calls the same way, with bundled dependencies, process-scoped auth, automatic long-running operation polling, and a curated set of operation presets for the calls support engineers reach for most often.
 
-> :octocat: **Source code & releases:** [https://github.com/blakedrumm/AzArmClient-PS](https://github.com/blakedrumm/AzArmClient-PS)
+> :link: **Source code & releases:** [https://github.com/blakedrumm/AzArmClient-PS](https://github.com/blakedrumm/AzArmClient-PS)
 
 If you have ideas, run into issues, or want to extend the operation catalog for your own workflows, feel free to reach out — I'm always happy to help troubleshoot or share lessons learned.
 
