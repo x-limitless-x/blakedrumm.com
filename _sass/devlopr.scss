@@ -708,7 +708,9 @@ header {
 #recent-articles-header{
     display: grid;
     width: 100%;
-    grid-template-columns: 17fr 2fr;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    align-items: center;
 }
 
 .article-link, .article-alert {
@@ -734,6 +736,7 @@ header {
 }
 .recent-article-link{
     font-size: 20px;
+    line-height: 1.3;
     text-decoration: none;
     margin-bottom: 0;
 }
