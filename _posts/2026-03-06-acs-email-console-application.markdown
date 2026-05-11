@@ -34,9 +34,12 @@ This post explains how the application works, how to run it, and includes a deep
 
 ## 💾 Download the Code
 
-You can download the full source code used in this article here:
+You can get the full source code used in this article from either of these locations:
 
-> 🔗 **Download the Email Quickstart Console Application**  
+> 🔗 **GitHub Repository**  
+> [https://github.com/blakedrumm/ACS-EmailQuickstart](https://github.com/blakedrumm/ACS-EmailQuickstart)
+
+> 🔗 **Direct ZIP Download**  
 > [https://files.blakedrumm.com/EmailQuickstart-ACS.zip](https://files.blakedrumm.com/EmailQuickstart-ACS.zip)
 
 After downloading, extract the archive and open the project folder in your preferred IDE such as **Visual Studio** or **VS Code**. If you are running from source, install the **.NET 9 SDK** first.
