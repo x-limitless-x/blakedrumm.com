@@ -54,6 +54,11 @@ author_education_details:
 
 # Projects
 author_project_details:
+              - project_thumbnail: acs-domain-checker-tool.png
+                project_title: Azure Communication Services (ACS) - Domain Checker Tool
+                project_description: 
+                project_url: https://github.com/blakedrumm/azure-communication-services-domain-checker
+                visibility: true
               - project_thumbnail: scom-data-collector.png
                 project_title: System Center Operations Manager Data Collector
                 project_description: 
