@@ -34,6 +34,48 @@ PowerShell Compatibility | Windows PowerShell 5.1 and PowerShell 7+ |
 
 ---
 
+## :white_check_mark: Requirements
+
+Before running the installer, make sure the following are available:
+
+- Windows with Windows PowerShell 5.1 or PowerShell 7+.
+- Visual Studio Code.
+- GitHub Copilot and GitHub Copilot Chat/Agent support.
+- Access to each model you plan to configure.
+- A workspace path when using workspace scope.
+
+The current installer is Windows-specific because model discovery and settings resolution use Windows SQLite and `%APPDATA%` paths.
+
+---
+
+## :arrow_down: Install the Council
+
+The source package contains two equivalent distributions:
+
+- [Install-VSCodeCopilotCouncil-v5.ps1](https://files.blakedrumm.com/Install-VSCodeCopilotCouncil-v5.ps1){:target="_blank"} - The executable PowerShell script.
+- [Install-VSCodeCopilotCouncil-v5.txt](https://files.blakedrumm.com/Install-VSCodeCopilotCouncil-v5.txt){:target="_blank"} - An identical text-format copy for environments that block `.ps1` downloads.
+
+Open PowerShell in the folder containing the script and run:
+
+```powershell
+.\Install-VSCodeCopilotCouncil-v5.ps1
+```
+
+The interactive flow displays the discovered models, accepts one to five selections, asks which selected model should coordinate, shows the resolved paths, and validates the generated files.
+
+After installation:
+
+1. Return to Visual Studio Code.
+2. Run **Developer: Reload Window** from the Command Palette.
+3. Open Copilot Chat or the Agents window.
+4. Select **Multi-Model Engineering Council**.
+
+![Selecting Multi-Model Engineering Council from the Visual Studio Code agent menu](/assets/img/posts/vscode-ai-council-agent-picker.png){:class="img-fluid"}
+
+The installed coordinator appears alongside the standard **Agent**, **Ask**, and **Plan** options. Hover over it to see the adaptive tier description before selecting it.
+
+---
+
 ## :art: Agent Workflow Overview
 
 ![VS Code Copilot Multi-Model Agent Workflow](/assets/img/posts/vscode-ai-council.png){:class="img-fluid"}
@@ -186,48 +228,6 @@ The settings editor accounts for JSON with comments. It masks comments while pre
 The installer writes the coordinator, expert, and reviewer files, then validates their names, models, visibility, and allowed agent lists. It also verifies that leaf reviewers cannot delegate and that an expert does not receive its own reviewer when multiple models are configured.
 
 Generated expert and reviewer files left behind by an earlier configuration are backed up and removed from the current target directory.
-
----
-
-## :white_check_mark: Requirements
-
-Before running the installer, make sure the following are available:
-
-- Windows with Windows PowerShell 5.1 or PowerShell 7+.
-- Visual Studio Code.
-- GitHub Copilot and GitHub Copilot Chat/Agent support.
-- Access to each model you plan to configure.
-- A workspace path when using workspace scope.
-
-The current installer is Windows-specific because model discovery and settings resolution use Windows SQLite and `%APPDATA%` paths.
-
----
-
-## :arrow_down: Install the Council
-
-The source package contains two equivalent distributions:
-
-- [Install-VSCodeCopilotCouncil-v5.ps1](https://files.blakedrumm.com/Install-VSCodeCopilotCouncil-v5.ps1){:target="_blank"} - The executable PowerShell script.
-- [Install-VSCodeCopilotCouncil-v5.txt](https://files.blakedrumm.com/Install-VSCodeCopilotCouncil-v5.txt){:target="_blank"} - An identical text-format copy for environments that block `.ps1` downloads.
-
-Open PowerShell in the folder containing the script and run:
-
-```powershell
-.\Install-VSCodeCopilotCouncil-v5.ps1
-```
-
-The interactive flow displays the discovered models, accepts one to five selections, asks which selected model should coordinate, shows the resolved paths, and validates the generated files.
-
-After installation:
-
-1. Return to Visual Studio Code.
-2. Run **Developer: Reload Window** from the Command Palette.
-3. Open Copilot Chat or the Agents window.
-4. Select **Multi-Model Engineering Council**.
-
-![Selecting Multi-Model Engineering Council from the Visual Studio Code agent menu](/assets/img/posts/vscode-ai-council-agent-picker.png){:class="img-fluid"}
-
-The installed coordinator appears alongside the standard **Agent**, **Ask**, and **Plan** options. Hover over it to see the adaptive tier description before selecting it.
 
 ---
 
