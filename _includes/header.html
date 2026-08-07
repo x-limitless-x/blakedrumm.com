@@ -13,12 +13,12 @@
           </button>
           
           <a class="navbar-brand" href="/">
-            <img class="top-logo" src="/assets/img/blake-drumm-logo.png" />
+            <img class="top-logo" src="/assets/img/blake-drumm-logo.png" alt="Blake Drumm Technical Blog" />
             <!--{{site.title}}-->
           </a>
           <script>
-            let logoMode = localStorage.getItem('color-theme') === "light" ? "dark" : "light";
-            $('.top-logo').attr({src:"/assets/img/blake-drumm-logo-" + logoMode + ".png"})
+            let logoMode = document.documentElement.getAttribute('data-theme') === "light" ? "dark" : "light";
+            document.querySelector('.top-logo').src = "/assets/img/blake-drumm-logo-" + logoMode + ".png";
           </script>
 
           <ul class="nav justify-content-end searchbtn mobileView">
@@ -31,7 +31,7 @@
           -->
           
             <li class="nav-item">
-              <a class="nav-link toggle-search-button" href="#search">
+              <a class="nav-link toggle-search-button" href="#search" aria-label="Search">
                 <i class="fa fa-search search-icon" aria-hidden="true"></i>
               </a>
             </li>
@@ -53,6 +53,8 @@
                 class="nav-link switch theme-toggle"
                 type="checkbox"
                 name="checkbox"
+                role="switch"
+                aria-label="Toggle color theme"
               />
             </li>
           </ul>
@@ -67,13 +69,13 @@
                 >
               </li>
               {% endfor %}
-            <span class="nav-divider"> | </span>
-            <a href="https://files.blakedrumm.com" target="_"><button class="btn btn-dark navbar-btn">File Repository</button></a>
+            <li class="nav-item nav-divider-item" aria-hidden="true"><span class="nav-divider"> | </span></li>
+            <li class="nav-item"><a href="https://files.blakedrumm.com" class="btn btn-dark navbar-btn" target="_blank" rel="noopener noreferrer">File Repository</a></li>
             </ul>
           </div>
           <ul class="nav justify-content-end searchbtn">
                 <li class="nav-item">
-                      <a class="nav-link toggle-search-button" href="#search">
+                      <a class="nav-link toggle-search-button" href="#search" aria-label="Search">
                         <i class="fa fa-search search-icon" aria-hidden="true"></i>
                       </a>
                 </li>
@@ -82,6 +84,8 @@
                     class="nav-link switch theme-toggle"
                     type="checkbox"
                     name="checkbox"
+                    role="switch"
+                    aria-label="Toggle color theme"
                   />
                 </li>
           </ul>

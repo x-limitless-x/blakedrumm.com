@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div class="row justify-content-center" id="blog-post-container">
-  <div class="col-lg-10">
+  <div class="col-12">
     {% include blog_post_article.html %}
      {%- include blog_post_comments.html-%}
   </div>
 </div>
-<div class="row">
+<div class="row post-support">
   <div class="col-md-4">
     <div class="card">
       <div class="card-header">About {{site.author}}</div>
@@ -21,7 +21,7 @@ layout: default
   <div class="col-md-4">
     <div class="card">
       <div class="card-header">Categories</div>
-      <div class="card-body text-dark">
+      <div class="card-body">
         {%- include blog_categories.html -%}
       </div>
     </div>
@@ -29,12 +29,14 @@ layout: default
   <div class="col-md-4">
     <div class="card">
       <div class="card-header">Useful Links</div>
-      <div class="card-body text-dark">
+      <div class="card-body">
+        <ul>
         {% for i in site.urls %}
         <li>
           <a href="{{ site.url}}{{site.baseurl}}{{ i.url }}">{{ i.text }}</a>
         </li>
         {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

@@ -1,14 +1,25 @@
 $(document).ready(()=> modeSwitcher() )
 
-if ( !localStorage.getItem('color-theme') ){
-	document.documentElement.setAttribute('data-theme', 'dark');
-	document.documentElement.classList.add("dark-theme");
-	localStorage.setItem('color-theme', 'dark');
+function getColorTheme() {
+	return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
 }
-else{
-	document.documentElement.classList.add(localStorage.getItem('color-theme') + "-theme");
-	document.documentElement.setAttribute('data-theme', localStorage.getItem('color-theme'));
-	
+
+function setColorTheme(theme) {
+	var isLight = theme === 'light';
+	document.documentElement.setAttribute('data-theme', theme);
+	document.documentElement.classList.toggle('light-theme', isLight);
+	document.documentElement.classList.toggle('dark-theme', !isLight);
+
+	try {
+		localStorage.setItem('color-theme', theme);
+	} catch (error) {}
+
+	$('.theme-toggle').prop('checked', isLight);
+
+	var logo = document.getElementsByClassName('top-logo')[0];
+	if (logo) {
+		logo.src = '/assets/img/blake-drumm-logo-' + (isLight ? 'dark' : 'light') + '.png';
+	}
 }
 
 /**
@@ -17,35 +28,13 @@ else{
  * Initialize page theme and set event handlers
  */
 function modeSwitcher() {
-	// toggle between light/dark mode for site logo
-
-	switch ( localStorage.getItem('color-theme') ){
-		case 'dark':
-			$('.theme-toggle').removeAttr('checked');
-		break;
-		case 'light':
-			$('.theme-toggle').attr('checked','');
-		break;
-	}
+	setColorTheme(getColorTheme());
 
     /* 
      * dark-light mode-switcher
      * Change the icons inside the button based on previous settings
      */
     $('.theme-toggle').off('click').on('click', function() {
-		let _siteLogo = localStorage.getItem('color-theme') === "light" ? "light" : "dark";
-        // if exists and set via local storage previously
-		if ($(document.documentElement).attr('data-theme') === "dark" ) {
-			document.documentElement.setAttribute('data-theme', 'light');
-			localStorage.setItem('color-theme', 'light');
-			document.documentElement.classList.remove("dark-theme");
-			document.documentElement.classList.add("light-theme");
-		} else {
-			document.documentElement.setAttribute('data-theme', 'dark');
-			localStorage.setItem('color-theme', 'dark');
-			document.documentElement.classList.remove("light-theme");
-			document.documentElement.classList.add("dark-theme");
-		}
-		document.getElementsByClassName('top-logo')[0].src = '/assets/img/blake-drumm-logo-'+ _siteLogo + '.png'
+		setColorTheme(getColorTheme() === 'dark' ? 'light' : 'dark');
     });
 }

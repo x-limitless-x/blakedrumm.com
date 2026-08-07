@@ -1,7 +1,7 @@
-<article class="card" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="card-header">
+<article class="card post-article" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="card-header post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <h4 class="post-meta">{{ page.summary }}</h4>
+    <p class="post-deck" itemprop="description">{{ page.summary }}</p>
     <p class="post-summary">
       Posted by : {% if page.author %}
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -24,20 +24,25 @@
     </div>
   </div>
 
-  <div class="row" itemprop="articleBody">
-    <div class="main col-12 col-lg-9 markdown-body">
+  <div class="post-content-shell">
+    <div class="post-media-frame">
       <img
         class="card-img-top"
         src="{{ page.thumbnail }}"
-        alt="{{ post.title }}"
+        alt="{{ page.title | escape }}"
+        decoding="async"
+        fetchpriority="high"
       />
+    </div>
       {% if page.toc == true %}
-        <div id="toc_container" class="card-header">
-          <p class="toc_title">Contents</p>
+        <aside id="toc_container" class="post-toc" aria-label="Table of contents">
+          <details>
+            <summary>On this page</summary>
             {% include toc.html html=content class='toc_list' submenu_class='toc-submenu' item_class='toc-item' %}
-        </div>
+          </details>
+        </aside>
       {% endif %}
-      <hr />
+    <div class="main markdown-body" itemprop="articleBody">
       {{ content }}
       <br />
       {%- include share_page.html -%}
@@ -60,6 +65,18 @@
 
 </article>
 <script>
+  var articleTables = document.querySelectorAll(".markdown-body table");
+  for (var tableIndex = 0; tableIndex < articleTables.length; tableIndex++) {
+      var table = articleTables[tableIndex];
+      if (!table.parentElement.classList.contains("table-scroll")) {
+          var tableWrapper = document.createElement("div");
+          tableWrapper.className = "table-scroll";
+          table.parentNode.insertBefore(tableWrapper, table);
+          tableWrapper.appendChild(table);
+          table.classList.remove("d-block", "overflow-auto");
+      }
+  }
+
   var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
 
   for (var i = 0; i < headings.length; i++) {
