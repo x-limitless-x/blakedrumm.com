@@ -4,7 +4,7 @@ title: "VS Code AI Council: An Adaptive Multi-Model GitHub Copilot Workflow"
 date:   '2026-08-07 12:00:00 -0500'
 categories: powershell projects guides ai
 author: blakedrumm
-thumbnail: /assets/img/posts/vscode-ai-council.png
+thumbnail: /assets/img/posts/vscode-ai-council-main.png
 toc: true
 
 summary: >- # this means to ignore newlines
