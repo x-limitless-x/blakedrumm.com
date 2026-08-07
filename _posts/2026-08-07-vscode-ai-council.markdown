@@ -99,11 +99,11 @@ The coordinator selects the lowest tier that can produce a correct, defensible a
 
 Tier | Strategy | Typical Use |
 ------------- | ----------- | ----------- |
-Tier 0 | Direct answer, no subagents | Known facts, syntax questions, lookups, and trivial local changes. |
-Tier 1 | One expert | A focused task that fits one engineering lens. |
-Tier 2 | Two experts in parallel | Shared behavior or a real decision spanning two non-overlapping lenses. |
-Tier 3 | Adversarial debate with bounded peer review | Explicit debate requests, unresolved disagreement, or a hard-to-reverse decision that tools cannot settle. |
-Tier 4 | One expert per configured model in parallel | Genuinely independent subsystems, an explicitly requested full team, or a difficult bug that survived a smaller council. |
+Tier&nbsp;0 | Direct answer, no subagents | Known facts, syntax questions, lookups, and trivial local changes. |
+Tier&nbsp;1 | One expert | A focused task that fits one engineering lens. |
+Tier&nbsp;2 | Two experts in parallel | Shared behavior or a real decision spanning two non-overlapping lenses. |
+Tier&nbsp;3 | Adversarial debate with bounded peer review | Explicit debate requests, unresolved disagreement, or a hard-to-reverse decision that tools cannot settle. |
+Tier&nbsp;4 | One expert per configured model in parallel | Genuinely independent subsystems, an explicitly requested full team, or a difficult bug that survived a smaller council. |
 {: .table .table-hover .table-text .d-block .overflow-auto }
 
 Tier 0 is intentionally the default for most questions. Tiers 3 and 4 are exceptions, not a ceremony applied to every prompt.
