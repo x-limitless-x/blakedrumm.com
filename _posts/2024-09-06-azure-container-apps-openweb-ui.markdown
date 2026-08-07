@@ -2,7 +2,7 @@
 layout: post
 title:  "Setup OpenWeb UI AI Webpage - Azure Container Apps"
 date:   '2024-09-07 22:35:08 -0500'
-categories: azure guides containerapps
+categories: azure guides containerapps ai
 author: blakedrumm
 thumbnail: /assets/img/posts/openweb-ui-logged-in.png
 toc: true
