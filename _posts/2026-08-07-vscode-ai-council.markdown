@@ -2,7 +2,7 @@
 layout: post
 title: "VS Code AI Council: An Adaptive Multi-Model GitHub Copilot Workflow"
 date:   '2026-08-07 12:00:00 -0500'
-categories: powershell projects guides
+categories: powershell projects guides ai
 author: blakedrumm
 thumbnail: /assets/img/posts/vscode-ai-council.png
 toc: true
