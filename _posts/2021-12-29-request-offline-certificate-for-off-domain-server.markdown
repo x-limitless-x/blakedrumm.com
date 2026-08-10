@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create your own offline Certificate Request for SCOM Off-Domain Server"
+title:  "Create Your Own Offline Certificate Request for an Off-Domain Server - System Center Operations Manager (SCOM)"
 date:   '2021-12-29 12:03:42 -0500'
 categories: troubleshooting guides operationsManager certificates
 author: blakedrumm

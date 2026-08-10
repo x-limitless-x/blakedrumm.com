@@ -1,6 +1,6 @@
 ---
 layout: post_table_virtualization
-title:  "All Operations Manager Event ID's"
+title:  "All Event IDs - System Center Operations Manager (SCOM)"
 date:   '2023-03-28 09:46:42 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm

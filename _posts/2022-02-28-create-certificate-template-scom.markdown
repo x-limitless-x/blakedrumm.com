@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to create a Certificate Template for Operations Manager"
+title:  "How to Create a Certificate Template - System Center Operations Manager (SCOM)"
 date:   '2022-02-28 12:12:46 -0500'
 categories: troubleshooting guides operationsManager certificates
 author: blakedrumm

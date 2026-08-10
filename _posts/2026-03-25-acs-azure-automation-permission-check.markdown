@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Validate Azure Automation Managed Identity RBAC for ACS - Azure Communication Services"
+title:  "Validate Azure Automation Managed Identity RBAC - Azure Communication Services (ACS)"
 date:   '2026-03-25 11:00:00 -0500'
 categories: azure powershell guides communication-services acs troubleshooting
 author: blakedrumm

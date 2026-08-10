@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resolve Post Install error with Unix / Linux Install for SCOM Agent"
+title:  "Resolve Post-Install Error with UNIX/Linux Agent Installation - System Center Operations Manager (SCOM)"
 date:   '2022-01-10 18:04:26 -0500'
 categories: troubleshooting linux operationsManager
 author: blakedrumm

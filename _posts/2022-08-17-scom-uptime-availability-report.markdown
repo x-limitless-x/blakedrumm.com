@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-08-17 16:08:58 -0500'
-title: "SCOM Uptime Availability Report"
+title: "Uptime Availability Report - System Center Operations Manager (SCOM)"
 categories: guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/uptime-availability-report.png

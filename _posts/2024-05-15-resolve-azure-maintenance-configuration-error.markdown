@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resolving Azure Maintenance Configuration Authorization Errors - Azure Update Manager"
+title:  "Resolving Azure Maintenance Configuration Authorization Errors - Azure Update Manager (AUM)"
 date:   '2024-05-15 10:00:00 -0500'
 categories: azure powershell troubleshooting guides updateManager
 author: blakedrumm

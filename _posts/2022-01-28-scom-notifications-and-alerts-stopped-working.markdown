@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to resolve SCOM Notifications Stopped & No New Alerts"
+title:  "How to Resolve Notifications Stopped & No New Alerts - System Center Operations Manager (SCOM)"
 date:   '2022-01-28 14:21:52 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm

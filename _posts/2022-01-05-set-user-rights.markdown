@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Set and Check User Rights Assignment via PowerShell"
+title:  "Set and Check User Rights Assignment via PowerShell - Microsoft Windows"
 date:   '2022-01-05 23:41:26 -0500'
 categories: powershell operationsManager troubleshooting projects 
 author: blakedrumm

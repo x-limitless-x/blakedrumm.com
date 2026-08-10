@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Resolve Operations Manager Event ID 33333"
+title:  "Resolve Event ID 33333 - System Center Operations Manager (SCOM)"
 date:   '2021-08-16 02:08:42 -0500'
 categories: troubleshooting guides powershell operationsManager
 author: blakedrumm

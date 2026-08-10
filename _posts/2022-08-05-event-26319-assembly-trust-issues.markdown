@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Event 26319 - Assembly Trust Issues with SQL 2017+"
+title:  "Event 26319: Assembly Trust Issues with SQL 2017+ - System Center Operations Manager (SCOM)"
 date:   '2022-08-05 16:00:21 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM ACS Collector Troubleshooting Tips"
+title:  "Audit Collection Services (ACS) Collector Troubleshooting Tips - System Center Operations Manager (SCOM)"
 date:   '2022-01-24 20:22:16 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm

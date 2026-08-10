@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2023-10-12 14:33:27 -0500'
-title: "SCOM SDK not staying on - AzMan Issue"
+title: "SDK Not Staying On: AzMan Issue - System Center Operations Manager (SCOM)"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/sdk-service-stopped.png

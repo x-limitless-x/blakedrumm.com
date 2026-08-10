@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "UNIX/Linux System Center Operations Manager Agents Troubleshooting Tips"
+title:  "UNIX/Linux Agents Troubleshooting Tips - System Center Operations Manager (SCOM)"
 date:   '2022-01-26 12:21:52 -0500'
 categories: troubleshooting linux operationsManager
 author: blakedrumm

@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-11-23 18:21:42 -0500'
-title: "Reconfigure System Center Operations Manager for Database Move Tool"
+title: "Database Move Reconfiguration Tool - System Center Operations Manager (SCOM)"
 categories: powershell projects operationsManager troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/scom-db-move-tool.png

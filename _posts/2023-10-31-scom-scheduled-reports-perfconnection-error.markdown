@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2023-10-31 17:54:02 -0500'
-title:  "SCOM Scheduled Reports Fail with AlertConnectionString, PerfConnectionString, or StateConnectionString Error"
+title:  "Scheduled Reports Fail with AlertConnectionString, PerfConnectionString, or StateConnectionString Error - System Center Operations Manager (SCOM)"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-reports-perfconnection-error.png

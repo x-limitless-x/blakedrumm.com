@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Clear Microsoft Teams Cache Script"
+title:  "Clear Cache Script - Microsoft Teams"
 date:   '2026-06-04 10:00:00 -0500'
 categories: powershell teams troubleshooting guides
 author: blakedrumm

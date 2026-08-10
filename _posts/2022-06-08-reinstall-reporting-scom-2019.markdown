@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-06-08 23:05:45 -0500'
-title: "Error while installing SCOM 2019 Reporting"
+title: "Error While Installing 2019 Reporting - System Center Operations Manager (SCOM)"
 categories: guides operationsManager troubleshooting
 author: blakedrumm
 thumbnail: /assets/img/posts/reporting-error-scom-ssrs.png

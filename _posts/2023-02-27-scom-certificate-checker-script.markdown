@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM Certificate Checker Script"
+title:  "Certificate Checker Script - System Center Operations Manager (SCOM)"
 date:   '2023-02-27 20:02:10 -0500'
 categories: troubleshooting certificates guides operationsManager powershell
 author: blakedrumm

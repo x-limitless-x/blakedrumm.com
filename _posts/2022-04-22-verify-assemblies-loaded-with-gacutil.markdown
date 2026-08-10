@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-04-22 13:28:58 -0500'
-title: "Verify Assemblies are loaded with GACUtil"
+title: "Verify Assemblies Are Loaded with GACUtil - .NET Framework"
 categories: troubleshooting guides
 author: blakedrumm
 thumbnail: /assets/img/posts/gacutil-check.png

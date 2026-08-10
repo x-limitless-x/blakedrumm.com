@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title:  "PowerShell: SCOM's Best Friend - Insights from Scomathon 2024"
+title:  "PowerShell as SCOM's Best Friend: Insights from Scomathon 2024 - System Center Operations Manager (SCOM)"
 date:   '2024-06-18 10:00:00 -0500'
 categories: operationsManager powershell projects
 author: blakedrumm

@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-06-06 9:21:21 -0500'
-title: "Rebuild Performance Counters"
+title: "Rebuild Performance Counters - Microsoft Windows"
 categories: guides operationsManager powershell
 author: blakedrumm
 thumbnail: /assets/img/posts/recreate-perf-counters.png

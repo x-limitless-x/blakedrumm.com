@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to check core usage of ESU licenses - Azure Arc"
+title:  "How to Check Core Usage of ESU Licenses - Azure Arc"
 date:   '2024-01-24 12:00:00 -0500'
 categories: troubleshooting azure
 author: blakedrumm

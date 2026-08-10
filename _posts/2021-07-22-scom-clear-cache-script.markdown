@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM Clear Cache Script"
+title:  "Clear Cache Script - System Center Operations Manager (SCOM)"
 date:   '2021-07-22 01:09:42 -0500'
 categories: powershell operationsManager
 author: blakedrumm

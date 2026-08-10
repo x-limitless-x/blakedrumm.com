@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data Reader account provided is not same as that in the management group"
+title:  "Data Reader Account Provided Is Not the Same as That in the Management Group - System Center Operations Manager (SCOM)"
 date:   '2022-09-19 15:16:32 -0500'
 categories: troubleshooting operationsManager
 author: blakedrumm

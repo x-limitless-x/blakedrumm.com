@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM SDK Crashing - Cannot Generate SSPI Context"
+title:  "SDK Crashing: Cannot Generate SSPI Context - System Center Operations Manager (SCOM)"
 date:   '2023-01-24 16:17:10 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm

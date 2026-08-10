@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM Agent Installation Error - Microsoft ESENT Keys are required"
+title:  "Agent Installation Error: Microsoft ESENT Keys Are Required - System Center Operations Manager (SCOM)"
 date:   '2023-01-05 13:12:42 -0500'
 categories: troubleshooting guides operationsManager
 author: blakedrumm

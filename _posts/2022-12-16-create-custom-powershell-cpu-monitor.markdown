@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create Custom PowerShell CPU Monitor"
+title:  "Create Custom PowerShell CPU Monitor - System Center Operations Manager (SCOM)"
 date:   '2022-12-17 01:25:12 -0500'
 categories: powershell operationsManager guides
 author: blakedrumm

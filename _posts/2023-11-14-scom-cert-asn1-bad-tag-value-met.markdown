@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2023-11-14 14:33:27 -0500'
-title: "SCOM Certificate Error - ASN1 Bad Tag Value Met"
+title: "Certificate Error: ASN1 Bad Tag Value Met - System Center Operations Manager (SCOM)"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-asn1-bad-tag-value-met.png

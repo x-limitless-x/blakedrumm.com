@@ -7,7 +7,7 @@ layout: post
 permalink: /blog/acs-email-console-application/
 summary: "Learn how to send HTML emails using Azure Communication Services (ACS) with a C# console application. This guide explains how the tool works, how to configure it, and includes a deep dive into the internal logic such as operation polling, custom headers, and execution modes."
 thumbnail: /assets/img/posts/acs-email-console-app.png
-title: "Sending Emails with Azure Communication Services (ACS) — A C# Console Application with Custom Headers"
+title: "Sending Emails with a C# Console Application and Custom Headers - Azure Communication Services (ACS)"
 toc: true
 ---
 

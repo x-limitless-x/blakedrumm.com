@@ -2,7 +2,7 @@
 layout: post
 date:   '2021-07-06 02:16:42 -0500'
 categories: powershell projects operationsManager
-title: System Center Operations Manager - Data Collector
+title: "Data Collector - System Center Operations Manager (SCOM)"
 author: blakedrumm
 thumbnail: /assets/img/posts/scom-data-collector.png
 toc: true

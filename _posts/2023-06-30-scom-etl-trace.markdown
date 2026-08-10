@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM ETL Trace Gathering Script"
+title:  "ETL Trace Gathering Script - System Center Operations Manager (SCOM)"
 date:   '2023-06-30 15:32:09 -0500'
 categories: powershell operationsManager troubleshooting projects
 author: blakedrumm

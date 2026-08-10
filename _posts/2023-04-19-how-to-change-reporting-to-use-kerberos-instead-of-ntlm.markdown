@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to change SQL Server Reporting Services to use Kerberos instead of NTLM"
+title:  "How to Use Kerberos Instead of NTLM - SQL Server Reporting Services (SSRS)"
 date:   '2023-04-19 13:28:09 -0500'
 categories: troubleshooting guides operationsManager projects security powershell
 author: blakedrumm

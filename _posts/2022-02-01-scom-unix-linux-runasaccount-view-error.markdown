@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SCOM Unix/Linux RunAs Account View - System.Xml.XmlException"
+title:  "Unix/Linux RunAs Account View Error: System.Xml.XmlException - System Center Operations Manager (SCOM)"
 date:   '2022-02-01 16:45:21 -0500'
 categories: troubleshooting operationsManager linux
 author: blakedrumm

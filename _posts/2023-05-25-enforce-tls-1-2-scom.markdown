@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Enforce TLS 1.2 & TLS 1.3 in SCOM - The PowerShell Way!"
+title:  "Enforce TLS 1.2 & TLS 1.3: The PowerShell Way! - System Center Operations Manager (SCOM)"
 date:   '2023-05-25 17:08:51 -0500'
 categories: powershell operationsManager troubleshooting projects security
 author: blakedrumm

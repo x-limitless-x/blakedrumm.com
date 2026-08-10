@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   '2022-05-02 14:28:58 -0500'
-title: "Custom SQL Management Pack Invoke-SqlCmd Exception"
+title: "Custom SQL Management Pack Invoke-SqlCmd Exception - System Center Operations Manager (SCOM)"
 categories: troubleshooting guides operationsManager
 author: blakedrumm
 thumbnail: /assets/img/posts/invoke-sqlcmd.png

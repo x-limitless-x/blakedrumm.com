@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Decommission SCOM Gateway"
+title:  "How to Decommission a Gateway - System Center Operations Manager (SCOM)"
 date:   '2023-04-25 15:43:02 -0500'
 categories: guides operationsManager powershell
 author: blakedrumm

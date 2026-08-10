@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cleaning Orphaned WindowsPatchExtension Status Files - Azure Update Manager"
+title:  "Cleaning Orphaned WindowsPatchExtension Status Files - Azure Update Manager (AUM)"
 date:   '2025-06-18 10:50:00 -0500'
 categories: azure guides updateManager troubleshooting powershell 
 author: blakedrumm

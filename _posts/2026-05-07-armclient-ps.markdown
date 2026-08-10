@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ArmClient-PS - A Single-Script Azure Resource Manager Support Tool"
+title: "A Single-Script Azure Resource Manager Support Tool - ArmClient-PS"
 date:   '2026-05-07 21:00:00 -0500'
 categories: azure powershell projects troubleshooting
 author: blakedrumm
