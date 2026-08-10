@@ -5,24 +5,6 @@
   <style>
     html[data-theme="dark"] { background-color: #1c1c1e; color-scheme: dark; }
     html[data-theme="light"] { background-color: #ffffff; color-scheme: light; }
-    @keyframes page-gate-failsafe { to { opacity: 1; } }
-    html.page-enter body {
-      opacity: 0;
-      transition: opacity 400ms cubic-bezier(0, 0, 0.58, 1);
-      animation: page-gate-failsafe 1ms linear 1200ms forwards;
-    }
-    html.page-enter.page-ready body {
-      opacity: 1;
-      animation: none;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html.page-enter body,
-      html.page-enter.page-ready body {
-        opacity: 1 !important;
-        transition: none !important;
-        animation: none !important;
-      }
-    }
   </style>
   <script>
     (function () {
@@ -49,37 +31,11 @@
         root.classList.toggle("dark-theme", theme === "dark");
       }
 
-      function revealPage() {
-        if (!root.classList.contains("page-enter") || root.classList.contains("page-ready")) {
-          return;
-        }
-
-        root.classList.add("page-ready");
-        window.setTimeout(function () {
-          root.classList.remove("page-enter", "page-ready");
-        }, 450);
-      }
-
       applyTheme(readTheme());
-
-      if (document.visibilityState === "visible" &&
-          !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        window.setTimeout(revealPage, 1200);
-        root.classList.add("page-enter");
-        document.addEventListener("DOMContentLoaded", function () {
-          if (document.body) {
-            document.body.getBoundingClientRect();
-          }
-          window.requestAnimationFrame(function () {
-            window.requestAnimationFrame(revealPage);
-          });
-        }, { once: true });
-      }
 
       window.addEventListener("pageshow", function (event) {
         if (event.persisted) {
           applyTheme(readTheme());
-          root.classList.remove("page-enter", "page-ready");
         }
       });
     })();
