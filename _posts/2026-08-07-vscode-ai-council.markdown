@@ -27,7 +27,7 @@ Project Detail | Value |
 Author | Blake Drumm ([blakedrumm@microsoft.com](mailto:blakedrumm@microsoft.com)) |
 Version | 5.0.0 |
 Date Created | August 6th, 2026 |
-Last Modified | August 7th, 2026 |
+Last Modified | August 8th, 2026 |
 License | MIT License |
 PowerShell Compatibility | Windows PowerShell 5.1 and PowerShell 7+ |
 {: .table .table-hover .table-text .d-block .overflow-auto }
