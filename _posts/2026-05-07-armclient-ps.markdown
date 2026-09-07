@@ -43,25 +43,6 @@ For development, clone the repository. For normal use, download the release arch
 &nbsp;
 <a href="https://github.com/blakedrumm/AzArmClient-PS/releases/latest/download/AzArmClient-PS.zip" class="btn btn-primary navbar-btn" target="_blank" rel="noopener noreferrer">Download Latest Release</a>
 
-> :spiral_notepad: **Note**
->
-> The latest reviewed release is [v1.1.0](https://github.com/blakedrumm/AzArmClient-PS/releases/tag/v1.1.0), published August 13, 2026. Its `AzArmClient-PS.zip` SHA-256 digest is `32d0d04f9de84464559fb9d782623d4095c0d64cd2571be95a796d8b4a85b7e0`. Check the release page for the digest that matches the version you download.
-
----
-
-## :new: What's New in Version 1.1.0
-
-Version 1.1.0 is more than a dependency refresh. The main additions and corrections are:
-
-- An optional WPF interface with searchable presets, live ARM operation discovery, guided parameters, encrypted defaults, tenant switching, response inspection, and **Copy as CLI**.
-- Route provenance for discovered operations. The GUI distinguishes a Microsoft-published **DOCUMENTED PATH** from a path **INFERRED** from ARM role-based access control (RBAC) metadata.
-- Correct routing for Resource Manager root types such as `/subscriptions`, which must not be placed below `/providers/Microsoft.Resources/`.
-- API-version selection that treats `-preview`, `-beta`, `-alpha`, and `-rc` versions as prerelease versions when choosing a stable default.
-- Package inventory and runtime hash validation for `ArmClient-PS.Gui.ps1` whenever the optional file is present.
-- A release archive built from an exact commit and validated after extraction before publication.
-
-See the repository [changelog](https://github.com/blakedrumm/AzArmClient-PS/blob/main/CHANGELOG.md) for the complete release history.
-
 ---
 
 ## :red_circle: Prerequisites
